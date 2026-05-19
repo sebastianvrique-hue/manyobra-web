@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/manyobra/public_html/manyobra/
+    - export DEPLOYPATH=/home2/manyobra/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp logo.png $DEPLOYPATH
     - /bin/cp sebastian.png $DEPLOYPATH
