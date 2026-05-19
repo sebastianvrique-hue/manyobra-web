@@ -1,0 +1,16 @@
+name: Deploy a cPanel
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar deploy en cPanel
+        run: |
+          curl -s -X POST \
+            -H "Authorization: cpanel manyobra:${{ secrets.CPANEL_TOKEN }}" \
+            "https://manyobra.cl:2083/execute/VersionControl/update" \
+            --data-urlencode "repository_root=/home2/manyobra/public_html/manyobra"
