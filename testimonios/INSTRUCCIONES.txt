@@ -1,0 +1,22 @@
+TESTIMONIOS – MANYOBRA
+======================
+
+Agrega tus archivos en cada carpeta y actualiza index.html.
+
+📁 videos/
+  - Formatos: .mp4, .webm
+  - Nombre sugerido: testimonio-nombre-cliente.mp4
+  - Ejemplo: testimonio-juan-construccion.mp4
+
+📁 imagenes/
+  - Formatos: .jpg, .jpeg, .png, .webp
+  - Nombre sugerido: testimonio-nombre-cliente.jpg
+  - Ejemplo: testimonio-maria-dental.jpg
+
+📁 audios/
+  - Formatos: .mp3, .wav, .ogg
+  - Nombre sugerido: testimonio-nombre-cliente.mp3
+  - Ejemplo: testimonio-pedro-ecommerce.mp3
+
+Luego en index.html busca la sección "TESTIMONIOS" y agrega
+cada archivo siguiendo el patrón de los ejemplos que están comentados.
