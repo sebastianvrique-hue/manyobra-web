@@ -6,7 +6,7 @@
 
   <!-- ── PRIMARY SEO ── -->
   <title>Planes y Precios | Manyobra – Marketing Digital & Producción Audiovisual</title>
-  <meta name="description" content="Planes de marketing digital para negocios chilenos. Meta Ads + contenido + bot WhatsApp desde $150.000/mes. Sin permanencia forzada." />
+  <meta name="description" content="Elige el plan de marketing digital que mejor se adapta a tu negocio. Desde $150.000/mes. Meta Ads + Contenido + Bot WhatsApp. Planes Corriente, Voltaje y Tormenta." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://manyobra.cl/planes.html" />
 
@@ -66,172 +66,181 @@
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white); }
 
-    /* ── SHARED ── */
-    .sec-tag { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
-    .sec-tag::before { content: '— '; }
-    .sec-inner { max-width: 1100px; margin: 0 auto; }
-    .sec-inner-sm { max-width: 800px; margin: 0 auto; }
-
-    /* ── S1 HERO ── */
-    .hero {
+    /* ── HERO PLANES ── */
+    .planes-hero {
       padding: 140px 6% 80px;
       text-align: center;
       border-bottom: 1px solid var(--border);
     }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1.1rem; }
-    .hero h1 span { color: var(--white); }
-    .hero p { font-size: clamp(.95rem, 1.6vw, 1.1rem); color: var(--muted); max-width: 540px; margin: 0 auto 2rem; line-height: 1.7; }
-    .hero-cta {
-      display: inline-block; background: var(--white); color: var(--black);
-      padding: .8rem 2rem; border-radius: 8px; font-weight: 700; font-size: .9rem;
-      text-decoration: none; letter-spacing: .02em; transition: background .2s, transform .1s;
+    .sec-tag { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+    .sec-tag::before { content: '— '; }
+    .planes-hero h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1rem; }
+    .planes-hero h1 span { color: var(--white); }
+    .planes-hero p { font-size: clamp(.95rem, 1.6vw, 1.1rem); color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+
+    /* ── ALERT BANNER ── */
+    .alert-banner {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: .75rem 1.4rem;
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .82rem; font-weight: 600; color: var(--white);
+      margin-bottom: 2.5rem;
     }
-    .hero-cta:hover { background: #E0E0E0; transform: translateY(-2px); }
-    .hero-sub { font-size: .75rem; color: var(--muted); margin-top: .9rem; }
+    .alert-banner .fire { font-size: 1rem; }
 
-    /* ── S2 PROBLEMA ── */
-    .problema-section { padding: 80px 6%; background: var(--grey1); border-bottom: 1px solid var(--border); }
-    .problema-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 900; letter-spacing: -1px; margin-bottom: .6rem; }
-    .problema-section .sec-lead { font-size: .95rem; color: var(--muted); margin-bottom: 2.5rem; }
-    .problema-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
-    .problema-item {
-      display: flex; align-items: flex-start; gap: .8rem;
-      background: var(--grey2); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.1rem 1.3rem;
-    }
-    .problema-x { font-size: 1rem; flex-shrink: 0; margin-top: .1rem; }
-    .problema-item p { font-size: .87rem; color: #C0C0C0; line-height: 1.5; }
-
-    /* ── S3 POR QUÉ ── */
-    .porque-section { padding: 80px 6%; border-bottom: 1px solid var(--border); }
-    .porque-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 900; letter-spacing: -1px; margin-bottom: .6rem; }
-    .porque-section .sec-lead { font-size: .95rem; color: var(--muted); margin-bottom: 2.5rem; }
-    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
-    .stat-item { background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; text-align: center; }
-    .stat-num { font-size: 2rem; font-weight: 900; letter-spacing: -2px; margin-bottom: .3rem; }
-    .stat-label { font-size: .78rem; color: var(--muted); line-height: 1.4; }
-    .porque-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .porque-pill {
-      display: flex; align-items: center; gap: .4rem;
-      background: var(--grey2); border: 1px solid var(--border2);
-      border-radius: 100px; padding: .35rem .9rem;
-      font-size: .78rem; color: #C0C0C0;
-    }
-    .porque-pill span { font-size: .85rem; }
-
-    /* ── S4 PLANES ── */
-    .solo-banner { background: var(--grey2); border-bottom: 1px solid var(--border); padding: .9rem 6%; text-align: center; }
-    .solo-banner p { font-size: .88rem; color: #B0B0B0; }
-    .solo-banner strong { color: var(--white); }
-
-    .pricing-section { padding: 60px 6% 80px; }
+    /* ── PRICING GRID ── */
+    .pricing-section { padding: 60px 6% 100px; }
     .pricing-inner { max-width: 1180px; margin: 0 auto; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: start; }
 
-    .plan-card { background: var(--grey2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem 1.6rem; display: flex; flex-direction: column; position: relative; transition: border-color .25s, transform .25s; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    /* ── CARD BASE ── */
+    .plan-card {
+      background: var(--grey2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.6rem 2rem;
+      display: flex; flex-direction: column;
+      gap: 0;
+      position: relative;
+      transition: border-color .25s, transform .25s;
+    }
     .plan-card:hover { border-color: rgba(255,255,255,0.22); transform: translateY(-4px); }
-    .plan-card.popular { border-color: rgba(255,255,255,0.30); background: var(--grey3); }
 
-    .plan-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--white); color: var(--black); font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .25rem .75rem; border-radius: 100px; white-space: nowrap; }
+    /* Popular highlight */
+    .plan-card.popular {
+      border-color: rgba(255,255,255,0.30);
+      background: var(--grey3);
+    }
+
+    /* ── BADGE ── */
+    .plan-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--white); color: var(--black);
+      font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      padding: .25rem .75rem; border-radius: 100px; white-space: nowrap;
+    }
     .plan-badge.nuevo { background: var(--grey4); color: var(--white); border: 1px solid var(--border2); }
 
-    .plan-name { font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: .3rem; }
-    .plan-onboard { display: inline-block; font-size: .7rem; font-weight: 600; color: var(--muted); border: 1px solid var(--border2); border-radius: 20px; padding: .2rem .7rem; margin-bottom: .9rem; }
-    .plan-tagline { font-size: .78rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.3rem; min-height: 2.2em; }
+    /* ── CARD HEADER ── */
+    .plan-name { font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: .35rem; }
+    .plan-tagline { font-size: .78rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.4rem; min-height: 2.2em; }
 
-    .plan-price-wrap { margin-bottom: 1.4rem; }
-    .plan-price-old { font-size: .8rem; color: var(--muted); text-decoration: line-through; margin-bottom: .2rem; }
-    .plan-price { display: flex; align-items: baseline; gap: .3rem; }
+    /* ── PRICE ── */
+    .plan-price-wrap { margin-bottom: 1.5rem; }
+    .plan-price-old { font-size: .82rem; color: var(--muted); text-decoration: line-through; margin-bottom: .2rem; }
+    .plan-price { display: flex; align-items: baseline; gap: .35rem; }
     .plan-price .amount { font-size: 2.2rem; font-weight: 900; letter-spacing: -2px; line-height: 1; }
     .plan-price .currency { font-size: .85rem; font-weight: 600; color: var(--muted); }
-    .plan-iva { font-size: .73rem; color: var(--muted); margin-top: .3rem; }
-    .plan-saving { display: inline-block; margin-top: .5rem; font-size: .7rem; font-weight: 700; color: var(--muted); background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 4px; padding: .2rem .55rem; }
+    .plan-price .period { font-size: .78rem; color: var(--muted); margin-left: .1rem; }
+    .plan-discount-badge {
+      display: inline-block; background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white); font-size: .65rem; font-weight: 700; letter-spacing: .08em;
+      padding: .2rem .55rem; border-radius: 4px; text-transform: uppercase; margin-top: .4rem;
+    }
 
-    .plan-cta { display: block; text-align: center; padding: .75rem 1rem; border-radius: 8px; font-weight: 700; font-size: .85rem; text-decoration: none; letter-spacing: .02em; transition: all .2s; margin-bottom: 1.5rem; }
-    .cta-white { background: var(--white); color: var(--black); }
-    .cta-white:hover { background: #E8E8E8; }
-    .cta-outline { background: transparent; color: var(--white); border: 1px solid var(--border2); }
-    .cta-outline:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.05); }
+    /* ── CTA BUTTON ── */
+    .plan-cta {
+      display: block; text-align: center; padding: .75rem 1rem;
+      border-radius: 8px; font-weight: 700; font-size: .85rem;
+      text-decoration: none; letter-spacing: .02em;
+      transition: all .2s; margin-bottom: 1.6rem;
+    }
+    .plan-cta.cta-white { background: var(--white); color: var(--black); }
+    .plan-cta.cta-white:hover { background: #E8E8E8; }
+    .plan-cta.cta-outline { background: transparent; color: var(--white); border: 1px solid var(--border2); }
+    .plan-cta.cta-outline:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.05); }
 
-    .plan-divider { height: 1px; background: var(--border); margin-bottom: 1.3rem; }
+    /* ── FEATURES DIVIDER ── */
+    .plan-divider { height: 1px; background: var(--border); margin-bottom: 1.4rem; }
+
+    /* ── FEATURE LIST ── */
     .plan-features { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
-    .plan-features li { display: flex; align-items: flex-start; gap: .55rem; font-size: .8rem; color: #C0C0C0; line-height: 1.45; }
-    .plan-features li .check { flex-shrink: 0; width: 16px; height: 16px; margin-top: 1px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .6rem; color: var(--white); }
+    .plan-features li {
+      display: flex; align-items: flex-start; gap: .55rem;
+      font-size: .8rem; color: #C0C0C0; line-height: 1.45;
+    }
+    .plan-features li .check {
+      flex-shrink: 0; width: 16px; height: 16px; margin-top: 1px;
+      background: rgba(255,255,255,0.08); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .6rem; color: var(--white);
+    }
     .plan-features li strong { color: var(--white); font-weight: 600; }
-    .feat-label { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--grey5); margin: .9rem 0 .4rem; }
-    .plan-value-tag { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: .75rem; color: var(--muted); }
-    .plan-value-tag strong { color: var(--white); }
 
-    /* ── S5 VALOR ── */
-    .valor-section { padding: 80px 6%; background: var(--grey1); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .valor-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; letter-spacing: -1px; margin-bottom: .6rem; }
-    .valor-section .sec-lead { font-size: .95rem; color: var(--muted); margin-bottom: 2.5rem; }
-    .valor-list { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 2rem; }
-    .valor-row { display: flex; justify-content: space-between; align-items: center; background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: .9rem 1.3rem; }
-    .valor-row-name { font-size: .87rem; color: #C0C0C0; }
-    .valor-row-price { font-size: .87rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
-    .valor-total { display: flex; justify-content: space-between; align-items: center; background: var(--grey3); border: 1px solid var(--border2); border-radius: var(--radius); padding: 1rem 1.3rem; }
-    .valor-total-label { font-size: .9rem; font-weight: 700; }
-    .valor-total-price { font-size: 1.1rem; font-weight: 900; color: var(--muted); text-decoration: line-through; }
-    .valor-highlight { margin-top: 1.5rem; text-align: center; }
-    .valor-highlight p { font-size: .95rem; color: var(--muted); margin-bottom: .5rem; }
-    .valor-highlight strong { font-size: 2rem; font-weight: 900; letter-spacing: -2px; color: var(--white); }
-
-    /* ── S6 TESTIMONIOS ── */
-    .testi-section { padding: 80px 6%; border-bottom: 1px solid var(--border); }
-    .testi-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; letter-spacing: -1px; margin-bottom: .5rem; }
-    .testi-section .sec-lead { font-size: .95rem; color: var(--muted); margin-bottom: 2.5rem; }
-    .testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; align-items: start; }
-    .testi-card { background: var(--grey2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-    .testi-video-wrap { position: relative; background: var(--grey3); }
-    .testi-video-wrap video { width: 100%; display: block; }
-    .testi-info { padding: 1.2rem 1.4rem; }
-    .testi-stars { color: #FFD700; font-size: .9rem; letter-spacing: .1em; margin-bottom: .4rem; }
-    .testi-name { font-size: .9rem; font-weight: 700; margin-bottom: .2rem; }
-    .testi-biz { font-size: .78rem; color: var(--muted); }
-
-    /* ── S7 OBJECIONES ── */
-    .objecciones-section { padding: 80px 6%; background: var(--grey1); border-bottom: 1px solid var(--border); }
-    .objecciones-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; letter-spacing: -1px; margin-bottom: .6rem; }
-    .objecciones-section .sec-lead { font-size: .95rem; color: var(--muted); margin-bottom: 2.5rem; }
-    .obj-list { display: flex; flex-direction: column; gap: .6rem; }
-    details.obj-item { background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-    details.obj-item[open] { border-color: var(--border2); }
-    details.obj-item summary {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.1rem 1.3rem; cursor: pointer; list-style: none;
-      font-size: .88rem; font-weight: 600; gap: 1rem;
+    /* ── SECTION LABEL INSIDE CARD ── */
+    .feat-label {
+      font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--grey5); margin: 1rem 0 .5rem;
     }
-    details.obj-item summary::-webkit-details-marker { display: none; }
-    .obj-question { color: var(--white); }
-    .obj-chevron { flex-shrink: 0; font-size: .75rem; color: var(--muted); transition: transform .2s; }
-    details.obj-item[open] .obj-chevron { transform: rotate(180deg); }
-    .obj-answer { padding: 0 1.3rem 1.1rem; font-size: .85rem; color: #B0B0B0; line-height: 1.65; border-top: 1px solid var(--border); padding-top: .9rem; margin-top: 0; }
 
-    /* ── S8 GARANTÍAS ── */
-    .garantias-section { padding: 80px 6%; border-bottom: 1px solid var(--border); }
-    .garantias-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; letter-spacing: -1px; margin-bottom: .5rem; }
-    .garantias-section .sec-lead { font-size: .95rem; color: var(--muted); margin-bottom: 2.5rem; }
-    .garantias-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .garantia-card { display: flex; align-items: flex-start; gap: .9rem; background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
-    .garantia-icon { font-size: 1.4rem; flex-shrink: 0; }
-    .garantia-title { font-size: .87rem; font-weight: 700; margin-bottom: .3rem; }
-    .garantia-desc { font-size: .78rem; color: #B0B0B0; line-height: 1.5; }
-
-    /* ── S9 CTA FINAL ── */
-    .cta-final { padding: 100px 6%; text-align: center; border-bottom: 1px solid var(--border); }
-    .cta-final h2 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; letter-spacing: -2px; margin-bottom: .8rem; }
-    .cta-final p { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; }
-    .cta-final-btn {
-      display: inline-block; background: var(--white); color: var(--black);
-      padding: 1rem 2.5rem; border-radius: 8px; font-weight: 800; font-size: 1rem;
-      text-decoration: none; letter-spacing: .01em; transition: background .2s, transform .1s;
+    /* ── CONDITIONS ── */
+    .conditions-section {
+      background: var(--grey1); border-top: 1px solid var(--border);
+      padding: 60px 6%;
     }
-    .cta-final-btn:hover { background: #E0E0E0; transform: translateY(-2px); }
-    .cta-fine { font-size: .72rem; color: var(--grey5); margin-top: 1.5rem; }
+    .conditions-inner { max-width: 900px; margin: 0 auto; }
+    .conditions-inner h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .conditions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+    .cond-item {
+      display: flex; align-items: flex-start; gap: .6rem;
+      font-size: .82rem; color: #B0B0B0; line-height: 1.5;
+    }
+    .cond-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--grey5); flex-shrink: 0; margin-top: 6px; }
+
+    /* ── SOLO APRUEBAS BANNER ── */
+    .solo-aprueba-banner {
+      background: var(--grey2); border-bottom: 1px solid var(--border);
+      padding: 1rem 6%; text-align: center;
+    }
+    .solo-aprueba-banner p {
+      font-size: .88rem; color: #B0B0B0; margin: 0;
+    }
+    .solo-aprueba-banner strong { color: var(--white); }
+
+    /* ── PLAN ONBOARD BADGE ── */
+    .plan-onboard {
+      display: inline-block; font-size: .72rem; font-weight: 600;
+      color: var(--muted); border: 1px solid var(--border2);
+      border-radius: 20px; padding: .25rem .75rem;
+      margin-bottom: 1rem; letter-spacing: .02em;
+    }
+
+    /* ── GUARANTEE STRIP ── */
+    .guarantee-strip { background: var(--grey1); border-top: 1px solid var(--border); padding: 60px 6%; }
+    .guarantee-strip-inner { max-width: 900px; margin: 0 auto; }
+    .guarantee-strip-inner h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: .4rem; }
+    .guarantee-strip-inner p { font-size: .85rem; color: var(--muted); margin-bottom: 2rem; }
+    .guarantee-strip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .gs-card { display: flex; align-items: flex-start; gap: .9rem; background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
+    .gs-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .gs-title { font-size: .85rem; font-weight: 700; margin-bottom: .3rem; }
+    .gs-desc { font-size: .78rem; color: #B0B0B0; line-height: 1.5; }
+
+    /* ── VALUE COMPARISON ── */
+    .value-section { background: var(--grey2); border-top: 1px solid var(--border); padding: 60px 6%; text-align: center; }
+    .value-inner { max-width: 900px; margin: 0 auto; }
+    .value-inner h2 { font-size: 1rem; font-weight: 700; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2rem; }
+    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .value-item { background: var(--grey3); border: 1px solid var(--border2); border-radius: var(--radius); padding: 1.5rem; }
+    .value-item .v-plan { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
+    .value-item .v-market { font-size: .8rem; color: var(--grey5); text-decoration: line-through; margin-bottom: .5rem; }
+    .value-item .v-price { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
+    .value-item .v-label { font-size: .72rem; color: var(--muted); margin-top: .4rem; }
 
     /* ── FOOTER ── */
-    footer { background: var(--grey1); border-top: 1px solid var(--border); padding: 60px 6% 30px; }
+    footer {
+      background: var(--grey1); border-top: 1px solid var(--border);
+      padding: 60px 6% 30px;
+    }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-brand p { font-size: .83rem; color: var(--muted); line-height: 1.7; margin-top: .8rem; max-width: 260px; }
@@ -244,11 +253,17 @@
     .footer-bottom a:hover { color: var(--muted); }
 
     /* ── WA FLOAT ── */
-    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 50; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); text-decoration: none; transition: transform .2s; }
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 50;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4); text-decoration: none;
+      transition: transform .2s;
+    }
     .wa-float:hover { transform: scale(1.1); }
     .wa-float svg { width: 26px; height: 26px; fill: #fff; }
 
-    /* ── MOBILE ── */
+    /* ── MOBILE NAV ── */
     @media (max-width: 768px) {
       .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(0,0,0,0.97); flex-direction: column; gap: 0; padding: 1rem 6%; }
       .nav-links.open { display: flex; }
@@ -256,17 +271,15 @@
       .nav-links a { display: block; padding: .9rem 0; font-size: .85rem; }
       .nav-cta { display: none; }
       .hamburger { display: flex; }
-      .problema-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
-      .testi-grid { grid-template-columns: 1fr; }
-      .garantias-grid { grid-template-columns: 1fr; }
+      .value-grid { grid-template-columns: 1fr; }
+      .guarantee-strip-grid { grid-template-columns: 1fr; }
+      .conditions-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
     @media (min-width: 769px) and (max-width: 1100px) {
       .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-      .stats-grid { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
@@ -289,164 +302,113 @@
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- S1: PORTADA -->
-<div class="hero">
+<!-- HERO -->
+<div class="planes-hero">
   <div class="sec-tag">Planes & Precios</div>
-  <h1>Lo que tu negocio necesita<br/><span>para crecer en redes.</span><br/>Sin rodeos.</h1>
-  <p>Planes de marketing digital para negocios chilenos que quieren más clientes, no más tareas.</p>
-  <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20agendar%20una%20llamada" target="_blank" rel="noopener" class="hero-cta">Agendar llamada gratis →</a>
-  <p class="hero-sub">Onboarding en 48-72 hrs · Cupos limitados este mes</p>
+  <h1>Elige el plan que<br/><span>hace crecer tu negocio</span></h1>
+  <p>Contenido profesional, Meta Ads y automatización desde <strong>$150.000/mes</strong>. Todos los precios son + IVA.</p>
 </div>
 
-<!-- S2: EL PROBLEMA -->
-<section class="problema-section">
-  <div class="sec-inner-sm">
-    <div class="sec-tag">El problema</div>
-    <h2>¿Por qué tu negocio<br/>no está vendiendo en redes?</h2>
-    <div class="problema-grid">
-      <div class="problema-item">
-        <div class="problema-x">✗</div>
-        <p>Publicas de vez en cuando y nadie reacciona</p>
-      </div>
-      <div class="problema-item">
-        <div class="problema-x">✗</div>
-        <p>Hiciste publicidad y gastaste plata sin ver resultados</p>
-      </div>
-      <div class="problema-item">
-        <div class="problema-x">✗</div>
-        <p>No tienes tiempo para crear contenido todos los días</p>
-      </div>
-      <div class="problema-item">
-        <div class="problema-x">✗</div>
-        <p>Contrataste alguien que "hacía de todo" y no pasó nada</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- S3: POR QUÉ MANYOBRA -->
-<section class="porque-section">
-  <div class="sec-inner">
-    <div class="sec-tag">Por qué Manyobra</div>
-    <h2>Ads + contenido + bot<br/>en un solo lugar</h2>
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-num">+200</div>
-        <div class="stat-label">Campañas gestionadas en Chile</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">3.5x</div>
-        <div class="stat-label">ROAS promedio en Meta Ads</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">+50</div>
-        <div class="stat-label">Clientes activos</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">4 años</div>
-        <div class="stat-label">Especializados en Meta Ads</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">1 lugar</div>
-        <div class="stat-label">Ads + contenido + bot integrados</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">Mes 4</div>
-        <div class="stat-label">Sin permanencia forzada desde el mes 4</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- S4: LOS PLANES -->
-<div class="solo-banner">
+<!-- SOLO APRUEBAS -->
+<div class="solo-aprueba-banner">
   <p>¿Qué tienes que hacer tú? <strong>Solo aprobar el contenido.</strong> Nosotros nos encargamos de todo lo demás.</p>
 </div>
+
+<!-- PRICING -->
 <section class="pricing-section">
   <div class="pricing-inner">
     <div class="pricing-grid">
 
-      <!-- CORRIENTE -->
+      <!-- ── CORRIENTE ── -->
       <div class="plan-card">
         <div class="plan-name">⚡ Corriente</div>
         <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Aparece todos los días en redes sin dedicarle ni una hora.</p>
         <div class="plan-price-wrap">
+          <div class="plan-price-old">Antes $100.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">150.000</span>
           </div>
-          <div class="plan-iva">/mes + IVA</div>
-          <div class="plan-saving">Valor de mercado $350.000 · Ahorras 57%</div>
+          <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Corriente" target="_blank" rel="noopener" class="plan-cta cta-outline">Quiero este plan →</a>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Corriente" target="_blank" rel="noopener" class="plan-cta cta-outline">
+          Quiero este plan →
+        </a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>8 piezas</strong> al mes: 2 videos + 3 fotos + 3 diseños</span></li>
+          <li><span class="check">✓</span><span><strong>16 piezas</strong> de contenido al mes</span></li>
+          <li><span class="check">✓</span><span>4 videos + 3 fotos + 3 imágenes de diseño</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span>5 publicaciones en Feed + 3 historias</span></li>
+          <li><span class="check">✓</span><span>8 publicaciones en Feed + 6 historias</span></li>
           <div class="feat-label">Publicidad & Gestión</div>
-          <li><span class="check">✓</span><span><strong>Meta Ads</strong> gestionado + Píxel instalado</span></li>
-          <li><span class="check">✓</span><span>Community Manager + reporte mensual</span></li>
+          <li><span class="check">✓</span><span><strong>Meta Ads</strong> gestionados + Píxel instalado para rastrear conversiones</span></li>
+          <li><span class="check">✓</span><span>Community Manager y reporte mensual</span></li>
         </ul>
       </div>
 
-      <!-- VOLTAJE -->
+      <!-- ── VOLTAJE (POPULAR) ── -->
       <div class="plan-card popular">
-        <div class="plan-badge">⭐ Más popular</div>
+        <div class="plan-badge">⭐ Popular</div>
         <div class="plan-name">⚡ Voltaje</div>
         <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Todo lo que necesitas para pasar de seguidores a clientes, en un solo plan.</p>
         <div class="plan-price-wrap">
+          <div class="plan-price-old">Antes $200.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">300.000</span>
           </div>
-          <div class="plan-iva">/mes + IVA</div>
-          <div class="plan-saving">Valor de mercado $650.000 · Ahorras 53%</div>
+          <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Voltaje" target="_blank" rel="noopener" class="plan-cta cta-white">Quiero este plan →</a>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Voltaje" target="_blank" rel="noopener" class="plan-cta cta-white">
+          Quiero este plan →
+        </a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>12 piezas</strong> al mes: 4 videos + 4 fotos + 4 diseños</span></li>
-          <li><span class="check">✓</span><span><strong>1 sesión</strong> de producción profesional</span></li>
+          <li><span class="check">✓</span><span><strong>23 piezas</strong> de contenido al mes</span></li>
+          <li><span class="check">✓</span><span>2 videos + 4 fotos + 6 imágenes de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>1 sesión</strong> de producción profesional (grabación + dirección de arte)</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span>8 publicaciones en Feed + 4 historias</span></li>
+          <li><span class="check">✓</span><span>16 publicaciones en Feed + 12 historias</span></li>
           <div class="feat-label">Publicidad & Automatización</div>
-          <li><span class="check">✓</span><span><strong>Meta Ads completo</strong> + Remarketing</span></li>
+          <li><span class="check">✓</span><span><strong>Meta Ads completo</strong> + Optimización + Remarketing</span></li>
           <li><span class="check">✓</span><span><strong>Landing Page básica</strong> + Hosting + Dominio (1 año)</span></li>
-          <li><span class="check">✓</span><span>Copywriting + guiones + respuestas rápidas</span></li>
+          <li><span class="check">✓</span><span>Copywriting de ventas + guiones para videos + respuestas rápidas</span></li>
         </ul>
       </div>
 
-      <!-- TORMENTA -->
+      <!-- ── TORMENTA ── -->
       <div class="plan-card">
         <div class="plan-badge nuevo">Premium</div>
         <div class="plan-name">⚡ Tormenta</div>
         <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Tu sistema de ventas automatizado que trabaja 24/7 mientras tú duermes.</p>
         <div class="plan-price-wrap">
+          <div class="plan-price-old">Antes $300.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">500.000</span>
           </div>
-          <div class="plan-iva">/mes + IVA</div>
-          <div class="plan-saving">Valor de mercado $1.100.000 · Ahorras 54%</div>
+          <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Tormenta" target="_blank" rel="noopener" class="plan-cta cta-outline">Quiero este plan →</a>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Tormenta" target="_blank" rel="noopener" class="plan-cta cta-outline">
+          Quiero este plan →
+        </a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>24 piezas</strong> al mes: 8 videos + 8 fotos + 8 diseños</span></li>
+          <li><span class="check">✓</span><span><strong>42 piezas</strong> de contenido al mes</span></li>
+          <li><span class="check">✓</span><span>10 videos + 8 fotos + 10 imágenes de diseño</span></li>
           <li><span class="check">✓</span><span><strong>3 sesiones</strong> de producción profesional al mes</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span>16 publicaciones en Feed + 8 historias</span></li>
+          <li><span class="check">✓</span><span>24 publicaciones en Feed + 18 historias</span></li>
           <div class="feat-label">Publicidad & Automatización</div>
           <li><span class="check">✓</span><span><strong>Meta Ads avanzado</strong> + audiencias personalizadas</span></li>
-          <li><span class="check">✓</span><span><strong>Landing Page Premium</strong> + A/B Testing</span></li>
-          <li><span class="check">✓</span><span><strong>Bot WhatsApp</strong> automático de ventas 24/7</span></li>
+          <li><span class="check">✓</span><span><strong>Landing Page Premium</strong> + optimización + A/B Testing</span></li>
+          <li><span class="check">✓</span><span><strong>Bot de WhatsApp</strong> automático de ventas 24/7</span></li>
         </ul>
       </div>
 
@@ -454,178 +416,83 @@
   </div>
 </section>
 
-<!-- S5: COMPARACIÓN DE VALOR -->
-<section class="valor-section">
-  <div class="sec-inner-sm">
-    <div class="sec-tag">Comparación de valor</div>
-    <h2>¿Cuánto costaría<br/>contratar esto por separado?</h2>
-    <div class="valor-list">
-      <div class="valor-row">
-        <span class="valor-row-name">Community Manager freelance</span>
-        <span class="valor-row-price">$200.000/mes</span>
+<!-- VALUE COMPARISON -->
+<section class="value-section">
+  <div class="value-inner">
+    <h2>¿Cuánto costaría contratar esto por separado?</h2>
+    <div class="value-grid">
+      <div class="value-item">
+        <div class="v-plan">⚡ Corriente</div>
+        <div class="v-market">Valor de mercado: $350.000+/mes</div>
+        <div class="v-price">$150.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 57%</div>
       </div>
-      <div class="valor-row">
-        <span class="valor-row-name">Producción de videos (4 por mes)</span>
-        <span class="valor-row-price">$300.000/mes</span>
+      <div class="value-item">
+        <div class="v-plan">⚡ Voltaje</div>
+        <div class="v-market">Valor de mercado: $650.000+/mes</div>
+        <div class="v-price">$300.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 53%</div>
       </div>
-      <div class="valor-row">
-        <span class="valor-row-name">Diseñador gráfico</span>
-        <span class="valor-row-price">$150.000/mes</span>
-      </div>
-      <div class="valor-row">
-        <span class="valor-row-name">Gestión Meta Ads</span>
-        <span class="valor-row-price">$200.000/mes</span>
-      </div>
-      <div class="valor-row">
-        <span class="valor-row-name">Landing Page</span>
-        <span class="valor-row-price">$300.000 único</span>
-      </div>
-      <div class="valor-row">
-        <span class="valor-row-name">Bot WhatsApp</span>
-        <span class="valor-row-price">$150.000/mes</span>
-      </div>
-    </div>
-    <div class="valor-total">
-      <span class="valor-total-label">Total de mercado</span>
-      <span class="valor-total-price">+$1.300.000/mes</span>
-    </div>
-    <div class="valor-highlight">
-      <p>Con Manyobra desde</p>
-      <strong>$150.000/mes</strong>
-    </div>
-  </div>
-</section>
-
-<!-- S6: TESTIMONIOS -->
-<section class="testi-section">
-  <div class="sec-inner">
-    <div class="sec-tag">Testimonios</div>
-    <h2>Lo que dicen nuestros clientes</h2>
-    <p class="sec-lead">Resultados reales de negocios reales.</p>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-video-wrap" style="aspect-ratio: 1/1">
-          <video src="testimonios/videos/Testimonio%20carlos%20cool%20edit.mp4" controls preload="none" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
-        </div>
-        <div class="testi-info">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-name">Carlos</div>
-          <div class="testi-biz">Bubble House & Mandala Sushi · Villa Alemana, V Región</div>
-        </div>
-      </div>
-      <div class="testi-card" style="max-width:380px; margin:0 auto; width:100%;">
-        <div class="testi-video-wrap" style="aspect-ratio: 9/16">
-          <video src="testimonios/videos/testimonio%20pedro%20campossss.mp4" controls preload="none" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
-        </div>
-        <div class="testi-info">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-name">Pedro Campos</div>
-          <div class="testi-biz">Obras Menores · Temuco, Región de la Araucanía</div>
-        </div>
+      <div class="value-item">
+        <div class="v-plan">⚡ Tormenta</div>
+        <div class="v-market">Valor de mercado: $1.100.000+/mes</div>
+        <div class="v-price">$500.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 54%</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- S7: OBJECIONES -->
-<section class="objecciones-section">
-  <div class="sec-inner-sm">
-    <div class="sec-tag">Preguntas frecuentes</div>
-    <h2>Te respondemos antes<br/>de que preguntes</h2>
-    <div class="obj-list">
-      <details class="obj-item">
-        <summary>
-          <span class="obj-question">"Es muy caro"</span>
-          <span class="obj-chevron">▼</span>
-        </summary>
-        <p class="obj-answer">Contratar por separado cuesta 8x más. Esto es el precio de un community manager solo, pero incluye todo: contenido, ads, landing, reportes y estrategia.</p>
-      </details>
-      <details class="obj-item">
-        <summary>
-          <span class="obj-question">"No sé si funciona para mi rubro"</span>
-          <span class="obj-chevron">▼</span>
-        </summary>
-        <p class="obj-answer">Hemos trabajado con restaurantes, construcción, salud, retail y servicios. Si hay clientes en Meta, hay resultados.</p>
-      </details>
-      <details class="obj-item">
-        <summary>
-          <span class="obj-question">"Ya probé publicidad y no funcionó"</span>
-          <span class="obj-chevron">▼</span>
-        </summary>
-        <p class="obj-answer">La publicidad sin contenido bueno no funciona. Hacemos las dos cosas juntas: contenido que conecta + ads que convierten.</p>
-      </details>
-      <details class="obj-item">
-        <summary>
-          <span class="obj-question">"No tengo tiempo para esto"</span>
-          <span class="obj-chevron">▼</span>
-        </summary>
-        <p class="obj-answer">Solo necesitas aprobar el contenido. Todo lo demás — grabación, edición, publicación, ads, reportes — lo hacemos nosotros.</p>
-      </details>
-      <details class="obj-item">
-        <summary>
-          <span class="obj-question">"¿Y si no me gusta cómo queda?"</span>
-          <span class="obj-chevron">▼</span>
-        </summary>
-        <p class="obj-answer">Tienes 15 días de revisión sin costo. Si algo no refleja lo acordado, lo rehacemos hasta que quedes 100% conforme.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- S8: GARANTÍAS -->
-<section class="garantias-section">
-  <div class="sec-inner">
-    <div class="sec-tag">Garantías</div>
+<!-- GUARANTEES -->
+<section class="guarantee-strip">
+  <div class="guarantee-strip-inner">
     <h2>Confiamos en nuestro trabajo</h2>
-    <p class="sec-lead">El riesgo lo asumimos nosotros, no tú.</p>
-    <div class="garantias-grid">
-      <div class="garantia-card">
-        <div class="garantia-icon">🛡️</div>
+    <p>El riesgo lo asumimos nosotros, no tú.</p>
+    <div class="guarantee-strip-grid">
+      <div class="gs-card">
+        <div class="gs-icon">🛡️</div>
         <div>
-          <div class="garantia-title">Satisfacción garantizada 15 días</div>
-          <div class="garantia-desc">Si algo no refleja lo acordado, lo revisamos sin costo adicional hasta quedar 100% conforme.</div>
+          <div class="gs-title">Satisfacción garantizada en 15 días</div>
+          <div class="gs-desc">Si algo no refleja lo acordado, lo revisamos sin costo adicional hasta que quedes 100% conforme.</div>
         </div>
       </div>
-      <div class="garantia-card">
-        <div class="garantia-icon">📂</div>
+      <div class="gs-card">
+        <div class="gs-icon">📂</div>
         <div>
-          <div class="garantia-title">El contenido es tuyo para siempre</div>
-          <div class="garantia-desc">Todo el material producido te pertenece. Si decides salir, te llevas todos los archivos.</div>
+          <div class="gs-title">El contenido es tuyo para siempre</div>
+          <div class="gs-desc">Todo el material producido te pertenece. Si decides salir, te llevas todos los archivos.</div>
         </div>
       </div>
-      <div class="garantia-card">
-        <div class="garantia-icon">🔓</div>
+      <div class="gs-card">
+        <div class="gs-icon">🔓</div>
         <div>
-          <div class="garantia-title">Sin permanencia forzada desde el mes 4</div>
-          <div class="garantia-desc">A partir del cuarto mes puedes salir con solo 15 días de aviso. Sin multas, sin letra chica.</div>
+          <div class="gs-title">Sin permanencia forzada desde el mes 4</div>
+          <div class="gs-desc">A partir del cuarto mes puedes salir con solo 15 días de aviso. Sin multas, sin letra chica.</div>
         </div>
       </div>
-      <div class="garantia-card">
-        <div class="garantia-icon">📅</div>
+      <div class="gs-card">
+        <div class="gs-icon">📅</div>
         <div>
-          <div class="garantia-title">Entrega en plazo o descuento automático</div>
-          <div class="garantia-desc">Si no cumplimos el plazo acordado, se aplica un descuento automático en tu próxima factura.</div>
-        </div>
-      </div>
-      <div class="garantia-card">
-        <div class="garantia-icon">💳</div>
-        <div>
-          <div class="garantia-title">Tu presupuesto publicitario, siempre en tu cuenta</div>
-          <div class="garantia-desc">El dinero de Meta Ads lo manejas tú directamente. Nosotros gestionamos la estrategia, nunca tocamos tu plata.</div>
+          <div class="gs-title">Entrega en plazo o descuento automático</div>
+          <div class="gs-desc">Si no cumplimos el plazo de entrega acordado, se aplica un descuento automático en tu próxima factura.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- S9: CTA FINAL -->
-<section class="cta-final">
-  <div class="sec-inner-sm">
-    <div class="sec-tag">Empieza hoy</div>
-    <h2>¿Listo para empezar?</h2>
-    <p>Onboarding en 48-72 hrs. Cupos limitados este mes.</p>
-    <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20agendar%20una%20llamada%20para%20conocer%20los%20planes" target="_blank" rel="noopener" class="cta-final-btn">Agendar llamada gratis →</a>
-    <p class="cta-fine">Precios válidos por 30 días desde su emisión. Todos los valores + IVA. Vigencia 2026.</p>
+<!-- CONDITIONS -->
+<section class="conditions-section">
+  <div class="conditions-inner">
+    <h2>Condiciones comerciales</h2>
+    <div class="conditions-grid">
+      <div class="cond-item"><div class="cond-dot"></div><span>Presupuesto publicitario en Meta Ads <strong>no incluido</strong>.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>El contenido es <strong>propiedad del cliente</strong> tras el pago.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>Permanencia mínima recomendada: <strong>3 meses</strong>.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span><strong>Sin amarres</strong> desde el mes 4 (salida con 15 días de aviso).</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>Pago mensual <strong>anticipado</strong> al inicio de cada ciclo.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>Precios válidos por <strong>30 días</strong> desde su emisión. Vigencia 2026.</span></div>
+    </div>
   </div>
 </section>
 
@@ -672,6 +539,7 @@
 </a>
 
 <script>
+  // Hamburger menu
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('navLinks').classList.toggle('open');
   });
