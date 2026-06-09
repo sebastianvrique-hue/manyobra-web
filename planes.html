@@ -6,7 +6,7 @@
 
   <!-- ── PRIMARY SEO ── -->
   <title>Planes y Precios | Manyobra – Marketing Digital & Producción Audiovisual</title>
-  <meta name="description" content="Elige el plan de marketing digital que mejor se adapta a tu negocio. Desde $100.000/mes. Meta Ads + Contenido + Bot WhatsApp. Planes Corriente, Voltaje y Tormenta." />
+  <meta name="description" content="Elige el plan de marketing digital que mejor se adapta a tu negocio. Desde $150.000/mes. Meta Ads + Contenido + Bot WhatsApp. Planes Corriente, Voltaje y Tormenta." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://manyobra.cl/planes.html" />
 
@@ -196,6 +196,46 @@
     }
     .cond-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--grey5); flex-shrink: 0; margin-top: 6px; }
 
+    /* ── SOLO APRUEBAS BANNER ── */
+    .solo-aprueba-banner {
+      background: var(--grey2); border-bottom: 1px solid var(--border);
+      padding: 1rem 6%; text-align: center;
+    }
+    .solo-aprueba-banner p {
+      font-size: .88rem; color: #B0B0B0; margin: 0;
+    }
+    .solo-aprueba-banner strong { color: var(--white); }
+
+    /* ── PLAN ONBOARD BADGE ── */
+    .plan-onboard {
+      display: inline-block; font-size: .72rem; font-weight: 600;
+      color: var(--muted); border: 1px solid var(--border2);
+      border-radius: 20px; padding: .25rem .75rem;
+      margin-bottom: 1rem; letter-spacing: .02em;
+    }
+
+    /* ── GUARANTEE STRIP ── */
+    .guarantee-strip { background: var(--grey1); border-top: 1px solid var(--border); padding: 60px 6%; }
+    .guarantee-strip-inner { max-width: 900px; margin: 0 auto; }
+    .guarantee-strip-inner h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: .4rem; }
+    .guarantee-strip-inner p { font-size: .85rem; color: var(--muted); margin-bottom: 2rem; }
+    .guarantee-strip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .gs-card { display: flex; align-items: flex-start; gap: .9rem; background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
+    .gs-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .gs-title { font-size: .85rem; font-weight: 700; margin-bottom: .3rem; }
+    .gs-desc { font-size: .78rem; color: #B0B0B0; line-height: 1.5; }
+
+    /* ── VALUE COMPARISON ── */
+    .value-section { background: var(--grey2); border-top: 1px solid var(--border); padding: 60px 6%; text-align: center; }
+    .value-inner { max-width: 900px; margin: 0 auto; }
+    .value-inner h2 { font-size: 1rem; font-weight: 700; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2rem; }
+    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .value-item { background: var(--grey3); border: 1px solid var(--border2); border-radius: var(--radius); padding: 1.5rem; }
+    .value-item .v-plan { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
+    .value-item .v-market { font-size: .8rem; color: var(--grey5); text-decoration: line-through; margin-bottom: .5rem; }
+    .value-item .v-price { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
+    .value-item .v-label { font-size: .72rem; color: var(--muted); margin-top: .4rem; }
+
     /* ── FOOTER ── */
     footer {
       background: var(--grey1); border-top: 1px solid var(--border);
@@ -232,6 +272,8 @@
       .nav-cta { display: none; }
       .hamburger { display: flex; }
       .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .value-grid { grid-template-columns: 1fr; }
+      .guarantee-strip-grid { grid-template-columns: 1fr; }
       .conditions-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; text-align: center; }
@@ -264,7 +306,12 @@
 <div class="planes-hero">
   <div class="sec-tag">Planes & Precios</div>
   <h1>Elige el plan que<br/><span>hace crecer tu negocio</span></h1>
-  <p>Contenido profesional, Meta Ads y automatización desde <strong>$100.000/mes</strong>. Todos los precios son + IVA.</p>
+  <p>Contenido profesional, Meta Ads y automatización desde <strong>$150.000/mes</strong>. Todos los precios son + IVA.</p>
+</div>
+
+<!-- SOLO APRUEBAS -->
+<div class="solo-aprueba-banner">
+  <p>¿Qué tienes que hacer tú? <strong>Solo aprobar el contenido.</strong> Nosotros nos encargamos de todo lo demás.</p>
 </div>
 
 <!-- PRICING -->
@@ -275,11 +322,13 @@
       <!-- ── CORRIENTE ── -->
       <div class="plan-card">
         <div class="plan-name">⚡ Corriente</div>
-        <p class="plan-tagline">Presencia constante sin que pienses en contenido.</p>
+        <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
+        <p class="plan-tagline">Aparece todos los días en redes sin dedicarle ni una hora.</p>
         <div class="plan-price-wrap">
+          <div class="plan-price-old">Antes $100.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
-            <span class="amount">100.000</span>
+            <span class="amount">150.000</span>
           </div>
           <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
         </div>
@@ -289,12 +338,12 @@
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>15 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span>3 videos + 3 fotos + 3 imágenes de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>16 piezas</strong> de contenido al mes</span></li>
+          <li><span class="check">✓</span><span>4 videos + 3 fotos + 3 imágenes de diseño</span></li>
           <div class="feat-label">Publicaciones</div>
           <li><span class="check">✓</span><span>8 publicaciones en Feed + 6 historias</span></li>
           <div class="feat-label">Publicidad & Gestión</div>
-          <li><span class="check">✓</span><span>Gestión básica de <strong>Meta Ads</strong> + Píxel</span></li>
+          <li><span class="check">✓</span><span><strong>Meta Ads</strong> gestionados + Píxel instalado para rastrear conversiones</span></li>
           <li><span class="check">✓</span><span>Community Manager y reporte mensual</span></li>
         </ul>
       </div>
@@ -303,11 +352,13 @@
       <div class="plan-card popular">
         <div class="plan-badge">⭐ Popular</div>
         <div class="plan-name">⚡ Voltaje</div>
-        <p class="plan-tagline">Para crecer en serio y convertir seguidores en clientes.</p>
+        <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
+        <p class="plan-tagline">Todo lo que necesitas para pasar de seguidores a clientes, en un solo plan.</p>
         <div class="plan-price-wrap">
+          <div class="plan-price-old">Antes $200.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
-            <span class="amount">200.000</span>
+            <span class="amount">300.000</span>
           </div>
           <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
         </div>
@@ -317,15 +368,15 @@
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>28 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span>6 videos + 5 fotos + 6 imágenes de diseño</span></li>
-          <li><span class="check">✓</span><span><strong>1 sesión</strong> de producción profesional (máx. 2 horas)</span></li>
+          <li><span class="check">✓</span><span><strong>23 piezas</strong> de contenido al mes</span></li>
+          <li><span class="check">✓</span><span>2 videos + 4 fotos + 6 imágenes de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>1 sesión</strong> de producción profesional (grabación + dirección de arte)</span></li>
           <div class="feat-label">Publicaciones</div>
           <li><span class="check">✓</span><span>16 publicaciones en Feed + 12 historias</span></li>
           <div class="feat-label">Publicidad & Automatización</div>
           <li><span class="check">✓</span><span><strong>Meta Ads completo</strong> + Optimización + Remarketing</span></li>
           <li><span class="check">✓</span><span><strong>Landing Page básica</strong> + Hosting + Dominio (1 año)</span></li>
-          <li><span class="check">✓</span><span>Copywriting de ventas y respuestas rápidas</span></li>
+          <li><span class="check">✓</span><span>Copywriting de ventas + guiones para videos + respuestas rápidas</span></li>
         </ul>
       </div>
 
@@ -333,11 +384,13 @@
       <div class="plan-card">
         <div class="plan-badge nuevo">Premium</div>
         <div class="plan-name">⚡ Tormenta</div>
-        <p class="plan-tagline">Ecosistema digital completo para escalar ventas online.</p>
+        <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
+        <p class="plan-tagline">Tu sistema de ventas automatizado que trabaja 24/7 mientras tú duermes.</p>
         <div class="plan-price-wrap">
+          <div class="plan-price-old">Antes $300.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
-            <span class="amount">300.000</span>
+            <span class="amount">500.000</span>
           </div>
           <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
         </div>
@@ -359,6 +412,71 @@
         </ul>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- VALUE COMPARISON -->
+<section class="value-section">
+  <div class="value-inner">
+    <h2>¿Cuánto costaría contratar esto por separado?</h2>
+    <div class="value-grid">
+      <div class="value-item">
+        <div class="v-plan">⚡ Corriente</div>
+        <div class="v-market">Valor de mercado: $350.000+/mes</div>
+        <div class="v-price">$150.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 57%</div>
+      </div>
+      <div class="value-item">
+        <div class="v-plan">⚡ Voltaje</div>
+        <div class="v-market">Valor de mercado: $650.000+/mes</div>
+        <div class="v-price">$300.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 53%</div>
+      </div>
+      <div class="value-item">
+        <div class="v-plan">⚡ Tormenta</div>
+        <div class="v-market">Valor de mercado: $1.100.000+/mes</div>
+        <div class="v-price">$500.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 54%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEES -->
+<section class="guarantee-strip">
+  <div class="guarantee-strip-inner">
+    <h2>Confiamos en nuestro trabajo</h2>
+    <p>El riesgo lo asumimos nosotros, no tú.</p>
+    <div class="guarantee-strip-grid">
+      <div class="gs-card">
+        <div class="gs-icon">🛡️</div>
+        <div>
+          <div class="gs-title">Satisfacción garantizada en 15 días</div>
+          <div class="gs-desc">Si algo no refleja lo acordado, lo revisamos sin costo adicional hasta que quedes 100% conforme.</div>
+        </div>
+      </div>
+      <div class="gs-card">
+        <div class="gs-icon">📂</div>
+        <div>
+          <div class="gs-title">El contenido es tuyo para siempre</div>
+          <div class="gs-desc">Todo el material producido te pertenece. Si decides salir, te llevas todos los archivos.</div>
+        </div>
+      </div>
+      <div class="gs-card">
+        <div class="gs-icon">🔓</div>
+        <div>
+          <div class="gs-title">Sin permanencia forzada desde el mes 4</div>
+          <div class="gs-desc">A partir del cuarto mes puedes salir con solo 15 días de aviso. Sin multas, sin letra chica.</div>
+        </div>
+      </div>
+      <div class="gs-card">
+        <div class="gs-icon">📅</div>
+        <div>
+          <div class="gs-title">Entrega en plazo o descuento automático</div>
+          <div class="gs-desc">Si no cumplimos el plazo de entrega acordado, se aplica un descuento automático en tu próxima factura.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

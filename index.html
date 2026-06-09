@@ -660,25 +660,34 @@
     <!-- VIDEOS -->
     <div class="testi-panel active" id="panel-videos">
       <div class="video-grid" id="video-grid">
-        <!--
-          PARA AGREGAR UN VIDEO, copia este bloque y pega debajo:
-
-          <div class="video-card">
-            <div class="video-wrap">
-              <video src="testimonios/videos/testimonio-cliente.mp4" preload="none"></video>
-              <div class="video-play" onclick="playVideo(this)">
-                <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-              </div>
-            </div>
-            <div class="video-info">
-              <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <div class="client-name">Nombre del Cliente</div>
-              <div class="client-biz">Rubro · Ciudad</div>
+        <div class="video-card">
+          <div class="video-wrap" style="aspect-ratio: 1/1">
+            <video src="testimonios/videos/Testimonio%20carlos%20cool%20edit.mp4" preload="none"></video>
+            <div class="video-play" onclick="playVideo(this)">
+              <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
             </div>
           </div>
-        -->
+          <div class="video-info">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div class="client-name">Carlos</div>
+            <div class="client-biz">Bubble House & Mandala Sushi · Villa Alemana, V Región</div>
+          </div>
+        </div>
+        <div class="video-card" style="max-width: 340px; margin: 0 auto;">
+          <div class="video-wrap" style="aspect-ratio: 9/16">
+            <video src="testimonios/videos/testimonio%20pedro%20campossss.mp4" preload="none"></video>
+            <div class="video-play" onclick="playVideo(this)">
+              <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+          </div>
+          <div class="video-info">
+            <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div class="client-name">Pedro Campos</div>
+            <div class="client-biz">Obras Menores · Temuco, Región de la Araucanía</div>
+          </div>
+        </div>
       </div>
-      <div class="testi-empty" id="empty-videos">
+      <div class="testi-empty" id="empty-videos" style="display:none">
         <p><strong>Aún no hay videos.</strong><br/>Agrega archivos .mp4 en la carpeta <code>testimonios/videos/</code><br/>y sigue las instrucciones del archivo INSTRUCCIONES.txt</p>
       </div>
     </div>
