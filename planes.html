@@ -77,6 +77,13 @@
     .planes-hero h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1rem; }
     .planes-hero h1 span { color: var(--white); }
     .planes-hero p { font-size: clamp(.95rem, 1.6vw, 1.1rem); color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+    .download-pdf-btn {
+      display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.6rem;
+      background: transparent; color: var(--white); border: 1px solid var(--border2);
+      border-radius: 8px; padding: .65rem 1.2rem; font-family: inherit; font-size: .82rem;
+      font-weight: 600; cursor: pointer; transition: all .2s;
+    }
+    .download-pdf-btn:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.05); }
 
     /* ── PILARES (3 pilares = 1 sistema) ── */
     .pilares-section { padding: 60px 6% 40px; border-bottom: 1px solid var(--border); }
@@ -145,6 +152,32 @@
     }
     .bt-btn.active .bt-save { background: rgba(0,0,0,0.1); color: #16813F; }
     .price-note { font-size: .72rem; color: var(--muted); margin-top: .4rem; display: none; }
+
+    /* ── TESTIMONIOS (franja compacta) ── */
+    .testi-strip { max-width: 1180px; margin: 0 auto 2.5rem; text-align: center; }
+    .testi-strip .sec-tag { margin-bottom: .8rem; }
+    .testi-strip h3 { font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 2rem; }
+    .testi-strip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .testi-video-card {
+      background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; text-align: left; transition: border-color .2s, transform .2s;
+    }
+    .testi-video-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+    .testi-video-card .video-wrap { position: relative; aspect-ratio: 16/9; background: var(--grey3); }
+    .testi-video-card .video-wrap video { width: 100%; height: 100%; object-fit: cover; }
+    .testi-video-card .video-play {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.4); cursor: pointer; transition: background .2s;
+    }
+    .testi-video-card .video-play:hover { background: rgba(0,0,0,0.2); }
+    .testi-video-card .play-btn { width: 48px; height: 48px; border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; }
+    .testi-video-card .play-btn svg { width: 16px; height: 16px; fill: var(--black); margin-left: 3px; }
+    .testi-video-card .video-info { padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: .8rem; flex-wrap: wrap; }
+    .testi-video-card .client-line { font-size: .82rem; }
+    .testi-video-card .client-name { font-weight: 700; }
+    .testi-video-card .client-biz { color: var(--muted); }
+    .testi-video-card .stars { display: flex; gap: 2px; flex-shrink: 0; }
+    .testi-video-card .stars span { color: var(--white); font-size: .82rem; }
 
     /* ── PLAN BÁSICO BANNER (Arranque) ── */
     .plan-basico-banner {
@@ -350,6 +383,7 @@
       .hamburger { display: flex; }
       .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
       .value-grid { grid-template-columns: 1fr; }
+      .testi-strip-grid { grid-template-columns: 1fr; }
       .pilares-grid { grid-template-columns: 1fr; }
       .pilares-op { transform: rotate(90deg); padding: .2rem 0; }
       .plan-basico-banner { flex-direction: column; align-items: flex-start; }
@@ -362,6 +396,22 @@
     @media (min-width: 769px) and (max-width: 1100px) {
       .pricing-grid { grid-template-columns: repeat(2, 1fr); }
       .value-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── PRINT (Descargar PDF) ── */
+    @media print {
+      nav, .hamburger, .wa-float, .download-pdf-btn, .billing-toggle-wrap,
+      .testi-strip-section, .plan-cta, .solo-aprueba-banner { display: none !important; }
+      * { background: #fff !important; color: #000 !important; border-color: #ccc !important; box-shadow: none !important; text-shadow: none !important; }
+      body { background: #fff !important; }
+      a[href]::after { content: ""; }
+      .plan-card, .pilar-card, .gs-card, .value-item { border: 1px solid #ccc !important; break-inside: avoid; }
+      .plan-card.popular { border: 2px solid #000 !important; }
+      .plan-badge, .plan-badge.nuevo, .pb-tag, .plan-onboard, .plan-discount-badge, .pt-save { border: 1px solid #999 !important; }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr) !important; gap: .8rem !important; }
+      .value-grid { grid-template-columns: repeat(4, 1fr) !important; }
+      section { padding: 24px 4% !important; }
+      .planes-hero { padding: 24px 4% !important; }
     }
   </style>
 </head>
@@ -389,6 +439,10 @@
   <div class="sec-tag">Planes & Precios</div>
   <h1>Elige el plan que<br/><span>hace crecer tu negocio</span></h1>
   <p>Contenido profesional, Meta Ads y automatización desde <strong>$100.000/mes</strong>. Todos los precios son + IVA.</p>
+  <button type="button" class="download-pdf-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 17v2a2 2 0 002 2h10a2 2 0 002-2v-2"/></svg>
+    Descargar planes en PDF
+  </button>
 </div>
 
 <!-- PILARES -->
@@ -463,6 +517,40 @@
   <p>¿Qué tienes que hacer tú? <strong>Solo aprobar el contenido.</strong> Nosotros nos encargamos de todo lo demás.</p>
 </div>
 
+<!-- TESTIMONIOS -->
+<section class="testi-strip-section" style="padding: 50px 6% 0;">
+  <div class="testi-strip">
+    <div class="sec-tag">Testimonios</div>
+    <h3>Lo que dicen nuestros clientes</h3>
+    <div class="testi-strip-grid">
+      <div class="testi-video-card">
+        <div class="video-wrap">
+          <video src="testimonios/videos/Testimonio%20carlos%20cool%20edit.mp4" preload="none"></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="client-line"><span class="client-name">Carlos</span> · <span class="client-biz">Bubble House & Mandala Sushi</span></div>
+          <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+      <div class="testi-video-card">
+        <div class="video-wrap">
+          <video src="testimonios/videos/testimonio%20pedro%20campossss.mp4" preload="none"></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="client-line"><span class="client-name">Pedro Campos</span> · <span class="client-biz">Obras Menores</span></div>
+          <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing-section">
   <div class="pricing-inner">
@@ -510,9 +598,12 @@
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
           <li><span class="check">✓</span><span><strong>8 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span>2 videos + 3 fotos + 3 imágenes de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>2 videos</strong></span></li>
+          <li><span class="check">✓</span><span><strong>3 fotos</strong></span></li>
+          <li><span class="check">✓</span><span><strong>3 imágenes</strong> de diseño</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span>8 publicaciones en Feed + 6 historias</span></li>
+          <li><span class="check">✓</span><span><strong>8 publicaciones</strong> en Feed</span></li>
+          <li><span class="check">✓</span><span><strong>6 historias</strong></span></li>
           <div class="feat-label">Publicidad & Gestión</div>
           <li><span class="check">✓</span><span><strong>Meta Ads</strong> gestionados + Píxel instalado para rastrear conversiones</span></li>
           <li><span class="check">✓</span><span>Community Manager y reporte mensual</span></li>
@@ -541,10 +632,13 @@
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
           <li><span class="check">✓</span><span><strong>14 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span>4 videos + 4 fotos + 6 imágenes de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>4 videos</strong></span></li>
+          <li><span class="check">✓</span><span><strong>4 fotos</strong></span></li>
+          <li><span class="check">✓</span><span><strong>6 imágenes</strong> de diseño</span></li>
           <li><span class="check">✓</span><span><strong>1 sesión</strong> de producción profesional (grabación + dirección de arte)</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span>16 publicaciones en Feed + 12 historias</span></li>
+          <li><span class="check">✓</span><span><strong>16 publicaciones</strong> en Feed</span></li>
+          <li><span class="check">✓</span><span><strong>12 historias</strong></span></li>
           <div class="feat-label">Publicidad & Automatización</div>
           <li><span class="check">✓</span><span><strong>Meta Ads completo</strong> + Optimización + Remarketing</span></li>
           <li><span class="check">✓</span><span><strong>Landing Page básica</strong> + Hosting + Dominio (1 año)</span></li>
@@ -574,10 +668,13 @@
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
           <li><span class="check">✓</span><span><strong>28 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span>10 videos + 8 fotos + 10 imágenes de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>10 videos</strong></span></li>
+          <li><span class="check">✓</span><span><strong>8 fotos</strong></span></li>
+          <li><span class="check">✓</span><span><strong>10 imágenes</strong> de diseño</span></li>
           <li><span class="check">✓</span><span><strong>Hasta 2 sesiones</strong> de producción profesional al mes</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span>24 publicaciones en Feed + 18 historias</span></li>
+          <li><span class="check">✓</span><span><strong>24 publicaciones</strong> en Feed</span></li>
+          <li><span class="check">✓</span><span><strong>18 historias</strong></span></li>
           <div class="feat-label">Publicidad & Automatización</div>
           <li><span class="check">✓</span><span><strong>Meta Ads avanzado</strong> + audiencias personalizadas</span></li>
           <li><span class="check">✓</span><span><strong>Landing Page Premium</strong> + optimización + A/B Testing</span></li>
@@ -715,6 +812,14 @@
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('navLinks').classList.toggle('open');
   });
+
+  // Video testimonial player
+  function playVideo(overlay) {
+    const video = overlay.previousElementSibling;
+    video.play();
+    overlay.style.display = 'none';
+    video.controls = true;
+  }
 
   // Billing toggle: mensual vs 3 meses
   const billingData = {

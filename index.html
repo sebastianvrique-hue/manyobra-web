@@ -346,12 +346,12 @@
     .testi-panel.active { display: block; }
 
     /* Video grid */
-    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .video-card {
       background: var(--grey1); border: 1px solid var(--border); border-radius: var(--radius);
       overflow: hidden; transition: border-color .2s, transform .2s;
     }
-    .video-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+    .video-card:hover { border-color: var(--border2); transform: translateY(-4px); }
     .video-wrap { position: relative; aspect-ratio: 16/9; background: var(--grey2); }
     .video-wrap video { width: 100%; height: 100%; object-fit: cover; }
     .video-play {
@@ -359,13 +359,13 @@
       background: rgba(0,0,0,0.4); cursor: pointer; transition: background .2s;
     }
     .video-play:hover { background: rgba(0,0,0,0.2); }
-    .play-btn { width: 52px; height: 52px; border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; }
-    .play-btn svg { width: 18px; height: 18px; fill: var(--black); margin-left: 3px; }
-    .video-info { padding: 1.2rem; }
-    .video-info .client-name { font-size: .9rem; font-weight: 700; margin-bottom: .3rem; }
-    .video-info .client-biz { font-size: .78rem; color: var(--muted); }
-    .stars { display: flex; gap: 2px; margin-bottom: .5rem; }
-    .stars span { color: var(--blue); font-size: .8rem; }
+    .play-btn { width: 68px; height: 68px; border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; }
+    .play-btn svg { width: 24px; height: 24px; fill: var(--black); margin-left: 3px; }
+    .video-info { padding: 1.6rem; }
+    .video-info .client-name { font-size: 1.25rem; font-weight: 800; margin-bottom: .35rem; letter-spacing: -.01em; }
+    .video-info .client-biz { font-size: .92rem; color: var(--muted); }
+    .stars { display: flex; gap: 3px; margin-bottom: .7rem; }
+    .stars span { color: var(--blue); font-size: 1.1rem; }
 
     /* Image grid */
     .img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -510,6 +510,7 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .stat { border-right: none; border-bottom: 1px solid var(--border); }
       .stat:nth-child(odd) { border-right: 1px solid var(--border); }
+      .video-grid { grid-template-columns: 1fr; }
       .svc-grid { grid-template-columns: 1fr; }
       .process-grid { grid-template-columns: 1fr 1fr; }
       .why-grid { grid-template-columns: 1fr; }
@@ -573,77 +574,6 @@
   </div>
 </div>
 
-<!-- SERVICES -->
-<section class="services-sec" id="servicios" aria-labelledby="servicios-titulo">
-  <div class="sec-inner">
-    <div class="sec-tag">Servicios</div>
-    <h2 id="servicios-titulo">Lo que hacemos <span class="accent">bien</span></h2>
-    <p class="sec-sub">Estrategia, contenido y tecnología en un solo lugar para crecer con <strong>Facebook Ads e Instagram Ads</strong> en Chile.</p>
-    <div class="svc-grid">
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Campañas de Conversión</h3><p>Campañas en Facebook e Instagram enfocadas en ventas, leads y registros con segmentación precisa.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Producción Audiovisual</h3><p>Videos y fotos profesionales pensados para ads. Contenido que para el scroll y genera acción.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Bot de WhatsApp</h3><p>Automatizamos la atención inicial y calificación de leads para que solo llegues a prospectos reales.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Retargeting</h3><p>Recuperamos a las personas que vieron tus productos pero no compraron.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">05</div><h3>Optimización y Reportes</h3><p>Monitoreo diario, A/B testing y reportes claros cada semana basados en datos reales.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">06</div><h3>Meta Policy Compliance</h3><p>Revisamos cada anuncio para cumplir las políticas de Meta y evitar rechazos o bloqueos.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process-sec" id="proceso">
-  <div class="sec-inner">
-    <div class="sec-tag">Proceso</div>
-    <h2>Cómo <span class="accent">trabajamos</span></h2>
-    <p class="sec-sub">Simple y transparente desde el primer día.</p>
-    <div class="process-grid">
-      <div class="process-step"><div class="p-num">01</div><h3>Diagnóstico gratuito</h3><p>Analizamos tu negocio, competencia y objetivos para entender el punto de partida real.</p></div>
-      <div class="process-step"><div class="p-num">02</div><h3>Estrategia personalizada</h3><p>Diseñamos el plan de campañas, creativos y automatizaciones según tu presupuesto.</p></div>
-      <div class="process-step"><div class="p-num">03</div><h3>Lanzamos y producimos</h3><p>Activamos campañas, grabamos el contenido y configuramos el bot de WhatsApp.</p></div>
-      <div class="process-step"><div class="p-num">04</div><h3>Reportes y escalado</h3><p>Ajustes continuos y escalado de lo que mejor funciona.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROFILE -->
-<section class="profile-sec" id="perfil">
-  <div class="sec-inner">
-    <div class="profile-grid">
-      <div class="profile-img">
-        <img src="sebastian.png" alt="Sebastián, fundador de Manyobra – Agencia Meta Ads Chile" width="600" height="800" loading="eager" />
-      </div>
-      <div class="profile-content">
-        <div>
-          <div class="profile-role">Fundador · Meta Ads Specialist · Audiovisual Producer</div>
-          <div class="profile-name">Hola,<br/>soy <span class="accent">Sebastián</span></div>
-        </div>
-        <p class="profile-bio">Llevo más de 4 años ayudando a negocios chilenos a crecer con publicidad en Meta. Empecé combinando mi pasión por la producción audiovisual con el marketing digital, y descubrí que los mejores resultados llegan cuando el contenido y la estrategia trabajan juntos.</p>
-        <p class="profile-bio">Hoy desde Manyobra gestionamos campañas, producimos contenido y automatizamos la atención por WhatsApp para que nuestros clientes se enfoquen en lo que saben hacer.</p>
-        <div class="profile-nums">
-          <div class="pn"><div class="pn-val">+200</div><div class="pn-lbl">Campañas</div></div>
-          <div class="pn"><div class="pn-val">+50</div><div class="pn-lbl">Clientes</div></div>
-          <div class="pn"><div class="pn-val">4+ años</div><div class="pn-lbl">Meta Ads</div></div>
-        </div>
-        <div class="profile-tags">
-          <span class="ptag">Meta Ads</span><span class="ptag">Facebook Ads</span>
-          <span class="ptag">Instagram Ads</span><span class="ptag">Producción Video</span>
-          <span class="ptag">WhatsApp Bot</span><span class="ptag">CRM</span>
-        </div>
-        <div class="profile-socials">
-          <a href="https://wa.me/56956747949" target="_blank" rel="noopener" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-          </a>
-          <a href="https://www.instagram.com/manyobra.cl/" target="_blank" rel="noopener" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            @manyobra.cl
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section class="testi-sec" id="testimonios">
   <div class="sec-inner">
@@ -652,9 +582,9 @@
     <p class="sec-sub">Resultados reales de negocios reales.</p>
 
     <div class="testi-tabs">
-      <button class="testi-tab active" onclick="switchTab('videos', this)">Video</button>
-      <button class="testi-tab" onclick="switchTab('imagenes', this)">Imagen</button>
-      <button class="testi-tab" onclick="switchTab('audios', this)">Audio</button>
+      <button class="testi-tab active" data-tab="videos" onclick="switchTab('videos', this)">Video</button>
+      <button class="testi-tab" data-tab="imagenes" onclick="switchTab('imagenes', this)">Imagen</button>
+      <button class="testi-tab" data-tab="audios" onclick="switchTab('audios', this)">Audio</button>
     </div>
 
     <!-- VIDEOS -->
@@ -749,6 +679,77 @@
       </div>
       <div class="testi-empty" id="empty-audios">
         <p><strong>Aún no hay audios.</strong><br/>Agrega archivos .mp3 en la carpeta <code>testimonios/audios/</code></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-sec" id="servicios" aria-labelledby="servicios-titulo">
+  <div class="sec-inner">
+    <div class="sec-tag">Servicios</div>
+    <h2 id="servicios-titulo">Lo que hacemos <span class="accent">bien</span></h2>
+    <p class="sec-sub">Estrategia, contenido y tecnología en un solo lugar para crecer con <strong>Facebook Ads e Instagram Ads</strong> en Chile.</p>
+    <div class="svc-grid">
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Campañas de Conversión</h3><p>Campañas en Facebook e Instagram enfocadas en ventas, leads y registros con segmentación precisa.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Producción Audiovisual</h3><p>Videos y fotos profesionales pensados para ads. Contenido que para el scroll y genera acción.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Bot de WhatsApp</h3><p>Automatizamos la atención inicial y calificación de leads para que solo llegues a prospectos reales.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Retargeting</h3><p>Recuperamos a las personas que vieron tus productos pero no compraron.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">05</div><h3>Optimización y Reportes</h3><p>Monitoreo diario, A/B testing y reportes claros cada semana basados en datos reales.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">06</div><h3>Meta Policy Compliance</h3><p>Revisamos cada anuncio para cumplir las políticas de Meta y evitar rechazos o bloqueos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-sec" id="proceso">
+  <div class="sec-inner">
+    <div class="sec-tag">Proceso</div>
+    <h2>Cómo <span class="accent">trabajamos</span></h2>
+    <p class="sec-sub">Simple y transparente desde el primer día.</p>
+    <div class="process-grid">
+      <div class="process-step"><div class="p-num">01</div><h3>Diagnóstico gratuito</h3><p>Analizamos tu negocio, competencia y objetivos para entender el punto de partida real.</p></div>
+      <div class="process-step"><div class="p-num">02</div><h3>Estrategia personalizada</h3><p>Diseñamos el plan de campañas, creativos y automatizaciones según tu presupuesto.</p></div>
+      <div class="process-step"><div class="p-num">03</div><h3>Lanzamos y producimos</h3><p>Activamos campañas, grabamos el contenido y configuramos el bot de WhatsApp.</p></div>
+      <div class="process-step"><div class="p-num">04</div><h3>Reportes y escalado</h3><p>Ajustes continuos y escalado de lo que mejor funciona.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="profile-sec" id="perfil">
+  <div class="sec-inner">
+    <div class="profile-grid">
+      <div class="profile-img">
+        <img src="sebastian.png" alt="Sebastián, fundador de Manyobra – Agencia Meta Ads Chile" width="600" height="800" loading="eager" />
+      </div>
+      <div class="profile-content">
+        <div>
+          <div class="profile-role">Fundador · Meta Ads Specialist · Audiovisual Producer</div>
+          <div class="profile-name">Hola,<br/>soy <span class="accent">Sebastián</span></div>
+        </div>
+        <p class="profile-bio">Llevo más de 4 años ayudando a negocios chilenos a crecer con publicidad en Meta. Empecé combinando mi pasión por la producción audiovisual con el marketing digital, y descubrí que los mejores resultados llegan cuando el contenido y la estrategia trabajan juntos.</p>
+        <p class="profile-bio">Hoy desde Manyobra gestionamos campañas, producimos contenido y automatizamos la atención por WhatsApp para que nuestros clientes se enfoquen en lo que saben hacer.</p>
+        <div class="profile-nums">
+          <div class="pn"><div class="pn-val">+200</div><div class="pn-lbl">Campañas</div></div>
+          <div class="pn"><div class="pn-val">+50</div><div class="pn-lbl">Clientes</div></div>
+          <div class="pn"><div class="pn-val">4+ años</div><div class="pn-lbl">Meta Ads</div></div>
+        </div>
+        <div class="profile-tags">
+          <span class="ptag">Meta Ads</span><span class="ptag">Facebook Ads</span>
+          <span class="ptag">Instagram Ads</span><span class="ptag">Producción Video</span>
+          <span class="ptag">WhatsApp Bot</span><span class="ptag">CRM</span>
+        </div>
+        <div class="profile-socials">
+          <a href="https://wa.me/56956747949" target="_blank" rel="noopener" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/manyobra.cl/" target="_blank" rel="noopener" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @manyobra.cl
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -925,15 +926,21 @@
 
   // Check empty panels
   function checkEmpty() {
+    let visibleTabs = 0;
     ['videos','imagenes','audios'].forEach(type => {
       const grid = document.getElementById(type === 'videos' ? 'video-grid' : type === 'imagenes' ? 'img-grid' : 'audio-grid');
       const empty = document.getElementById('empty-' + type);
+      const tab = document.querySelector('.testi-tab[data-tab="' + type + '"]');
       if (grid && empty) {
         const hasContent = grid.querySelector('.video-card, .img-card, .audio-card');
         grid.style.display = hasContent ? 'grid' : 'none';
         empty.style.display = hasContent ? 'none' : 'block';
+        if (tab) tab.style.display = hasContent ? '' : 'none';
+        if (hasContent) visibleTabs++;
       }
     });
+    const tabsBar = document.querySelector('.testi-tabs');
+    if (tabsBar) tabsBar.style.display = visibleTabs > 1 ? 'flex' : 'none';
   }
   checkEmpty();
 
