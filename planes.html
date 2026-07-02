@@ -407,6 +407,11 @@
       a[href]::after { content: ""; }
       .plan-card, .pilar-card, .gs-card, .value-item { border: 1px solid #ccc !important; break-inside: avoid; }
       .plan-card.popular { border: 2px solid #000 !important; }
+      /* Chromium's print/PDF export mis-renders CSS Grid rows with align-items:stretch
+         combined with a flex-grow child (ghost/overlapping text) — stack to 1 column like mobile. */
+      .pilares-grid { grid-template-columns: 1fr !important; align-items: start !important; }
+      .pilar-card { break-inside: avoid; margin-bottom: .6rem; }
+      .pilares-op { display: none !important; }
       .plan-badge, .plan-badge.nuevo, .pb-tag, .plan-onboard, .plan-discount-badge, .pt-save { border: 1px solid #999 !important; }
       .pricing-grid { grid-template-columns: repeat(3, 1fr) !important; gap: .8rem !important; }
       .value-grid { grid-template-columns: repeat(4, 1fr) !important; }
@@ -758,7 +763,6 @@
       <div class="cond-item"><div class="cond-dot"></div><span>Presupuesto publicitario en Meta Ads <strong>no incluido</strong>.</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>El contenido es <strong>propiedad del cliente</strong> tras el pago.</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>Permanencia mínima recomendada: <strong>3 meses</strong>.</span></div>
-      <div class="cond-item"><div class="cond-dot"></div><span><strong>Sin amarres</strong> desde el mes 4 (salida con 15 días de aviso).</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>Pago mensual <strong>anticipado</strong> al inicio de cada ciclo.</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>Precios válidos por <strong>30 días</strong> desde su emisión. Vigencia 2026.</span></div>
     </div>
