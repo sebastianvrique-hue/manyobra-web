@@ -6,7 +6,7 @@
 
   <!-- ── PRIMARY SEO ── -->
   <title>Planes y Precios | Manyobra – Marketing Digital & Producción Audiovisual</title>
-  <meta name="description" content="Elige el plan de marketing digital que mejor se adapta a tu negocio. Desde $150.000/mes. Meta Ads + Contenido + Bot WhatsApp. Planes Corriente, Voltaje y Tormenta." />
+  <meta name="description" content="Elige el plan de marketing digital que mejor se adapta a tu negocio. Desde $100.000/mes. Meta Ads + Contenido + Bot WhatsApp. Planes Arranque, Impulso, Turbo y Manyobra." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://manyobra.cl/planes.html" />
 
@@ -78,6 +78,42 @@
     .planes-hero h1 span { color: var(--white); }
     .planes-hero p { font-size: clamp(.95rem, 1.6vw, 1.1rem); color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.7; }
 
+    /* ── PILARES (3 pilares = 1 sistema) ── */
+    .pilares-section { padding: 60px 6% 40px; border-bottom: 1px solid var(--border); }
+    .pilares-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .pilares-inner h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 2.5rem; }
+    .pilares-grid { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: stretch; gap: 1rem; }
+    .pilar-card { background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem 1.2rem; display: flex; flex-direction: column; text-align: left; }
+    .pilar-icon { font-size: 1.6rem; margin-bottom: .6rem; text-align: center; }
+    .pilar-name { font-size: .95rem; font-weight: 800; margin-bottom: .4rem; text-align: center; }
+    .pilar-desc { font-size: .78rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.1rem; min-height: 2.4em; text-align: center; }
+    .pilar-list { list-style: none; display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.1rem; flex-grow: 1; }
+    .pilar-list li {
+      display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
+      font-size: .72rem; color: #C0C0C0; padding-bottom: .5rem; border-bottom: 1px solid var(--border);
+    }
+    .pilar-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .pilar-list li b { color: var(--white); font-weight: 700; white-space: nowrap; }
+    .pilar-value { font-size: 1.3rem; font-weight: 900; letter-spacing: -.5px; text-align: center; padding-top: 1rem; border-top: 1px solid var(--border2); }
+    .pilar-value span { display: block; font-size: .68rem; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-top: .1rem; }
+    .pilares-op { font-size: 1.6rem; font-weight: 300; color: var(--grey5); }
+    .pilares-total {
+      margin-top: 2rem; padding: 2rem; background: var(--grey3); border: 1px solid var(--border2);
+      border-radius: var(--radius); text-align: center;
+    }
+    .pt-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .pt-row { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+    .pt-sum { font-size: 1.1rem; color: var(--muted); text-decoration: line-through; }
+    .pt-sum span { text-decoration: line-through; font-size: .75rem; }
+    .pt-arrow { font-size: 1.2rem; color: var(--grey5); }
+    .pt-real { font-size: 2rem; font-weight: 900; letter-spacing: -1px; }
+    .pt-real span { display: block; font-size: .72rem; font-weight: 500; color: var(--muted); margin-top: .15rem; letter-spacing: 0; }
+    .pt-save {
+      display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      padding: .25rem .65rem; border-radius: 4px; margin-bottom: 1.2rem;
+    }
+
     /* ── ALERT BANNER ── */
     .alert-banner {
       background: rgba(255,255,255,0.04);
@@ -90,8 +126,49 @@
     }
     .alert-banner .fire { font-size: 1rem; }
 
+    /* ── BILLING TOGGLE ── */
+    .billing-toggle-wrap { display: flex; justify-content: center; margin: 0 auto 2rem; padding: 0 6%; }
+    .billing-toggle {
+      display: inline-flex; background: var(--grey2); border: 1px solid var(--border2);
+      border-radius: 100px; padding: .3rem;
+    }
+    .bt-btn {
+      appearance: none; border: none; background: transparent; color: var(--muted);
+      font-family: inherit; font-size: .8rem; font-weight: 700; letter-spacing: .01em;
+      padding: .55rem 1.3rem; border-radius: 100px; cursor: pointer; transition: all .2s;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .bt-btn.active { background: var(--white); color: var(--black); }
+    .bt-save {
+      font-size: .62rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+      background: rgba(34,197,94,0.15); color: #4ADE80; padding: .15rem .4rem; border-radius: 4px;
+    }
+    .bt-btn.active .bt-save { background: rgba(0,0,0,0.1); color: #16813F; }
+    .price-note { font-size: .72rem; color: var(--muted); margin-top: .4rem; display: none; }
+
+    /* ── PLAN BÁSICO BANNER (Arranque) ── */
+    .plan-basico-banner {
+      max-width: 1180px; margin: 0 auto 2.5rem; background: var(--grey1);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.5rem 1.8rem; display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+    }
+    .pb-name { font-size: 1.05rem; font-weight: 800; margin-bottom: .3rem; display: flex; align-items: center; gap: .6rem; }
+    .pb-tag {
+      font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); border: 1px solid var(--border2); border-radius: 100px; padding: .18rem .55rem;
+    }
+    .pb-desc { font-size: .82rem; color: var(--muted); margin-bottom: .5rem; max-width: 480px; }
+    .pb-features { font-size: .75rem; color: #999; }
+    .pb-right { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    .pb-price { display: flex; align-items: baseline; gap: .2rem; white-space: nowrap; }
+    .pb-price .currency { font-size: .8rem; color: var(--muted); }
+    .pb-price .amount { font-size: 1.7rem; font-weight: 900; letter-spacing: -1px; }
+    .pb-price .period { font-size: .72rem; color: var(--muted); margin-left: .2rem; }
+    .plan-cta.cta-small { padding: .6rem .9rem; font-size: .78rem; margin-bottom: 0; white-space: nowrap; }
+
     /* ── PRICING GRID ── */
-    .pricing-section { padding: 60px 6% 100px; }
+    .pricing-section { padding: 20px 6% 100px; }
     .pricing-inner { max-width: 1180px; margin: 0 auto; }
 
     .pricing-grid {
@@ -229,7 +306,7 @@
     .value-section { background: var(--grey2); border-top: 1px solid var(--border); padding: 60px 6%; text-align: center; }
     .value-inner { max-width: 900px; margin: 0 auto; }
     .value-inner h2 { font-size: 1rem; font-weight: 700; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2rem; }
-    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
     .value-item { background: var(--grey3); border: 1px solid var(--border2); border-radius: var(--radius); padding: 1.5rem; }
     .value-item .v-plan { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
     .value-item .v-market { font-size: .8rem; color: var(--grey5); text-decoration: line-through; margin-bottom: .5rem; }
@@ -273,6 +350,10 @@
       .hamburger { display: flex; }
       .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
       .value-grid { grid-template-columns: 1fr; }
+      .pilares-grid { grid-template-columns: 1fr; }
+      .pilares-op { transform: rotate(90deg); padding: .2rem 0; }
+      .plan-basico-banner { flex-direction: column; align-items: flex-start; }
+      .pb-right { width: 100%; justify-content: space-between; }
       .guarantee-strip-grid { grid-template-columns: 1fr; }
       .conditions-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
@@ -280,6 +361,7 @@
     }
     @media (min-width: 769px) and (max-width: 1100px) {
       .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .value-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -306,7 +388,74 @@
 <div class="planes-hero">
   <div class="sec-tag">Planes & Precios</div>
   <h1>Elige el plan que<br/><span>hace crecer tu negocio</span></h1>
-  <p>Contenido profesional, Meta Ads y automatización desde <strong>$150.000/mes</strong>. Todos los precios son + IVA.</p>
+  <p>Contenido profesional, Meta Ads y automatización desde <strong>$100.000/mes</strong>. Todos los precios son + IVA.</p>
+</div>
+
+<!-- PILARES -->
+<section class="pilares-section">
+  <div class="pilares-inner">
+    <h2>3 pilares. 1 sistema completo de captación.</h2>
+    <div class="pilares-grid">
+      <div class="pilar-card">
+        <div class="pilar-icon">🎬</div>
+        <div class="pilar-name">Contenido</div>
+        <div class="pilar-desc">Videos, fotos y diseño que generan confianza</div>
+        <ul class="pilar-list">
+          <li><span>Videos de valor</span><b>$120.000</b></li>
+          <li><span>Posts estratégicos</span><b>$80.000</b></li>
+          <li><span>Copy persuasivo</span><b>$60.000</b></li>
+          <li><span>Calendario editorial</span><b>$40.000</b></li>
+        </ul>
+        <div class="pilar-value">$300.000<span>/mes de valor</span></div>
+      </div>
+      <div class="pilares-op">+</div>
+      <div class="pilar-card">
+        <div class="pilar-icon">🎯</div>
+        <div class="pilar-name">Meta Ads</div>
+        <div class="pilar-desc">Pauta gestionada que trae clientes reales</div>
+        <ul class="pilar-list">
+          <li><span>Campañas de conversión</span><b>$130.000</b></li>
+          <li><span>Retargeting inteligente</span><b>$70.000</b></li>
+          <li><span>A/B Testing continuo</span><b>$60.000</b></li>
+          <li><span>Segmentación precisa</span><b>$40.000</b></li>
+        </ul>
+        <div class="pilar-value">$300.000<span>/mes de valor</span></div>
+      </div>
+      <div class="pilares-op">+</div>
+      <div class="pilar-card">
+        <div class="pilar-icon">🤖</div>
+        <div class="pilar-name">Agente WhatsApp</div>
+        <div class="pilar-desc">Responde, califica y agenda 24/7</div>
+        <ul class="pilar-list">
+          <li><span>Atiende por WhatsApp 24/7</span><b>$120.000</b></li>
+          <li><span>Califica al lead</span><b>$70.000</b></li>
+          <li><span>Agenda reuniones</span><b>$60.000</b></li>
+          <li><span>Seguimiento infinito</span><b>$50.000</b></li>
+        </ul>
+        <div class="pilar-value">$300.000<span>/mes de valor</span></div>
+      </div>
+    </div>
+    <div class="pilares-total">
+      <div class="pt-label">Los 3 pilares como paquete completo</div>
+      <div class="pt-row">
+        <div class="pt-sum">$900.000<span>/mes por separado</span></div>
+        <div class="pt-arrow">→</div>
+        <div class="pt-real">$500.000<span>/mes con el Plan Manyobra</span></div>
+      </div>
+      <div class="pt-save">Ahorras $400.000/mes · 44% menos</div><br/>
+      <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Manyobra" target="_blank" rel="noopener" class="plan-cta cta-white" style="display:inline-block; max-width:320px; margin-bottom:0;">
+        Quiero el Plan Manyobra →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BILLING TOGGLE -->
+<div class="billing-toggle-wrap">
+  <div class="billing-toggle" role="group" aria-label="Elige tu forma de pago">
+    <button type="button" class="bt-btn active" data-billing="mensual">Pago mensual</button>
+    <button type="button" class="bt-btn" data-billing="trimestral">Pago 3 meses <span class="bt-save">Ahorra ~33%</span></button>
+  </div>
 </div>
 
 <!-- SOLO APRUEBAS -->
@@ -317,22 +466,44 @@
 <!-- PRICING -->
 <section class="pricing-section">
   <div class="pricing-inner">
+
+    <!-- ── ARRANQUE (entrada) ── -->
+    <div class="plan-basico-banner">
+      <div class="pb-left">
+        <div class="pb-name">🔑 Arranque <span class="pb-tag">Plan básico</span></div>
+        <div class="pb-desc">¿Recién estás partiendo? Contenido profesional para tus redes, sin pauta todavía.</div>
+        <div class="pb-features">1 video + 2 fotos + 2 imágenes = 5 piezas/mes · Calendario editorial · Sin gestión de Ads</div>
+      </div>
+      <div class="pb-right">
+        <div data-plan="arranque">
+          <div class="pb-price">
+            <span class="currency">$</span><span class="amount">100.000</span><span class="period">/mes + IVA</span>
+          </div>
+          <div class="price-note"></div>
+        </div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Arranque" target="_blank" rel="noopener" class="plan-cta cta-outline cta-small">
+          Quiero este plan →
+        </a>
+      </div>
+    </div>
+
     <div class="pricing-grid">
 
-      <!-- ── CORRIENTE ── -->
+      <!-- ── IMPULSO ── -->
       <div class="plan-card">
-        <div class="plan-name">⚡ Corriente</div>
-        <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
+        <div class="plan-name">⚙️ Impulso</div>
+        <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Aparece todos los días en redes sin dedicarle ni una hora.</p>
-        <div class="plan-price-wrap">
+        <div class="plan-price-wrap" data-plan="impulso">
           <div class="plan-price-old">Antes $100.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">150.000</span>
+            <span class="period">/mes + IVA</span>
           </div>
-          <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
+          <div class="price-note"></div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Corriente" target="_blank" rel="noopener" class="plan-cta cta-outline">
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Impulso" target="_blank" rel="noopener" class="plan-cta cta-outline">
           Quiero este plan →
         </a>
         <div class="plan-divider"></div>
@@ -348,21 +519,22 @@
         </ul>
       </div>
 
-      <!-- ── VOLTAJE (POPULAR) ── -->
+      <!-- ── TURBO (POPULAR) ── -->
       <div class="plan-card popular">
         <div class="plan-badge">⭐ Popular</div>
-        <div class="plan-name">⚡ Voltaje</div>
-        <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
+        <div class="plan-name">🏎️ Turbo</div>
+        <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Todo lo que necesitas para pasar de seguidores a clientes, en un solo plan.</p>
-        <div class="plan-price-wrap">
+        <div class="plan-price-wrap" data-plan="turbo">
           <div class="plan-price-old">Antes $200.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">300.000</span>
+            <span class="period">/mes + IVA</span>
           </div>
-          <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
+          <div class="price-note"></div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Voltaje" target="_blank" rel="noopener" class="plan-cta cta-white">
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="plan-cta cta-white">
           Quiero este plan →
         </a>
         <div class="plan-divider"></div>
@@ -380,21 +552,22 @@
         </ul>
       </div>
 
-      <!-- ── TORMENTA ── -->
+      <!-- ── MANYOBRA (PREMIUM) ── -->
       <div class="plan-card">
         <div class="plan-badge nuevo">Premium</div>
-        <div class="plan-name">⚡ Tormenta</div>
-        <div class="plan-onboard">⚡ Onboarding en 48-72 hrs</div>
+        <div class="plan-name">⚡ Manyobra</div>
+        <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Tu sistema de ventas automatizado que trabaja 24/7 mientras tú duermes.</p>
-        <div class="plan-price-wrap">
+        <div class="plan-price-wrap" data-plan="manyobra">
           <div class="plan-price-old">Antes $300.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">500.000</span>
+            <span class="period">/mes + IVA</span>
           </div>
-          <div style="font-size:.75rem; color:var(--muted); margin-top:.3rem;">/mes + IVA</div>
+          <div class="price-note"></div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Tormenta" target="_blank" rel="noopener" class="plan-cta cta-outline">
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Manyobra" target="_blank" rel="noopener" class="plan-cta cta-outline">
           Quiero este plan →
         </a>
         <div class="plan-divider"></div>
@@ -422,19 +595,25 @@
     <h2>¿Cuánto costaría contratar esto por separado?</h2>
     <div class="value-grid">
       <div class="value-item">
-        <div class="v-plan">⚡ Corriente</div>
+        <div class="v-plan">🔑 Arranque</div>
+        <div class="v-market">Valor de mercado: $220.000+/mes</div>
+        <div class="v-price">$100.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 54%</div>
+      </div>
+      <div class="value-item">
+        <div class="v-plan">⚙️ Impulso</div>
         <div class="v-market">Valor de mercado: $350.000+/mes</div>
         <div class="v-price">$150.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
         <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 57%</div>
       </div>
       <div class="value-item">
-        <div class="v-plan">⚡ Voltaje</div>
+        <div class="v-plan">🏎️ Turbo</div>
         <div class="v-market">Valor de mercado: $650.000+/mes</div>
         <div class="v-price">$300.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
         <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 53%</div>
       </div>
       <div class="value-item">
-        <div class="v-plan">⚡ Tormenta</div>
+        <div class="v-plan">⚡ Manyobra</div>
         <div class="v-market">Valor de mercado: $1.100.000+/mes</div>
         <div class="v-price">$500.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
         <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 54%</div>
@@ -535,6 +714,47 @@
   // Hamburger menu
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Billing toggle: mensual vs 3 meses
+  const billingData = {
+    arranque: { monthly: 100000, qMonthly: 65000,  qTotal: 195000 },
+    impulso:  { monthly: 150000, qMonthly: 100000, qTotal: 300000 },
+    turbo:    { monthly: 300000, qMonthly: 200000, qTotal: 600000 },
+    manyobra: { monthly: 500000, qMonthly: 330000, qTotal: 990000 }
+  };
+  const formatCLP = n => n.toLocaleString('es-CL');
+
+  function setBilling(mode) {
+    document.querySelectorAll('.bt-btn').forEach(b => b.classList.toggle('active', b.dataset.billing === mode));
+    document.querySelectorAll('[data-plan]').forEach(block => {
+      const d = billingData[block.dataset.plan];
+      if (!d) return;
+      const amountEl = block.querySelector('.amount');
+      const oldEl = block.querySelector('.plan-price-old');
+      const noteEl = block.querySelector('.price-note');
+      if (mode === 'mensual') {
+        amountEl.textContent = formatCLP(d.monthly);
+        if (oldEl) oldEl.style.display = '';
+        if (noteEl) noteEl.style.display = 'none';
+      } else {
+        amountEl.textContent = formatCLP(d.qMonthly);
+        if (oldEl) oldEl.style.display = 'none';
+        if (noteEl) {
+          noteEl.textContent = `Pago único de $${formatCLP(d.qTotal)} por 3 meses + IVA`;
+          noteEl.style.display = 'block';
+        }
+      }
+      const link = block.closest('.plan-card, .plan-basico-banner')?.querySelector('.plan-cta');
+      if (link) {
+        if (!link.dataset.waBase) link.dataset.waBase = link.getAttribute('href');
+        link.setAttribute('href', mode === 'trimestral' ? link.dataset.waBase + '%20(plan%203%20meses)' : link.dataset.waBase);
+      }
+    });
+  }
+
+  document.querySelectorAll('.bt-btn').forEach(btn => {
+    btn.addEventListener('click', () => setBilling(btn.dataset.billing));
   });
 </script>
 
