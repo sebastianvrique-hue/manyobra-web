@@ -21,7 +21,7 @@
   <meta property="og:url" content="https://manyobra.cl/" />
   <meta property="og:title" content="Agencia Meta Ads Chile | Facebook & Instagram Ads | Manyobra" />
   <meta property="og:description" content="Diseñamos campañas en Facebook e Instagram que generan clientes reales para negocios chilenos. Producción audiovisual + Bot WhatsApp incluido. +200 campañas gestionadas." />
-  <meta property="og:image" content="https://manyobra.cl/sebastian.png" />
+  <meta property="og:image" content="https://manyobra.cl/logo.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Manyobra – Agencia Meta Ads Chile" />
@@ -29,10 +29,10 @@
   <meta property="og:locale" content="es_CL" />
 
   <!-- ── TWITTER CARD ── -->
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Agencia Meta Ads Chile | Manyobra" />
   <meta name="twitter:description" content="Campañas en Facebook e Instagram que generan clientes reales. Producción audiovisual + Bot WhatsApp. Diagnóstico gratuito." />
-  <meta name="twitter:image" content="https://manyobra.cl/sebastian.png" />
+  <meta name="twitter:image" content="https://manyobra.cl/logo.png" />
 
   <!-- ── SCHEMA.ORG JSON-LD ── -->
   <script type="application/ld+json">
@@ -45,8 +45,8 @@
         "name": "Manyobra",
         "alternateName": "Manyobra SpA",
         "url": "https://manyobra.cl",
-        "logo": "https://manyobra.cl/sebastian.png",
-        "image": "https://manyobra.cl/sebastian.png",
+        "logo": "https://manyobra.cl/logo.png",
+        "image": "https://manyobra.cl/logo.png",
         "description": "Agencia chilena de Meta Ads y producción audiovisual especializada en campañas de Facebook e Instagram que generan clientes reales para negocios en Chile.",
         "telephone": "+56956747949",
         "email": "contacto@manyobra.cl",
@@ -83,7 +83,6 @@
         "name": "Sebastián",
         "jobTitle": "Fundador y Meta Ads Specialist",
         "description": "Especialista en Meta Ads y producción audiovisual con más de 4 años de experiencia ayudando a negocios chilenos a crecer con publicidad en Facebook e Instagram.",
-        "image": "https://manyobra.cl/sebastian.png",
         "url": "https://manyobra.cl",
         "sameAs": ["https://www.instagram.com/manyobra.cl/"],
         "worksFor": {
@@ -198,11 +197,21 @@
       --grey4:   #2A2A2A;
       --grey5:   #444444;
       --muted:   #888888;
-      --blue:    #FFFFFF;
-      --blue-dim: rgba(255,255,255,0.06);
+      --blue:    #60A5FA;
+      --blue-dim: rgba(59,130,246,0.12);
       --border:  rgba(255,255,255,0.08);
       --border2: rgba(255,255,255,0.14);
       --radius:  12px;
+      --accent:     #3B82F6;
+      --accent-2:   #8B5CF6;
+      --accent-hi:  #60A5FA;
+      --accent-brd: rgba(59,130,246,0.35);
+      --grad:       linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      --grad-text:  linear-gradient(100deg, #60A5FA 0%, #A78BFA 100%);
+      --glow:       0 8px 40px rgba(59,130,246,0.35);
+      --glass:      rgba(255,255,255,0.04);
+      --glass-brd:  rgba(255,255,255,0.10);
+      --radius-lg:  20px;
     }
 
     html { scroll-behavior: smooth; }
@@ -308,23 +317,30 @@
     .process-step h3 { font-size: .95rem; font-weight: 700; margin-bottom: .5rem; }
     .process-step p { font-size: .83rem; color: var(--muted); line-height: 1.7; }
 
-    /* ── PROFILE ── */
+    /* ── PROFILE (founder card, sin foto) ── */
     .profile-sec { background: var(--grey1); }
-    .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .profile-img {
-      aspect-ratio: 3/4; border-radius: 16px; overflow: hidden;
-      background: var(--grey2); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
+    .founder-card {
+      position: relative; overflow: hidden;
+      background: var(--glass); border: 1px solid var(--glass-brd);
+      border-radius: var(--radius-lg); padding: 2.5rem;
+     
+      display: flex; flex-direction: column; gap: 2rem;
     }
-    .profile-img img { width: 100%; height: 100%; object-fit: cover; }
-    .profile-img .placeholder { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem; }
-    .profile-img .placeholder span { display: block; font-size: 3rem; margin-bottom: 1rem; }
-    .profile-content { display: flex; flex-direction: column; gap: 2rem; }
+    .founder-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); }
+    .founder-head { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    .founder-avatar {
+      width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
+      background: var(--grad); color: #fff; font-size: 1.5rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(59,130,246,0.4);
+    }
+    .founder-cols { display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start; }
+    .founder-side { display: flex; flex-direction: column; gap: 1.5rem; }
     .profile-role { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-    .profile-name { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; }
+    .profile-name { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; }
     .profile-name .accent { color: var(--blue); }
     .profile-bio { font-size: .95rem; color: var(--muted); line-height: 1.8; }
+    .profile-bio + .profile-bio { margin-top: 1rem; }
     .profile-nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .pn { border-top: 1px solid var(--border2); padding-top: 1rem; }
     .pn-val { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
@@ -444,7 +460,7 @@
     /* ── FOOTER ── */
     footer { background: var(--black); border-top: 1px solid var(--border); padding: 4rem 6% 2.5rem; }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-brand { display: flex; flex-direction: column; gap: 1rem; }
     .footer-brand p { font-size: .85rem; color: var(--muted); line-height: 1.7; max-width: 260px; }
     .footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
@@ -500,8 +516,9 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .svc-grid { grid-template-columns: repeat(2, 1fr); }
-      .profile-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .profile-img { max-width: 340px; }
+      .founder-cols { grid-template-columns: 1fr; gap: 2rem; }
+      .lp-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+      .lp-card.popular { transform: none; }
     }
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -517,11 +534,189 @@
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
       .form-row { grid-template-columns: 1fr; }
       .profile-nums { grid-template-columns: 1fr 1fr; }
+      .lp-banner { flex-direction: column; align-items: flex-start; }
+      .lp-banner-right { width: 100%; justify-content: space-between; }
+      .founder-card { padding: 1.8rem; }
     }
     @media (max-width: 480px) {
       .process-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
       .profile-nums { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════ DESIGN V2 — DARK PREMIUM ══════════ */
+    ::selection { background: rgba(59,130,246,0.35); }
+
+    /* texto gradiente en palabras clave */
+    h1 em, h2 .accent, .stat-n .accent, .profile-name .accent, .pn-val {
+      background: var(--grad-text);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* nav */
+    .nav-links a { position: relative; }
+    .nav-links a::after {
+      content: ''; position: absolute; left: 0; bottom: -6px; width: 100%; height: 2px;
+      background: var(--grad); border-radius: 2px;
+      transform: scaleX(0); transform-origin: left; transition: transform .25s;
+    }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta { background: var(--grad); color: #fff; box-shadow: 0 4px 18px rgba(59,130,246,0.35); }
+    .nav-cta:hover { background: var(--grad); filter: brightness(1.12); box-shadow: 0 6px 26px rgba(124,58,237,0.45); transform: translateY(-1px); }
+
+    /* hero: orbs + textura */
+    .hero-bg { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .hero-bg::before {
+      content: ''; position: absolute; width: 560px; height: 560px; border-radius: 50%;
+      top: -160px; left: -120px;
+      background: radial-gradient(circle, rgba(59,130,246,0.30), transparent 65%);
+      filter: blur(90px); animation: orbDrift 16s ease-in-out infinite alternate;
+    }
+    .hero-bg::after {
+      content: ''; position: absolute; width: 520px; height: 520px; border-radius: 50%;
+      bottom: -180px; right: -120px;
+      background: radial-gradient(circle, rgba(139,92,246,0.24), transparent 65%);
+      filter: blur(90px); animation: orbDrift 20s ease-in-out infinite alternate-reverse;
+    }
+    .hero-tex {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 34px 34px;
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 70%);
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 70%);
+    }
+    @keyframes orbDrift { from { transform: translate(0,0); } to { transform: translate(70px,50px); } }
+    .hero-tag {
+      background: var(--glass); border-color: var(--accent-brd); color: #C9D6F5;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .hero-tag::before {
+      content: ''; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--grad); box-shadow: 0 0 10px var(--accent);
+      animation: tagPulse 2.4s ease-in-out infinite;
+    }
+    @keyframes tagPulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+    .btn-grad { background: var(--grad); color: #fff; box-shadow: var(--glow); }
+    .btn-grad:hover { transform: translateY(-2px); box-shadow: 0 10px 44px rgba(124,58,237,0.45); filter: brightness(1.08); }
+
+    /* stats */
+    .stats { background: linear-gradient(180deg, rgba(59,130,246,0.06), transparent 70%), var(--grey1); }
+    .stat-n { font-size: 2.4rem; }
+
+    /* cards / secciones */
+    .svc-card:hover { background: var(--grey2); box-shadow: inset 0 1px 0 var(--accent-brd); }
+    .svc-dot { background: var(--grad); box-shadow: 0 0 12px rgba(59,130,246,0.8); }
+    .process-step:hover { box-shadow: 0 -2px 0 0 var(--accent); border-color: var(--accent-brd); }
+    .why-icon {
+      width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
+      background: var(--blue-dim); border: 1px solid var(--accent-brd); border-radius: 12px;
+      font-size: 1.3rem; margin-bottom: 1.2rem;
+    }
+    .video-card:hover { border-color: var(--accent-brd); box-shadow: 0 12px 40px rgba(59,130,246,0.15); }
+    .play-btn { background: var(--grad); }
+    .play-btn svg { fill: #fff; }
+    .testi-tab.active { background: var(--grad); color: #fff; }
+    .stars span { color: #FBBF24; }
+
+    /* FAQ + form */
+    details[open] { background: linear-gradient(90deg, rgba(59,130,246,0.06), transparent); }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent-brd); box-shadow: 0 0 0 3px var(--blue-dim); }
+    .btn-submit { background: var(--grad); color: #fff; box-shadow: 0 6px 24px rgba(59,130,246,0.3); }
+    .btn-submit:hover { background: var(--grad); filter: brightness(1.12); box-shadow: 0 8px 32px rgba(124,58,237,0.4); }
+
+    /* ── PLANES (resumen en landing) ── */
+    .planes-sec { background: var(--black); position: relative; overflow: hidden; }
+    .planes-sec::before {
+      content: ''; position: absolute; width: 640px; height: 640px; border-radius: 50%;
+      top: -220px; right: -180px; pointer-events: none;
+      background: radial-gradient(circle, rgba(139,92,246,0.14), transparent 65%);
+      filter: blur(100px);
+    }
+    .lp-banner {
+      position: relative; display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+      background: var(--glass); border: 1px solid var(--glass-brd); border-radius: var(--radius-lg);
+      padding: 1.5rem 1.8rem; margin-bottom: 1.75rem;
+     
+    }
+    .lp-banner-name { font-size: 1.05rem; font-weight: 800; display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin-bottom: .3rem; }
+    .lp-tag {
+      font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--blue); border: 1px solid var(--accent-brd); background: var(--blue-dim);
+      border-radius: 100px; padding: .18rem .55rem;
+    }
+    .lp-banner-desc { font-size: .82rem; color: var(--muted); max-width: 480px; }
+    .lp-banner-right { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    .lp-banner-price { font-size: 1.6rem; font-weight: 900; letter-spacing: -1px; white-space: nowrap; }
+    .lp-banner-price span { font-size: .72rem; color: var(--muted); font-weight: 500; margin-left: .15rem; }
+    .lp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: stretch; }
+    .lp-card {
+      position: relative; display: flex; flex-direction: column;
+      background: var(--glass); border: 1px solid var(--glass-brd); border-radius: var(--radius-lg);
+      padding: 2.2rem 1.6rem 2rem;
+     
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+    }
+    .lp-card:hover { transform: translateY(-5px); border-color: var(--accent-brd); box-shadow: 0 16px 48px rgba(59,130,246,0.12); }
+    .lp-card.popular {
+      border: 1px solid transparent;
+      background: linear-gradient(var(--grey2), var(--grey2)) padding-box, var(--grad) border-box;
+      box-shadow: 0 12px 50px rgba(124,58,237,0.22);
+    }
+    .lp-card.popular:hover { transform: translateY(-5px); box-shadow: 0 18px 60px rgba(124,58,237,0.32); }
+    .lp-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--grad); color: #fff;
+      font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      padding: .28rem .8rem; border-radius: 100px; white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(59,130,246,0.4);
+    }
+    .lp-badge.ghost { background: var(--grey3); color: var(--blue); border: 1px solid var(--accent-brd); box-shadow: none; }
+    .lp-name { font-size: 1.15rem; font-weight: 800; margin-bottom: .35rem; }
+    .lp-desc { font-size: .78rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.2rem; min-height: 2.2em; }
+    .lp-price { display: flex; align-items: baseline; gap: .3rem; margin-bottom: 1.4rem; }
+    .lp-price .n { font-size: 2rem; font-weight: 900; letter-spacing: -1.5px; line-height: 1; }
+    .lp-price .p { font-size: .75rem; color: var(--muted); }
+    .lp-feats { list-style: none; display: flex; flex-direction: column; gap: .55rem; margin-bottom: 1.6rem; flex-grow: 1; }
+    .lp-feats li { display: flex; gap: .55rem; align-items: flex-start; font-size: .8rem; color: #C0C0C0; line-height: 1.45; }
+    .lp-feats li::before {
+      content: '✓'; flex-shrink: 0; width: 16px; height: 16px; margin-top: 1px;
+      background: var(--blue-dim); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .6rem; color: var(--blue);
+    }
+    .lp-cta {
+      display: block; text-align: center; padding: .75rem 1rem; border-radius: 8px;
+      font-weight: 700; font-size: .85rem; text-decoration: none; letter-spacing: .02em;
+      transition: all .2s;
+    }
+    .lp-cta.ghost { background: transparent; color: var(--white); border: 1px solid var(--border2); }
+    .lp-cta.ghost:hover { border-color: var(--accent-brd); background: var(--blue-dim); }
+    .lp-cta.grad { background: var(--grad); color: #fff; box-shadow: 0 6px 20px rgba(59,130,246,0.35); }
+    .lp-cta.grad:hover { filter: brightness(1.12); transform: translateY(-1px); }
+    .planes-more { text-align: center; margin-top: 2.5rem; }
+    .planes-more p { font-size: .78rem; color: var(--muted); margin-top: .9rem; }
+
+    /* tags + sociales con acento */
+    .ptag:hover { border-color: var(--accent-brd); color: var(--blue); }
+    .social-btn:hover { border-color: var(--accent-brd); color: var(--white); background: var(--blue-dim); }
+
+    /* footer */
+    footer { position: relative; }
+    footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59,130,246,0.5), rgba(139,92,246,0.5), transparent); }
+
+    /* reveal on scroll (clases agregadas por JS — sin JS no se oculta nada) */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-bg::before, .hero-bg::after, .hero-tag::before { animation: none; }
+    }
+    @media print {
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .hero-bg, .hero-tex { display: none !important; }
+      h1 em, h2 .accent, .stat-n .accent, .profile-name .accent, .pn-val { background: none !important; -webkit-text-fill-color: initial !important; }
     }
   </style>
 </head>
@@ -538,7 +733,7 @@
     <li><a href="#perfil">Sobre mí</a></li>
     <li><a href="#testimonios">Testimonios</a></li>
     <li><a href="#agenda">Agenda</a></li>
-    <li><a href="planes.html">Planes</a></li>
+    <li><a href="#planes">Planes</a></li>
     <li><a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener">🤖 Bot</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
@@ -548,16 +743,15 @@
 
 <!-- HERO -->
 <header class="hero" role="banner">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-tex" aria-hidden="true"></div>
   <div class="hero-inner">
-    <div class="hero-logo">
-      <img src="logo.png" alt="Manyobra" />
-    </div>
     <div class="hero-tag">Agencia Meta Ads · Chile</div>
     <h1>Anuncios que <em>convierten</em>.<br/>Contenido que <em>para el scroll</em>.</h1>
     <p class="hero-sub">Somos la agencia de <strong>Meta Ads en Chile</strong> que diseña campañas en Facebook e Instagram y produce el contenido que hace que tu negocio destaque y venda.</p>
     <div class="hero-actions">
-      <a href="#contacto" class="btn btn-white">Quiero más clientes</a>
-      <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+      <a href="#contacto" class="btn btn-grad">Quiero más clientes</a>
+      <a href="#planes" class="btn btn-outline">Ver planes y precios</a>
       <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="btn btn-outline">🤖 Probar Bot</a>
     </div>
     <p class="hero-note">Los resultados dependen de cada negocio. No garantizamos cifras específicas.</p>
@@ -719,28 +913,34 @@
 <!-- PROFILE -->
 <section class="profile-sec" id="perfil">
   <div class="sec-inner">
-    <div class="profile-grid">
-      <div class="profile-img">
-        <img src="sebastian.png" alt="Sebastián, fundador de Manyobra – Agencia Meta Ads Chile" width="600" height="800" loading="eager" />
-      </div>
-      <div class="profile-content">
+    <div class="sec-tag">Sobre mí</div>
+    <h2>Detrás de <span class="accent">Manyobra</span></h2>
+    <p class="sec-sub">Estrategia y producción con nombre y apellido, sin intermediarios.</p>
+    <div class="founder-card">
+      <div class="founder-head">
+        <div class="founder-avatar" aria-hidden="true">S</div>
         <div>
+          <div class="profile-name">Hola, soy <span class="accent">Sebastián</span></div>
           <div class="profile-role">Fundador · Meta Ads Specialist · Audiovisual Producer</div>
-          <div class="profile-name">Hola,<br/>soy <span class="accent">Sebastián</span></div>
         </div>
-        <p class="profile-bio">Llevo más de 4 años ayudando a negocios chilenos a crecer con publicidad en Meta. Empecé combinando mi pasión por la producción audiovisual con el marketing digital, y descubrí que los mejores resultados llegan cuando el contenido y la estrategia trabajan juntos.</p>
-        <p class="profile-bio">Hoy desde Manyobra gestionamos campañas, producimos contenido y automatizamos la atención por WhatsApp para que nuestros clientes se enfoquen en lo que saben hacer.</p>
-        <div class="profile-nums">
-          <div class="pn"><div class="pn-val">+200</div><div class="pn-lbl">Campañas</div></div>
-          <div class="pn"><div class="pn-val">+50</div><div class="pn-lbl">Clientes</div></div>
-          <div class="pn"><div class="pn-val">4+ años</div><div class="pn-lbl">Meta Ads</div></div>
+      </div>
+      <div class="founder-cols">
+        <div>
+          <p class="profile-bio">Llevo más de 4 años ayudando a negocios chilenos a crecer con publicidad en Meta. Empecé combinando mi pasión por la producción audiovisual con el marketing digital, y descubrí que los mejores resultados llegan cuando el contenido y la estrategia trabajan juntos.</p>
+          <p class="profile-bio">Hoy desde Manyobra gestionamos campañas, producimos contenido y automatizamos la atención por WhatsApp para que nuestros clientes se enfoquen en lo que saben hacer.</p>
         </div>
-        <div class="profile-tags">
-          <span class="ptag">Meta Ads</span><span class="ptag">Facebook Ads</span>
-          <span class="ptag">Instagram Ads</span><span class="ptag">Producción Video</span>
-          <span class="ptag">WhatsApp Bot</span><span class="ptag">CRM</span>
-        </div>
-        <div class="profile-socials">
+        <div class="founder-side">
+          <div class="profile-nums">
+            <div class="pn"><div class="pn-val">+200</div><div class="pn-lbl">Campañas</div></div>
+            <div class="pn"><div class="pn-val">+50</div><div class="pn-lbl">Clientes</div></div>
+            <div class="pn"><div class="pn-val">4+ años</div><div class="pn-lbl">Meta Ads</div></div>
+          </div>
+          <div class="profile-tags">
+            <span class="ptag">Meta Ads</span><span class="ptag">Facebook Ads</span>
+            <span class="ptag">Instagram Ads</span><span class="ptag">Producción Video</span>
+            <span class="ptag">WhatsApp Bot</span><span class="ptag">CRM</span>
+          </div>
+          <div class="profile-socials">
           <a href="https://wa.me/56956747949" target="_blank" rel="noopener" class="social-btn">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp
@@ -749,6 +949,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             @manyobra.cl
           </a>
+          </div>
         </div>
       </div>
     </div>
@@ -766,6 +967,75 @@
       <div class="why-item"><div class="why-icon">🤖</div><h3>Bot de WhatsApp incluido</h3><p>Calificamos leads automáticamente para que solo llegues a clientes que realmente quieren comprar.</p></div>
       <div class="why-item"><div class="why-icon">📊</div><h3>Comunicación directa</h3><p>Tienes acceso directo al equipo que gestiona tus campañas. Sin intermediarios.</p></div>
       <div class="why-item"><div class="why-icon">🤝</div><h3>Sin permanencia</h3><p>Trabajamos mes a mes porque confiamos en que los resultados hablan solos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES (resumen) -->
+<!-- OJO: precios duplicados — si cambian, actualizar también planes.html (tarjetas HTML + objeto billingData del script) -->
+<section class="planes-sec" id="planes">
+  <div class="sec-inner">
+    <div class="sec-tag">Planes</div>
+    <h2>Planes desde <span class="accent">$100.000/mes</span></h2>
+    <p class="sec-sub">Contenido, Meta Ads y automatización en un solo lugar. Todos los precios son + IVA.</p>
+
+    <div class="lp-banner">
+      <div>
+        <div class="lp-banner-name">🔑 Arranque <span class="lp-tag">Plan de entrada</span></div>
+        <p class="lp-banner-desc">¿Recién estás partiendo? 1 video + 2 fotos + 2 diseños = 5 piezas de contenido al mes. Sin gestión de Ads.</p>
+      </div>
+      <div class="lp-banner-right">
+        <div class="lp-banner-price">$100.000<span>/mes + IVA</span></div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Arranque" target="_blank" rel="noopener" class="lp-cta ghost">Lo quiero →</a>
+      </div>
+    </div>
+
+    <div class="lp-grid">
+      <article class="lp-card">
+        <div class="lp-name">⚙️ Impulso</div>
+        <p class="lp-desc">Aparece todos los días en redes sin dedicarle ni una hora.</p>
+        <div class="lp-price"><span class="n">$150.000</span><span class="p">/mes + IVA</span></div>
+        <ul class="lp-feats">
+          <li><strong>8 piezas</strong>&nbsp;de contenido al mes</li>
+          <li>2 videos · 3 fotos · 3 diseños</li>
+          <li>Meta Ads gestionados + Píxel</li>
+          <li>Community Manager + reporte mensual</li>
+        </ul>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Impulso" target="_blank" rel="noopener" class="lp-cta ghost">Quiero este plan →</a>
+      </article>
+
+      <article class="lp-card popular">
+        <div class="lp-badge">⭐ Popular</div>
+        <div class="lp-name">🏎️ Turbo</div>
+        <p class="lp-desc">Todo lo que necesitas para pasar de seguidores a clientes.</p>
+        <div class="lp-price"><span class="n">$300.000</span><span class="p">/mes + IVA</span></div>
+        <ul class="lp-feats">
+          <li><strong>14 piezas</strong>&nbsp;de contenido al mes</li>
+          <li>4 videos · 4 fotos · 6 diseños + sesión de producción</li>
+          <li>Meta Ads completo + remarketing</li>
+          <li>Landing page + copywriting de ventas</li>
+        </ul>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="lp-cta grad">Quiero este plan →</a>
+      </article>
+
+      <article class="lp-card">
+        <div class="lp-badge ghost">Premium</div>
+        <div class="lp-name">⚡ Manyobra</div>
+        <p class="lp-desc">Tu sistema de ventas automatizado trabajando 24/7.</p>
+        <div class="lp-price"><span class="n">$500.000</span><span class="p">/mes + IVA</span></div>
+        <ul class="lp-feats">
+          <li><strong>28 piezas</strong>&nbsp;de contenido al mes</li>
+          <li>10 videos · 8 fotos · 10 diseños + 2 sesiones</li>
+          <li>Meta Ads avanzado + A/B testing</li>
+          <li>Bot de WhatsApp de ventas 24/7</li>
+        </ul>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Manyobra" target="_blank" rel="noopener" class="lp-cta ghost">Quiero este plan →</a>
+      </article>
+    </div>
+
+    <div class="planes-more">
+      <a href="planes.html" class="btn btn-grad">Ver desglose completo de los planes →</a>
+      <p>Incluye el detalle de cada pilar, garantías, pago 3 meses con ~33% de descuento y descarga en PDF.</p>
     </div>
   </div>
 </section>
@@ -846,6 +1116,16 @@
           <li><a href="#servicios">Producción Audiovisual</a></li>
           <li><a href="#servicios">Bot WhatsApp</a></li>
           <li><a href="#servicios">Retargeting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Planes</h4>
+        <ul>
+          <li><a href="planes.html">🔑 Arranque</a></li>
+          <li><a href="planes.html">⚙️ Impulso</a></li>
+          <li><a href="planes.html">🏎️ Turbo</a></li>
+          <li><a href="planes.html">⚡ Manyobra</a></li>
+          <li><a href="planes.html">Ver todos →</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1005,6 +1285,23 @@
     setTimeout(() => t.classList.remove('show'), 4000);
     this.reset();
   });
+
+  // Reveal on scroll (las clases se agregan por JS: sin JS nada queda oculto)
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    const grids = document.querySelectorAll('.svc-grid, .process-grid, .why-grid, .video-grid, .lp-grid, .stats-grid, .faq-list');
+    grids.forEach(g => Array.from(g.children).forEach((el, i) => {
+      el.classList.add('reveal');
+      el.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+    }));
+    document.querySelectorAll('.sec-inner > .sec-tag, .sec-inner > h2, .sec-inner > .sec-sub, .lp-banner, .planes-more, .founder-card, .contact-form')
+      .forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  })();
 </script>
 </body>
 </html>
