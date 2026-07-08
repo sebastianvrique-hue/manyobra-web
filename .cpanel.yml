@@ -10,3 +10,13 @@ deployment:
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/cp -R testimonios/ $DEPLOYPATH
+    # ── Tema de WordPress (el home de manyobra.cl lo sirve WP, no index.html) ──
+    - export WPTHEME=/home2/manyobra/public_html/wp-content/themes/manyobra/
+    - /bin/mkdir -p $WPTHEME/assets
+    - /bin/cp wordpress-theme/manyobra/front-page.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/header.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/functions.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/index.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/style.css $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/assets/main.css $WPTHEME/assets/
+    - /bin/cp wordpress-theme/manyobra/assets/main.js $WPTHEME/assets/

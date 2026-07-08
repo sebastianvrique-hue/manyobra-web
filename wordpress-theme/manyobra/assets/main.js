@@ -91,3 +91,20 @@ if (form) {
     this.reset();
   });
 }
+
+// Reveal on scroll (las clases se agregan por JS: sin JS nada queda oculto)
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  const grids = document.querySelectorAll('.svc-grid, .process-grid, .why-grid, .video-grid, .lp-grid, .stats-grid, .faq-list');
+  grids.forEach(g => Array.from(g.children).forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+  }));
+  document.querySelectorAll('.sec-inner > .sec-tag, .sec-inner > h2, .sec-inner > .sec-sub, .lp-banner, .planes-more, .founder-card, .contact-form')
+    .forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
