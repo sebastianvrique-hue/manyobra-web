@@ -425,8 +425,8 @@
       .pilar-card { break-inside: avoid; margin-bottom: .6rem; }
       .pilares-op { display: none !important; }
       .plan-badge, .plan-badge.nuevo, .pb-tag, .plan-onboard, .plan-discount-badge, .pt-save { border: 1px solid #999 !important; }
-      .pricing-grid { grid-template-columns: repeat(3, 1fr) !important; gap: .8rem !important; }
-      .value-grid { grid-template-columns: repeat(4, 1fr) !important; }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr) !important; gap: .8rem !important; }
+      .value-grid { grid-template-columns: repeat(3, 1fr) !important; }
       section { padding: 24px 4% !important; }
       .planes-hero { padding: 24px 4% !important; }
     }
@@ -531,6 +531,35 @@
     .gs-card:hover { border-color: var(--accent-brd); }
     .cond-dot { background: var(--grad); box-shadow: 0 0 8px rgba(59,130,246,0.6); }
 
+    /* grid de 2 planes centrado (Arranque va en banner) */
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin: 0 auto; }
+    @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
+
+    /* ── AGENTE IA (sistema aparte) ── */
+    .agente-ia-card {
+      max-width: 860px; margin: 2.5rem auto 0; padding: 2rem;
+      border: 1px solid transparent; border-radius: var(--radius-lg);
+      background: linear-gradient(var(--grey2), var(--grey2)) padding-box, var(--grad) border-box;
+      box-shadow: 0 12px 50px rgba(124,58,237,0.18);
+    }
+    .ai-head { display: flex; align-items: flex-start; gap: 1.2rem; margin-bottom: 1.4rem; }
+    .ai-icon {
+      width: 54px; height: 54px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      background: var(--blue-dim); border: 1px solid var(--accent-brd); border-radius: 14px; font-size: 1.6rem;
+    }
+    .ai-name { font-size: 1.2rem; font-weight: 800; margin-bottom: .4rem; display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+    .ai-desc { font-size: .85rem; color: var(--muted); line-height: 1.6; max-width: 640px; }
+    .ai-feats { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem 1.5rem; margin-bottom: 1.5rem; }
+    .ai-feats li { display: flex; align-items: flex-start; gap: .55rem; font-size: .8rem; color: #C0C0C0; line-height: 1.45; }
+    .ai-feats li strong { color: var(--white); }
+    .ai-ctas { display: flex; gap: .8rem; flex-wrap: wrap; }
+    .ai-ctas .plan-cta { flex: 1; min-width: 200px; }
+    .ai-note { font-size: .72rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+    @media (max-width: 768px) {
+      .ai-head { flex-direction: column; }
+      .ai-feats { grid-template-columns: 1fr; }
+    }
+
     /* footer */
     footer { position: relative; }
     footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59,130,246,0.5), rgba(139,92,246,0.5), transparent); }
@@ -553,7 +582,7 @@
       .plan-card, .pilar-card, .plan-basico-banner, .billing-toggle, .testi-video-card, .value-item, .gs-card, .download-pdf-btn {
         backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
       }
-      .plan-card.popular, .pilares-total { background: #fff !important; }
+      .plan-card.popular, .pilares-total, .agente-ia-card { background: #fff !important; border: 1px solid #ccc !important; break-inside: avoid; }
       .plan-basico-banner::before { display: none !important; }
     }
   </style>
@@ -581,7 +610,7 @@
 <div class="planes-hero">
   <div class="sec-tag">Planes & Precios</div>
   <h1>Elige el plan que<br/><span>hace crecer tu negocio</span></h1>
-  <p>Contenido profesional, Meta Ads y automatización desde <strong>$100.000/mes</strong>. Todos los precios son + IVA.</p>
+  <p>3 planes con contenido profesional y <strong>Meta Ads gestionados incluidos</strong>, desde <strong>$100.000/mes</strong>. Todos los precios son + IVA.</p>
   <button type="button" class="download-pdf-btn" onclick="window.print()">
     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 17v2a2 2 0 002 2h10a2 2 0 002-2v-2"/></svg>
     Descargar planes en PDF
@@ -591,7 +620,7 @@
 <!-- PILARES -->
 <section class="pilares-section">
   <div class="pilares-inner">
-    <h2>3 pilares. 1 sistema completo de captación.</h2>
+    <h2>Contenido + Meta Ads en cada plan. Y un Agente IA como sistema aparte.</h2>
     <div class="pilares-grid">
       <div class="pilar-card">
         <div class="pilar-icon">🎬</div>
@@ -618,10 +647,10 @@
         </ul>
         <div class="pilar-value">$300.000<span>/mes de valor</span></div>
       </div>
-      <div class="pilares-op">+</div>
+      <div class="pilares-op">·</div>
       <div class="pilar-card">
         <div class="pilar-icon">🤖</div>
-        <div class="pilar-name">Agente WhatsApp</div>
+        <div class="pilar-name">Agente IA <span class="pb-tag" style="vertical-align:middle;">Sistema aparte</span></div>
         <div class="pilar-desc">Responde, califica y agenda 24/7</div>
         <ul class="pilar-list">
           <li><span>Atiende por WhatsApp 24/7</span><b>$120.000</b></li>
@@ -633,15 +662,15 @@
       </div>
     </div>
     <div class="pilares-total">
-      <div class="pt-label">Los 3 pilares como paquete completo</div>
+      <div class="pt-label">Contenido + Meta Ads incluidos en todos los planes</div>
       <div class="pt-row">
-        <div class="pt-sum">$900.000<span>/mes por separado</span></div>
+        <div class="pt-sum">$600.000<span>/mes contratado por separado</span></div>
         <div class="pt-arrow">→</div>
-        <div class="pt-real">$500.000<span>/mes con el Plan Manyobra</span></div>
+        <div class="pt-real">desde $100.000<span>/mes con un plan Manyobra</span></div>
       </div>
-      <div class="pt-save">Ahorras $400.000/mes · 44% menos</div><br/>
-      <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Manyobra" target="_blank" rel="noopener" class="plan-cta cta-white" style="display:inline-block; max-width:320px; margin-bottom:0;">
-        Quiero el Plan Manyobra →
+      <div class="pt-save">Elige tu nivel: 6, 12 o 24 publicaciones al mes</div><br/>
+      <a href="#precios" class="plan-cta cta-white" style="display:inline-block; max-width:320px; margin-bottom:0;">
+        Ver los 3 planes ↓
       </a>
     </div>
   </div>
@@ -695,15 +724,15 @@
 </section>
 
 <!-- PRICING -->
-<section class="pricing-section">
+<section class="pricing-section" id="precios">
   <div class="pricing-inner">
 
     <!-- ── ARRANQUE (entrada) ── -->
     <div class="plan-basico-banner">
       <div class="pb-left">
         <div class="pb-name">🔑 Arranque <span class="pb-tag">Plan básico</span></div>
-        <div class="pb-desc">¿Recién estás partiendo? Contenido profesional para tus redes, sin pauta todavía.</div>
-        <div class="pb-features">1 video + 2 fotos + 2 imágenes = 5 piezas/mes · Calendario editorial · Sin gestión de Ads</div>
+        <div class="pb-desc">¿Recién estás partiendo? Contenido profesional y tu pauta gestionada, todo incluido.</div>
+        <div class="pb-features">3 videos + 3 imágenes 1:1 + 3 imágenes 9:16 · 6 publicaciones Feed + 6 historias · Meta Ads con 6 anuncios · Reporte mensual · App de avance</div>
       </div>
       <div class="pb-right">
         <div data-plan="arranque">
@@ -720,8 +749,9 @@
 
     <div class="pricing-grid">
 
-      <!-- ── IMPULSO ── -->
-      <div class="plan-card">
+      <!-- ── IMPULSO (POPULAR) ── -->
+      <div class="plan-card popular">
+        <div class="plan-badge">⭐ Popular</div>
         <div class="plan-name">⚙️ Impulso</div>
         <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Aparece todos los días en redes sin dedicarle ni una hora.</p>
@@ -734,28 +764,28 @@
           </div>
           <div class="price-note"></div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Impulso" target="_blank" rel="noopener" class="plan-cta cta-outline">
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Impulso" target="_blank" rel="noopener" class="plan-cta cta-white">
           Quiero este plan →
         </a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>8 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span><strong>2 videos</strong></span></li>
-          <li><span class="check">✓</span><span><strong>3 fotos</strong></span></li>
-          <li><span class="check">✓</span><span><strong>3 imágenes</strong> de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>6 videos</strong> profesionales</span></li>
+          <li><span class="check">✓</span><span><strong>6 imágenes 1:1</strong> para Feed</span></li>
+          <li><span class="check">✓</span><span><strong>6 imágenes 9:16</strong> para Historias</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span><strong>8 publicaciones</strong> en Feed</span></li>
-          <li><span class="check">✓</span><span><strong>6 historias</strong></span></li>
+          <li><span class="check">✓</span><span><strong>12 publicaciones</strong> en Feed</span></li>
+          <li><span class="check">✓</span><span><strong>12 historias</strong></span></li>
           <div class="feat-label">Publicidad & Gestión</div>
-          <li><span class="check">✓</span><span><strong>Meta Ads</strong> gestionados + Píxel instalado para rastrear conversiones</span></li>
-          <li><span class="check">✓</span><span>Community Manager y reporte mensual</span></li>
+          <li><span class="check">✓</span><span><strong>Meta Ads gestionados</strong> con <strong>12 anuncios</strong> + Píxel instalado</span></li>
+          <li><span class="check">✓</span><span>Community Manager + reporte quincenal</span></li>
+          <li><span class="check">✓</span><span><strong>App de avance</strong> para seguir tu proyecto en tiempo real</span></li>
         </ul>
       </div>
 
-      <!-- ── TURBO (POPULAR) ── -->
-      <div class="plan-card popular">
-        <div class="plan-badge">⭐ Popular</div>
+      <!-- ── TURBO ── -->
+      <div class="plan-card">
+        <div class="plan-badge nuevo">Más completo</div>
         <div class="plan-name">🏎️ Turbo</div>
         <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Todo lo que necesitas para pasar de seguidores a clientes, en un solo plan.</p>
@@ -768,64 +798,51 @@
           </div>
           <div class="price-note"></div>
         </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="plan-cta cta-white">
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="plan-cta cta-outline">
           Quiero este plan →
         </a>
         <div class="plan-divider"></div>
         <ul class="plan-features">
           <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>14 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span><strong>4 videos</strong></span></li>
-          <li><span class="check">✓</span><span><strong>4 fotos</strong></span></li>
-          <li><span class="check">✓</span><span><strong>6 imágenes</strong> de diseño</span></li>
+          <li><span class="check">✓</span><span><strong>12 videos</strong> profesionales</span></li>
+          <li><span class="check">✓</span><span><strong>12 imágenes 1:1</strong> para Feed</span></li>
+          <li><span class="check">✓</span><span><strong>12 imágenes 9:16</strong> para Historias</span></li>
           <li><span class="check">✓</span><span><strong>1 sesión</strong> de producción profesional (grabación + dirección de arte)</span></li>
           <div class="feat-label">Publicaciones</div>
-          <li><span class="check">✓</span><span><strong>16 publicaciones</strong> en Feed</span></li>
-          <li><span class="check">✓</span><span><strong>12 historias</strong></span></li>
-          <div class="feat-label">Publicidad & Automatización</div>
-          <li><span class="check">✓</span><span><strong>Meta Ads completo</strong> + Optimización + Remarketing</span></li>
-          <li><span class="check">✓</span><span><strong>Landing Page básica</strong> + Hosting + Dominio (1 año)</span></li>
-          <li><span class="check">✓</span><span>Copywriting de ventas + guiones para videos + respuestas rápidas</span></li>
-        </ul>
-      </div>
-
-      <!-- ── MANYOBRA (PREMIUM) ── -->
-      <div class="plan-card">
-        <div class="plan-badge nuevo">Premium</div>
-        <div class="plan-name">⚡ Manyobra</div>
-        <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
-        <p class="plan-tagline">Tu sistema de ventas automatizado que trabaja 24/7 mientras tú duermes.</p>
-        <div class="plan-price-wrap" data-plan="manyobra">
-          <div class="plan-price-old">Antes $300.000</div>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">500.000</span>
-            <span class="period">/mes + IVA</span>
-          </div>
-          <div class="price-note"></div>
-        </div>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Manyobra" target="_blank" rel="noopener" class="plan-cta cta-outline">
-          Quiero este plan →
-        </a>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <div class="feat-label">Contenido mensual</div>
-          <li><span class="check">✓</span><span><strong>28 piezas</strong> de contenido al mes</span></li>
-          <li><span class="check">✓</span><span><strong>10 videos</strong></span></li>
-          <li><span class="check">✓</span><span><strong>8 fotos</strong></span></li>
-          <li><span class="check">✓</span><span><strong>10 imágenes</strong> de diseño</span></li>
-          <li><span class="check">✓</span><span><strong>Hasta 2 sesiones</strong> de producción profesional al mes</span></li>
-          <div class="feat-label">Publicaciones</div>
           <li><span class="check">✓</span><span><strong>24 publicaciones</strong> en Feed</span></li>
-          <li><span class="check">✓</span><span><strong>18 historias</strong></span></li>
-          <div class="feat-label">Publicidad & Automatización</div>
-          <li><span class="check">✓</span><span><strong>Meta Ads avanzado</strong> + audiencias personalizadas</span></li>
-          <li><span class="check">✓</span><span><strong>Landing Page Premium</strong> + optimización + A/B Testing</span></li>
-          <li><span class="check">✓</span><span><strong>Bot de WhatsApp</strong> automático de ventas 24/7</span></li>
+          <li><span class="check">✓</span><span><strong>24 historias</strong></span></li>
+          <div class="feat-label">Publicidad & Gestión</div>
+          <li><span class="check">✓</span><span><strong>Meta Ads completo</strong> con <strong>24 anuncios</strong> + Optimización + Remarketing</span></li>
+          <li><span class="check">✓</span><span><strong>Landing Page básica</strong> + Hosting + Dominio (1 año)</span></li>
+          <li><span class="check">✓</span><span>Copywriting de ventas + reporte semanal</span></li>
+          <li><span class="check">✓</span><span><strong>App de avance</strong> para seguir tu proyecto en tiempo real</span></li>
         </ul>
       </div>
 
     </div>
+
+    <!-- ── AGENTE IA (sistema aparte) ── -->
+    <div class="agente-ia-card" id="agente-ia">
+      <div class="ai-head">
+        <div class="ai-icon">🤖</div>
+        <div>
+          <div class="ai-name">Agente IA <span class="pb-tag">Sistema aparte</span></div>
+          <p class="ai-desc">Un agente de inteligencia artificial que atiende tu WhatsApp 24/7: responde al instante, califica a cada lead, agenda reuniones y hace seguimiento sin que muevas un dedo. Se integra con tu plan de contenido o funciona por sí solo.</p>
+        </div>
+      </div>
+      <ul class="ai-feats">
+        <li><span class="check">✓</span><span>Responde por WhatsApp <strong>24/7</strong></span></li>
+        <li><span class="check">✓</span><span><strong>Califica</strong> a cada lead antes de que llegue a ti</span></li>
+        <li><span class="check">✓</span><span><strong>Agenda reuniones</strong> directo en tu calendario</span></li>
+        <li><span class="check">✓</span><span>Seguimiento automático hasta cerrar</span></li>
+      </ul>
+      <div class="ai-ctas">
+        <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="plan-cta cta-white" style="margin-bottom:0;">Probar el agente →</a>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0;">Quiero una demo</a>
+      </div>
+      <p class="ai-note">Se cotiza según tu negocio · Puedes sumarlo a cualquier plan o contratarlo solo</p>
+    </div>
+
   </div>
 </section>
 
@@ -836,27 +853,21 @@
     <div class="value-grid">
       <div class="value-item">
         <div class="v-plan">🔑 Arranque</div>
-        <div class="v-market">Valor de mercado: $220.000+/mes</div>
+        <div class="v-market">Valor de mercado: $280.000+/mes</div>
         <div class="v-price">$100.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
-        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 54%</div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 60%</div>
       </div>
       <div class="value-item">
         <div class="v-plan">⚙️ Impulso</div>
-        <div class="v-market">Valor de mercado: $350.000+/mes</div>
+        <div class="v-market">Valor de mercado: $450.000+/mes</div>
         <div class="v-price">$150.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
-        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 57%</div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 65%</div>
       </div>
       <div class="value-item">
         <div class="v-plan">🏎️ Turbo</div>
-        <div class="v-market">Valor de mercado: $650.000+/mes</div>
+        <div class="v-market">Valor de mercado: $900.000+/mes</div>
         <div class="v-price">$300.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
-        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 53%</div>
-      </div>
-      <div class="value-item">
-        <div class="v-plan">⚡ Manyobra</div>
-        <div class="v-market">Valor de mercado: $1.100.000+/mes</div>
-        <div class="v-price">$500.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
-        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 54%</div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 65%</div>
       </div>
     </div>
   </div>
@@ -967,8 +978,7 @@
   const billingData = {
     arranque: { monthly: 100000, qMonthly: 65000,  qTotal: 195000 },
     impulso:  { monthly: 150000, qMonthly: 100000, qTotal: 300000 },
-    turbo:    { monthly: 300000, qMonthly: 200000, qTotal: 600000 },
-    manyobra: { monthly: 500000, qMonthly: 330000, qTotal: 990000 }
+    turbo:    { monthly: 300000, qMonthly: 200000, qTotal: 600000 }
   };
   const formatCLP = n => n.toLocaleString('es-CL');
 
