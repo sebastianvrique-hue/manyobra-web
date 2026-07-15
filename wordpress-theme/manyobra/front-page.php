@@ -33,8 +33,8 @@
       </svg>
     </div>
     <div class="hero-tag">Agencia Meta Ads · Chile</div>
-    <h1>Anuncios que <em>convierten</em>.<br/>Contenido que <em>para el scroll</em>.</h1>
-    <p class="hero-sub">Diseñamos campañas en Facebook e Instagram y producimos el contenido que hace que tu negocio destaque y venda.</p>
+    <h1>Más <em>clientes</em>.<br/>Menos <em>complicaciones</em>.</h1>
+    <p class="hero-sub">Ponemos a trabajar tus anuncios, tu contenido y tu WhatsApp para que lleguen clientes reales a tu negocio. Tú solo te encargas de atenderlos.</p>
     <div class="hero-actions">
       <a href="#contacto" class="btn btn-grad">Quiero más clientes</a>
       <a href="#planes" class="btn btn-outline">Ver planes y precios</a>
@@ -58,14 +58,14 @@
   <div class="sec-inner">
     <div class="sec-tag">Servicios</div>
     <h2>Lo que hacemos <span class="accent">bien</span></h2>
-    <p class="sec-sub">Estrategia, contenido y tecnología en un solo lugar.</p>
+    <p class="sec-sub">No te vendemos servicios sueltos: te damos resultados para tu negocio.</p>
     <div class="svc-grid">
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Campañas de Conversión</h3><p>Campañas en Facebook e Instagram enfocadas en ventas, leads y registros con segmentación precisa.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Producción Audiovisual</h3><p>Videos y fotos profesionales pensados para ads. Contenido que para el scroll y genera acción.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Bot de WhatsApp</h3><p>Automatizamos la atención inicial y calificación de leads para que solo llegues a prospectos reales.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Retargeting</h3><p>Recuperamos a las personas que vieron tus productos pero no compraron.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">05</div><h3>Optimización y Reportes</h3><p>Monitoreo diario, A/B testing y reportes claros cada semana basados en datos reales.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">06</div><h3>Meta Policy Compliance</h3><p>Revisamos cada anuncio para cumplir las políticas de Meta y evitar rechazos o bloqueos.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Más clientes que te compran</h3><p>Campañas en Facebook e Instagram para que la gente correcta te encuentre y te escriba.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Una marca que se ve profesional</h3><p>Producimos los videos y fotos que hacen que tu negocio se vea a la altura de lo que vale.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Nunca más pierdes un mensaje</h3><p>Un agente de IA responde, califica y agenda por WhatsApp 24/7, aunque estés durmiendo.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Recuperas las ventas que se escapan</h3><p>Volvemos a impactar a quienes te vieron y no compraron, hasta que se deciden.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">05</div><h3>Sabes en qué se va cada peso</h3><p>Reportes claros: ves qué funciona y qué no, sin humo.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">06</div><h3>Cero dolores de cabeza con Meta</h3><p>Cuidamos que tus anuncios cumplan las políticas para que nunca te bloqueen la cuenta.</p></div>
     </div>
   </div>
 </section>
@@ -75,7 +75,7 @@
   <div class="sec-inner">
     <div class="sec-tag">Proceso</div>
     <h2>Cómo <span class="accent">trabajamos</span></h2>
-    <p class="sec-sub">Simple y transparente desde el primer día.</p>
+    <p class="sec-sub">Simple y transparente: tú apruebas, nosotros hacemos que lleguen clientes.</p>
     <div class="process-grid">
       <div class="process-step"><div class="p-num">01</div><h3>Diagnóstico gratuito</h3><p>Analizamos tu negocio, competencia y objetivos para entender el punto de partida real.</p></div>
       <div class="process-step"><div class="p-num">02</div><h3>Estrategia personalizada</h3><p>Diseñamos el plan de campañas, creativos y automatizaciones según tu presupuesto.</p></div>
@@ -174,10 +174,10 @@
     <h2>No somos una agencia <span class="accent">más</span></h2>
     <p class="sec-sub">Combinamos lo que pocas agencias ofrecen juntas.</p>
     <div class="why-grid">
-      <div class="why-item"><div class="why-icon">🎬</div><h3>Ads + Contenido en un solo lugar</h3><p>Manejamos la estrategia y la producción audiovisual sin que necesites coordinar con nadie más.</p></div>
-      <div class="why-item"><div class="why-icon">🤖</div><h3>Bot de WhatsApp incluido</h3><p>Calificamos leads automáticamente para que solo llegues a clientes que realmente quieren comprar.</p></div>
-      <div class="why-item"><div class="why-icon">📊</div><h3>Comunicación directa</h3><p>Tienes acceso directo al equipo que gestiona tus campañas. Sin intermediarios.</p></div>
-      <div class="why-item"><div class="why-icon">🤝</div><h3>Sin permanencia</h3><p>Trabajamos mes a mes porque confiamos en que los resultados hablan solos.</p></div>
+      <div class="why-item"><div class="why-icon">🎬</div><h3>Todo resuelto, en un solo lugar</h3><p>No coordinas con nadie más: estrategia y producción audiovisual bajo un mismo equipo.</p></div>
+      <div class="why-item"><div class="why-icon">🤖</div><h3>Atiende y vende por ti, 24/7</h3><p>El bot de WhatsApp califica leads automáticamente para que solo llegues a clientes que realmente quieren comprar.</p></div>
+      <div class="why-item"><div class="why-icon">📊</div><h3>Sabes siempre cómo va tu negocio</h3><p>Acceso directo al equipo que gestiona tus campañas. Sin intermediarios ni sorpresas.</p></div>
+      <div class="why-item"><div class="why-icon">🤝</div><h3>Te quedas porque quieres, no porque debes</h3><p>Trabajamos mes a mes porque confiamos en que los resultados hablan solos.</p></div>
     </div>
   </div>
 </section>
@@ -188,12 +188,12 @@
   <div class="sec-inner">
     <div class="sec-tag">Planes</div>
     <h2>Planes desde <span class="accent">$100.000/mes</span></h2>
-    <p class="sec-sub">Contenido, Meta Ads y automatización en un solo lugar. Todos los precios son + IVA.</p>
+    <p class="sec-sub">Elige cuánto quieres crecer este mes. Tú solo apruebas el contenido; nosotros conseguimos que tu negocio se vea y venda. Todos los precios son + IVA.</p>
 
     <div class="lp-banner">
       <div>
         <div class="lp-banner-name">🔑 Arranque <span class="lp-tag">Plan de entrada</span></div>
-        <p class="lp-banner-desc">¿Recién estás partiendo? 3 videos + 6 imágenes al mes → 6 publicaciones + 6 historias, con Meta Ads gestionados (6 anuncios) y app de avance.</p>
+        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 3 videos + 6 imágenes al mes → 6 publicaciones + 6 historias, con Meta Ads gestionados (6 anuncios) y app de avance.</p>
       </div>
       <div class="lp-banner-right">
         <div class="lp-banner-price">$100.000<span>/mes + IVA</span></div>
@@ -205,7 +205,7 @@
       <article class="lp-card popular">
         <div class="lp-badge">⭐ Popular</div>
         <div class="lp-name">⚙️ Impulso</div>
-        <p class="lp-desc">Aparece todos los días en redes sin dedicarle ni una hora.</p>
+        <p class="lp-desc">Aparece todos los días y llena tu agenda sin mover un dedo.</p>
         <div class="lp-price"><span class="n">$150.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
           <li><strong>12 publicaciones + 12 historias</strong>&nbsp;al mes</li>
@@ -219,7 +219,7 @@
       <article class="lp-card">
         <div class="lp-badge ghost">Más completo</div>
         <div class="lp-name">🏎️ Turbo</div>
-        <p class="lp-desc">Todo lo que necesitas para pasar de seguidores a clientes.</p>
+        <p class="lp-desc">Tu sistema completo para convertir seguidores en clientes.</p>
         <div class="lp-price"><span class="n">$300.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
           <li><strong>24 publicaciones + 24 historias</strong>&nbsp;al mes</li>
