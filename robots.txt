@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /ventas.html
+Disallow: /ventas/
 
 Sitemap: https://manyobra.cl/sitemap.xml
