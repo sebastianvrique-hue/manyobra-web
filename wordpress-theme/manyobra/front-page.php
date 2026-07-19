@@ -193,7 +193,7 @@
     <div class="lp-banner">
       <div>
         <div class="lp-banner-name">🔑 Arranque <span class="lp-tag">Plan de entrada</span></div>
-        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 3 videos + 6 imágenes al mes → 6 publicaciones + 6 historias, con Meta Ads gestionados (6 anuncios) y app de avance.</p>
+        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 4 videos + 4 imágenes + 4 historias al mes, con Meta Ads gestionados (4 anuncios) y app de avance.</p>
       </div>
       <div class="lp-banner-right">
         <div class="lp-banner-price">$100.000<span>/mes + IVA</span></div>
@@ -206,34 +206,34 @@
         <div class="lp-badge">⭐ Popular</div>
         <div class="lp-name">⚙️ Impulso</div>
         <p class="lp-desc">Aparece todos los días y llena tu agenda sin mover un dedo.</p>
-        <div class="lp-price"><span class="n">$150.000</span><span class="p">/mes + IVA</span></div>
+        <div class="lp-price"><span class="n">$200.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
-          <li><strong>12 publicaciones + 12 historias</strong>&nbsp;al mes</li>
-          <li>6 videos · 6 imágenes 1:1 · 6 imágenes 9:16</li>
-          <li>Meta Ads gestionados: <strong>12 anuncios</strong>&nbsp;+ Píxel</li>
+          <li><strong>🎁 Bonus:</strong> Landing Page o Tienda Online gratis</li>
+          <li><strong>24 piezas</strong>&nbsp;de contenido al mes: 8 videos · 8 imágenes · 8 historias</li>
+          <li>Meta Ads gestionados: <strong>8 anuncios</strong>&nbsp;+ Píxel</li>
           <li>Reporte quincenal + app de avance</li>
         </ul>
         <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Impulso" target="_blank" rel="noopener" class="lp-cta grad">Quiero este plan →</a>
       </article>
 
       <article class="lp-card">
-        <div class="lp-badge ghost">Más completo</div>
+        <div class="lp-badge ghost">🤖 Con Agente IA</div>
         <div class="lp-name">🏎️ Turbo</div>
-        <p class="lp-desc">Tu sistema completo para convertir seguidores en clientes.</p>
+        <p class="lp-desc">Tu sistema completo para convertir seguidores en clientes, con Agente IA incluido.</p>
         <div class="lp-price"><span class="n">$300.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
-          <li><strong>24 publicaciones + 24 historias</strong>&nbsp;al mes</li>
-          <li>12 videos · 12 imágenes 1:1 · 12 imágenes 9:16 + sesión de producción</li>
-          <li>Meta Ads completo: <strong>24 anuncios</strong>&nbsp;+ remarketing</li>
-          <li>Landing page + reporte semanal + app de avance</li>
+          <li><strong>36 piezas</strong>&nbsp;de contenido al mes: 12 videos · 12 imágenes · 12 historias</li>
+          <li>Meta Ads completo: <strong>12 anuncios</strong>&nbsp;+ remarketing</li>
+          <li><strong>Agente IA incluido</strong>: responde y agenda por WhatsApp 24/7</li>
+          <li>Landing Premium + reporte semanal + app de avance</li>
         </ul>
         <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="lp-cta ghost">Quiero este plan →</a>
       </article>
 
       <article class="lp-card">
-        <div class="lp-badge ghost">🤖 Sistema aparte</div>
+        <div class="lp-badge ghost">Incluido en Turbo</div>
         <div class="lp-name">Agente IA</div>
-        <p class="lp-desc">Tu vendedor con inteligencia artificial en WhatsApp, 24/7.</p>
+        <p class="lp-desc">Tu vendedor con inteligencia artificial en WhatsApp, 24/7. Ya viene con el Plan Turbo, o contrátalo solo.</p>
         <div class="lp-price"><span class="n">A tu medida</span></div>
         <ul class="lp-feats">
           <li>Responde por WhatsApp 24/7</li>
