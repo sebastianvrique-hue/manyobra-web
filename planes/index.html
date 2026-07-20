@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="es-CL" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── PRIMARY SEO ── -->
+  <title>Planes y Precios | Manyobra – Marketing Digital & Producción Audiovisual</title>
+  <meta name="description" content="Elige el plan de marketing digital que mejor se adapta a tu negocio. Desde $100.000/mes. Meta Ads + Contenido + Bot WhatsApp. Planes Arranque, Impulso, Turbo y Manyobra." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://manyobra.cl/planes/" />
+
+  <!-- ── OPEN GRAPH ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://manyobra.cl/planes/" />
+  <meta property="og:title" content="Planes y Precios | Manyobra" />
+  <meta property="og:description" content="Planes de marketing digital y producción audiovisual para negocios chilenos. Meta Ads + Contenido + Bot WhatsApp." />
+  <meta property="og:image" content="https://manyobra.cl/logo.png" />
+  <meta property="og:site_name" content="Manyobra" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- ── FONTS ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:   #000000;
+      --white:   #FFFFFF;
+      --grey1:   #0A0A0A;
+      --grey2:   #111111;
+      --grey3:   #1A1A1A;
+      --grey4:   #2A2A2A;
+      --grey5:   #444444;
+      --muted:   #888888;
+      --border:  rgba(255,255,255,0.08);
+      --border2: rgba(255,255,255,0.14);
+      --radius:  12px;
+      --blue:       #60A5FA;
+      --blue-dim:   rgba(59,130,246,0.12);
+      --accent:     #3B82F6;
+      --accent-2:   #8B5CF6;
+      --accent-hi:  #60A5FA;
+      --accent-brd: rgba(59,130,246,0.35);
+      --grad:       linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      --grad-text:  linear-gradient(100deg, #60A5FA 0%, #A78BFA 100%);
+      --glow:       0 8px 40px rgba(59,130,246,0.35);
+      --glass:      rgba(255,255,255,0.04);
+      --glass-brd:  rgba(255,255,255,0.10);
+      --radius-lg:  20px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--grey4); border-radius: 2px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6%; height: 64px;
+      background: rgba(0,0,0,0.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 38px; width: auto; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .82rem; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-cta { background: var(--white); color: var(--black); padding: .55rem 1.3rem; border-radius: 6px; font-weight: 700; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: background .2s, transform .1s; }
+    .nav-cta:hover { background: #E0E0E0; transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white); }
+
+    /* ── HERO PLANES ── */
+    .planes-hero {
+      padding: 140px 6% 80px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .sec-tag { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+    .sec-tag::before { content: '— '; }
+    .planes-hero h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 1rem; }
+    .planes-hero h1 span { color: var(--white); }
+    .planes-hero p { font-size: clamp(.95rem, 1.6vw, 1.1rem); color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+    .download-pdf-btn {
+      display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.6rem;
+      background: transparent; color: var(--white); border: 1px solid var(--border2);
+      border-radius: 8px; padding: .65rem 1.2rem; font-family: inherit; font-size: .82rem;
+      font-weight: 600; cursor: pointer; transition: all .2s;
+    }
+    .download-pdf-btn:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.05); }
+
+    /* ── PILARES (3 pilares = 1 sistema) ── */
+    .pilares-section { padding: 60px 6% 40px; border-bottom: 1px solid var(--border); }
+    .pilares-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .pilares-inner h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 2.5rem; }
+    .pilares-grid { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: stretch; gap: 1rem; }
+    .pilar-card { background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem 1.2rem; display: flex; flex-direction: column; text-align: left; }
+    .pilar-icon { font-size: 1.6rem; margin-bottom: .6rem; text-align: center; }
+    .pilar-name { font-size: .95rem; font-weight: 800; margin-bottom: .4rem; text-align: center; }
+    .pilar-desc { font-size: .78rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.1rem; min-height: 2.4em; text-align: center; }
+    .pilar-list { list-style: none; display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.1rem; flex-grow: 1; }
+    .pilar-list li {
+      display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
+      font-size: .72rem; color: #C0C0C0; padding-bottom: .5rem; border-bottom: 1px solid var(--border);
+    }
+    .pilar-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .pilar-list li b { color: var(--white); font-weight: 700; white-space: nowrap; }
+    .pilar-value { font-size: 1.3rem; font-weight: 900; letter-spacing: -.5px; text-align: center; padding-top: 1rem; border-top: 1px solid var(--border2); }
+    .pilar-value span { display: block; font-size: .68rem; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-top: .1rem; }
+    .pilares-op { font-size: 1.6rem; font-weight: 300; color: var(--grey5); }
+    .pilares-total {
+      margin-top: 2rem; padding: 2rem; background: var(--grey3); border: 1px solid var(--border2);
+      border-radius: var(--radius); text-align: center;
+    }
+    .pt-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .pt-row { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+    .pt-sum { font-size: 1.1rem; color: var(--muted); text-decoration: line-through; }
+    .pt-sum span { text-decoration: line-through; font-size: .75rem; }
+    .pt-arrow { font-size: 1.2rem; color: var(--grey5); }
+    .pt-real { font-size: 2rem; font-weight: 900; letter-spacing: -1px; }
+    .pt-real span { display: block; font-size: .72rem; font-weight: 500; color: var(--muted); margin-top: .15rem; letter-spacing: 0; }
+    .pt-save {
+      display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+      padding: .25rem .65rem; border-radius: 4px; margin-bottom: 1.2rem;
+    }
+
+    /* ── ALERT BANNER ── */
+    .alert-banner {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: .75rem 1.4rem;
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .82rem; font-weight: 600; color: var(--white);
+      margin-bottom: 2.5rem;
+    }
+    .alert-banner .fire { font-size: 1rem; }
+
+    /* ── BILLING TOGGLE ── */
+    .billing-toggle-wrap { display: flex; justify-content: center; margin: 0 auto 2rem; padding: 0 6%; }
+    .billing-toggle {
+      display: inline-flex; background: var(--grey2); border: 1px solid var(--border2);
+      border-radius: 100px; padding: .3rem;
+    }
+    .bt-btn {
+      appearance: none; border: none; background: transparent; color: var(--muted);
+      font-family: inherit; font-size: .8rem; font-weight: 700; letter-spacing: .01em;
+      padding: .55rem 1.3rem; border-radius: 100px; cursor: pointer; transition: all .2s;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .bt-btn.active { background: var(--white); color: var(--black); }
+    .bt-save {
+      font-size: .62rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+      background: rgba(34,197,94,0.15); color: #4ADE80; padding: .15rem .4rem; border-radius: 4px;
+    }
+    .bt-btn.active .bt-save { background: rgba(0,0,0,0.1); color: #16813F; }
+    .price-note { font-size: .72rem; color: var(--muted); margin-top: .4rem; display: none; }
+
+    /* ── TESTIMONIOS (franja compacta) ── */
+    .testi-strip { max-width: 1180px; margin: 0 auto 2.5rem; text-align: center; }
+    .testi-strip .sec-tag { margin-bottom: .8rem; }
+    .testi-strip h3 { font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 2rem; }
+    .testi-strip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .testi-video-card {
+      background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; text-align: left; transition: border-color .2s, transform .2s;
+    }
+    .testi-video-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+    .testi-video-card .video-wrap { position: relative; aspect-ratio: 16/9; background: var(--grey3); }
+    .testi-video-card .video-wrap video { width: 100%; height: 100%; object-fit: cover; }
+    .testi-video-card .video-play {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.4); cursor: pointer; transition: background .2s;
+    }
+    .testi-video-card .video-play:hover { background: rgba(0,0,0,0.2); }
+    .testi-video-card .play-btn { width: 48px; height: 48px; border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; }
+    .testi-video-card .play-btn svg { width: 16px; height: 16px; fill: var(--black); margin-left: 3px; }
+    .testi-video-card .video-info { padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: .8rem; flex-wrap: wrap; }
+    .testi-video-card .client-line { font-size: .82rem; }
+    .testi-video-card .client-name { font-weight: 700; }
+    .testi-video-card .client-biz { color: var(--muted); }
+    .testi-video-card .stars { display: flex; gap: 2px; flex-shrink: 0; }
+    .testi-video-card .stars span { color: var(--white); font-size: .82rem; }
+
+    /* ── PLAN BÁSICO BANNER (Arranque) ── */
+    .plan-basico-banner {
+      max-width: 1180px; margin: 0 auto 2.5rem; background: var(--grey1);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.5rem 1.8rem; display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+    }
+    .pb-name { font-size: 1.05rem; font-weight: 800; margin-bottom: .3rem; display: flex; align-items: center; gap: .6rem; }
+    .pb-tag {
+      font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); border: 1px solid var(--border2); border-radius: 100px; padding: .18rem .55rem;
+    }
+    .pb-desc { font-size: .82rem; color: var(--muted); margin-bottom: .5rem; max-width: 480px; }
+    .pb-features { font-size: .75rem; color: #999; }
+    .pb-right { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    .pb-price { display: flex; align-items: baseline; gap: .2rem; white-space: nowrap; }
+    .pb-price .currency { font-size: .8rem; color: var(--muted); }
+    .pb-price .amount { font-size: 1.7rem; font-weight: 900; letter-spacing: -1px; }
+    .pb-price .period { font-size: .72rem; color: var(--muted); margin-left: .2rem; }
+    .plan-cta.cta-small { padding: .6rem .9rem; font-size: .78rem; margin-bottom: 0; white-space: nowrap; }
+
+    /* ── PRICING GRID ── */
+    .pricing-section { padding: 20px 6% 100px; }
+    .pricing-inner { max-width: 1180px; margin: 0 auto; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    /* ── CARD BASE ── */
+    .plan-card {
+      background: var(--grey2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.6rem 2rem;
+      display: flex; flex-direction: column;
+      gap: 0;
+      position: relative;
+      transition: border-color .25s, transform .25s;
+    }
+    .plan-card:hover { border-color: rgba(255,255,255,0.22); transform: translateY(-4px); }
+
+    /* Popular highlight */
+    .plan-card.popular {
+      border-color: rgba(255,255,255,0.30);
+      background: var(--grey3);
+    }
+
+    /* ── BADGE ── */
+    .plan-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--white); color: var(--black);
+      font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      padding: .25rem .75rem; border-radius: 100px; white-space: nowrap;
+    }
+    .plan-badge.nuevo { background: var(--grey4); color: var(--white); border: 1px solid var(--border2); }
+
+    /* ── CARD HEADER ── */
+    .plan-name { font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: .35rem; }
+    .plan-tagline { font-size: .78rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.4rem; min-height: 2.2em; }
+
+    /* ── PRICE ── */
+    .plan-price-wrap { margin-bottom: 1.5rem; }
+    .plan-price-old { font-size: .82rem; color: var(--muted); text-decoration: line-through; margin-bottom: .2rem; }
+    .plan-price { display: flex; align-items: baseline; gap: .35rem; }
+    .plan-price .amount { font-size: 2.2rem; font-weight: 900; letter-spacing: -2px; line-height: 1; }
+    .plan-price .currency { font-size: .85rem; font-weight: 600; color: var(--muted); }
+    .plan-price .period { font-size: .78rem; color: var(--muted); margin-left: .1rem; }
+    .plan-discount-badge {
+      display: inline-block; background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white); font-size: .65rem; font-weight: 700; letter-spacing: .08em;
+      padding: .2rem .55rem; border-radius: 4px; text-transform: uppercase; margin-top: .4rem;
+    }
+
+    /* ── CTA BUTTON ── */
+    .plan-cta {
+      display: block; text-align: center; padding: .75rem 1rem;
+      border-radius: 8px; font-weight: 700; font-size: .85rem;
+      text-decoration: none; letter-spacing: .02em;
+      transition: all .2s; margin-bottom: 1.6rem;
+    }
+    .plan-cta.cta-white { background: var(--white); color: var(--black); }
+    .plan-cta.cta-white:hover { background: #E8E8E8; }
+    .plan-cta.cta-outline { background: transparent; color: var(--white); border: 1px solid var(--border2); }
+    .plan-cta.cta-outline:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.05); }
+
+    /* ── FEATURES DIVIDER ── */
+    .plan-divider { height: 1px; background: var(--border); margin-bottom: 1.4rem; }
+
+    /* ── BONUS DESTACADO ── */
+    .plan-bonus {
+      display: flex; align-items: flex-start; gap: .7rem;
+      border: 1px solid transparent;
+      background: linear-gradient(var(--grey2), var(--grey2)) padding-box, var(--grad) border-box;
+      border-radius: 12px; padding: .9rem 1rem; margin-bottom: 1.4rem;
+      box-shadow: 0 6px 24px rgba(124,58,237,0.18);
+    }
+    .plan-bonus .bonus-emoji { font-size: 1.3rem; flex-shrink: 0; }
+    .plan-bonus .bonus-tag {
+      display: inline-block; font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+      background: var(--grad); color: #fff; padding: .15rem .5rem; border-radius: 4px; margin-bottom: .3rem;
+    }
+    .plan-bonus p { font-size: .82rem; color: #E5E5E5; line-height: 1.5; }
+    .plan-bonus strong { color: var(--white); }
+    @media print {
+      .plan-bonus { background: #fff !important; border: 1px dashed #999 !important; box-shadow: none !important; }
+    }
+
+    /* ── ESTRATEGIA DE ADS DESTACADA ── */
+    .plan-ads-strategy {
+      display: flex; align-items: flex-start; gap: .7rem;
+      background: var(--blue-dim); border: 1px solid var(--accent-brd);
+      border-radius: 12px; padding: .9rem 1rem; margin-bottom: 1.4rem;
+    }
+    .plan-ads-strategy .ads-emoji { font-size: 1.3rem; flex-shrink: 0; }
+    .plan-ads-strategy .ads-tag {
+      display: inline-block; font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--blue); border: 1px solid var(--accent-brd); padding: .15rem .5rem; border-radius: 4px; margin-bottom: .3rem;
+    }
+    .plan-ads-strategy p { font-size: .82rem; color: #E5E5E5; line-height: 1.5; }
+    .plan-ads-strategy strong { color: var(--white); }
+    @media print {
+      .plan-ads-strategy { background: #fff !important; border: 1px dashed #999 !important; box-shadow: none !important; }
+    }
+
+    /* ── FEATURE LIST ── */
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .plan-features li {
+      display: flex; align-items: flex-start; gap: .55rem;
+      font-size: .8rem; color: #C0C0C0; line-height: 1.45;
+    }
+    .plan-features li .check {
+      flex-shrink: 0; width: 16px; height: 16px; margin-top: 1px;
+      background: rgba(255,255,255,0.08); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .6rem; color: var(--white);
+    }
+    .plan-features li strong { color: var(--white); font-weight: 600; }
+
+    /* ── SECTION LABEL INSIDE CARD ── */
+    .feat-label {
+      font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--grey5); margin: 1rem 0 .5rem;
+    }
+
+    /* ── "TODO LO ANTERIOR" (ladder) ── */
+    .feat-inherit {
+      background: var(--blue-dim); border: 1px solid var(--accent-brd);
+      border-radius: 8px; padding: .55rem .7rem; margin-bottom: .3rem;
+    }
+    .feat-inherit .check { background: var(--grad) !important; color: #fff !important; }
+    .feat-inherit strong { color: var(--blue) !important; }
+
+    /* ── CONDITIONS ── */
+    .conditions-section {
+      background: var(--grey1); border-top: 1px solid var(--border);
+      padding: 60px 6%;
+    }
+    .conditions-inner { max-width: 900px; margin: 0 auto; }
+    .conditions-inner h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .conditions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+    .cond-item {
+      display: flex; align-items: flex-start; gap: .6rem;
+      font-size: .82rem; color: #B0B0B0; line-height: 1.5;
+    }
+    .cond-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--grey5); flex-shrink: 0; margin-top: 6px; }
+
+    /* ── SOLO APRUEBAS BANNER ── */
+    .solo-aprueba-banner {
+      background: var(--grey2); border-bottom: 1px solid var(--border);
+      padding: 1rem 6%; text-align: center;
+    }
+    .solo-aprueba-banner p {
+      font-size: .88rem; color: #B0B0B0; margin: 0;
+    }
+    .solo-aprueba-banner strong { color: var(--white); }
+
+    /* ── PLAN ONBOARD BADGE ── */
+    .plan-onboard {
+      display: inline-block; font-size: .72rem; font-weight: 600;
+      color: var(--muted); border: 1px solid var(--border2);
+      border-radius: 20px; padding: .25rem .75rem;
+      margin-bottom: 1rem; letter-spacing: .02em;
+    }
+
+    /* ── GUARANTEE STRIP ── */
+    .guarantee-strip { background: var(--grey1); border-top: 1px solid var(--border); padding: 60px 6%; }
+    .guarantee-strip-inner { max-width: 900px; margin: 0 auto; }
+    .guarantee-strip-inner h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: .4rem; }
+    .guarantee-strip-inner p { font-size: .85rem; color: var(--muted); margin-bottom: 2rem; }
+    .guarantee-strip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .gs-card { display: flex; align-items: flex-start; gap: .9rem; background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
+    .gs-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .gs-title { font-size: .85rem; font-weight: 700; margin-bottom: .3rem; }
+    .gs-desc { font-size: .78rem; color: #B0B0B0; line-height: 1.5; }
+
+    /* ── VALUE COMPARISON ── */
+    .value-section { background: var(--grey2); border-top: 1px solid var(--border); padding: 60px 6%; text-align: center; }
+    .value-inner { max-width: 900px; margin: 0 auto; }
+    .value-inner h2 { font-size: 1rem; font-weight: 700; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2rem; }
+    .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    .value-item { background: var(--grey3); border: 1px solid var(--border2); border-radius: var(--radius); padding: 1.5rem; }
+    .value-item .v-plan { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
+    .value-item .v-market { font-size: .8rem; color: var(--grey5); text-decoration: line-through; margin-bottom: .5rem; }
+    .value-item .v-price { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
+    .value-item .v-label { font-size: .72rem; color: var(--muted); margin-top: .4rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--grey1); border-top: 1px solid var(--border);
+      padding: 60px 6% 30px;
+    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand p { font-size: .83rem; color: var(--muted); line-height: 1.7; margin-top: .8rem; max-width: 260px; }
+    .footer-col h4 { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+    .footer-col a { color: #999; text-decoration: none; font-size: .83rem; transition: color .2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
+    .footer-bottom p, .footer-bottom a { font-size: .75rem; color: var(--grey5); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--muted); }
+
+    /* ── WA FLOAT ── */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 50;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4); text-decoration: none;
+      transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float svg { width: 26px; height: 26px; fill: #fff; }
+
+    /* ── MOBILE NAV ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(0,0,0,0.97); flex-direction: column; gap: 0; padding: 1rem 6%; }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--border); }
+      .nav-links a { display: block; padding: .9rem 0; font-size: .85rem; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .value-grid { grid-template-columns: 1fr; }
+      .testi-strip-grid { grid-template-columns: 1fr; }
+      .pilares-grid { grid-template-columns: 1fr; }
+      .pilares-op { transform: rotate(90deg); padding: .2rem 0; }
+      .plan-basico-banner { flex-direction: column; align-items: flex-start; }
+      .pb-right { width: 100%; justify-content: space-between; }
+      .guarantee-strip-grid { grid-template-columns: 1fr; }
+      .conditions-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .value-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── PRINT (Descargar PDF) ── */
+    @media print {
+      nav, .hamburger, .wa-float, .download-pdf-btn, .billing-toggle-wrap,
+      .testi-strip-section, .plan-cta, .solo-aprueba-banner { display: none !important; }
+      * { background: #fff !important; color: #000 !important; border-color: #ccc !important; box-shadow: none !important; text-shadow: none !important; }
+      body { background: #fff !important; }
+      a[href]::after { content: ""; }
+      .plan-card, .pilar-card, .gs-card, .value-item { border: 1px solid #ccc !important; break-inside: avoid; }
+      .plan-card.popular { border: 2px solid #000 !important; }
+      /* Chromium's print/PDF export mis-renders CSS Grid rows with align-items:stretch
+         combined with a flex-grow child (ghost/overlapping text) — stack to 1 column like mobile. */
+      .pilares-grid { grid-template-columns: 1fr !important; align-items: start !important; }
+      .pilar-card { break-inside: avoid; margin-bottom: .6rem; }
+      .pilares-op { display: none !important; }
+      .plan-badge, .plan-badge.nuevo, .pb-tag, .plan-onboard, .plan-discount-badge, .pt-save { border: 1px solid #999 !important; }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr) !important; gap: .8rem !important; }
+      .value-grid { grid-template-columns: repeat(3, 1fr) !important; }
+      section { padding: 24px 4% !important; }
+      .planes-hero { padding: 24px 4% !important; }
+    }
+
+    /* ══════════ DESIGN V2 — DARK PREMIUM ══════════ */
+    ::selection { background: rgba(59,130,246,0.35); }
+
+    /* nav */
+    .nav-links a { position: relative; }
+    .nav-links a::after {
+      content: ''; position: absolute; left: 0; bottom: -6px; width: 100%; height: 2px;
+      background: var(--grad); border-radius: 2px;
+      transform: scaleX(0); transform-origin: left; transition: transform .25s;
+    }
+    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+    @media (max-width: 768px) { .nav-links a::after { display: none; } }
+    .nav-cta { background: var(--grad); color: #fff; box-shadow: 0 4px 18px rgba(59,130,246,0.35); }
+    .nav-cta:hover { background: var(--grad); filter: brightness(1.12); box-shadow: 0 6px 26px rgba(124,58,237,0.45); transform: translateY(-1px); }
+
+    /* hero con orbs */
+    .planes-hero { position: relative; overflow: hidden; }
+    .planes-hero::before {
+      content: ''; position: absolute; z-index: -1; width: 560px; height: 560px; border-radius: 50%;
+      top: -180px; left: -140px; pointer-events: none;
+      background: radial-gradient(circle, rgba(59,130,246,0.28), transparent 65%);
+      filter: blur(90px); animation: orbDrift 16s ease-in-out infinite alternate;
+    }
+    .planes-hero::after {
+      content: ''; position: absolute; z-index: -1; width: 500px; height: 500px; border-radius: 50%;
+      bottom: -220px; right: -120px; pointer-events: none;
+      background: radial-gradient(circle, rgba(139,92,246,0.22), transparent 65%);
+      filter: blur(90px); animation: orbDrift 20s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes orbDrift { from { transform: translate(0,0); } to { transform: translate(70px,50px); } }
+    .planes-hero h1 span {
+      background: var(--grad-text);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .download-pdf-btn { background: var(--glass); border-color: var(--glass-brd); }
+    .download-pdf-btn:hover { border-color: var(--accent-brd); background: var(--blue-dim); }
+
+    /* pilares */
+    .pilar-card { background: var(--glass); border-color: var(--glass-brd); transition: transform .25s, border-color .25s; }
+    .pilar-card:hover { transform: translateY(-4px); border-color: var(--accent-brd); }
+    .pilar-icon {
+      width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
+      background: var(--blue-dim); border: 1px solid var(--accent-brd); border-radius: 12px;
+      font-size: 1.3rem; margin: 0 auto .8rem;
+    }
+    .pilar-value { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .pilar-value span { -webkit-text-fill-color: var(--muted); background: none; }
+    .pilares-op { color: var(--blue); }
+    .pilares-total {
+      border: 1px solid transparent;
+      background: linear-gradient(var(--grey3), var(--grey3)) padding-box, var(--grad) border-box;
+      box-shadow: 0 12px 50px rgba(124,58,237,0.18);
+    }
+    .pt-real { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .pt-real span { -webkit-text-fill-color: var(--muted); background: none; }
+    .pt-save { background: var(--blue-dim); border-color: var(--accent-brd); color: var(--blue); }
+
+    /* toggle de facturación */
+    .billing-toggle { background: var(--glass); border-color: var(--glass-brd); }
+    .bt-btn.active { background: var(--grad); color: #fff; box-shadow: 0 4px 16px rgba(59,130,246,0.35); }
+    .bt-btn.active .bt-save { background: rgba(255,255,255,0.22); color: #fff; }
+
+    /* banners y testimonios */
+    .solo-aprueba-banner strong { color: var(--blue); }
+    .testi-video-card { background: var(--glass); border-color: var(--glass-brd); }
+    .testi-video-card:hover { border-color: var(--accent-brd); box-shadow: 0 12px 40px rgba(59,130,246,0.12); }
+    .testi-video-card .play-btn { background: var(--grad); }
+    .testi-video-card .play-btn svg { fill: #fff; }
+    .testi-video-card .stars span { color: #FBBF24; }
+
+    /* plan Arranque (banner) */
+    .plan-basico-banner { position: relative; overflow: hidden; background: var(--glass); border-color: var(--glass-brd); border-radius: var(--radius-lg); }
+    .plan-basico-banner::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--grad); }
+    .pb-tag { color: var(--blue); border-color: var(--accent-brd); background: var(--blue-dim); }
+
+    /* cards de planes */
+    .plan-card { background: var(--glass); border-color: var(--glass-brd); border-radius: var(--radius-lg); }
+    .plan-card:hover { border-color: var(--accent-brd); box-shadow: 0 16px 48px rgba(59,130,246,0.12); }
+    .plan-card.popular {
+      border: 1px solid transparent;
+      background: linear-gradient(var(--grey2), var(--grey2)) padding-box, var(--grad) border-box;
+      box-shadow: 0 12px 50px rgba(124,58,237,0.22);
+    }
+    .plan-card.popular:hover { box-shadow: 0 18px 60px rgba(124,58,237,0.32); }
+    .plan-badge { background: var(--grad); color: #fff; box-shadow: 0 4px 16px rgba(59,130,246,0.4); }
+    .plan-badge.nuevo { background: var(--grey3); color: var(--blue); border-color: var(--accent-brd); }
+    .plan-features li .check { background: var(--blue-dim); color: var(--blue); }
+    .plan-discount-badge { background: var(--blue-dim); border-color: var(--accent-brd); color: var(--blue); }
+    .plan-cta.cta-white { background: var(--grad); color: #fff; box-shadow: 0 6px 20px rgba(59,130,246,0.35); }
+    .plan-cta.cta-white:hover { background: var(--grad); filter: brightness(1.12); transform: translateY(-1px); }
+    .plan-cta.cta-outline:hover { border-color: var(--accent-brd); background: var(--blue-dim); }
+
+    /* comparación de valor / garantías / condiciones */
+    .value-item { background: var(--glass); border-color: var(--glass-brd); }
+    .value-item .v-price { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .gs-card { background: var(--glass); border-color: var(--glass-brd); }
+    .gs-card:hover { border-color: var(--accent-brd); }
+    .cond-dot { background: var(--grad); box-shadow: 0 0 8px rgba(59,130,246,0.6); }
+
+    /* grid de 2 planes centrado (Arranque va en banner) */
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin: 0 auto; }
+    @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
+
+    /* ── AGENTE IA (sistema aparte) ── */
+    .agente-ia-card {
+      max-width: 860px; margin: 2.5rem auto 0; padding: 2rem;
+      border: 1px solid transparent; border-radius: var(--radius-lg);
+      background: linear-gradient(var(--grey2), var(--grey2)) padding-box, var(--grad) border-box;
+      box-shadow: 0 12px 50px rgba(124,58,237,0.18);
+    }
+    .ai-head { display: flex; align-items: flex-start; gap: 1.2rem; margin-bottom: 1.4rem; }
+    .ai-icon {
+      width: 54px; height: 54px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      background: var(--blue-dim); border: 1px solid var(--accent-brd); border-radius: 14px; font-size: 1.6rem;
+    }
+    .ai-name { font-size: 1.2rem; font-weight: 800; margin-bottom: .4rem; display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+    .ai-desc { font-size: .85rem; color: var(--muted); line-height: 1.6; max-width: 640px; }
+    .ai-feats { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem 1.5rem; margin-bottom: 1.5rem; }
+    .ai-feats li { display: flex; align-items: flex-start; gap: .55rem; font-size: .8rem; color: #C0C0C0; line-height: 1.45; }
+    .ai-feats li strong { color: var(--white); }
+    .ai-ctas { display: flex; gap: .8rem; flex-wrap: wrap; }
+    .ai-ctas .plan-cta { flex: 1; min-width: 200px; }
+    .ai-note { font-size: .72rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+    @media (max-width: 768px) {
+      .ai-head { flex-direction: column; }
+      .ai-feats { grid-template-columns: 1fr; }
+    }
+
+    /* footer */
+    footer { position: relative; }
+    footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59,130,246,0.5), rgba(139,92,246,0.5), transparent); }
+
+    /* reveal on scroll (clases agregadas por JS — sin JS no se oculta nada) */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .planes-hero::before, .planes-hero::after { animation: none; }
+    }
+
+    /* extensiones de impresión para el diseño V2 */
+    @media print {
+      .planes-hero::before, .planes-hero::after { display: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .planes-hero h1 span, .pilar-value, .pilar-value span, .pt-real, .pt-real span, .value-item .v-price {
+        background: none !important; -webkit-text-fill-color: #000 !important; color: #000 !important;
+      }
+      .plan-card, .pilar-card, .plan-basico-banner, .billing-toggle, .testi-video-card, .value-item, .gs-card, .download-pdf-btn {
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+      }
+      .plan-card.popular, .pilares-total, .agente-ia-card { background: #fff !important; border: 1px solid #ccc !important; break-inside: avoid; }
+      .plan-basico-banner::before { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a href="/" class="nav-logo" aria-label="Manyobra – Inicio">
+    <img src="/logo.png" alt="Manyobra" />
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/#servicios">Servicios</a></li>
+    <li><a href="/#proceso">Proceso</a></li>
+    <li><a href="/#perfil">Sobre mí</a></li>
+    <li><a href="/#testimonios">Testimonios</a></li>
+    <li><a href="/planes/" class="active">Planes</a></li>
+    <li><a href="/#contacto">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20info%20sobre%20los%20planes" target="_blank" rel="noopener" class="nav-cta">Ver planes →</a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<div class="planes-hero">
+  <div class="sec-tag">Planes & Precios</div>
+  <h1>Elige el plan que<br/><span>hace crecer tu negocio</span></h1>
+  <p>Elige cuánto quieres crecer este mes. Tú solo apruebas el contenido; nosotros conseguimos que tu negocio se vea y venda, desde <strong>$100.000/mes</strong>. Todos los precios son + IVA.</p>
+  <button type="button" class="download-pdf-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 17v2a2 2 0 002 2h10a2 2 0 002-2v-2"/></svg>
+    Descargar planes en PDF
+  </button>
+</div>
+
+<!-- PILARES -->
+<section class="pilares-section">
+  <div class="pilares-inner">
+    <h2>Contenido + Meta Ads en cada plan. El Agente IA viene incluido en Turbo.</h2>
+    <div class="pilares-grid">
+      <div class="pilar-card">
+        <div class="pilar-icon">🎬</div>
+        <div class="pilar-name">Contenido</div>
+        <div class="pilar-desc">Videos, fotos y diseño que generan confianza</div>
+        <ul class="pilar-list">
+          <li><span>Videos de valor</span><b>$120.000</b></li>
+          <li><span>Posts estratégicos</span><b>$80.000</b></li>
+          <li><span>Copy persuasivo</span><b>$60.000</b></li>
+          <li><span>Calendario editorial</span><b>$40.000</b></li>
+        </ul>
+        <div class="pilar-value">$300.000<span>/mes de valor</span></div>
+      </div>
+      <div class="pilares-op">+</div>
+      <div class="pilar-card">
+        <div class="pilar-icon">🎯</div>
+        <div class="pilar-name">Meta Ads</div>
+        <div class="pilar-desc">Pauta gestionada que trae clientes reales</div>
+        <ul class="pilar-list">
+          <li><span>Campañas de conversión</span><b>$130.000</b></li>
+          <li><span>Retargeting inteligente</span><b>$70.000</b></li>
+          <li><span>A/B Testing continuo</span><b>$60.000</b></li>
+          <li><span>Segmentación precisa</span><b>$40.000</b></li>
+        </ul>
+        <div class="pilar-value">$300.000<span>/mes de valor</span></div>
+      </div>
+      <div class="pilares-op">·</div>
+      <div class="pilar-card">
+        <div class="pilar-icon">🤖</div>
+        <div class="pilar-name">Agente IA <span class="pb-tag" style="vertical-align:middle;">Incluido en Turbo</span></div>
+        <div class="pilar-desc">Responde, califica y agenda 24/7</div>
+        <ul class="pilar-list">
+          <li><span>Atiende por WhatsApp 24/7</span><b>$120.000</b></li>
+          <li><span>Califica al lead</span><b>$70.000</b></li>
+          <li><span>Agenda reuniones</span><b>$60.000</b></li>
+          <li><span>Seguimiento infinito</span><b>$50.000</b></li>
+        </ul>
+        <div class="pilar-value">$300.000<span>/mes de valor</span></div>
+      </div>
+    </div>
+    <div class="pilares-total">
+      <div class="pt-label">Los 3 pilares como paquete completo</div>
+      <div class="pt-row">
+        <div class="pt-sum">$900.000<span>/mes por separado</span></div>
+        <div class="pt-arrow">→</div>
+        <div class="pt-real">$300.000<span>/mes con el Plan Turbo</span></div>
+      </div>
+      <div class="pt-save">Ahorras $600.000/mes · 66% menos</div><br/>
+      <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="plan-cta cta-white" style="display:inline-block; max-width:320px; margin-bottom:0;">
+        Quiero el Plan Turbo →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BILLING TOGGLE -->
+<div class="billing-toggle-wrap">
+  <div class="billing-toggle" role="group" aria-label="Elige tu forma de pago">
+    <button type="button" class="bt-btn active" data-billing="mensual">Pago mensual</button>
+    <button type="button" class="bt-btn" data-billing="trimestral">Pago 3 meses <span class="bt-save">Ahorra ~33%</span></button>
+  </div>
+</div>
+
+<!-- SOLO APRUEBAS -->
+<div class="solo-aprueba-banner">
+  <p>¿Qué tienes que hacer tú? <strong>Solo aprobar el contenido.</strong> Nosotros nos encargamos de todo lo demás.</p>
+</div>
+
+<!-- TESTIMONIOS -->
+<section class="testi-strip-section" style="padding: 50px 6% 0;">
+  <div class="testi-strip">
+    <div class="sec-tag">Testimonios</div>
+    <h3>Lo que dicen nuestros clientes</h3>
+    <div class="testi-strip-grid">
+      <div class="testi-video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/videos/Testimonio%20carlos%20cool%20edit.mp4" preload="none"></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="client-line"><span class="client-name">Carlos</span> · <span class="client-biz">Bubble House & Mandala Sushi</span></div>
+          <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+      <div class="testi-video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/videos/testimonio%20pedro%20campossss.mp4" preload="none"></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="client-line"><span class="client-name">Pedro Campos</span> · <span class="client-biz">Obras Menores</span></div>
+          <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="precios">
+  <div class="pricing-inner">
+
+    <!-- ── ARRANQUE (entrada) ── -->
+    <div class="plan-basico-banner">
+      <div class="pb-left">
+        <div class="pb-name">🔑 Arranque <span class="pb-tag">Plan básico</span></div>
+        <div class="pb-desc">Empieza a aparecer y a atraer tus primeros clientes: contenido profesional y tu pauta gestionada, todo incluido.</div>
+        <div class="pb-features">4 videos + 4 imágenes + 4 historias (12 piezas/mes, contenido editado, sin sesión de grabación) · Meta Ads con <strong>12 anuncios</strong> · Reporte mensual · App de avance</div>
+        <div class="plan-ads-strategy" style="margin-top:.8rem; margin-bottom:0;">
+          <div class="ads-emoji">🎯</div>
+          <div>
+            <div class="ads-tag">Estrategia de Ads</div>
+            <p><strong>12 anuncios con campañas de conversión</strong> segmentadas por ubicación, intereses y comportamiento, para que tu negocio le llegue a la gente correcta desde el primer día.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pb-right">
+        <div data-plan="arranque">
+          <div class="pb-price">
+            <span class="currency">$</span><span class="amount">100.000</span><span class="period">/mes + IVA</span>
+          </div>
+          <div class="price-note"></div>
+        </div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Arranque" target="_blank" rel="noopener" class="plan-cta cta-outline cta-small">
+          Quiero este plan →
+        </a>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- ── IMPULSO (POPULAR) ── -->
+      <div class="plan-card popular">
+        <div class="plan-badge">⭐ Popular</div>
+        <div class="plan-name">⚙️ Impulso</div>
+        <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+        <p class="plan-tagline">Aparece todos los días y llena tu agenda sin mover un dedo.</p>
+        <div class="plan-price-wrap" data-plan="impulso">
+          <div class="plan-price-old">Antes $100.000</div>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">200.000</span>
+            <span class="period">/mes + IVA</span>
+          </div>
+          <div class="price-note"></div>
+        </div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Impulso" target="_blank" rel="noopener" class="plan-cta cta-white">
+          Quiero este plan →
+        </a>
+        <div class="plan-ads-strategy">
+          <div class="ads-emoji">🎯</div>
+          <div>
+            <div class="ads-tag">Estrategia de Ads potenciada</div>
+            <p><strong>12 anuncios con campañas de conversión + Retargeting inteligente</strong> a quienes visitan tu nueva página web, con optimización quincenal para gastar mejor cada peso de tu presupuesto.</p>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Arranque</strong>, más:</span></li>
+          <div class="feat-label">Producción audiovisual</div>
+          <li><span class="check">✓</span><span><strong>Sesión de grabación profesional</strong> incluida (antes solo contenido editado)</span></li>
+          <li><span class="check">✓</span><span><strong>8 videos</strong> · <strong>8 imágenes</strong> · <strong>8 historias</strong> (24 piezas/mes)</span></li>
+          <div class="feat-label">Página web</div>
+          <li><span class="check">✓</span><span><strong>Landing Page o Tienda Online</strong> con Píxel de Meta instalado para medir y retargetear</span></li>
+          <div class="feat-label">Publicidad & Gestión</div>
+          <li><span class="check">✓</span><span><strong>Meta Ads gestionados</strong> con <strong>12 anuncios</strong> + retargeting</span></li>
+          <li><span class="check">✓</span><span>Community Manager + reporte quincenal</span></li>
+        </ul>
+      </div>
+
+      <!-- ── TURBO ── -->
+      <div class="plan-card">
+        <div class="plan-badge nuevo">🤖 Con Agente IA</div>
+        <div class="plan-name">🏎️ Turbo</div>
+        <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+        <p class="plan-tagline">Tu sistema completo para convertir seguidores en clientes, con Agente IA incluido.</p>
+        <div class="plan-price-wrap" data-plan="turbo">
+          <div class="plan-price-old">Antes $200.000</div>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">300.000</span>
+            <span class="period">/mes + IVA</span>
+          </div>
+          <div class="price-note"></div>
+        </div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="plan-cta cta-outline">
+          Quiero este plan →
+        </a>
+        <div class="plan-ads-strategy">
+          <div class="ads-emoji">🎯</div>
+          <div>
+            <div class="ads-tag">Estrategia de Ads completa</div>
+            <p><strong>12 anuncios con campañas de conversión + Retargeting multi-etapa + A/B Testing continuo</strong> de creativos y públicos, con remarketing avanzado optimizado cada semana para maximizar tus ventas.</p>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Impulso</strong>, más:</span></li>
+          <div class="feat-label">Agente de venta IA</div>
+          <li><span class="check">✓</span><span><strong>Agente de venta IA especializado:</strong> responde, califica, agenda y hace seguimiento por WhatsApp 24/7</span></li>
+          <div class="feat-label">Más producción & web</div>
+          <li><span class="check">✓</span><span><strong>12 videos</strong> · <strong>12 imágenes</strong> · <strong>12 historias</strong> (36 piezas/mes) + <strong>1 sesión</strong> extra de producción profesional</span></li>
+          <li><span class="check">✓</span><span><strong>Landing Page Premium</strong> + Hosting + Dominio (1 año)</span></li>
+          <div class="feat-label">Publicidad & Gestión</div>
+          <li><span class="check">✓</span><span>Copywriting de ventas + reporte semanal</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ── AGENTE IA (sistema aparte) ── -->
+    <div class="agente-ia-card" id="agente-ia">
+      <div class="ai-head">
+        <div class="ai-icon">🤖</div>
+        <div>
+          <div class="ai-name">Agente IA <span class="pb-tag">Incluido en Turbo</span></div>
+          <p class="ai-desc">Un agente de inteligencia artificial que atiende tu WhatsApp 24/7: responde al instante, califica a cada lead, agenda reuniones y hace seguimiento sin que muevas un dedo. Ya viene incluido en el Plan Turbo — y si no necesitas el plan completo, también puedes contratarlo solo.</p>
+        </div>
+      </div>
+      <ul class="ai-feats">
+        <li><span class="check">✓</span><span>Responde por WhatsApp <strong>24/7</strong></span></li>
+        <li><span class="check">✓</span><span><strong>Califica</strong> a cada lead antes de que llegue a ti</span></li>
+        <li><span class="check">✓</span><span><strong>Agenda reuniones</strong> directo en tu calendario</span></li>
+        <li><span class="check">✓</span><span>Seguimiento automático hasta cerrar</span></li>
+      </ul>
+      <div class="ai-ctas">
+        <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="plan-cta cta-white" style="margin-bottom:0;">Probar el agente →</a>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0;">Quiero una demo</a>
+      </div>
+      <p class="ai-note">Incluido gratis en el Plan Turbo · Contratado solo, se cotiza según tu negocio</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- VALUE COMPARISON -->
+<section class="value-section">
+  <div class="value-inner">
+    <h2>¿Cuánto costaría contratar esto por separado?</h2>
+    <div class="value-grid">
+      <div class="value-item">
+        <div class="v-plan">🔑 Arranque</div>
+        <div class="v-market">Valor de mercado: $400.000+/mes (incluye 12 anuncios)</div>
+        <div class="v-price">$100.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 75%</div>
+      </div>
+      <div class="value-item">
+        <div class="v-plan">⚙️ Impulso</div>
+        <div class="v-market">Valor de mercado: $700.000+/mes (incluye producción + web)</div>
+        <div class="v-price">$200.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 70%</div>
+      </div>
+      <div class="value-item">
+        <div class="v-plan">🏎️ Turbo</div>
+        <div class="v-market">Valor de mercado: $900.000+/mes (incluye Agente IA)</div>
+        <div class="v-price">$300.000<span style="font-size:.9rem;font-weight:400">/mes</span></div>
+        <div class="v-label">+ IVA &nbsp;·&nbsp; Ahorras más del 66%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEES -->
+<section class="guarantee-strip">
+  <div class="guarantee-strip-inner">
+    <h2>Confiamos en nuestro trabajo</h2>
+    <p>El riesgo lo asumimos nosotros, no tú.</p>
+    <div class="guarantee-strip-grid">
+      <div class="gs-card">
+        <div class="gs-icon">🛡️</div>
+        <div>
+          <div class="gs-title">Satisfacción garantizada en 15 días</div>
+          <div class="gs-desc">Si algo no refleja lo acordado, lo revisamos sin costo adicional hasta que quedes 100% conforme.</div>
+        </div>
+      </div>
+      <div class="gs-card">
+        <div class="gs-icon">📂</div>
+        <div>
+          <div class="gs-title">El contenido es tuyo para siempre</div>
+          <div class="gs-desc">Todo el material producido te pertenece. Si decides salir, te llevas todos los archivos.</div>
+        </div>
+      </div>
+      <div class="gs-card">
+        <div class="gs-icon">📅</div>
+        <div>
+          <div class="gs-title">Entrega en plazo o descuento automático</div>
+          <div class="gs-desc">Si no cumplimos el plazo de entrega acordado, se aplica un descuento automático en tu próxima factura.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="conditions-section">
+  <div class="conditions-inner">
+    <h2>Condiciones comerciales</h2>
+    <div class="conditions-grid">
+      <div class="cond-item"><div class="cond-dot"></div><span>Presupuesto publicitario en Meta Ads <strong>no incluido</strong>.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>El contenido es <strong>propiedad del cliente</strong> tras el pago.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>Permanencia mínima recomendada: <strong>3 meses</strong>.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>Pago mensual <strong>anticipado</strong> al inicio de cada ciclo.</span></div>
+      <div class="cond-item"><div class="cond-dot"></div><span>Precios válidos por <strong>30 días</strong> desde su emisión. Vigencia 2026.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">
+          <img src="/logo.png" alt="Manyobra" />
+        </a>
+        <p>Agencia de Meta Ads y producción audiovisual para negocios chilenos que quieren crecer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/#servicios">Meta Ads</a></li>
+          <li><a href="/#servicios">Producción Audiovisual</a></li>
+          <li><a href="/#servicios">Bot WhatsApp</a></li>
+          <li><a href="/#servicios">Retargeting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="/#perfil">Sobre mí</a></li>
+          <li><a href="/#testimonios">Testimonios</a></li>
+          <li><a href="/planes/">Planes</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
+          <li><a href="mailto:contacto@manyobra.cl">contacto@manyobra.cl</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manyobra SpA · Imagine Lux SPA · RUT: 78.213.349-7 · Todos los derechos reservados.</p>
+      <p><a href="/">Inicio</a> &nbsp;·&nbsp; <a href="mailto:contacto@manyobra.cl">contacto@manyobra.cl</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20info%20sobre%20los%20planes" target="_blank" rel="noopener" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // Hamburger menu
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Video testimonial player
+  function playVideo(overlay) {
+    const video = overlay.previousElementSibling;
+    video.play();
+    overlay.style.display = 'none';
+    video.controls = true;
+  }
+
+  // Billing toggle: mensual vs 3 meses
+  const billingData = {
+    arranque: { monthly: 100000, qMonthly: 65000,  qTotal: 195000 },
+    impulso:  { monthly: 200000, qMonthly: 130000, qTotal: 390000 },
+    turbo:    { monthly: 300000, qMonthly: 200000, qTotal: 600000 }
+  };
+  const formatCLP = n => n.toLocaleString('es-CL');
+
+  function setBilling(mode) {
+    document.querySelectorAll('.bt-btn').forEach(b => b.classList.toggle('active', b.dataset.billing === mode));
+    document.querySelectorAll('[data-plan]').forEach(block => {
+      const d = billingData[block.dataset.plan];
+      if (!d) return;
+      const amountEl = block.querySelector('.amount');
+      const oldEl = block.querySelector('.plan-price-old');
+      const noteEl = block.querySelector('.price-note');
+      if (mode === 'mensual') {
+        amountEl.textContent = formatCLP(d.monthly);
+        if (oldEl) oldEl.style.display = '';
+        if (noteEl) noteEl.style.display = 'none';
+      } else {
+        amountEl.textContent = formatCLP(d.qMonthly);
+        if (oldEl) oldEl.style.display = 'none';
+        if (noteEl) {
+          noteEl.textContent = `Pago único de $${formatCLP(d.qTotal)} por 3 meses + IVA`;
+          noteEl.style.display = 'block';
+        }
+      }
+      const link = block.closest('.plan-card, .plan-basico-banner')?.querySelector('.plan-cta');
+      if (link) {
+        if (!link.dataset.waBase) link.dataset.waBase = link.getAttribute('href');
+        link.setAttribute('href', mode === 'trimestral' ? link.dataset.waBase + '%20(plan%203%20meses)' : link.dataset.waBase);
+      }
+    });
+  }
+
+  document.querySelectorAll('.bt-btn').forEach(btn => {
+    btn.addEventListener('click', () => setBilling(btn.dataset.billing));
+  });
+
+  // Reveal on scroll (las clases se agregan por JS: sin JS nada queda oculto)
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    const grids = document.querySelectorAll('.pilares-grid, .pricing-grid, .value-grid, .guarantee-strip-grid, .conditions-grid, .testi-strip-grid');
+    grids.forEach(g => Array.from(g.children).forEach((el, i) => {
+      el.classList.add('reveal');
+      el.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+    }));
+    document.querySelectorAll('.pilares-inner > h2, .pilares-total, .plan-basico-banner, .billing-toggle-wrap, .testi-strip, .value-inner > h2, .guarantee-strip-inner > h2, .conditions-inner > h2')
+      .forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  })();
+</script>
+
+</body>
+</html>

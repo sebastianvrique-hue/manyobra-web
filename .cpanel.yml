@@ -5,6 +5,11 @@ deployment:
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp planes.html $DEPLOYPATH
     - /bin/cp ventas.html $DEPLOYPATH
+    # ── URLs limpias: /planes/ y /ventas/ (planes.html y ventas.html en la raíz quedan como redirect stub) ──
+    - /bin/mkdir -p $DEPLOYPATH/planes
+    - /bin/cp planes/index.html $DEPLOYPATH/planes/
+    - /bin/mkdir -p $DEPLOYPATH/ventas
+    - /bin/cp ventas/index.html $DEPLOYPATH/ventas/
     - /bin/cp logo.png $DEPLOYPATH
     - /bin/cp sebastian.png $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH

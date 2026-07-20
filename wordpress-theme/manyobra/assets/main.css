@@ -424,7 +424,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent-brd); box
 .lp-banner-right { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
 .lp-banner-price { font-size: 1.6rem; font-weight: 900; letter-spacing: -1px; white-space: nowrap; }
 .lp-banner-price span { font-size: .72rem; color: var(--muted); font-weight: 500; margin-left: .15rem; }
-.lp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: stretch; }
+.lp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; align-items: stretch; max-width: 780px; margin: 0 auto; }
 .lp-card {
   position: relative; display: flex; flex-direction: column;
   background: var(--glass); border: 1px solid var(--glass-brd); border-radius: var(--radius-lg);

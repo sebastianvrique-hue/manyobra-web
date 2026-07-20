@@ -183,7 +183,7 @@
 </section>
 
 <!-- PLANES (resumen) -->
-<!-- OJO: precios duplicados — si cambian, actualizar también planes.html (tarjetas HTML + objeto billingData del script) -->
+<!-- OJO: precios duplicados — si cambian, actualizar también planes/index.html (tarjetas HTML + objeto billingData del script) -->
 <section class="planes-sec" id="planes">
   <div class="sec-inner">
     <div class="sec-tag">Planes</div>
@@ -193,7 +193,7 @@
     <div class="lp-banner">
       <div>
         <div class="lp-banner-name">🔑 Arranque <span class="lp-tag">Plan de entrada</span></div>
-        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 4 videos + 4 imágenes + 4 historias al mes, con Meta Ads gestionados (4 anuncios) y app de avance.</p>
+        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 4 videos + 4 imágenes + 4 historias al mes (contenido editado), con Meta Ads gestionados: campañas de conversión segmentadas (12 anuncios) y app de avance.</p>
       </div>
       <div class="lp-banner-right">
         <div class="lp-banner-price">$100.000<span>/mes + IVA</span></div>
@@ -208,10 +208,11 @@
         <p class="lp-desc">Aparece todos los días y llena tu agenda sin mover un dedo.</p>
         <div class="lp-price"><span class="n">$200.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
-          <li><strong>🎁 Bonus:</strong> Landing Page o Tienda Online gratis</li>
-          <li><strong>24 piezas</strong>&nbsp;de contenido al mes: 8 videos · 8 imágenes · 8 historias</li>
-          <li>Meta Ads gestionados: <strong>8 anuncios</strong>&nbsp;+ Píxel</li>
-          <li>Reporte quincenal + app de avance</li>
+          <li><strong>✓ Todo lo de Arranque</strong>, más:</li>
+          <li><strong>Producción audiovisual real</strong> (sesión de grabación): 8 videos · 8 imágenes · 8 historias</li>
+          <li><strong>Página web</strong> (Landing o Tienda Online) con Píxel de Meta</li>
+          <li>Meta Ads: 12 anuncios <strong>con retargeting</strong> + reporte quincenal</li>
+          <li>Community Manager + onboarding en 48-72 hrs</li>
         </ul>
         <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Impulso" target="_blank" rel="noopener" class="lp-cta grad">Quiero este plan →</a>
       </article>
@@ -222,32 +223,19 @@
         <p class="lp-desc">Tu sistema completo para convertir seguidores en clientes, con Agente IA incluido.</p>
         <div class="lp-price"><span class="n">$300.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
-          <li><strong>36 piezas</strong>&nbsp;de contenido al mes: 12 videos · 12 imágenes · 12 historias</li>
-          <li>Meta Ads completo: <strong>12 anuncios</strong>&nbsp;+ remarketing</li>
-          <li><strong>Agente IA incluido</strong>: responde y agenda por WhatsApp 24/7</li>
-          <li>Landing Premium + reporte semanal + app de avance</li>
+          <li><strong>✓ Todo lo de Impulso</strong>, más:</li>
+          <li><strong>Agente de venta IA especializado</strong>: responde, califica y agenda por WhatsApp 24/7</li>
+          <li>12 videos · 12 imágenes · 12 historias + 1 sesión extra de producción</li>
+          <li>Meta Ads con A/B testing + remarketing multi-etapa</li>
+          <li>Landing Page Premium + copywriting de ventas + reporte semanal</li>
         </ul>
         <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="lp-cta ghost">Quiero este plan →</a>
-      </article>
-
-      <article class="lp-card">
-        <div class="lp-badge ghost">Incluido en Turbo</div>
-        <div class="lp-name">Agente IA</div>
-        <p class="lp-desc">Tu vendedor con inteligencia artificial en WhatsApp, 24/7. Ya viene con el Plan Turbo, o contrátalo solo.</p>
-        <div class="lp-price"><span class="n">A tu medida</span></div>
-        <ul class="lp-feats">
-          <li>Responde por WhatsApp 24/7</li>
-          <li>Califica a cada lead antes de que llegue a ti</li>
-          <li>Agenda reuniones directo en tu calendario</li>
-          <li>Se suma a cualquier plan o funciona solo</li>
-        </ul>
-        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA" target="_blank" rel="noopener" class="lp-cta ghost">Quiero una demo →</a>
       </article>
     </div>
 
     <div class="planes-more">
-      <a href="planes.html" class="btn btn-grad">Ver desglose completo de los planes →</a>
-      <p>Incluye el detalle de cada pilar, garantías, pago 3 meses con ~33% de descuento y descarga en PDF.</p>
+      <a href="/planes/" class="btn btn-grad">Ver desglose completo de los planes →</a>
+      <p>Incluye el detalle de cada pilar, garantías, pago 3 meses con ~33% de descuento y descarga en PDF.<br/>¿Solo quieres el Agente IA, sin plan de contenido? <a href="/planes/#agente-ia" style="color:var(--blue);">También se contrata solo →</a></p>
     </div>
   </div>
 </section>
@@ -323,11 +311,11 @@
       <div class="footer-col">
         <h4>Planes</h4>
         <ul>
-          <li><a href="planes.html">🔑 Arranque</a></li>
-          <li><a href="planes.html">⚙️ Impulso</a></li>
-          <li><a href="planes.html">🏎️ Turbo</a></li>
-          <li><a href="planes.html#agente-ia">🤖 Agente IA</a></li>
-          <li><a href="planes.html">Ver todos →</a></li>
+          <li><a href="/planes/">🔑 Arranque</a></li>
+          <li><a href="/planes/">⚙️ Impulso</a></li>
+          <li><a href="/planes/">🏎️ Turbo</a></li>
+          <li><a href="/planes/#agente-ia">🤖 Agente IA</a></li>
+          <li><a href="/planes/">Ver todos →</a></li>
         </ul>
       </div>
       <div class="footer-col">
