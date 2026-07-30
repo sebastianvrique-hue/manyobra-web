@@ -622,6 +622,32 @@
       .ai-feats { grid-template-columns: 1fr; }
     }
 
+    /* ── FAQ / DUDAS ── */
+    .faq-section { background: var(--grey2); border-top: 1px solid var(--border); padding: 60px 6%; }
+    .faq-inner { max-width: 860px; margin: 0 auto; }
+    .faq-inner h2 { font-size: clamp(1.4rem, 2.8vw, 2rem); font-weight: 900; letter-spacing: -.5px; margin-bottom: .4rem; text-align: center; }
+    .faq-inner h2 span { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .faq-inner > p { font-size: .88rem; color: var(--muted); text-align: center; margin-bottom: 2.2rem; }
+    .faq-list { display: flex; flex-direction: column; gap: .65rem; }
+    .faq-item {
+      background: var(--glass); border: 1px solid var(--glass-brd);
+      border-radius: 12px; overflow: hidden; transition: border-color .2s;
+    }
+    .faq-item[open] { border-color: var(--accent-brd); }
+    .faq-item summary {
+      padding: 1rem 1.2rem; cursor: pointer; list-style: none;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      font-size: .9rem; font-weight: 700; transition: color .2s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--muted); flex-shrink: 0; transition: transform .25s, color .2s; }
+    .faq-item[open] summary::after { transform: rotate(45deg); color: var(--blue); }
+    .faq-item summary:hover { color: var(--blue); }
+    .faq-body { padding: 0 1.2rem 1.1rem; font-size: .86rem; color: #B0B0B0; line-height: 1.75; }
+    .faq-body strong { color: var(--white); }
+    .faq-body a { color: var(--blue); text-decoration: none; }
+    @media print { .faq-section { display: none !important; } }
+
     /* footer */
     footer { position: relative; }
     footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59,130,246,0.5), rgba(139,92,246,0.5), transparent); }
@@ -990,6 +1016,52 @@
       <div class="cond-item"><div class="cond-dot"></div><span>Permanencia mínima recomendada: <strong>3 meses</strong>.</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>Pago mensual <strong>anticipado</strong> al inicio de cada ciclo.</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>Precios válidos por <strong>30 días</strong> desde su emisión. Vigencia 2026.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ / DUDAS -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Lo que casi todos <span>preguntan</span></h2>
+    <p>Si tu duda no está acá, escríbenos por WhatsApp y te respondemos directo.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿El presupuesto de publicidad está incluido en el precio del plan?</summary>
+        <div class="faq-body">No. El valor del plan cubre <strong>nuestro trabajo</strong>: estrategia, producción de contenido, gestión de campañas, reportes y —según el plan— página web y Agente IA. La plata que se invierte en pauta se carga directo a <strong>tu propia cuenta de Meta</strong>, así tú tienes control y visibilidad total de cada peso. Nunca manejamos tu dinero de publicidad. En el diagnóstico te recomendamos un monto según tu rubro.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto debería invertir en pauta además del plan?</summary>
+        <div class="faq-body">Se puede partir desde <strong>$50.000 mensuales</strong>, pero recomendamos cerca de <strong>$150.000</strong> para que las campañas tengan datos suficientes y el algoritmo pueda optimizar. El monto ideal depende de tu industria, tu ticket promedio y qué tan competitivo es tu rubro — lo definimos juntos antes de partir.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál plan me conviene si estoy recién partiendo?</summary>
+        <div class="faq-body"><strong>Arranque</strong> está pensado justo para eso: ya incluye la gestión de Meta Ads con 12 anuncios y contenido editado, sin la sesión de grabación. Si ya tienes algo de material y quieres crecer más rápido, <strong>Impulso</strong> agrega la producción audiovisual real y tu página web. Y si buscas el sistema completo con el Agente IA atendiendo tu WhatsApp, es <strong>Turbo</strong>. En el diagnóstico gratuito te decimos honestamente cuál te calza.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo cambiarme de plan más adelante?</summary>
+        <div class="faq-body">Sí, en cualquier momento y en ambos sentidos. Como cada plan incluye todo lo del anterior, subir es simplemente sumar lo que falta. Si necesitas bajar por un mes complicado, también se puede: preferimos que te quedes con lo que puedes sostener antes que te vayas del todo.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo tengo que dedicarle yo?</summary>
+        <div class="faq-body">Prácticamente nada más que <strong>aprobar el contenido</strong>. Nosotros planificamos, producimos, publicamos, gestionamos la pauta y te entregamos el reporte. Para la sesión de grabación (Impulso y Turbo) coordinamos un día contigo. El resto del mes puedes seguir tu proceso desde la <strong>app de avance</strong> sin tener que preguntar nada.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que firmar un contrato de permanencia?</summary>
+        <div class="faq-body">No hay permanencia forzada: trabajamos mes a mes y puedes salir avisando con 15 días. Sí <strong>recomendamos</strong> darle mínimo 3 meses, porque es el tiempo que necesita la pauta para optimizar y el contenido para acumular efecto. Si te vas, todo el material producido es tuyo y te lo llevas.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿El Agente IA lo puedo contratar sin un plan de contenido?</summary>
+        <div class="faq-body">Sí. Viene incluido en el <strong>Plan Turbo</strong>, pero si solo necesitas resolver la atención de tu WhatsApp también se contrata por separado y se cotiza según tu negocio. Puedes <a href="/agente-ia/">ver todo lo que hace acá</a> o probarlo tú mismo antes de decidir.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa si no me gusta una pieza de contenido?</summary>
+        <div class="faq-body">Nada se publica sin tu aprobación. Y si algo no refleja lo acordado, lo corregimos sin costo adicional: está cubierto por la <strong>garantía de satisfacción de 15 días</strong>.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿En cuánto tiempo se ven resultados?</summary>
+        <div class="faq-body">El onboarding toma <strong>48 a 72 horas</strong> y de ahí las campañas quedan activas. El algoritmo de Meta necesita entre 7 y 14 días para optimizar, así que los primeros resultados concretos normalmente aparecen al cierre del primer mes. Preferimos ser claros: los resultados dependen de cada negocio y no garantizamos cifras específicas.</div>
+      </details>
     </div>
   </div>
 </section>
