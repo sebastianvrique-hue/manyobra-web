@@ -10,6 +10,8 @@ deployment:
     - /bin/cp planes/index.html $DEPLOYPATH/planes/
     - /bin/mkdir -p $DEPLOYPATH/ventas
     - /bin/cp ventas/index.html $DEPLOYPATH/ventas/
+    - /bin/mkdir -p $DEPLOYPATH/agente-ia
+    - /bin/cp agente-ia/index.html $DEPLOYPATH/agente-ia/
     - /bin/cp logo.png $DEPLOYPATH
     - /bin/cp sebastian.png $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH

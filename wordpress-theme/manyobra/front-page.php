@@ -16,6 +16,7 @@
     <li><a href="#perfil">Sobre mí</a></li>
     <li><a href="#testimonios">Testimonios</a></li>
     <li><a href="#planes">Planes</a></li>
+    <li><a href="/agente-ia/">Agente IA</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Trabajemos juntos</a>
@@ -235,7 +236,7 @@
 
     <div class="planes-more">
       <a href="/planes/" class="btn btn-grad">Ver desglose completo de los planes →</a>
-      <p>Incluye el detalle de cada pilar, garantías, pago 3 meses con ~33% de descuento y descarga en PDF.<br/>¿Solo quieres el Agente IA, sin plan de contenido? <a href="/planes/#agente-ia" style="color:var(--blue);">También se contrata solo →</a></p>
+      <p>Incluye el detalle de cada pilar, garantías, pago 3 meses con ~33% de descuento y descarga en PDF.<br/>¿Solo quieres el Agente IA, sin plan de contenido? <a href="/agente-ia/" style="color:var(--blue);">También se contrata solo →</a></p>
     </div>
   </div>
 </section>
@@ -314,7 +315,7 @@
           <li><a href="/planes/">🔑 Arranque</a></li>
           <li><a href="/planes/">⚙️ Impulso</a></li>
           <li><a href="/planes/">🏎️ Turbo</a></li>
-          <li><a href="/planes/#agente-ia">🤖 Agente IA</a></li>
+          <li><a href="/agente-ia/">🤖 Agente IA</a></li>
           <li><a href="/planes/">Ver todos →</a></li>
         </ul>
       </div>
