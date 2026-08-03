@@ -519,9 +519,65 @@
     }
     .sec-inner { animation: fadeUp .45s ease both; }
 
+    /* ── PRUEBA SOCIAL ── */
+    .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    .proof-card {
+      background: var(--grey2); border: 1px solid var(--border); border-radius: 14px;
+      overflow: hidden; transition: border-color .2s, transform .2s;
+    }
+    .proof-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+    .proof-video { position: relative; aspect-ratio: 16/9; background: var(--grey3); }
+    .proof-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .proof-play {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.45); cursor: pointer; transition: background .2s;
+    }
+    .proof-play:hover { background: rgba(0,0,0,0.25); }
+    .proof-play-btn {
+      width: 54px; height: 54px; border-radius: 50%; background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+    }
+    .proof-play-btn svg { width: 18px; height: 18px; fill: #000; margin-left: 3px; }
+    .proof-info { padding: 1.1rem 1.25rem; }
+    .proof-stars { color: #FBBF24; font-size: .85rem; letter-spacing: 1px; margin-bottom: .45rem; }
+    .proof-name { font-size: .95rem; font-weight: 800; margin-bottom: .15rem; }
+    .proof-biz { font-size: .78rem; color: var(--muted); }
+    .proof-note {
+      text-align: center; font-size: .82rem; color: var(--muted);
+      background: var(--grey2); border: 1px solid var(--border);
+      border-radius: 10px; padding: .9rem 1.2rem;
+    }
+    .proof-note strong { color: var(--white); }
+
+    /* ── OBJECIONES ── */
+    .obj-list { display: flex; flex-direction: column; gap: .7rem; }
+    .obj-item {
+      background: var(--grey2); border: 1px solid var(--border);
+      border-radius: 12px; overflow: hidden; transition: border-color .2s;
+    }
+    .obj-item[open] { border-color: var(--border2); }
+    .obj-item summary {
+      padding: 1.1rem 1.3rem; cursor: pointer; list-style: none;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      font-size: .93rem; font-weight: 700; transition: color .2s;
+    }
+    .obj-item summary::-webkit-details-marker { display: none; }
+    .obj-item summary::after {
+      content: '+'; font-size: 1.25rem; color: var(--muted); flex-shrink: 0;
+      transition: transform .25s;
+    }
+    .obj-item[open] summary::after { transform: rotate(45deg); }
+    .obj-item summary:hover { color: var(--green); }
+    .obj-body {
+      padding: 0 1.3rem 1.2rem; font-size: .88rem; color: #B0B0B0; line-height: 1.75;
+    }
+    .obj-body strong { color: var(--white); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
       .sales-steps { display: none; }
+      .proof-grid { grid-template-columns: 1fr; }
       .pain-grid, .bonus-grid, .guarantee-grid { grid-template-columns: 1fr; }
       .price-reveal { flex-direction: column; }
       .price-right { text-align: left; }
@@ -545,9 +601,11 @@
   <ul class="sales-steps" id="salesSteps">
     <li><button class="step-btn active" data-target="problema"><span class="step-dot"></span>01 Problema</button></li>
     <li><button class="step-btn" data-target="valor"><span class="step-dot"></span>02 Valor</button></li>
-    <li><button class="step-btn" data-target="bonus"><span class="step-dot"></span>03 Bonus</button></li>
-    <li><button class="step-btn" data-target="garantias"><span class="step-dot"></span>04 Garantías</button></li>
-    <li><button class="step-btn" data-target="cierre"><span class="step-dot"></span>05 Cierre</button></li>
+    <li><button class="step-btn" data-target="resultados"><span class="step-dot"></span>03 Clientes</button></li>
+    <li><button class="step-btn" data-target="bonus"><span class="step-dot"></span>04 Bonus</button></li>
+    <li><button class="step-btn" data-target="garantias"><span class="step-dot"></span>05 Garantías</button></li>
+    <li><button class="step-btn" data-target="preguntas"><span class="step-dot"></span>06 Dudas</button></li>
+    <li><button class="step-btn" data-target="cierre"><span class="step-dot"></span>07 Cierre</button></li>
   </ul>
 </nav>
 
@@ -639,13 +697,13 @@
         </tr>
         <tr>
           <td class="td-name"><span class="row-num">9</span>Agente IA en WhatsApp 24/7 (responde, califica, agenda)</td>
-          <td>$300.000</td>
+          <td>$200.000</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <td>Total de mercado</td>
-          <td>$2.260.000/mes</td>
+          <td>$2.160.000/mes</td>
         </tr>
       </tfoot>
     </table>
@@ -653,7 +711,7 @@
     <div class="price-reveal">
       <div class="price-left">
         <div class="price-label">Lo que vale en el mercado</div>
-        <div class="price-crossed">$2.260.000/mes</div>
+        <div class="price-crossed">$2.160.000/mes</div>
         <div class="price-label" style="margin-bottom:.5rem;">Tu precio con Manyobra</div>
         <div class="price-real">$300.000<span style="font-size:1.4rem;font-weight:600;color:var(--muted)">/mes</span></div>
         <div class="price-iva">+ IVA · Pago mensual · Sin permanencia forzada</div>
@@ -665,7 +723,7 @@
         </div>
         <div style="margin-top:1rem;">
           <div class="savings-label">Ahorro mensual</div>
-          <div class="savings-amount">$1.960.000</div>
+          <div class="savings-amount">$1.860.000</div>
         </div>
       </div>
     </div>
@@ -673,11 +731,55 @@
 </section>
 
 <!-- ════════════════════════════════════════════
-     SECCIÓN 3 — BONUS
+     SECCIÓN 3 — PRUEBA SOCIAL
+═════════════════════════════════════════════ -->
+<section id="resultados">
+  <div class="sec-inner">
+    <div class="sec-eyebrow"><span>03</span> — Clientes reales</div>
+    <h2 class="sec-h">No tienes que creerme a mí.<br/>Escúchalos a ellos.</h2>
+    <p class="sec-lead">Dos clientes contando en sus propias palabras cómo les fue trabajando con nosotros.</p>
+
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-video">
+          <video src="/testimonios/videos/Testimonio%20carlos%20cool%20edit.mp4" preload="none" playsinline></video>
+          <div class="proof-play" onclick="playProof(this)">
+            <div class="proof-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="proof-info">
+          <div class="proof-stars">★★★★★</div>
+          <div class="proof-name">Carlos</div>
+          <div class="proof-biz">Bubble House &amp; Mandala Sushi · Villa Alemana, V Región</div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-video">
+          <video src="/testimonios/videos/testimonio%20pedro%20campossss.mp4" preload="none" playsinline></video>
+          <div class="proof-play" onclick="playProof(this)">
+            <div class="proof-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="proof-info">
+          <div class="proof-stars">★★★★★</div>
+          <div class="proof-name">Pedro Campos</div>
+          <div class="proof-biz">Obras Menores · Temuco, Región de la Araucanía</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-note">
+      <strong>+200 campañas gestionadas</strong> y <strong>+50 clientes</strong> en más de 4 años trabajando con negocios chilenos.
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 4 — BONUS
 ═════════════════════════════════════════════ -->
 <section id="bonus">
   <div class="sec-inner">
-    <div class="sec-eyebrow"><span>03</span> — Solo hoy</div>
+    <div class="sec-eyebrow"><span>04</span> — Solo hoy</div>
     <h2 class="sec-h">Bonus exclusivos<br/>si cierras en esta llamada</h2>
     <p class="sec-lead">Estos bonus no están disponibles en la web ni en ningún otro momento. Solo para quien toma la decisión hoy.</p>
 
@@ -724,7 +826,7 @@
 ═════════════════════════════════════════════ -->
 <section id="garantias">
   <div class="sec-inner">
-    <div class="sec-eyebrow"><span>04</span> — Sin riesgo</div>
+    <div class="sec-eyebrow"><span>05</span> — Sin riesgo</div>
     <h2 class="sec-h">Tres garantías<br/>que eliminan el riesgo</h2>
     <p class="sec-lead">Confiamos en nuestro trabajo. Por eso asumimos el riesgo nosotros, no tú.</p>
 
@@ -755,11 +857,53 @@
 </section>
 
 <!-- ════════════════════════════════════════════
-     SECCIÓN 5 — CIERRE
+     SECCIÓN 6 — OBJECIONES
+═════════════════════════════════════════════ -->
+<section id="preguntas">
+  <div class="sec-inner">
+    <div class="sec-eyebrow"><span>06</span> — Antes de decidir</div>
+    <h2 class="sec-h">Lo que casi todos<br/>me preguntan acá</h2>
+    <p class="sec-lead">Si tienes una duda que no está en esta lista, dímela en la llamada y te la respondo directo.</p>
+
+    <div class="obj-list">
+      <details class="obj-item">
+        <summary>¿Por qué no contrato a alguien para que lo haga interno?</summary>
+        <div class="obj-body">Porque para cubrir lo que trae este plan necesitas al menos tres personas distintas: alguien que grabe y edite video, un diseñador y alguien que sepa de verdad manejar pauta en Meta. Un solo community manager con sueldo mínimo de mercado ya te cuesta más que este plan completo, y aun así te faltarían las otras dos áreas. Acá tienes las tres cubiertas por un equipo que ya lleva años haciéndolo, sin sueldos, sin finiquitos y sin tener que capacitar a nadie.</div>
+      </details>
+      <details class="obj-item">
+        <summary>¿Y si no me gusta el contenido que hacen?</summary>
+        <div class="obj-body">Nada se publica sin que tú lo apruebes: revisas cada pieza antes de que salga. Y si algo no refleja lo que acordamos, lo corregimos sin costo adicional — eso está por escrito en la <strong>garantía de satisfacción de 15 días</strong>. Tu única tarea real en este plan es aprobar o pedir cambios.</div>
+      </details>
+      <details class="obj-item">
+        <summary>¿El presupuesto de publicidad está incluido en el precio?</summary>
+        <div class="obj-body">No, y es importante que quede claro: el valor del plan cubre <strong>nuestro trabajo</strong> (estrategia, producción, gestión de campañas, landing, agente IA y reportes). La plata que se invierte en pauta se carga directo a <strong>tu propia cuenta de Meta</strong>, así que tú tienes el control y la visibilidad total de cada peso. Nosotros nunca manejamos tu dinero de pauta. En la llamada te recomiendo un monto según tu rubro y objetivo.</div>
+      </details>
+      <details class="obj-item">
+        <summary>¿En cuánto tiempo voy a ver resultados?</summary>
+        <div class="obj-body">El contenido y las campañas quedan andando en <strong>48 a 72 horas</strong> desde que partimos. Dicho eso, el algoritmo de Meta necesita entre 7 y 14 días para optimizar bien, así que los primeros resultados concretos normalmente se ven al cierre del primer mes. Prefiero decirte esto ahora que prometerte ventas en la primera semana: los resultados dependen de cada negocio y no garantizamos cifras específicas.</div>
+      </details>
+      <details class="obj-item">
+        <summary>¿Me tengo que amarrar por muchos meses?</summary>
+        <div class="obj-body">No hay contrato de permanencia forzada. Trabajamos mes a mes y puedes salir avisando con 15 días. Sí te <strong>recomiendo</strong> darle mínimo 3 meses, no por amarrarte, sino porque es el tiempo real que necesita la pauta para optimizar y para que el contenido acumule efecto. Si te vas, te llevas todo el material producido: es tuyo para siempre.</div>
+      </details>
+      <details class="obj-item">
+        <summary>¿Con quién voy a estar hablando durante el proyecto?</summary>
+        <div class="obj-body">Conmigo, directo. No hay ejecutivo de cuentas intermediario ni un chat donde nadie responde. Yo dirijo el proyecto y coordino a los especialistas que trabajan en cada área. Además tienes la <strong>app de avance</strong> para ver en cualquier momento en qué está tu proyecto, sin tener que preguntar.</div>
+      </details>
+      <details class="obj-item">
+        <summary>Ya probé con otra agencia y no funcionó. ¿Por qué sería distinto?</summary>
+        <div class="obj-body">Es la duda más justa de todas. La diferencia más común que veo: la mayoría vende <strong>solo</strong> pauta o <strong>solo</strong> contenido. Cuando se separan, la pauta termina promocionando contenido malo, o se produce contenido bonito que nadie ve. Acá van juntos y bajo un mismo responsable, más el agente IA que atiende a la gente que llega. Si aún así no ves cambios, no hay amarre: te vas cuando quieras y con tu material.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 7 — CIERRE
 ═════════════════════════════════════════════ -->
 <section id="cierre">
   <div class="sec-inner">
-    <div class="sec-eyebrow"><span>05</span> — Tu decisión</div>
+    <div class="sec-eyebrow"><span>07</span> — Tu decisión</div>
     <h2 class="sec-h">Todo lo que llevas<br/>si decides hoy</h2>
     <p class="sec-lead">Un resumen de todo lo que entra en tu negocio desde el día que dices que sí.</p>
 
@@ -811,7 +955,7 @@
             <div class="cs-line-name" style="font-size:.78rem;color:var(--muted)">Valor de mercado equivalente</div>
           </div>
         </div>
-        <div class="cs-line-val" style="color:var(--muted);font-size:.85rem;text-decoration:line-through">$2.428.000/mes</div>
+        <div class="cs-line-val" style="color:var(--muted);font-size:.85rem;text-decoration:line-through">$2.328.000/mes</div>
       </div>
     </div>
 
@@ -846,7 +990,15 @@
 </section>
 
 <script>
-  const sections = ['problema','valor','bonus','garantias','cierre'];
+  const sections = ['problema','valor','resultados','bonus','garantias','preguntas','cierre'];
+
+  // Reproductor de los videos de testimonio
+  function playProof(overlay) {
+    const video = overlay.previousElementSibling;
+    video.play();
+    overlay.style.display = 'none';
+    video.controls = true;
+  }
   const buttons  = document.querySelectorAll('.step-btn');
   const fillEl   = document.getElementById('scrollFill');
 

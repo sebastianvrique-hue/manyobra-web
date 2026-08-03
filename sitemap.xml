@@ -4,8 +4,22 @@
   <url>
     <loc>https://manyobra.cl/</loc>
     <xhtml:link rel="alternate" hreflang="es-CL" href="https://manyobra.cl/"/>
-    <lastmod>2025-04-27</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://manyobra.cl/planes/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://manyobra.cl/planes/"/>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://manyobra.cl/agente-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://manyobra.cl/agente-ia/"/>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

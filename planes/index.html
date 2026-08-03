@@ -622,6 +622,114 @@
       .ai-feats { grid-template-columns: 1fr; }
     }
 
+    /* ── CUPOS (escasez) ── */
+    .cupos-banner {
+      max-width: 1180px; margin: 0 auto 1.75rem;
+      display: flex; align-items: flex-start; gap: .8rem;
+      background: var(--blue-dim); border: 1px solid var(--accent-brd);
+      border-radius: 12px; padding: .9rem 1.2rem;
+    }
+    .cupos-banner p { font-size: .85rem; color: #C8D4EC; line-height: 1.6; margin: 0; }
+    .cupos-banner strong { color: var(--white); }
+    .cupos-dot {
+      flex-shrink: 0; width: 9px; height: 9px; border-radius: 50%; margin-top: .45rem;
+      background: #4ADE80; box-shadow: 0 0 10px rgba(74,222,128,.9);
+      animation: cuposPulse 2.4s ease-in-out infinite;
+    }
+    @keyframes cuposPulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+    @media (prefers-reduced-motion: reduce) { .cupos-dot { animation: none; } }
+
+    /* ── ARGUMENTO DE VALOR EN TARJETA ── */
+    .plan-value-note {
+      background: var(--blue-dim); border: 1px solid var(--accent-brd);
+      border-radius: 10px; padding: .7rem .85rem; margin-bottom: 1.4rem;
+      font-size: .78rem; color: #C8D4EC; line-height: 1.55;
+    }
+    .plan-value-note strong { color: var(--white); }
+
+    /* ── PROYECTOS A MEDIDA (ancla superior) ── */
+    .custom-band {
+      max-width: 1180px; margin: 2rem auto 0;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.2rem; flex-wrap: wrap;
+      background: var(--glass); border: 1px dashed var(--border2);
+      border-radius: var(--radius-lg); padding: 1.3rem 1.6rem;
+    }
+    .custom-band p { font-size: .88rem; color: var(--muted); line-height: 1.6; margin: 0; max-width: 620px; }
+    .custom-band strong { color: var(--white); }
+
+    /* ── SERVICIOS SUELTOS ── */
+    .sueltos-section { background: var(--grey1); border-top: 1px solid var(--border); padding: 60px 6%; }
+    @media print { .sueltos-section { display: none !important; } }
+    .sueltos-inner { max-width: 1100px; margin: 0 auto; }
+    .sueltos-inner h2 { font-size: clamp(1.4rem, 2.8vw, 2rem); font-weight: 900; letter-spacing: -.5px; margin-bottom: .4rem; text-align: center; }
+    .sueltos-inner h2 span { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .sueltos-inner > p { font-size: .88rem; color: var(--muted); text-align: center; margin-bottom: 2.2rem; }
+    .sueltos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .suelto-card {
+      background: var(--glass); border: 1px solid var(--glass-brd); border-radius: var(--radius);
+      padding: 1.5rem; display: flex; flex-direction: column;
+      transition: transform .25s, border-color .25s;
+    }
+    .suelto-card:hover { transform: translateY(-4px); border-color: var(--accent-brd); }
+    .suelto-card.destacado {
+      border: 1px solid transparent;
+      background: linear-gradient(var(--grey2), var(--grey2)) padding-box, var(--grad) border-box;
+      box-shadow: 0 10px 40px rgba(124,58,237,0.18);
+    }
+    .suelto-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .6rem; }
+    .suelto-icon {
+      width: 40px; height: 40px; border-radius: 11px; background: var(--blue-dim);
+      border: 1px solid var(--accent-brd); display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; flex-shrink: 0;
+    }
+    .suelto-name { font-size: 1rem; font-weight: 800; }
+    .suelto-desc { font-size: .83rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.1rem; flex-grow: 1; }
+    .suelto-price { display: flex; align-items: baseline; gap: .3rem; margin-bottom: .3rem; }
+    .suelto-price .n { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
+    .suelto-price .p { font-size: .75rem; color: var(--muted); }
+    .suelto-sub { font-size: .72rem; color: var(--grey5); margin-bottom: 1.1rem; }
+    .suelto-tag {
+      display: inline-block; font-size: .6rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+      background: var(--grad); color: #fff; padding: .15rem .5rem; border-radius: 4px; margin-left: .5rem;
+    }
+    .sueltos-note { text-align: center; font-size: .8rem; color: var(--muted); margin-top: 1.6rem; }
+    @media (max-width: 768px) {
+      .sueltos-grid { grid-template-columns: 1fr; }
+      .custom-band { flex-direction: column; align-items: flex-start; }
+    }
+    @media print {
+      .cupos-banner, .custom-band { border: 1px solid #999 !important; background: #fff !important; }
+      .suelto-card, .suelto-card.destacado { background: #fff !important; border: 1px solid #ccc !important; break-inside: avoid; }
+      .plan-value-note { background: #fff !important; border: 1px dashed #999 !important; }
+    }
+
+    /* ── FAQ / DUDAS ── */
+    .faq-section { background: var(--grey2); border-top: 1px solid var(--border); padding: 60px 6%; }
+    .faq-inner { max-width: 860px; margin: 0 auto; }
+    .faq-inner h2 { font-size: clamp(1.4rem, 2.8vw, 2rem); font-weight: 900; letter-spacing: -.5px; margin-bottom: .4rem; text-align: center; }
+    .faq-inner h2 span { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .faq-inner > p { font-size: .88rem; color: var(--muted); text-align: center; margin-bottom: 2.2rem; }
+    .faq-list { display: flex; flex-direction: column; gap: .65rem; }
+    .faq-item {
+      background: var(--glass); border: 1px solid var(--glass-brd);
+      border-radius: 12px; overflow: hidden; transition: border-color .2s;
+    }
+    .faq-item[open] { border-color: var(--accent-brd); }
+    .faq-item summary {
+      padding: 1rem 1.2rem; cursor: pointer; list-style: none;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      font-size: .9rem; font-weight: 700; transition: color .2s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--muted); flex-shrink: 0; transition: transform .25s, color .2s; }
+    .faq-item[open] summary::after { transform: rotate(45deg); color: var(--blue); }
+    .faq-item summary:hover { color: var(--blue); }
+    .faq-body { padding: 0 1.2rem 1.1rem; font-size: .86rem; color: #B0B0B0; line-height: 1.75; }
+    .faq-body strong { color: var(--white); }
+    .faq-body a { color: var(--blue); text-decoration: none; }
+    @media print { .faq-section { display: none !important; } }
+
     /* footer */
     footer { position: relative; }
     footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59,130,246,0.5), rgba(139,92,246,0.5), transparent); }
@@ -715,22 +823,22 @@
         <div class="pilar-name">Agente IA <span class="pb-tag" style="vertical-align:middle;">Incluido en Turbo</span></div>
         <div class="pilar-desc">Responde, califica y agenda 24/7</div>
         <ul class="pilar-list">
-          <li><span>Atiende por WhatsApp 24/7</span><b>$120.000</b></li>
-          <li><span>Califica al lead</span><b>$70.000</b></li>
-          <li><span>Agenda reuniones</span><b>$60.000</b></li>
-          <li><span>Seguimiento infinito</span><b>$50.000</b></li>
+          <li><span>Atiende por WhatsApp 24/7</span><b>$80.000</b></li>
+          <li><span>Califica al lead</span><b>$50.000</b></li>
+          <li><span>Agenda reuniones</span><b>$40.000</b></li>
+          <li><span>Seguimiento infinito</span><b>$30.000</b></li>
         </ul>
-        <div class="pilar-value">$300.000<span>/mes de valor</span></div>
+        <div class="pilar-value">$200.000<span>/mes de valor</span></div>
       </div>
     </div>
     <div class="pilares-total">
       <div class="pt-label">Los 3 pilares como paquete completo</div>
       <div class="pt-row">
-        <div class="pt-sum">$900.000<span>/mes por separado</span></div>
+        <div class="pt-sum">$800.000<span>/mes por separado</span></div>
         <div class="pt-arrow">→</div>
         <div class="pt-real">$300.000<span>/mes con el Plan Turbo</span></div>
       </div>
-      <div class="pt-save">Ahorras $600.000/mes · 66% menos</div><br/>
+      <div class="pt-save">Ahorras $500.000/mes · 62% menos</div><br/>
       <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="plan-cta cta-white" style="display:inline-block; max-width:320px; margin-bottom:0;">
         Quiero el Plan Turbo →
       </a>
@@ -789,12 +897,19 @@
 <section class="pricing-section" id="precios">
   <div class="pricing-inner">
 
+    <!-- ── CUPOS (escasez real) ── -->
+    <div class="cupos-banner">
+      <span class="cupos-dot"></span>
+      <p><strong>Tomamos solo 3 a 4 clientes nuevos al mes.</strong> Es la única forma de mantener la calidad de producción y que tu proyecto no sea uno más en la fila.</p>
+    </div>
+
     <!-- ── ARRANQUE (entrada) ── -->
     <div class="plan-basico-banner">
       <div class="pb-left">
         <div class="pb-name">🔑 Arranque <span class="pb-tag">Plan básico</span></div>
         <div class="pb-desc">Empieza a aparecer y a atraer tus primeros clientes: contenido profesional y tu pauta gestionada, todo incluido.</div>
-        <div class="pb-features">4 videos + 4 imágenes + 4 historias (12 piezas/mes, contenido editado, sin sesión de grabación) · Meta Ads con <strong>12 anuncios</strong> · Reporte mensual · App de avance</div>
+        <div class="pb-features">4 videos + 4 imágenes + 4 historias (12 piezas/mes) · Meta Ads con <strong>12 anuncios</strong> · Reporte mensual · App de avance</div>
+        <div class="pb-features" style="margin-top:.4rem; color:var(--grey5);">Editamos el material que tú nos envías (fotos y videos de tu local o tu celular) y lo convertimos en piezas profesionales. La sesión de grabación con nuestro equipo entra desde el Plan Impulso.</div>
         <div class="plan-ads-strategy" style="margin-top:.8rem; margin-bottom:0;">
           <div class="ads-emoji">🎯</div>
           <div>
@@ -805,6 +920,7 @@
       </div>
       <div class="pb-right">
         <div data-plan="arranque">
+          <div class="plan-price-old" style="text-align:right;">Valor de mercado: $400.000</div>
           <div class="pb-price">
             <span class="currency">$</span><span class="amount">100.000</span><span class="period">/mes + IVA</span>
           </div>
@@ -825,7 +941,7 @@
         <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Aparece todos los días y llena tu agenda sin mover un dedo.</p>
         <div class="plan-price-wrap" data-plan="impulso">
-          <div class="plan-price-old">Antes $100.000</div>
+          <div class="plan-price-old">Valor de mercado: $700.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">200.000</span>
@@ -847,7 +963,7 @@
         <ul class="plan-features">
           <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Arranque</strong>, más:</span></li>
           <div class="feat-label">Producción audiovisual</div>
-          <li><span class="check">✓</span><span><strong>Sesión de grabación profesional</strong> incluida (antes solo contenido editado)</span></li>
+          <li><span class="check">✓</span><span><strong>Sesión de grabación profesional</strong> con nuestro equipo (en Arranque editamos lo que tú nos envías)</span></li>
           <li><span class="check">✓</span><span><strong>8 videos</strong> · <strong>8 imágenes</strong> · <strong>8 historias</strong> (24 piezas/mes)</span></li>
           <div class="feat-label">Página web</div>
           <li><span class="check">✓</span><span><strong>Landing Page o Tienda Online</strong> con Píxel de Meta instalado para medir y retargetear</span></li>
@@ -864,7 +980,7 @@
         <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
         <p class="plan-tagline">Tu sistema completo para convertir seguidores en clientes, con Agente IA incluido.</p>
         <div class="plan-price-wrap" data-plan="turbo">
-          <div class="plan-price-old">Antes $200.000</div>
+          <div class="plan-price-old">Valor de mercado: $900.000</div>
           <div class="plan-price">
             <span class="currency">$</span>
             <span class="amount">300.000</span>
@@ -875,6 +991,9 @@
         <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Turbo" target="_blank" rel="noopener" class="plan-cta cta-outline">
           Quiero este plan →
         </a>
+        <div class="plan-value-note">
+          Solo el <strong>Agente IA</strong> contratado por separado cuesta <strong>$199.990/mes</strong>. Acá lo tienes incluido <strong>más todo el sistema</strong> de contenido, pauta y web.
+        </div>
         <div class="plan-ads-strategy">
           <div class="ads-emoji">🎯</div>
           <div>
@@ -897,6 +1016,14 @@
 
     </div>
 
+    <!-- ── PROYECTOS A MEDIDA (ancla superior) ── -->
+    <div class="custom-band">
+      <p>¿Tienes <strong>varias sucursales</strong>, necesitas más volumen de contenido o vas a lanzar algo grande? Armamos un <strong>proyecto a medida</strong> con el alcance que requieras.</p>
+      <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20necesito%20un%20proyecto%20a%20medida" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0; white-space:nowrap;">
+        Desde $500.000/mes →
+      </a>
+    </div>
+
     <!-- ── AGENTE IA (sistema aparte) ── -->
     <div class="agente-ia-card" id="agente-ia">
       <div class="ai-head">
@@ -913,12 +1040,68 @@
         <li><span class="check">✓</span><span>Seguimiento automático hasta cerrar</span></li>
       </ul>
       <div class="ai-ctas">
-        <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="plan-cta cta-white" style="margin-bottom:0;">Probar el agente →</a>
+        <a href="/agente-ia/" class="plan-cta cta-white" style="margin-bottom:0;">Ver todo lo que hace →</a>
         <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0;">Quiero una demo</a>
       </div>
-      <p class="ai-note">Incluido gratis en el Plan Turbo · Contratado solo, se cotiza según tu negocio</p>
+      <p class="ai-note">Incluido gratis en el Plan Turbo · Contratado solo: <strong style="color:var(--white);">$119.990/mes</strong> precio lanzamiento (después $199.990) con 300 conversaciones incluidas</p>
     </div>
 
+  </div>
+</section>
+
+<!-- SERVICIOS SUELTOS -->
+<section class="sueltos-section" id="servicios-sueltos">
+  <div class="sueltos-inner">
+    <h2>¿No necesitas un plan completo? <span>Contrata solo lo que te falta</span></h2>
+    <p>Servicios puntuales, sin plan mensual ni permanencia.</p>
+    <div class="sueltos-grid">
+
+      <div class="suelto-card destacado">
+        <div class="suelto-head">
+          <div class="suelto-icon">🤖</div>
+          <div class="suelto-name">Agente IA WhatsApp <span class="suelto-tag">Lanzamiento</span></div>
+        </div>
+        <p class="suelto-desc">Atiende, califica y agenda por ti las 24 horas. Lo entrenamos con tu negocio y lo conectamos a tu número actual.</p>
+        <div class="suelto-price"><span class="n">$119.990</span><span class="p">/mes + IVA</span></div>
+        <div class="suelto-sub">Precio lanzamiento (después $199.990) · Incluye 300 conversaciones al mes</div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Agente%20IA%20por%20separado" target="_blank" rel="noopener" class="plan-cta cta-white" style="margin-bottom:0;">Quiero el Agente IA →</a>
+      </div>
+
+      <div class="suelto-card">
+        <div class="suelto-head">
+          <div class="suelto-icon">📹</div>
+          <div class="suelto-name">Sesión audiovisual</div>
+        </div>
+        <p class="suelto-desc">Vamos a tu local a grabar: media jornada de producción con dirección de arte, y te entregamos las piezas editadas y listas para publicar.</p>
+        <div class="suelto-price"><span class="n">Desde $250.000</span></div>
+        <div class="suelto-sub">Pago único · El material queda 100% tuyo</div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20cotizar%20una%20sesi%C3%B3n%20audiovisual" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0;">Cotizar sesión →</a>
+      </div>
+
+      <div class="suelto-card">
+        <div class="suelto-head">
+          <div class="suelto-icon">🌐</div>
+          <div class="suelto-name">Página web o tienda online</div>
+        </div>
+        <p class="suelto-desc">Landing page o e-commerce listo para vender, con el Píxel de Meta instalado para que puedas medir y hacer retargeting después.</p>
+        <div class="suelto-price"><span class="n">Desde $250.000</span></div>
+        <div class="suelto-sub">Pago único · Incluye hosting y dominio por 1 año</div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20cotizar%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0;">Cotizar web →</a>
+      </div>
+
+      <div class="suelto-card">
+        <div class="suelto-head">
+          <div class="suelto-icon">🎯</div>
+          <div class="suelto-name">Setup y auditoría de Meta Ads</div>
+        </div>
+        <p class="suelto-desc">Dejamos tu cuenta ordenada: Business Manager, Píxel, eventos de conversión y campañas configuradas correctamente desde cero.</p>
+        <div class="suelto-price"><span class="n">Desde $150.000</span></div>
+        <div class="suelto-sub">Pago único · Ideal si ya gestionas tu propia pauta</div>
+        <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20cotizar%20setup%20de%20Meta%20Ads" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0;">Cotizar setup →</a>
+      </div>
+
+    </div>
+    <p class="sueltos-note">¿Necesitas más de uno? Combínalos o pásate a un plan mensual — te asesoramos según lo que necesites.</p>
   </div>
 </section>
 
@@ -990,6 +1173,52 @@
       <div class="cond-item"><div class="cond-dot"></div><span>Permanencia mínima recomendada: <strong>3 meses</strong>.</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>Pago mensual <strong>anticipado</strong> al inicio de cada ciclo.</span></div>
       <div class="cond-item"><div class="cond-dot"></div><span>Precios válidos por <strong>30 días</strong> desde su emisión. Vigencia 2026.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ / DUDAS -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Lo que casi todos <span>preguntan</span></h2>
+    <p>Si tu duda no está acá, escríbenos por WhatsApp y te respondemos directo.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿El presupuesto de publicidad está incluido en el precio del plan?</summary>
+        <div class="faq-body">No. El valor del plan cubre <strong>nuestro trabajo</strong>: estrategia, producción de contenido, gestión de campañas, reportes y —según el plan— página web y Agente IA. La plata que se invierte en pauta se carga directo a <strong>tu propia cuenta de Meta</strong>, así tú tienes control y visibilidad total de cada peso. Nunca manejamos tu dinero de publicidad. En el diagnóstico te recomendamos un monto según tu rubro.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto debería invertir en pauta además del plan?</summary>
+        <div class="faq-body">Se puede partir desde <strong>$50.000 mensuales</strong>, pero recomendamos cerca de <strong>$150.000</strong> para que las campañas tengan datos suficientes y el algoritmo pueda optimizar. El monto ideal depende de tu industria, tu ticket promedio y qué tan competitivo es tu rubro — lo definimos juntos antes de partir.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál plan me conviene si estoy recién partiendo?</summary>
+        <div class="faq-body"><strong>Arranque</strong> está pensado justo para eso: ya incluye la gestión de Meta Ads con 12 anuncios y edición profesional del material que tú nos envías (fotos y videos de tu celular o tu local). Si quieres que vayamos nosotros a grabar y crecer más rápido, <strong>Impulso</strong> agrega la sesión de producción real y tu página web. Y si buscas el sistema completo con el Agente IA atendiendo tu WhatsApp, es <strong>Turbo</strong>. En el diagnóstico gratuito te decimos honestamente cuál te calza.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo cambiarme de plan más adelante?</summary>
+        <div class="faq-body">Sí, en cualquier momento y en ambos sentidos. Como cada plan incluye todo lo del anterior, subir es simplemente sumar lo que falta. Si necesitas bajar por un mes complicado, también se puede: preferimos que te quedes con lo que puedes sostener antes que te vayas del todo.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo tengo que dedicarle yo?</summary>
+        <div class="faq-body">Prácticamente nada más que <strong>aprobar el contenido</strong>. Nosotros planificamos, producimos, publicamos, gestionamos la pauta y te entregamos el reporte. Para la sesión de grabación (Impulso y Turbo) coordinamos un día contigo. El resto del mes puedes seguir tu proceso desde la <strong>app de avance</strong> sin tener que preguntar nada.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que firmar un contrato de permanencia?</summary>
+        <div class="faq-body">No hay permanencia forzada: trabajamos mes a mes y puedes salir avisando con 15 días. Sí <strong>recomendamos</strong> darle mínimo 3 meses, porque es el tiempo que necesita la pauta para optimizar y el contenido para acumular efecto. Si te vas, todo el material producido es tuyo y te lo llevas.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿El Agente IA lo puedo contratar sin un plan de contenido?</summary>
+        <div class="faq-body">Sí. Viene incluido en el <strong>Plan Turbo</strong>, pero si solo necesitas resolver la atención de tu WhatsApp también se contrata por separado desde <strong>$119.990/mes</strong> (precio de lanzamiento, después $199.990), con 300 conversaciones incluidas. Puedes <a href="/agente-ia/">ver todo lo que hace acá</a> o probarlo tú mismo antes de decidir.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa si no me gusta una pieza de contenido?</summary>
+        <div class="faq-body">Nada se publica sin tu aprobación. Y si algo no refleja lo acordado, lo corregimos sin costo adicional: está cubierto por la <strong>garantía de satisfacción de 15 días</strong>.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿En cuánto tiempo se ven resultados?</summary>
+        <div class="faq-body">El onboarding toma <strong>48 a 72 horas</strong> y de ahí las campañas quedan activas. El algoritmo de Meta necesita entre 7 y 14 días para optimizar, así que los primeros resultados concretos normalmente aparecen al cierre del primer mes. Preferimos ser claros: los resultados dependen de cada negocio y no garantizamos cifras específicas.</div>
+      </details>
     </div>
   </div>
 </section>

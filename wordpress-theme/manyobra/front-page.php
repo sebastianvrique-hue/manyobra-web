@@ -16,6 +16,7 @@
     <li><a href="#perfil">Sobre mí</a></li>
     <li><a href="#testimonios">Testimonios</a></li>
     <li><a href="#planes">Planes</a></li>
+    <li><a href="/agente-ia/">Agente IA</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Trabajemos juntos</a>
@@ -193,7 +194,7 @@
     <div class="lp-banner">
       <div>
         <div class="lp-banner-name">🔑 Arranque <span class="lp-tag">Plan de entrada</span></div>
-        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 4 videos + 4 imágenes + 4 historias al mes (contenido editado), con Meta Ads gestionados: campañas de conversión segmentadas (12 anuncios) y app de avance.</p>
+        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 4 videos + 4 imágenes + 4 historias al mes (editamos lo que tú nos envías), con Meta Ads gestionados: campañas de conversión segmentadas (12 anuncios) y app de avance.</p>
       </div>
       <div class="lp-banner-right">
         <div class="lp-banner-price">$100.000<span>/mes + IVA</span></div>
@@ -235,7 +236,7 @@
 
     <div class="planes-more">
       <a href="/planes/" class="btn btn-grad">Ver desglose completo de los planes →</a>
-      <p>Incluye el detalle de cada pilar, garantías, pago 3 meses con ~33% de descuento y descarga en PDF.<br/>¿Solo quieres el Agente IA, sin plan de contenido? <a href="/planes/#agente-ia" style="color:var(--blue);">También se contrata solo →</a></p>
+      <p>Incluye el detalle de cada pilar, garantías, pago 3 meses con ~33% de descuento y descarga en PDF.<br/>¿Solo quieres el Agente IA, sin plan de contenido? <a href="/agente-ia/" style="color:var(--blue);">También se contrata solo →</a></p>
     </div>
   </div>
 </section>
@@ -314,7 +315,7 @@
           <li><a href="/planes/">🔑 Arranque</a></li>
           <li><a href="/planes/">⚙️ Impulso</a></li>
           <li><a href="/planes/">🏎️ Turbo</a></li>
-          <li><a href="/planes/#agente-ia">🤖 Agente IA</a></li>
+          <li><a href="/agente-ia/">🤖 Agente IA</a></li>
           <li><a href="/planes/">Ver todos →</a></li>
         </ul>
       </div>
