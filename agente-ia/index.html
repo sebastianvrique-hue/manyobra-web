@@ -264,6 +264,34 @@
     .use-card h3 { font-size: .92rem; font-weight: 700; margin-bottom: .4rem; display: flex; align-items: center; gap: .55rem; }
     .use-card p { font-size: .84rem; color: var(--muted); line-height: 1.6; }
 
+    /* ── PRECIO ── */
+    .price-sec { background: var(--grey1); border-top: 1px solid var(--border); text-align: center; }
+    .price-card {
+      max-width: 480px; margin: 0 auto;
+      border: 1px solid transparent; border-radius: var(--radius-lg);
+      background: linear-gradient(var(--grey2), var(--grey2)) padding-box, var(--grad) border-box;
+      box-shadow: 0 12px 50px rgba(124,58,237,0.2);
+      padding: 2.2rem 2rem;
+    }
+    .price-tag {
+      display: inline-block; font-size: .65rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+      background: var(--grad); color: #fff; padding: .22rem .65rem; border-radius: 100px; margin-bottom: 1rem;
+    }
+    .price-old { font-size: .95rem; color: var(--grey5); text-decoration: line-through; margin-bottom: .2rem; }
+    .price-amount { display: flex; align-items: baseline; justify-content: center; gap: .35rem; margin-bottom: .4rem; }
+    .price-amount .n { font-size: 2.6rem; font-weight: 900; letter-spacing: -1.5px; }
+    .price-amount .p { font-size: .85rem; color: var(--muted); }
+    .price-sub { font-size: .85rem; color: var(--muted); margin-bottom: 1.6rem; }
+    .price-sub strong { color: var(--white); }
+    .price-feats { list-style: none; display: flex; flex-direction: column; gap: .55rem; margin-bottom: 1.8rem; text-align: left; }
+    .price-feats li { display: flex; gap: .55rem; align-items: flex-start; font-size: .85rem; color: #D8D8D8; line-height: 1.5; }
+    .price-feats li::before {
+      content: '✓'; flex-shrink: 0; width: 18px; height: 18px; margin-top: 1px;
+      background: var(--blue-dim); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .65rem; color: var(--blue);
+    }
+
     /* ── CIERRE ── */
     .close-sec { background: var(--grey1); text-align: center; border-top: 1px solid var(--border); }
     .close-card {
@@ -370,7 +398,7 @@
     <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="btn btn-grad">Probar el agente ahora →</a>
     <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA" target="_blank" rel="noopener" class="btn btn-outline">Quiero una demo</a>
   </div>
-  <p class="hero-note">Se conecta a tu WhatsApp actual · Incluido en el Plan Turbo · También se contrata solo</p>
+  <p class="hero-note">Desde $119.990/mes · Se conecta a tu WhatsApp actual · Incluido gratis en el Plan Turbo</p>
 </header>
 
 <!-- PROBLEMA -->
@@ -617,6 +645,29 @@
   </div>
 </section>
 
+<!-- PRECIO -->
+<section class="price-sec">
+  <div class="inner">
+    <div class="sec-tag">Precio</div>
+    <h2>Simple y <span class="accent">directo</span></h2>
+    <p class="sec-sub" style="margin-left:auto; margin-right:auto;">Sin letra chica. Un solo plan, con todo incluido.</p>
+    <div class="price-card">
+      <div class="price-tag">Precio de lanzamiento</div>
+      <div class="price-old">Después $199.990/mes</div>
+      <div class="price-amount"><span class="n">$119.990</span><span class="p">/mes + IVA</span></div>
+      <div class="price-sub">Incluye <strong>300 conversaciones al mes</strong> (~50 por semana)</div>
+      <ul class="price-feats">
+        <li>Configurado y entrenado con tu negocio</li>
+        <li>Conectado a tu WhatsApp actual</li>
+        <li>Responde, califica y agenda 24/7</li>
+        <li>Sin permanencia forzada</li>
+      </ul>
+      <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Agente%20IA%20por%20separado" target="_blank" rel="noopener" class="btn btn-grad" style="width:100%; justify-content:center;">Quiero el Agente IA →</a>
+    </div>
+    <p class="hero-note" style="margin-top:1.4rem;">También viene <strong style="color:var(--muted);">incluido gratis</strong> en el <a href="/planes/" style="color:var(--blue); text-decoration:none;">Plan Turbo</a></p>
+  </div>
+</section>
+
 <!-- CIERRE -->
 <section class="close-sec">
   <div class="close-card">
@@ -626,7 +677,7 @@
       <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="btn btn-grad">Probar el agente ahora →</a>
       <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA%20para%20mi%20negocio" target="_blank" rel="noopener" class="btn btn-outline">Quiero una demo para mi negocio</a>
     </div>
-    <p class="close-note">Viene incluido en el <a href="/planes/">Plan Turbo</a> · Contratado solo, se cotiza según tu negocio</p>
+    <p class="close-note">Desde $119.990/mes · Incluido gratis en el <a href="/planes/">Plan Turbo</a></p>
   </div>
 </section>
 

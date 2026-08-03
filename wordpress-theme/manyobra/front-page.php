@@ -194,7 +194,7 @@
     <div class="lp-banner">
       <div>
         <div class="lp-banner-name">🔑 Arranque <span class="lp-tag">Plan de entrada</span></div>
-        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 4 videos + 4 imágenes + 4 historias al mes (contenido editado), con Meta Ads gestionados: campañas de conversión segmentadas (12 anuncios) y app de avance.</p>
+        <p class="lp-banner-desc">Empieza a aparecer y a atraer tus primeros clientes: 4 videos + 4 imágenes + 4 historias al mes (editamos lo que tú nos envías), con Meta Ads gestionados: campañas de conversión segmentadas (12 anuncios) y app de avance.</p>
       </div>
       <div class="lp-banner-right">
         <div class="lp-banner-price">$100.000<span>/mes + IVA</span></div>
