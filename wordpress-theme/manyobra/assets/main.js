@@ -78,19 +78,16 @@ document.querySelectorAll('.modal-overlay').forEach(el => el.addEventListener('c
 document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active')); });
 
 // Form
-const form = document.getElementById('contactForm');
-if (form) {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    if (!document.getElementById('nombre').value.trim() || !document.getElementById('email').value.trim()) {
-      alert('Por favor completa Nombre y Email.'); return;
-    }
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 4000);
-    this.reset();
-  });
-}
+// Calendly: cuando alguien agenda, lo registramos como conversión en Meta.
+// Validar el origen es obligatorio: sin esto cualquier iframe podría disparar conversiones falsas.
+window.addEventListener('message', function (e) {
+  if (e.origin !== 'https://calendly.com') return;
+  if (e.data && e.data.event === 'calendly.event_scheduled' && window.fbq) {
+    fbq('track', 'Schedule');
+    fbq('track', 'Lead');
+  }
+});
+
 
 // Reveal on scroll (las clases se agregan por JS: sin JS nada queda oculto)
 (function () {
