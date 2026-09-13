@@ -492,3 +492,16 @@ footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; 
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero-bg::before, .hero-bg::after, .hero-tag::before, .hero-logo svg { animation: none; }
 }
+
+/* ── PORTAFOLIO DE REELS (formato vertical) ── */
+.reel-sec { background: var(--grey1); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.reel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; }
+.reel-grid .video-wrap { aspect-ratio: 9 / 16; }
+.reel-grid .video-info { padding: 1rem 1.1rem; }
+.reel-client { font-size: .9rem; font-weight: 700; margin-bottom: .15rem; }
+.reel-rubro { font-size: .72rem; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; margin-bottom: .4rem; }
+.reel-desc { font-size: .78rem; color: var(--muted); line-height: 1.5; }
+.reel-note { margin-top: 2rem; font-size: .78rem; color: var(--grey5); text-align: center; }
+
+/* Aclaración bajo las cifras */
+.stats-note { max-width: 720px; margin: 1.6rem auto 0; text-align: center; font-size: .72rem; line-height: 1.6; color: var(--grey5); }
