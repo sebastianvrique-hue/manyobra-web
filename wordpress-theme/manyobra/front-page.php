@@ -188,7 +188,7 @@
 <section class="planes-sec" id="planes">
   <div class="sec-inner">
     <div class="sec-tag">Planes</div>
-    <h2>Planes desde <span class="accent">$50.000/mes</span></h2>
+    <h2>Un plan para <span class="accent">cada etapa</span> de tu negocio</h2>
     <p class="sec-sub">Dos caminos según cómo quieras producir tu contenido. Tú solo apruebas; del resto nos encargamos nosotros.</p>
 
     <div class="lp-grid">
@@ -196,7 +196,6 @@
         <div class="lp-badge ghost">🖥️ Sin grabación</div>
         <div class="lp-name">Planes Online</div>
         <p class="lp-desc">Editamos el material que tú nos envías —fotos y videos de tu local o tu celular— y lo convertimos en piezas profesionales.</p>
-        <div class="lp-price"><span class="p">Desde</span><span class="n">$50.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
           <li>3 planes: <strong>Inicio</strong>, <strong>Activo</strong> y <strong>Online Pro</strong></li>
           <li>Desde <strong>1 video + 3 imágenes</strong> al mes, con guion estratégico y edición profesional</li>
@@ -210,7 +209,6 @@
         <div class="lp-badge">🎬 Con grabación</div>
         <div class="lp-name">Planes con producción</div>
         <p class="lp-desc">Vamos a tu negocio con equipo de producción: cámara, dirección de arte y edición profesional. El contenido lo generamos nosotros.</p>
-        <div class="lp-price"><span class="p">Desde</span><span class="n">$200.000</span><span class="p">/mes + IVA</span></div>
         <ul class="lp-feats">
           <li>3 planes: <strong>Producción</strong>, <strong>Producción Pro</strong> y <strong>Dominio</strong></li>
           <li><strong>Sesiones de grabación</strong> mensuales con nuestro equipo</li>
