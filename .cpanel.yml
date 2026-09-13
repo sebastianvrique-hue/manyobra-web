@@ -1,11 +1,26 @@
 ---
 deployment:
   tasks:
+    # ── EL TEMA VA PRIMERO ──
+    # El home de manyobra.cl lo sirve WordPress, no index.html. Si el despliegue
+    # se corta (los videos de testimonios/ pesan y tardan), lo último que puede
+    # quedarse sin copiar es justo lo que renderiza la portada. Por eso va al inicio.
+    - export WPTHEME=/home2/manyobra/public_html/wp-content/themes/manyobra/
+    - /bin/mkdir -p $WPTHEME/assets
+    - /bin/cp wordpress-theme/manyobra/front-page.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/header.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/functions.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/index.php $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/style.css $WPTHEME
+    - /bin/cp wordpress-theme/manyobra/assets/main.css $WPTHEME/assets/
+    - /bin/cp wordpress-theme/manyobra/assets/main.js $WPTHEME/assets/
+
+    # ── Páginas y assets livianos ──
     - export DEPLOYPATH=/home2/manyobra/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp planes.html $DEPLOYPATH
     - /bin/cp ventas.html $DEPLOYPATH
-    # ── URLs limpias: /planes/ y /ventas/ (planes.html y ventas.html en la raíz quedan como redirect stub) ──
+    # URLs limpias: planes.html y ventas.html en la raíz quedan como redirect stub
     - /bin/mkdir -p $DEPLOYPATH/planes
     - /bin/cp planes/index.html $DEPLOYPATH/planes/
     - /bin/mkdir -p $DEPLOYPATH/ventas
@@ -16,19 +31,11 @@ deployment:
     - /bin/cp construccion/index.html $DEPLOYPATH/construccion/
     - /bin/cp logo.png $DEPLOYPATH
     - /bin/cp og-manyobra.jpg $DEPLOYPATH
+    - /bin/cp robots.txt $DEPLOYPATH
+    - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/mkdir -p $DEPLOYPATH/assets
     - /bin/cp assets/hero.mp4 $DEPLOYPATH/assets/
     - /bin/cp assets/hero.jpg $DEPLOYPATH/assets/
-    - /bin/cp robots.txt $DEPLOYPATH
-    - /bin/cp sitemap.xml $DEPLOYPATH
+
+    # ── Lo más pesado, al final ──
     - /bin/cp -R testimonios/ $DEPLOYPATH
-    # ── Tema de WordPress (el home de manyobra.cl lo sirve WP, no index.html) ──
-    - export WPTHEME=/home2/manyobra/public_html/wp-content/themes/manyobra/
-    - /bin/mkdir -p $WPTHEME/assets
-    - /bin/cp wordpress-theme/manyobra/front-page.php $WPTHEME
-    - /bin/cp wordpress-theme/manyobra/header.php $WPTHEME
-    - /bin/cp wordpress-theme/manyobra/functions.php $WPTHEME
-    - /bin/cp wordpress-theme/manyobra/index.php $WPTHEME
-    - /bin/cp wordpress-theme/manyobra/style.css $WPTHEME
-    - /bin/cp wordpress-theme/manyobra/assets/main.css $WPTHEME/assets/
-    - /bin/cp wordpress-theme/manyobra/assets/main.js $WPTHEME/assets/
