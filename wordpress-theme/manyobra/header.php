@@ -21,12 +21,22 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Manyobra – Agencia chilena de Meta Ads y producción audiovisual. Generamos tráfico que convierte para tu negocio." />
+  <meta name="description" content="Manyobra – Marketing y producción audiovisual para empresas de construcción en Chile. Grabamos tus obras y las convertimos en campañas que traen proyectos." />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Manyobra – Meta Ads y Producción Audiovisual" />
-  <meta property="og:description" content="Conectamos tu negocio con clientes reales usando Facebook e Instagram Ads con estrategia y contenido que convierte." />
+  <meta property="og:title" content="Manyobra – Marketing para Empresas de Construcción" />
+  <meta property="og:description" content="Tu obra es tu mejor vendedor. Grabamos tus proyectos y los ponemos frente a quien puede contratarte." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>" />
+  <meta property="og:image" content="https://manyobra.cl/og-manyobra.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Manyobra – Marketing para empresas de construcción" />
+  <meta property="og:site_name" content="Manyobra" />
+  <meta property="og:locale" content="es_CL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manyobra – Marketing para Empresas de Construcción" />
+  <meta name="twitter:description" content="Tu obra es tu mejor vendedor. Grabamos tus proyectos y los ponemos frente a quien puede contratarte." />
+  <meta name="twitter:image" content="https://manyobra.cl/og-manyobra.jpg" />
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -12,9 +12,8 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#perfil">Sobre mí</a></li>
-    <li><a href="#testimonios">Testimonios</a></li>
     <li><a href="#planes">Planes</a></li>
     <li><a href="/agente-ia/">Agente IA</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -25,6 +24,9 @@
 
 <!-- HERO -->
 <header class="hero">
+  <video class="hero-video" data-src="/assets/hero.mp4" poster="/assets/hero.jpg"
+         muted loop playsinline preload="none" aria-hidden="true"></video>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-tex" aria-hidden="true"></div>
   <div class="hero-inner">
@@ -33,14 +35,14 @@
         <path d="M8 76 C8 76 20 16 40 16 C60 16 60 76 80 76 C100 76 100 16 120 16 C140 16 152 76 152 76" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>
     </div>
-    <div class="hero-tag">Agencia Meta Ads · Chile</div>
-    <h1>Más <em>clientes</em>.<br/>Menos <em>complicaciones</em>.</h1>
-    <p class="hero-sub">Ponemos a trabajar tus anuncios, tu contenido y tu WhatsApp para que lleguen clientes reales a tu negocio. Tú solo te encargas de atenderlos.</p>
+    <div class="hero-tag">🏗️ Marketing para empresas de construcción · Chile</div>
+    <h1>Tu obra es tu<br/><em>mejor vendedor</em>.</h1>
+    <p class="hero-sub">Grabamos tus obras, las convertimos en contenido profesional y las ponemos frente a quien puede contratarte. Tú sigues en terreno; nosotros nos encargamos de que te encuentren.</p>
     <div class="hero-actions">
-      <a href="#contacto" class="btn btn-grad">Quiero más clientes</a>
+      <a href="#contacto" class="btn btn-grad">Quiero más proyectos</a>
       <a href="#planes" class="btn btn-outline">Ver los planes</a>
     </div>
-    <p class="hero-note">Los resultados dependen de cada negocio. No garantizamos cifras específicas.</p>
+    <p class="hero-note">Los resultados dependen de cada empresa. No garantizamos cifras específicas.</p>
   </div>
 </header>
 
@@ -52,6 +54,7 @@
     <div class="stat"><div class="stat-n">+<span class="accent">50</span></div><div class="stat-l">Clientes</div></div>
     <div class="stat"><div class="stat-n"><span class="accent">4</span>+</div><div class="stat-l">Años</div></div>
   </div>
+  <p class="stats-note">Experiencia acumulada de la agencia en todos los rubros que hemos trabajado, no exclusivamente en construcción.</p>
 </div>
 
 <!-- SERVICES -->
@@ -59,13 +62,13 @@
   <div class="sec-inner">
     <div class="sec-tag">Servicios</div>
     <h2>Lo que hacemos <span class="accent">bien</span></h2>
-    <p class="sec-sub">No te vendemos servicios sueltos: te damos resultados para tu negocio.</p>
+    <p class="sec-sub">No te vendemos servicios sueltos: hacemos que tu empresa constructora consiga más proyectos.</p>
     <div class="svc-grid">
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Más clientes que te compran</h3><p>Campañas en Facebook e Instagram para que la gente correcta te encuentre y te escriba.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Una marca que se ve profesional</h3><p>Producimos los videos y fotos que hacen que tu negocio se vea a la altura de lo que vale.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Nunca más pierdes un mensaje</h3><p>Un agente de IA responde, califica y agenda por WhatsApp 24/7, aunque estés durmiendo.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Recuperas las ventas que se escapan</h3><p>Volvemos a impactar a quienes te vieron y no compraron, hasta que se deciden.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">05</div><h3>Sabes en qué se va cada peso</h3><p>Reportes claros: ves qué funciona y qué no, sin humo.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Más proyectos, no solo seguidores</h3><p>Campañas dirigidas a quienes de verdad contratan: propietarios, inmobiliarias y empresas de tu zona.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Tus obras, grabadas como corresponde</h3><p>Vamos a terreno con equipo profesional y registramos el avance y el resultado final de cada proyecto.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Nunca más pierdes una cotización</h3><p>Un agente de IA responde, califica y agenda por WhatsApp 24/7, mientras tú estás en la obra.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Dejas de competir solo por precio</h3><p>Cuando el cliente ve la calidad de tu trabajo antes de hablar contigo, la conversación deja de ser cuánto cobras.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">05</div><h3>Sabes en qué se va cada peso</h3><p>Reportes claros: cuánto costó cada contacto y de qué anuncio llegó. Sin humo.</p></div>
       <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">06</div><h3>Cero dolores de cabeza con Meta</h3><p>Cuidamos que tus anuncios cumplan las políticas para que nunca te bloqueen la cuenta.</p></div>
     </div>
   </div>
@@ -76,12 +79,12 @@
   <div class="sec-inner">
     <div class="sec-tag">Proceso</div>
     <h2>Cómo <span class="accent">trabajamos</span></h2>
-    <p class="sec-sub">Simple y transparente: tú apruebas, nosotros hacemos que lleguen clientes.</p>
+    <p class="sec-sub">Simple y transparente: tú apruebas, nosotros hacemos que te lleguen proyectos.</p>
     <div class="process-grid">
-      <div class="process-step"><div class="p-num">01</div><h3>Diagnóstico gratuito</h3><p>Analizamos tu negocio, competencia y objetivos para entender el punto de partida real.</p></div>
-      <div class="process-step"><div class="p-num">02</div><h3>Estrategia personalizada</h3><p>Diseñamos el plan de campañas, creativos y automatizaciones según tu presupuesto.</p></div>
-      <div class="process-step"><div class="p-num">03</div><h3>Lanzamos y producimos</h3><p>Activamos campañas, grabamos el contenido y configuramos el bot de WhatsApp.</p></div>
-      <div class="process-step"><div class="p-num">04</div><h3>Reportes y escalado</h3><p>Ajustes continuos y escalado de lo que mejor funciona.</p></div>
+      <div class="process-step"><div class="p-num">01</div><h3>Diagnóstico gratuito</h3><p>Revisamos qué tipo de obras haces, a quién le quieres llegar y contra quién compites en tu zona.</p></div>
+      <div class="process-step"><div class="p-num">02</div><h3>Estrategia y plan de rodaje</h3><p>Definimos qué obras grabar, qué mostrar de cada una y a qué público dirigir la pauta.</p></div>
+      <div class="process-step"><div class="p-num">03</div><h3>Grabamos en terreno</h3><p>Vamos a tu obra, producimos el material y activamos las campañas.</p></div>
+      <div class="process-step"><div class="p-num">04</div><h3>Reportes y escalado</h3><p>Ajustamos lo que funciona y escalamos hacia el tipo de proyecto que más te conviene.</p></div>
     </div>
   </div>
 </section>
@@ -136,34 +139,129 @@
   </div>
 </section>
 
+<!-- PORTAFOLIO -->
+<section class="reel-sec" id="portafolio">
+  <div class="sec-inner">
+    <div class="sec-tag">Portafolio</div>
+    <h2>Contenido que <span class="accent">ya produjimos</span></h2>
+    <p class="sec-sub">Piezas reales que produjimos para las campañas de clientes del rubro.</p>
+    <div class="reel-grid">
+
+      <!-- Para sumar una pieza: copia este bloque, cambia src, poster, cliente y rubro,
+           y deja el .mp4 comprimido junto a su .jpg en testimonios/reels/ -->
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/jn-piscinas.mp4" poster="/testimonios/reels/jn-piscinas.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Piscinas</div>
+          <div class="reel-client">JN Piscinas</div>
+          <div class="reel-desc">Pieza para campaña de captación.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/landspace-1.mp4" poster="/testimonios/reels/landspace-1.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Paisajismo</div>
+          <div class="reel-client">Landspace</div>
+          <div class="reel-desc">Pieza para campaña de paisajismo.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/aridos-lomas.mp4" poster="/testimonios/reels/aridos-lomas.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Áridos</div>
+          <div class="reel-client">Áridos Lomas Blancas</div>
+          <div class="reel-desc">Pieza sobre operación y despacho de material.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/cj1.mp4" poster="/testimonios/reels/cj1.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Construcción</div>
+          <div class="reel-client">CJ1</div>
+          <div class="reel-desc">Pieza para campaña en redes.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/landspace-2.mp4" poster="/testimonios/reels/landspace-2.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Paisajismo</div>
+          <div class="reel-client">Landspace</div>
+          <div class="reel-desc">Segunda entrega mensual de contenido.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/aridos-agosto.mp4" poster="/testimonios/reels/aridos-agosto.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Áridos</div>
+          <div class="reel-client">Áridos Lomas Blancas</div>
+          <div class="reel-desc">Entrega mensual de contenido para redes.</div>
+        </div>
+      </div>
+
+    </div>
+    <p class="reel-note">Los videos se cargan solo cuando los reproduces, para no consumir tus datos de más.</p>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="testi-sec" id="testimonios">
   <div class="sec-inner">
     <div class="sec-tag">Testimonios</div>
     <h2>Lo que dicen <span class="accent">nuestros clientes</span></h2>
-    <p class="sec-sub">Resultados reales de negocios reales.</p>
-    <div class="testi-tabs">
-      <button class="testi-tab active" onclick="switchTab('videos', this)">Video</button>
-      <button class="testi-tab" onclick="switchTab('imagenes', this)">Imagen</button>
-      <button class="testi-tab" onclick="switchTab('audios', this)">Audio</button>
-    </div>
-    <div class="testi-panel active" id="panel-videos">
-      <div class="video-grid" id="video-grid"></div>
-      <div class="testi-empty" id="empty-videos">
-        <p><strong>Aún no hay videos.</strong><br/>Agrega archivos .mp4 en la carpeta del tema.</p>
+    <p class="sec-sub">Clientes reales del rubro construcción.</p>
+    <div class="video-grid">
+
+      <!-- Para sumar un testimonio: copia este bloque, cambia el src, el nombre y la empresa,
+           y deja el .mp4 comprimido dentro de testimonios/reels/ (el deploy sube esa carpeta completa). -->
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/testimonio-pedro.mp4" poster="/testimonios/reels/testimonio-pedro.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="client-name">Pedro Campos</div>
+          <div class="client-biz">Obras Menores</div>
+        </div>
       </div>
-    </div>
-    <div class="testi-panel" id="panel-imagenes">
-      <div class="img-grid" id="img-grid"></div>
-      <div class="testi-empty" id="empty-imagenes">
-        <p><strong>Aún no hay imágenes.</strong><br/>Agrega archivos .jpg/.png en la carpeta del tema.</p>
-      </div>
-    </div>
-    <div class="testi-panel" id="panel-audios">
-      <div class="audio-grid" id="audio-grid"></div>
-      <div class="testi-empty" id="empty-audios">
-        <p><strong>Aún no hay audios.</strong><br/>Agrega archivos .mp3 en la carpeta del tema.</p>
-      </div>
+
     </div>
   </div>
 </section>
@@ -173,12 +271,12 @@
   <div class="sec-inner">
     <div class="sec-tag">Por qué elegirnos</div>
     <h2>No somos una agencia <span class="accent">más</span></h2>
-    <p class="sec-sub">Combinamos lo que pocas agencias ofrecen juntas.</p>
+    <p class="sec-sub">Una agencia enfocada en construcción, no una genérica que además atiende constructoras.</p>
     <div class="why-grid">
-      <div class="why-item"><div class="why-icon">🎬</div><h3>Todo resuelto, en un solo lugar</h3><p>No coordinas con nadie más: estrategia y producción audiovisual bajo un mismo equipo.</p></div>
-      <div class="why-item"><div class="why-icon">🤖</div><h3>Atiende y vende por ti, 24/7</h3><p>El bot de WhatsApp califica leads automáticamente para que solo llegues a clientes que realmente quieren comprar.</p></div>
-      <div class="why-item"><div class="why-icon">📊</div><h3>Sabes siempre cómo va tu negocio</h3><p>Acceso directo al equipo que gestiona tus campañas. Sin intermediarios ni sorpresas.</p></div>
-      <div class="why-item"><div class="why-icon">🤝</div><h3>Te quedas porque quieres, no porque debes</h3><p>Trabajamos mes a mes porque confiamos en que los resultados hablan solos.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h.01M9 12h.01M9 15h.01M9 18h.01"/></svg></div><h3>Entendemos el rubro</h3><p>Trabajamos con empresas de construcción: sabemos qué se muestra de una obra y qué convence a quien va a contratarte.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7Z"/><path d="m2 7 3.5-4h4L6 7"/><path d="m10 7 3.5-4h4L14 7"/><path d="M10 12v5l4-2.5Z"/></svg></div><h3>Todo resuelto en un solo lugar</h3><p>No coordinas con nadie más: estrategia, grabación en terreno y pauta bajo un mismo equipo.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/><path d="M9 13h.01M15 13h.01"/><path d="M9 17h6"/></svg></div><h3>Atiende y califica por ti, 24/7</h3><p>El agente de IA responde las consultas que llegan por tus anuncios mientras tú estás en obra.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17 8.5 14.5a2 2 0 0 1 0-2.8l4-4a2 2 0 0 1 2.8 0L18 10.5"/><path d="m13 19 2-2"/><path d="M3 11 7 7l3 3"/><path d="M21 13l-4 4-3-3"/></svg></div><h3>Te quedas porque quieres, no porque debes</h3><p>Trabajamos mes a mes porque confiamos en que los resultados hablan solos.</p></div>
     </div>
   </div>
 </section>
@@ -286,7 +384,6 @@
           <li><a href="/planes/">🖥️ Planes Online</a></li>
           <li><a href="/planes/">🎬 Planes con grabación</a></li>
           <li><a href="/agente-ia/">🤖 Agente IA</a></li>
-          <li><a href="/construccion/">🏗️ Construcción</a></li>
           <li><a href="/planes/">Ver todos →</a></li>
         </ul>
       </div>
@@ -294,7 +391,8 @@
         <h4>Empresa</h4>
         <ul>
           <li><a href="#perfil">Sobre mí</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="#" onclick="openPrivacy(event)">Privacidad</a></li>
           <li><a href="#" onclick="openTerms(event)">Términos</a></li>
