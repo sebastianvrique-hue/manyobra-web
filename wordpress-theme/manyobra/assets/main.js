@@ -105,3 +105,24 @@ window.addEventListener('message', function (e) {
   }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
+
+// Video del hero: solo se descarga en pantallas grandes y sin movimiento reducido.
+// Con display:none el navegador igual lo pediria, asi que la fuente se asigna por JS.
+// Se escucha el cambio de media query porque al cargar en segundo plano el ancho
+// puede reportarse como 0 y entonces nunca se activaria.
+(function () {
+  var v = document.querySelector('.hero-video');
+  if (!v) return;
+  var grande = window.matchMedia('(min-width: 769px)');
+  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function aplicar() {
+    if (!grande.matches || quieto.matches) return;
+    if (!v.src) v.src = v.dataset.src;
+    // Se reintenta en cada disparo: el primer play() puede fallar si la pestana esta oculta.
+    if (v.paused) v.play().catch(function () { /* si el navegador lo bloquea, queda el poster */ });
+  }
+  aplicar();
+  grande.addEventListener('change', aplicar);
+  window.addEventListener('resize', aplicar);
+  window.addEventListener('load', aplicar);
+})();

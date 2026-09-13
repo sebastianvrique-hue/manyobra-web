@@ -12,10 +12,8 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#perfil">Sobre mí</a></li>
     <li><a href="#portafolio">Portafolio</a></li>
-    <li><a href="#testimonios">Testimonios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
     <li><a href="#planes">Planes</a></li>
     <li><a href="/agente-ia/">Agente IA</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -26,6 +24,9 @@
 
 <!-- HERO -->
 <header class="hero">
+  <video class="hero-video" data-src="/assets/hero.mp4" poster="/assets/hero.jpg"
+         muted loop playsinline preload="none" aria-hidden="true"></video>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-tex" aria-hidden="true"></div>
   <div class="hero-inner">
@@ -272,10 +273,10 @@
     <h2>No somos una agencia <span class="accent">más</span></h2>
     <p class="sec-sub">Una agencia enfocada en construcción, no una genérica que además atiende constructoras.</p>
     <div class="why-grid">
-      <div class="why-item"><div class="why-icon">🏗️</div><h3>Entendemos el rubro</h3><p>Trabajamos con empresas de construcción: sabemos qué se muestra de una obra y qué convence a quien va a contratarte.</p></div>
-      <div class="why-item"><div class="why-icon">🎬</div><h3>Todo resuelto en un solo lugar</h3><p>No coordinas con nadie más: estrategia, grabación en terreno y pauta bajo un mismo equipo.</p></div>
-      <div class="why-item"><div class="why-icon">🤖</div><h3>Atiende y califica por ti, 24/7</h3><p>El agente de IA responde las consultas que llegan por tus anuncios mientras tú estás en obra.</p></div>
-      <div class="why-item"><div class="why-icon">🤝</div><h3>Te quedas porque quieres, no porque debes</h3><p>Trabajamos mes a mes porque confiamos en que los resultados hablan solos.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h.01M9 12h.01M9 15h.01M9 18h.01"/></svg></div><h3>Entendemos el rubro</h3><p>Trabajamos con empresas de construcción: sabemos qué se muestra de una obra y qué convence a quien va a contratarte.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7Z"/><path d="m2 7 3.5-4h4L6 7"/><path d="m10 7 3.5-4h4L14 7"/><path d="M10 12v5l4-2.5Z"/></svg></div><h3>Todo resuelto en un solo lugar</h3><p>No coordinas con nadie más: estrategia, grabación en terreno y pauta bajo un mismo equipo.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/><path d="M9 13h.01M15 13h.01"/><path d="M9 17h6"/></svg></div><h3>Atiende y califica por ti, 24/7</h3><p>El agente de IA responde las consultas que llegan por tus anuncios mientras tú estás en obra.</p></div>
+      <div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17 8.5 14.5a2 2 0 0 1 0-2.8l4-4a2 2 0 0 1 2.8 0L18 10.5"/><path d="m13 19 2-2"/><path d="M3 11 7 7l3 3"/><path d="M21 13l-4 4-3-3"/></svg></div><h3>Te quedas porque quieres, no porque debes</h3><p>Trabajamos mes a mes porque confiamos en que los resultados hablan solos.</p></div>
     </div>
   </div>
 </section>

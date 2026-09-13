@@ -16,6 +16,9 @@ deployment:
     - /bin/cp construccion/index.html $DEPLOYPATH/construccion/
     - /bin/cp logo.png $DEPLOYPATH
     - /bin/cp og-manyobra.jpg $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/assets
+    - /bin/cp assets/hero.mp4 $DEPLOYPATH/assets/
+    - /bin/cp assets/hero.jpg $DEPLOYPATH/assets/
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/cp -R testimonios/ $DEPLOYPATH

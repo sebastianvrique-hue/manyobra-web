@@ -505,3 +505,50 @@ footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; 
 
 /* Aclaración bajo las cifras */
 .stats-note { max-width: 720px; margin: 1.6rem auto 0; text-align: center; font-size: .72rem; line-height: 1.6; color: var(--grey5); }
+
+/* ── ICONOS SVG (reemplazan a los emojis) ── */
+.why-icon { width: 30px; height: 30px; color: var(--blue); margin-bottom: 1rem; }
+.why-icon svg { width: 100%; height: 100%; display: block; }
+
+/* ── RETÍCULA DE PLANO (guiño al rubro, 0 archivos) ── */
+.services-sec, .why-sec { position: relative; }
+.services-sec::before, .why-sec::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%);
+}
+.services-sec > *, .why-sec > * { position: relative; z-index: 1; }
+
+/* ── FOCO VISIBLE PARA TECLADO ── */
+a:focus-visible, button:focus-visible, summary:focus-visible, .video-play:focus-visible {
+  outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px;
+}
+
+/* ── El play del portafolio es interactivo: que se comporte como tal ── */
+.video-play { border: none; width: 100%; }
+
+/* ── VIDEO DE FONDO DEL HERO ── */
+.hero-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 0; pointer-events: none;
+  opacity: .38; filter: grayscale(.35);
+}
+/* El oscurecido va en CSS, no quemado en el archivo: el texto se lee aunque el video no cargue */
+.hero-scrim {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.75) 55%, var(--black) 100%),
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(0,0,0,.35), transparent 75%);
+}
+.hero-bg, .hero-tex { z-index: 2; }
+.hero-inner { position: relative; z-index: 3; }
+
+/* En móvil y con movimiento reducido: solo el póster, nunca el video */
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+  .hero { background-image: url('/assets/hero.jpg'); background-size: cover; background-position: center; }
+}
