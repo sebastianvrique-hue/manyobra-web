@@ -381,7 +381,7 @@
   <div class="sec-inner">
     <div class="sec-tag">Contacto</div>
     <h2>Agenda tu <span class="accent">diagnóstico gratuito</span></h2>
-    <p>Primero revisamos si hay demanda suficiente en tu zona y si el sistema tiene sentido para tu tipo de obra. <strong>Si no lo tiene, te lo decimos.</strong> La evaluación no tiene costo.</p>
+    <p>Antes de venderte nada revisamos dos números: cuánta gente alcanzable hay en tu zona de operación y cuánto vale tu obra promedio. <strong>Si no dan para que la pauta se pague sola, te lo decimos.</strong> Esa revisión no tiene costo.</p>
     <div class="cupos-home">
       <span class="cupos-dot"></span>
       <p><strong>Tomamos solo 3 a 4 clientes nuevos al mes.</strong> Es la única forma de mantener la calidad de producción y que tu obra no sea una más en la fila.</p>
