@@ -15,7 +15,6 @@
     <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#planes">Planes</a></li>
-    <li><a href="/agente-ia/">Agente IA</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Trabajemos juntos</a>
@@ -60,6 +59,21 @@
   </div>
 </section>
 
+<!-- DOLOR -->
+<section class="services-sec dolor-sec" aria-labelledby="dolor-titulo">
+  <div class="sec-inner">
+    <div class="sec-tag">El problema</div>
+    <h2 id="dolor-titulo">El boca a boca <span class="accent">tiene techo</span></h2>
+    <p class="sec-sub">La mayoría de las empresas de construcción viven de referidos y licitaciones. Funciona, hasta que se acaba.</p>
+    <div class="svc-grid">
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Meses buenos y meses muertos</h3><p>Si el trabajo llega solo por recomendación, no controlas cuándo llega ni cuánto.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Obras que nadie vio</h3><p>Terminas proyectos de calidad y no queda registro que puedas mostrarle al próximo cliente.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Compites solo por precio</h3><p>Sin nada que te diferencie, la conversación siempre termina en cuánto cobras.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>No sabes de dónde vienen</h3><p>Sin medir, no distingues qué te trajo la obra grande del año y qué fue suerte.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- PORTAFOLIO -->
 <section class="reel-sec" id="portafolio">
   <div class="sec-inner">
@@ -72,7 +86,7 @@
            y deja el .mp4 comprimido junto a su .jpg en testimonios/reels/ -->
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/jn-piscinas.mp4" poster="/testimonios/reels/jn-piscinas.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/jn-piscinas.mp4" data-poster="/testimonios/reels/jn-piscinas.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -86,7 +100,7 @@
 
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/landspace-1.mp4" poster="/testimonios/reels/landspace-1.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/landspace-1.mp4" data-poster="/testimonios/reels/landspace-1.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -100,7 +114,7 @@
 
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/aridos-lomas.mp4" poster="/testimonios/reels/aridos-lomas.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/aridos-lomas.mp4" data-poster="/testimonios/reels/aridos-lomas.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -114,7 +128,7 @@
 
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/cj1.mp4" poster="/testimonios/reels/cj1.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/cj1.mp4" data-poster="/testimonios/reels/cj1.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -128,7 +142,7 @@
 
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/landspace-2.mp4" poster="/testimonios/reels/landspace-2.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/landspace-2.mp4" data-poster="/testimonios/reels/landspace-2.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -142,7 +156,7 @@
 
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/aridos-agosto.mp4" poster="/testimonios/reels/aridos-agosto.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/aridos-agosto.mp4" data-poster="/testimonios/reels/aridos-agosto.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -156,7 +170,7 @@
 
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/pedro-campos.mp4" poster="/testimonios/reels/pedro-campos.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/pedro-campos.mp4" data-poster="/testimonios/reels/pedro-campos.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -193,7 +207,7 @@
     <div class="svc-grid">
       <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Más proyectos, no solo seguidores</h3><p>Campañas dirigidas a quienes de verdad contratan: propietarios, inmobiliarias y empresas de tu zona.</p></div>
       <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Tus obras, grabadas como corresponde</h3><p>Vamos a terreno con equipo profesional y registramos el avance y el resultado final de cada proyecto.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Nunca más pierdes una cotización</h3><p>Un agente de IA responde, califica y agenda por WhatsApp 24/7, mientras tú estás en la obra.</p></div>
+      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Nunca más pierdes una cotización</h3><p>Un agente de IA responde, califica y agenda por WhatsApp 24/7, mientras tú estás en la obra. <a href="/agente-ia/" class="svc-link">Ver cómo funciona →</a></p></div>
       <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Dejas de competir solo por precio</h3><p>Cuando el cliente ve la calidad de tu trabajo antes de hablar contigo, la conversación deja de ser cuánto cobras.</p></div>
       <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">05</div><h3>Sabes en qué se va cada peso</h3><p>Reportes claros: cuánto costó cada contacto y de qué anuncio llegó. Sin humo.</p></div>
       <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">06</div><h3>Cero dolores de cabeza con Meta</h3><p>Cuidamos que tus anuncios cumplan las políticas para que nunca te bloqueen la cuenta.</p></div>
@@ -228,7 +242,7 @@
            y deja el .mp4 comprimido dentro de testimonios/reels/ (el deploy sube esa carpeta completa). -->
       <div class="video-card">
         <div class="video-wrap">
-          <video src="/testimonios/reels/testimonio-pedro.mp4" poster="/testimonios/reels/testimonio-pedro.jpg" preload="none" playsinline></video>
+          <video src="/testimonios/reels/testimonio-pedro.mp4" data-poster="/testimonios/reels/testimonio-pedro.jpg" preload="none" playsinline></video>
           <div class="video-play" onclick="playVideo(this)">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -406,6 +420,10 @@
     <div class="sec-tag">Contacto</div>
     <h2>Agenda tu <span class="accent">diagnóstico gratuito</span></h2>
     <p>Elige el horario que más te acomode. Conversamos sobre tu negocio, tus objetivos y qué plan te conviene — sin compromiso.</p>
+    <div class="cupos-home">
+      <span class="cupos-dot"></span>
+      <p><strong>Tomamos solo 3 a 4 clientes nuevos al mes.</strong> Es la única forma de mantener la calidad de producción y que tu obra no sea una más en la fila.</p>
+    </div>
     <div class="calendly-wrap">
       <div class="calendly-inline-widget" data-url="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?hide_gdpr_banner=1&amp;background_color=111111&amp;text_color=ffffff&amp;primary_color=ffffff" style="min-width:320px;height:700px;"></div>
       <noscript>
@@ -465,6 +483,11 @@
     </div>
   </div>
 </footer>
+
+<!-- CTA FIJO EN MÓVIL -->
+<div class="cta-movil">
+  <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=barra-movil" target="_blank" rel="noopener">Agendar reunión →</a>
+</div>
 
 <!-- WA FLOAT -->
 <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20me%20interesa%20saber%20m%C3%A1s" target="_blank" rel="noopener" class="wa-float">

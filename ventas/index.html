@@ -3,1054 +3,298 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '956034103850677');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=956034103850677&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="canonical" href="https://manyobra.cl/ventas/" />
-  <title>Plan Turbo – Manyobra</title>
+  <title>Propuesta Manyobra · Construcción</title>
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0A0A0A" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --black:      #000000;
-      --white:      #FFFFFF;
-      --grey1:      #0A0A0A;
-      --grey2:      #111111;
-      --grey3:      #1A1A1A;
-      --grey4:      #2A2A2A;
-      --grey5:      #444444;
-      --muted:      #888888;
-      --border:     rgba(255,255,255,0.08);
-      --border2:    rgba(255,255,255,0.14);
-      --radius:     12px;
-      --green:      #22C55E;
-      --green-dim:  rgba(34,197,94,0.10);
-      --green-glow: rgba(34,197,94,0.25);
-      --amber:      #F59E0B;
-      --amber-dim:  rgba(245,158,11,0.10);
-      --red:        #F87171;
-      --red-dim:    rgba(248,113,113,0.08);
-      --nav-h:      62px;
+      --black:#000; --white:#fff; --grey1:#0A0A0A; --grey2:#111; --grey3:#1A1A1A;
+      --grey4:#2A2A2A; --grey5:#444; --muted:#8A8A8A;
+      --border:rgba(255,255,255,.09); --border2:rgba(255,255,255,.16);
+      --blue:#60A5FA; --accent:#3B82F6; --accent-2:#8B5CF6;
+      --accent-brd:rgba(59,130,246,.35);
+      --grad:linear-gradient(135deg,#3B82F6 0%,#8B5CF6 100%);
+      --grad-text:linear-gradient(100deg,#60A5FA 0%,#A78BFA 100%);
+      --glass:rgba(255,255,255,.04);
+      --radius:14px;
     }
-
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      font-family:'Inter',sans-serif; background:var(--black); color:var(--white);
+      line-height:1.55; -webkit-font-smoothing:antialiased;
+      font-size: 18px;
     }
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--black); }
-    ::-webkit-scrollbar-thumb { background: var(--grey4); border-radius: 2px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 5%; }
+    section { padding: 76px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
 
-    /* ── FIXED NAV ── */
-    .sales-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      height: var(--nav-h);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 4%;
-      background: rgba(0,0,0,0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .sales-nav-logo img { height: 34px; width: auto; }
-    .sales-steps {
-      display: flex; align-items: center; gap: 0;
-      list-style: none;
-    }
-    .sales-steps li {
-      position: relative;
-    }
-    .sales-steps li + li::before {
-      content: '';
-      position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-      width: 1px; height: 16px;
-      background: var(--border2);
-    }
-    .step-btn {
-      display: flex; align-items: center; gap: .4rem;
-      padding: .4rem .9rem;
-      background: none; border: none; cursor: pointer;
-      color: var(--grey5);
-      font-family: inherit;
-      font-size: .73rem; font-weight: 600;
-      letter-spacing: .05em; text-transform: uppercase;
-      transition: color .2s;
-      white-space: nowrap;
-    }
-    .step-btn:hover { color: var(--muted); }
-    .step-btn.active { color: var(--white); }
-    .step-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--grey4);
-      flex-shrink: 0;
-      transition: background .2s, box-shadow .2s;
-    }
-    .step-btn.active .step-dot {
-      background: var(--white);
-      box-shadow: 0 0 8px rgba(255,255,255,0.6);
-    }
+    .paso { font-size: .75rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:1rem; }
+    .paso::before { content:'— '; }
+    h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight:900; line-height:1.03; letter-spacing:-2px; margin-bottom:1.1rem; }
+    h2 { font-size: clamp(1.9rem, 3.8vw, 2.9rem); font-weight:900; line-height:1.08; letter-spacing:-1.2px; margin-bottom:1rem; }
+    .accent { background:var(--grad-text); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .lead { font-size:1.1rem; color:var(--muted); max-width:720px; line-height:1.65; }
 
-    /* ── SCROLL PROGRESS ── */
-    .scroll-bar {
-      position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 199;
-      height: 2px; background: var(--grey3);
-    }
-    .scroll-fill {
-      height: 100%; width: 0%; background: var(--white);
-      transition: width .1s;
-      box-shadow: 0 0 6px rgba(255,255,255,0.5);
-    }
+    /* Portada */
+    .portada { padding: 110px 0 84px; }
+    .marca { display:flex; align-items:center; gap:.7rem; margin-bottom:3rem; }
+    .marca img { height:34px; }
+    .para { display:inline-block; border:1px solid var(--accent-brd); background:var(--glass); border-radius:100px; padding:.45rem 1.2rem; font-size:.9rem; color:#C9D6F5; margin-bottom:2rem; }
+    .para b { color:var(--white); }
 
-    /* ── SECTIONS ── */
-    section {
-      padding: 100px 4% 80px;
-      min-height: 100vh;
-      display: flex; align-items: center;
-    }
-    .sec-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    .sec-eyebrow {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .68rem; font-weight: 700;
-      letter-spacing: .14em; text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.4rem;
-    }
-    .sec-eyebrow span { color: var(--grey5); }
-    h2.sec-h {
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
-      font-weight: 900;
-      line-height: 1.07;
-      letter-spacing: -1.5px;
-      margin-bottom: 1rem;
-    }
-    .sec-lead {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.75;
-      margin-bottom: 3.5rem;
-    }
+    /* Diagnóstico */
+    .diag { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:2.2rem; }
+    .diag div { background:var(--grey2); border:1px solid var(--border); border-radius:var(--radius); padding:1.3rem 1.5rem; font-size:1rem; color:var(--muted); }
+    .diag b { color:var(--white); display:block; margin-bottom:.3rem; font-size:1.02rem; }
 
-    /* ── SECTION BACKGROUNDS ── */
-    #problema  { background: var(--grey1); padding-top: calc(var(--nav-h) + 80px); }
-    #valor     { background: var(--black); }
-    #bonus     { background: var(--grey1); }
-    #garantias { background: var(--black); }
-    #cierre    { background: var(--grey1); }
+    /* Caminos */
+    .caminos { display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; margin-top:2.2rem; }
+    .camino { background:var(--glass); border:1px solid var(--border2); border-radius:var(--radius); padding:1.8rem; }
+    .camino h3 { font-size:1.3rem; font-weight:800; margin-bottom:.5rem; }
+    .camino p { color:var(--muted); font-size:1rem; }
 
-    /* ── PAIN CARDS ── */
-    .pain-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
+    /* Planes */
+    .plan {
+      display:grid; grid-template-columns: 1fr auto; gap:2rem; align-items:start;
+      background:var(--grey1); border:1px solid var(--border); border-radius:var(--radius);
+      padding:2rem 2.2rem; margin-bottom:1rem;
     }
-    .pain-card {
-      background: var(--grey1);
-      padding: 2rem 2.2rem;
-      border-left: 3px solid transparent;
-      transition: background .2s, border-color .2s;
-    }
-    .pain-card:hover {
-      background: var(--grey2);
-      border-left-color: var(--red);
-    }
-    .pain-icon {
-      font-size: 1.5rem;
-      margin-bottom: .9rem;
-      display: block;
-    }
-    .pain-card h3 {
-      font-size: .98rem;
-      font-weight: 700;
-      margin-bottom: .4rem;
-      line-height: 1.3;
-    }
-    .pain-card p {
-      font-size: .82rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    .plan.destacado { border-color:var(--accent-brd); background:linear-gradient(180deg, rgba(59,130,246,.07), transparent 60%), var(--grey1); }
+    .plan-top { display:flex; align-items:center; gap:.8rem; margin-bottom:.5rem; flex-wrap:wrap; }
+    .plan-nombre { font-size:1.5rem; font-weight:900; letter-spacing:-.5px; }
+    .etiqueta { font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; background:var(--grad); color:#fff; padding:.25rem .7rem; border-radius:100px; }
+    .plan-para { color:var(--muted); font-size:1rem; margin-bottom:1.1rem; }
+    .entregables { list-style:none; display:grid; gap:.5rem; }
+    .entregables li { display:flex; gap:.6rem; font-size:1rem; }
+    .entregables li::before { content:'✓'; color:var(--blue); font-weight:700; flex-shrink:0; }
+    .precio { text-align:right; white-space:nowrap; }
+    .precio .n { font-size:2.3rem; font-weight:900; letter-spacing:-1.5px; display:block; line-height:1; }
+    .precio .p { font-size:.85rem; color:var(--muted); }
 
-    /* ── VALUE STACK ── */
-    .value-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2.5rem;
-    }
-    .value-table thead tr {
-      border-bottom: 1px solid var(--border2);
-    }
-    .value-table thead th {
-      text-align: left;
-      font-size: .68rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding: .6rem 0 .8rem;
-    }
-    .value-table thead th:last-child { text-align: right; }
-    .value-table tbody tr {
-      border-bottom: 1px solid var(--border);
-      transition: background .15s;
-    }
-    .value-table tbody tr:hover { background: rgba(255,255,255,0.03); }
-    .value-table tbody td {
-      padding: 1rem 0;
-      font-size: .9rem;
-      vertical-align: middle;
-    }
-    .value-table tbody td:last-child {
-      text-align: right;
-      font-weight: 700;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-    .value-table tfoot tr { border-top: 2px solid var(--border2); }
-    .value-table tfoot td {
-      padding: 1.1rem 0 .5rem;
-      font-size: .95rem;
-      font-weight: 800;
-    }
-    .value-table tfoot td:last-child {
-      text-align: right;
-      font-size: 1.1rem;
-      font-weight: 900;
-      letter-spacing: -.5px;
-    }
-    .row-num {
-      display: inline-block;
-      width: 22px; height: 22px; border-radius: 50%;
-      background: var(--grey3); border: 1px solid var(--border2);
-      font-size: .65rem; font-weight: 700; color: var(--muted);
-      text-align: center; line-height: 22px;
-      margin-right: .7rem; flex-shrink: 0;
-    }
-    .td-name { display: flex; align-items: center; }
+    /* Garantías */
+    .gar { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2.2rem; }
+    .gar div { background:var(--grey2); border:1px solid var(--border); border-radius:var(--radius); padding:1.4rem; }
+    .gar b { display:block; margin-bottom:.4rem; font-size:1.02rem; }
+    .gar span { color:var(--muted); font-size:.95rem; }
 
-    /* PRICE REVEAL */
-    .price-reveal {
-      background: var(--grey1);
-      border: 1px solid var(--border2);
-      border-radius: 16px;
-      padding: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .price-left {}
-    .price-label {
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: .4rem;
-    }
-    .price-crossed {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--grey5);
-      text-decoration: line-through;
-      margin-bottom: .8rem;
-    }
-    .price-real {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 900;
-      letter-spacing: -2px;
-      line-height: 1;
-    }
-    .price-iva {
-      font-size: .8rem;
-      color: var(--muted);
-      margin-top: .3rem;
-      font-weight: 400;
-    }
-    .price-right {
-      text-align: right;
-    }
-    .savings-tag {
-      display: inline-flex; align-items: center; gap: .4rem;
-      background: var(--green-dim);
-      border: 1px solid rgba(34,197,94,0.2);
-      color: var(--green);
-      padding: .6rem 1.2rem;
-      border-radius: 100px;
-      font-size: .88rem;
-      font-weight: 700;
-    }
-    .savings-label {
-      font-size: .72rem;
-      font-weight: 600;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      margin-top: .7rem;
-    }
-    .savings-amount {
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: var(--green);
-      letter-spacing: -.5px;
-    }
+    /* Pasos */
+    .pasos { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2.2rem; counter-reset:p; }
+    .pasos div { counter-increment:p; }
+    .pasos div::before { content:counter(p); display:block; font-size:2rem; font-weight:900; color:var(--blue); line-height:1; margin-bottom:.5rem; }
+    .pasos b { display:block; margin-bottom:.3rem; }
+    .pasos span { color:var(--muted); font-size:.95rem; }
 
-    /* ── BONUS CARDS ── */
-    .bonus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .bonus-card {
-      background: var(--grey2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.6rem 1.8rem;
-      display: flex; gap: 1.2rem; align-items: flex-start;
-      transition: border-color .2s, background .2s;
-      position: relative;
-      overflow: hidden;
-    }
-    .bonus-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--amber), transparent);
-      opacity: 0;
-      transition: opacity .2s;
-    }
-    .bonus-card:hover { border-color: rgba(245,158,11,0.25); }
-    .bonus-card:hover::before { opacity: 1; }
-    .bonus-num-wrap {
-      flex-shrink: 0;
-      width: 36px; height: 36px; border-radius: 8px;
-      background: var(--amber-dim);
-      border: 1px solid rgba(245,158,11,0.2);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--amber);
-      font-size: .75rem; font-weight: 800;
-    }
-    .bonus-body { flex: 1; }
-    .bonus-name {
-      font-size: .9rem;
-      font-weight: 700;
-      margin-bottom: .3rem;
-      line-height: 1.3;
-    }
-    .bonus-value {
-      font-size: .78rem;
-      color: var(--amber);
-      font-weight: 600;
-    }
+    .legal { font-size:.85rem; color:var(--grey5); line-height:1.7; margin-top:2.5rem; max-width:800px; }
+    .cierre { text-align:center; padding:90px 0; }
+    .cierre .datos { font-size:1.05rem; color:var(--muted); margin-top:1rem; }
+    .cierre .datos b { color:var(--white); }
 
-    .bonus-total {
-      display: flex; align-items: center; justify-content: space-between;
-      background: var(--amber-dim);
-      border: 1px solid rgba(245,158,11,0.2);
-      border-radius: var(--radius);
-      padding: 1.2rem 1.8rem;
+    @media (max-width:880px) {
+      body { font-size:16px; }
+      .diag, .caminos, .gar, .pasos { grid-template-columns:1fr; }
+      .plan { grid-template-columns:1fr; gap:1.2rem; }
+      .precio { text-align:left; }
     }
-    .bt-label {
-      font-size: .75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--amber);
-    }
-    .bt-value {
-      font-size: 1.3rem;
-      font-weight: 900;
-      color: var(--amber);
-      letter-spacing: -.5px;
-    }
-
-    /* ── GUARANTEES ── */
-    .guarantee-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    .guarantee-card {
-      background: var(--grey1);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.8rem 2rem;
-      display: flex; gap: 1rem; align-items: flex-start;
-      transition: border-color .2s;
-    }
-    .guarantee-card:hover { border-color: rgba(34,197,94,0.25); }
-    .g-icon {
-      flex-shrink: 0;
-      width: 36px; height: 36px; border-radius: 8px;
-      background: var(--green-dim);
-      border: 1px solid rgba(34,197,94,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-    }
-    .g-body {}
-    .g-title {
-      font-size: .9rem;
-      font-weight: 700;
-      margin-bottom: .35rem;
-    }
-    .g-desc {
-      font-size: .8rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    /* ── CLOSE SECTION ── */
-    .close-summary {
-      background: var(--grey2);
-      border: 1px solid var(--border2);
-      border-radius: 20px;
-      padding: 2.5rem;
-      margin-bottom: 2rem;
-    }
-    .cs-title {
-      font-size: .7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-    .cs-line {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: .9rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .cs-line:last-child { border-bottom: none; }
-    .cs-line-left {
-      display: flex; align-items: center; gap: .9rem;
-    }
-    .cs-check {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: var(--green-dim);
-      border: 1px solid rgba(34,197,94,0.3);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .cs-check svg { width: 12px; height: 12px; stroke: var(--green); fill: none; stroke-width: 2.5; }
-    .cs-line-name { font-size: .9rem; font-weight: 600; }
-    .cs-line-sub  { font-size: .75rem; color: var(--muted); margin-top: .1rem; }
-    .cs-line-val  { font-size: .88rem; font-weight: 700; white-space: nowrap; }
-    .cs-line-val.green { color: var(--green); }
-
-    .urgency-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: .8rem;
-      margin-bottom: 2.5rem;
-    }
-    .urgency-pill {
-      background: var(--grey3);
-      border: 1px solid var(--border2);
-      border-radius: 10px;
-      padding: .9rem 1rem;
-      text-align: center;
-    }
-    .u-icon { font-size: 1.2rem; margin-bottom: .3rem; display: block; }
-    .u-text { font-size: .78rem; font-weight: 600; line-height: 1.4; }
-
-    .cta-wrap { text-align: center; }
-    .cta-btn {
-      display: inline-flex; align-items: center; gap: .7rem;
-      background: #25D366;
-      color: #fff;
-      padding: 1.1rem 2.8rem;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 800;
-      text-decoration: none;
-      letter-spacing: -.2px;
-      transition: background .2s, transform .15s, box-shadow .2s;
-      box-shadow: 0 0 0 rgba(37,211,102,0);
-    }
-    .cta-btn:hover {
-      background: #1ebe5d;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(37,211,102,0.35);
-    }
-    .cta-btn svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
-    .cta-note {
-      margin-top: .9rem;
-      font-size: .75rem;
-      color: var(--grey5);
-    }
-
-    /* ── KEYFRAMES ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .sec-inner { animation: fadeUp .45s ease both; }
-
-    /* ── PRUEBA SOCIAL ── */
-    .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
-    .proof-card {
-      background: var(--grey2); border: 1px solid var(--border); border-radius: 14px;
-      overflow: hidden; transition: border-color .2s, transform .2s;
-    }
-    .proof-card:hover { border-color: var(--border2); transform: translateY(-3px); }
-    .proof-video { position: relative; aspect-ratio: 16/9; background: var(--grey3); }
-    .proof-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .proof-play {
-      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-      background: rgba(0,0,0,0.45); cursor: pointer; transition: background .2s;
-    }
-    .proof-play:hover { background: rgba(0,0,0,0.25); }
-    .proof-play-btn {
-      width: 54px; height: 54px; border-radius: 50%; background: #fff;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
-    }
-    .proof-play-btn svg { width: 18px; height: 18px; fill: #000; margin-left: 3px; }
-    .proof-info { padding: 1.1rem 1.25rem; }
-    .proof-stars { color: #FBBF24; font-size: .85rem; letter-spacing: 1px; margin-bottom: .45rem; }
-    .proof-name { font-size: .95rem; font-weight: 800; margin-bottom: .15rem; }
-    .proof-biz { font-size: .78rem; color: var(--muted); }
-    .proof-note {
-      text-align: center; font-size: .82rem; color: var(--muted);
-      background: var(--grey2); border: 1px solid var(--border);
-      border-radius: 10px; padding: .9rem 1.2rem;
-    }
-    .proof-note strong { color: var(--white); }
-
-    /* ── OBJECIONES ── */
-    .obj-list { display: flex; flex-direction: column; gap: .7rem; }
-    .obj-item {
-      background: var(--grey2); border: 1px solid var(--border);
-      border-radius: 12px; overflow: hidden; transition: border-color .2s;
-    }
-    .obj-item[open] { border-color: var(--border2); }
-    .obj-item summary {
-      padding: 1.1rem 1.3rem; cursor: pointer; list-style: none;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      font-size: .93rem; font-weight: 700; transition: color .2s;
-    }
-    .obj-item summary::-webkit-details-marker { display: none; }
-    .obj-item summary::after {
-      content: '+'; font-size: 1.25rem; color: var(--muted); flex-shrink: 0;
-      transition: transform .25s;
-    }
-    .obj-item[open] summary::after { transform: rotate(45deg); }
-    .obj-item summary:hover { color: var(--green); }
-    .obj-body {
-      padding: 0 1.3rem 1.2rem; font-size: .88rem; color: #B0B0B0; line-height: 1.75;
-    }
-    .obj-body strong { color: var(--white); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 700px) {
-      .sales-steps { display: none; }
-      .proof-grid { grid-template-columns: 1fr; }
-      .pain-grid, .bonus-grid, .guarantee-grid { grid-template-columns: 1fr; }
-      .price-reveal { flex-direction: column; }
-      .price-right { text-align: left; }
-      .urgency-grid { grid-template-columns: 1fr; }
-      section { padding: 80px 5% 60px; }
-      #problema { padding-top: calc(var(--nav-h) + 60px); }
-    }
-    @media (max-width: 480px) {
-      .value-table { font-size: .82rem; }
-      .cta-btn { width: 100%; justify-content: center; }
+    @media print {
+      body { background:#fff; color:#000; }
+      * { background:#fff !important; color:#000 !important; border-color:#ccc !important; }
+      .accent { -webkit-text-fill-color:#000 !important; }
+      section { page-break-inside:avoid; border-bottom:1px solid #ddd; }
     }
   </style>
 </head>
 <body>
 
-<!-- FIXED NAV -->
-<nav class="sales-nav">
-  <a href="/ventas/" class="sales-nav-logo">
-    <img src="/logo.png" alt="Manyobra" />
-  </a>
-  <ul class="sales-steps" id="salesSteps">
-    <li><button class="step-btn active" data-target="problema"><span class="step-dot"></span>01 Problema</button></li>
-    <li><button class="step-btn" data-target="valor"><span class="step-dot"></span>02 Valor</button></li>
-    <li><button class="step-btn" data-target="resultados"><span class="step-dot"></span>03 Clientes</button></li>
-    <li><button class="step-btn" data-target="bonus"><span class="step-dot"></span>04 Bonus</button></li>
-    <li><button class="step-btn" data-target="garantias"><span class="step-dot"></span>05 Garantías</button></li>
-    <li><button class="step-btn" data-target="preguntas"><span class="step-dot"></span>06 Dudas</button></li>
-    <li><button class="step-btn" data-target="cierre"><span class="step-dot"></span>07 Cierre</button></li>
-  </ul>
-</nav>
+<!-- PORTADA -->
+<section class="portada">
+  <div class="wrap">
+    <div class="marca"><img src="/logo.png" alt="Manyobra" /></div>
+    <div class="para">Propuesta para <b>[NOMBRE DE LA EMPRESA]</b></div>
+    <h1>Tu obra es tu<br/><span class="accent">mejor vendedor</span>.</h1>
+    <p class="lead">Lo que vamos a revisar hoy: dónde está tu empresa, qué produciríamos cada mes y cuánto cuesta cada camino.</p>
+  </div>
+</section>
 
-<!-- SCROLL PROGRESS -->
-<div class="scroll-bar"><div class="scroll-fill" id="scrollFill"></div></div>
+<!-- DIAGNÓSTICO -->
+<section>
+  <div class="wrap">
+    <div class="paso">01 · Diagnóstico</div>
+    <h2>Dónde estás <span class="accent">hoy</span></h2>
+    <p class="lead">Lo que conversamos antes de esta reunión.</p>
+    <div class="diag">
+      <div><b>Cómo llegan tus clientes hoy</b>[Referidos, licitaciones, redes…]</div>
+      <div><b>Qué te está frenando</b>[Meses irregulares, competir por precio…]</div>
+      <div><b>Qué quieres lograr</b>[Más obras de cierto tipo, otro segmento…]</div>
+      <div><b>A quién le quieres llegar</b>[Propietarios, inmobiliarias, empresas…]</div>
+    </div>
+  </div>
+</section>
 
-<!-- ════════════════════════════════════════════
-     SECCIÓN 1 — EL PROBLEMA
-═════════════════════════════════════════════ -->
-<section id="problema">
-  <div class="sec-inner">
-    <div class="sec-eyebrow"><span>01</span> — El problema</div>
-    <h2 class="sec-h">Lo que está pasando<br/>en tu negocio ahora mismo</h2>
-    <p class="sec-lead">Antes de ver la solución, necesitamos ser honestos sobre por qué tu negocio no está creciendo online como debería.</p>
-
-    <div class="pain-grid">
-      <div class="pain-card">
-        <span class="pain-icon">👻</span>
-        <h3>Invisible online mientras tu competencia aparece primero</h3>
-        <p>Tus clientes buscan lo que vendes y no te encuentran. El que aparece primero se queda con el negocio.</p>
+<!-- CAMINOS -->
+<section>
+  <div class="wrap">
+    <div class="paso">02 · Los dos caminos</div>
+    <h2>Según quién <span class="accent">produce el contenido</span></h2>
+    <div class="caminos">
+      <div class="camino">
+        <h3>Online</h3>
+        <p>Tú nos envías fotos y videos desde la obra; nosotros los convertimos en piezas profesionales y gestionamos la pauta.</p>
       </div>
-      <div class="pain-card">
-        <span class="pain-icon">⏳</span>
-        <h3>Sin tiempo para crear contenido de calidad</h3>
-        <p>Administrar el negocio ya consume tu día completo. El contenido siempre queda para después, y después se convierte en nunca.</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-icon">📱</span>
-        <h3>Imagen que no refleja el negocio real</h3>
-        <p>Fotos de celular, edición inconsistente, publicaciones sin estrategia. Tu negocio es mucho mejor de lo que tu perfil muestra.</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-icon">💸</span>
-        <h3>Has invertido en publicidad sin ver retorno claro</h3>
-        <p>Ya probaste con alguien o por tu cuenta, gastaste dinero y no sabes exactamente qué funcionó ni por qué.</p>
+      <div class="camino">
+        <h3>Con grabación</h3>
+        <p>Vamos a terreno con equipo de producción: cámara, dirección de arte y edición. El contenido lo generamos nosotros.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════
-     SECCIÓN 2 — STACK DE VALOR
-═════════════════════════════════════════════ -->
-<section id="valor">
-  <div class="sec-inner">
-    <div class="sec-eyebrow"><span>02</span> — Lo que recibes</div>
-    <h2 class="sec-h">El valor real de mercado<br/>del Plan Turbo</h2>
-    <p class="sec-lead">Veamos cuánto costaría contratar cada componente de forma separada con distintos proveedores.</p>
+<!-- PLANES -->
+<section>
+  <div class="wrap">
+    <div class="paso">03 · Los planes</div>
+    <h2>Qué recibes <span class="accent">cada mes</span></h2>
+    <p class="lead" style="margin-bottom:2.2rem;">Valores mensuales en pesos chilenos, no incluyen IVA.</p>
 
-    <table class="value-table">
-      <thead>
-        <tr>
-          <th>Componente incluido</th>
-          <th>Valor de mercado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="td-name"><span class="row-num">1</span>12 videos mensuales profesionales</td>
-          <td>$960.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">2</span>12 imágenes + 12 historias de diseño</td>
-          <td>$240.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">3</span>Meta Ads con 12 anuncios + optimización + remarketing</td>
-          <td>$150.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">4</span>Pixel de Facebook + seguimiento de eventos</td>
-          <td>$80.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">5</span>Landing Page + Hosting + Dominio (1 año)</td>
-          <td>$250.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">6</span>Administración y optimización de landing mensual</td>
-          <td>$80.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">7</span>Community Manager + copywriting de ventas</td>
-          <td>$120.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">8</span>Reporte semanal + reunión de estrategia</td>
-          <td>$80.000</td>
-        </tr>
-        <tr>
-          <td class="td-name"><span class="row-num">9</span>Agente IA en WhatsApp 24/7 (responde, califica, agenda)</td>
-          <td>$200.000</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>Total de mercado</td>
-          <td>$2.160.000/mes</td>
-        </tr>
-      </tfoot>
-    </table>
+    <div class="plan">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Inicio</span><span class="etiqueta">Online</span></div>
+        <p class="plan-para">Para empezar a existir en redes sin invertir de más.</p>
+        <ul class="entregables">
+          <li>1 video + 3 imágenes al mes</li>
+          <li>Guion estratégico y edición profesional</li>
+          <li>Calendario de publicación</li>
+          <li>Reporte mensual</li>
+        </ul>
+      </div>
+      <div class="precio"><span class="n">$50.000</span><span class="p">/mes + IVA</span></div>
+    </div>
 
-    <div class="price-reveal">
-      <div class="price-left">
-        <div class="price-label">Lo que vale en el mercado</div>
-        <div class="price-crossed">$2.160.000/mes</div>
-        <div class="price-label" style="margin-bottom:.5rem;">Tu precio con Manyobra</div>
-        <div class="price-real">$300.000<span style="font-size:1.4rem;font-weight:600;color:var(--muted)">/mes</span></div>
-        <div class="price-iva">+ IVA · Pago mensual · Sin permanencia forzada</div>
+    <div class="plan">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Activo</span><span class="etiqueta">Online</span></div>
+        <p class="plan-para">Publicar seguido y empezar a traer obras con pauta.</p>
+        <ul class="entregables">
+          <li>Todo lo de Inicio, más:</li>
+          <li>3 videos + 5 imágenes al mes</li>
+          <li>Meta Ads gestionados con campañas de conversión</li>
+          <li>Segmentación por zona, intereses y comportamiento</li>
+        </ul>
       </div>
-      <div class="price-right">
-        <div class="savings-tag">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Ahorras cada mes
-        </div>
-        <div style="margin-top:1rem;">
-          <div class="savings-label">Ahorro mensual</div>
-          <div class="savings-amount">$1.860.000</div>
-        </div>
+      <div class="precio"><span class="n">$100.000</span><span class="p">/mes + IVA</span></div>
+    </div>
+
+    <div class="plan">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Online Pro</span><span class="etiqueta">Online</span></div>
+        <p class="plan-para">Presencia diaria y anuncios que vuelven a buscar a quien ya te vio.</p>
+        <ul class="entregables">
+          <li>Todo lo de Activo, más:</li>
+          <li>5 videos + 7 imágenes + historias al mes</li>
+          <li>Retargeting a quienes ya interactuaron</li>
+          <li>Community Manager + reporte quincenal</li>
+        </ul>
       </div>
+      <div class="precio"><span class="n">$150.000</span><span class="p">/mes + IVA</span></div>
+    </div>
+
+    <div class="plan">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Producción</span><span class="etiqueta">Con grabación</span></div>
+        <p class="plan-para">Nuestro equipo va a tu obra y graba contenido real.</p>
+        <ul class="entregables">
+          <li>Todo lo de Online Pro, más:</li>
+          <li>1 sesión de grabación al mes con nuestro equipo</li>
+          <li>6 videos + 6 imágenes producidos por nosotros</li>
+          <li>Dirección de arte y guion estratégico</li>
+        </ul>
+      </div>
+      <div class="precio"><span class="n">$200.000</span><span class="p">/mes + IVA</span></div>
+    </div>
+
+    <div class="plan destacado">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Producción Pro</span><span class="etiqueta">Recomendado</span></div>
+        <p class="plan-para">Contenido propio y tu página web midiendo cada visita.</p>
+        <ul class="entregables">
+          <li>Todo lo de Producción, más:</li>
+          <li>8 videos + 8 imágenes + historias al mes</li>
+          <li>Landing Page o Tienda Online con Píxel de Meta</li>
+          <li>Retargeting a quienes visitan tu web + copywriting de ventas</li>
+        </ul>
+      </div>
+      <div class="precio"><span class="n">$350.000</span><span class="p">/mes + IVA</span></div>
+    </div>
+
+    <div class="plan">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Dominio</span><span class="etiqueta">Con Agente IA</span></div>
+        <p class="plan-para">El sistema completo, con un agente de IA atendiendo tu WhatsApp 24/7.</p>
+        <ul class="entregables">
+          <li>Todo lo de Producción Pro, más:</li>
+          <li>Agente IA: responde, califica, agenda y hace seguimiento</li>
+          <li>2 sesiones de grabación al mes</li>
+          <li>12 videos + 12 imágenes + historias</li>
+          <li>Web premium + hosting y dominio (1 año)</li>
+          <li>A/B testing continuo + reporte semanal</li>
+        </ul>
+      </div>
+      <div class="precio"><span class="n">$500.000</span><span class="p">/mes + IVA</span></div>
+    </div>
+
+    <p class="legal">
+      El presupuesto de publicidad en Meta Ads no está incluido y se carga directamente a la cuenta del cliente, que mantiene el control total de la inversión.
+      Los resultados dependen de cada empresa, su rubro y su nivel de competencia. No garantizamos cifras específicas.
+    </p>
+  </div>
+</section>
+
+<!-- GARANTÍAS -->
+<section>
+  <div class="wrap">
+    <div class="paso">04 · Garantías</div>
+    <h2>Trabajas <span class="accent">sin riesgo</span></h2>
+    <div class="gar">
+      <div><b>Satisfacción en 15 días</b><span>Si en los primeros 15 días no estás conforme, te devolvemos lo pagado.</span></div>
+      <div><b>El contenido es tuyo</b><span>Todo el material queda en tu poder, aunque dejes de trabajar con nosotros.</span></div>
+      <div><b>Entrega en plazo</b><span>Si no cumplimos el plazo acordado, se aplica un descuento en tu próxima factura.</span></div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════
-     SECCIÓN 3 — PRUEBA SOCIAL
-═════════════════════════════════════════════ -->
-<section id="resultados">
-  <div class="sec-inner">
-    <div class="sec-eyebrow"><span>03</span> — Clientes reales</div>
-    <h2 class="sec-h">No tienes que creerme a mí.<br/>Escúchalos a ellos.</h2>
-    <p class="sec-lead">Dos clientes contando en sus propias palabras cómo les fue trabajando con nosotros.</p>
-
-    <div class="proof-grid">
-      <div class="proof-card">
-        <div class="proof-video">
-          <video src="/testimonios/reels/testimonio-carlos.mp4" poster="/testimonios/reels/testimonio-carlos.jpg" preload="none" playsinline></video>
-          <div class="proof-play" onclick="playProof(this)">
-            <div class="proof-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="proof-info">
-          <div class="proof-stars">★★★★★</div>
-          <div class="proof-name">Carlos</div>
-          <div class="proof-biz">Bubble House &amp; Mandala Sushi · Villa Alemana, V Región</div>
-        </div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-video">
-          <video src="/testimonios/reels/testimonio-pedro.mp4" poster="/testimonios/reels/testimonio-pedro.jpg" preload="none" playsinline></video>
-          <div class="proof-play" onclick="playProof(this)">
-            <div class="proof-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="proof-info">
-          <div class="proof-stars">★★★★★</div>
-          <div class="proof-name">Pedro Campos</div>
-          <div class="proof-biz">Obras Menores · Temuco, Región de la Araucanía</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="proof-note">
-      <strong>+200 campañas gestionadas</strong> y <strong>+50 clientes</strong> en más de 4 años trabajando con negocios chilenos.
+<!-- PASOS -->
+<section>
+  <div class="wrap">
+    <div class="paso">05 · Cómo partimos</div>
+    <h2>Onboarding en <span class="accent">48 a 72 horas</span></h2>
+    <div class="pasos">
+      <div><b>Eliges el plan</b><span>Confirmamos alcance y fecha de inicio.</span></div>
+      <div><b>Accesos y agenda</b><span>Nos das acceso a tus cuentas y coordinamos la primera grabación si corresponde.</span></div>
+      <div><b>Salimos a producción</b><span>Producimos, activamos campañas y empiezas a recibir reportes.</span></div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════
-     SECCIÓN 4 — BONUS
-═════════════════════════════════════════════ -->
-<section id="bonus">
-  <div class="sec-inner">
-    <div class="sec-eyebrow"><span>04</span> — Solo hoy</div>
-    <h2 class="sec-h">Bonus exclusivos<br/>si cierras en esta llamada</h2>
-    <p class="sec-lead">Estos bonus no están disponibles en la web ni en ningún otro momento. Solo para quien toma la decisión hoy.</p>
-
-    <div class="bonus-grid">
-      <div class="bonus-card">
-        <div class="bonus-num-wrap">B1</div>
-        <div class="bonus-body">
-          <div class="bonus-name">Guía de contenido para los primeros 30 días</div>
-          <div class="bonus-value">Valorado en $49.000</div>
-        </div>
-      </div>
-      <div class="bonus-card">
-        <div class="bonus-num-wrap">B2</div>
-        <div class="bonus-body">
-          <div class="bonus-name">Auditoría completa de tu Instagram actual</div>
-          <div class="bonus-value">Valorado en $39.000</div>
-        </div>
-      </div>
-      <div class="bonus-card">
-        <div class="bonus-num-wrap">B3</div>
-        <div class="bonus-body">
-          <div class="bonus-name">Pack de 3 historias de venta adicionales para el mes 1</div>
-          <div class="bonus-value">Valorado en $35.000</div>
-        </div>
-      </div>
-      <div class="bonus-card">
-        <div class="bonus-num-wrap">B4</div>
-        <div class="bonus-body">
-          <div class="bonus-name">Configuración de WhatsApp Business para no perder leads</div>
-          <div class="bonus-value">Valorado en $45.000</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bonus-total">
-      <div class="bt-label">Total en bonus gratis</div>
-      <div class="bt-value">$168.000</div>
-    </div>
+<!-- CIERRE -->
+<section class="cierre">
+  <div class="wrap">
+    <h2>¿Con cuál <span class="accent">partimos</span>?</h2>
+    <p class="datos">
+      <b>Sebastián</b> · Fundador y director, Manyobra<br/>
+      +56 9 5674 7949 · contacto@manyobra.cl · manyobra.cl
+    </p>
+    <p class="legal" style="margin-left:auto;margin-right:auto;text-align:center;">
+      Manyobra SpA · Imagine Lux SpA · RUT 78.213.349-7 · Valores válidos por 30 días.
+    </p>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════
-     SECCIÓN 4 — GARANTÍAS
-═════════════════════════════════════════════ -->
-<section id="garantias">
-  <div class="sec-inner">
-    <div class="sec-eyebrow"><span>05</span> — Sin riesgo</div>
-    <h2 class="sec-h">Tres garantías<br/>que eliminan el riesgo</h2>
-    <p class="sec-lead">Confiamos en nuestro trabajo. Por eso asumimos el riesgo nosotros, no tú.</p>
-
-    <div class="guarantee-grid">
-      <div class="guarantee-card">
-        <div class="g-icon">🛡️</div>
-        <div class="g-body">
-          <div class="g-title">Satisfacción garantizada en 15 días</div>
-          <div class="g-desc">Si algo no refleja lo acordado, lo revisamos sin costo adicional hasta que quedes 100% conforme.</div>
-        </div>
-      </div>
-      <div class="guarantee-card">
-        <div class="g-icon">📂</div>
-        <div class="g-body">
-          <div class="g-title">El contenido es tuyo para siempre</div>
-          <div class="g-desc">Todo el material producido te pertenece. Si decides salir del servicio, te llevas todos los archivos.</div>
-        </div>
-      </div>
-      <div class="guarantee-card">
-        <div class="g-icon">📅</div>
-        <div class="g-body">
-          <div class="g-title">Entrega en plazo o descuento automático</div>
-          <div class="g-desc">Si no cumplimos el plazo de entrega acordado, se aplica un descuento automático en tu próxima factura.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════
-     SECCIÓN 6 — OBJECIONES
-═════════════════════════════════════════════ -->
-<section id="preguntas">
-  <div class="sec-inner">
-    <div class="sec-eyebrow"><span>06</span> — Antes de decidir</div>
-    <h2 class="sec-h">Lo que casi todos<br/>me preguntan acá</h2>
-    <p class="sec-lead">Si tienes una duda que no está en esta lista, dímela en la llamada y te la respondo directo.</p>
-
-    <div class="obj-list">
-      <details class="obj-item">
-        <summary>¿Por qué no contrato a alguien para que lo haga interno?</summary>
-        <div class="obj-body">Porque para cubrir lo que trae este plan necesitas al menos tres personas distintas: alguien que grabe y edite video, un diseñador y alguien que sepa de verdad manejar pauta en Meta. Un solo community manager con sueldo mínimo de mercado ya te cuesta más que este plan completo, y aun así te faltarían las otras dos áreas. Acá tienes las tres cubiertas por un equipo que ya lleva años haciéndolo, sin sueldos, sin finiquitos y sin tener que capacitar a nadie.</div>
-      </details>
-      <details class="obj-item">
-        <summary>¿Y si no me gusta el contenido que hacen?</summary>
-        <div class="obj-body">Nada se publica sin que tú lo apruebes: revisas cada pieza antes de que salga. Y si algo no refleja lo que acordamos, lo corregimos sin costo adicional — eso está por escrito en la <strong>garantía de satisfacción de 15 días</strong>. Tu única tarea real en este plan es aprobar o pedir cambios.</div>
-      </details>
-      <details class="obj-item">
-        <summary>¿El presupuesto de publicidad está incluido en el precio?</summary>
-        <div class="obj-body">No, y es importante que quede claro: el valor del plan cubre <strong>nuestro trabajo</strong> (estrategia, producción, gestión de campañas, landing, agente IA y reportes). La plata que se invierte en pauta se carga directo a <strong>tu propia cuenta de Meta</strong>, así que tú tienes el control y la visibilidad total de cada peso. Nosotros nunca manejamos tu dinero de pauta. En la llamada te recomiendo un monto según tu rubro y objetivo.</div>
-      </details>
-      <details class="obj-item">
-        <summary>¿En cuánto tiempo voy a ver resultados?</summary>
-        <div class="obj-body">El contenido y las campañas quedan andando en <strong>48 a 72 horas</strong> desde que partimos. Dicho eso, el algoritmo de Meta necesita entre 7 y 14 días para optimizar bien, así que los primeros resultados concretos normalmente se ven al cierre del primer mes. Prefiero decirte esto ahora que prometerte ventas en la primera semana: los resultados dependen de cada negocio y no garantizamos cifras específicas.</div>
-      </details>
-      <details class="obj-item">
-        <summary>¿Me tengo que amarrar por muchos meses?</summary>
-        <div class="obj-body">No hay contrato de permanencia forzada. Trabajamos mes a mes y puedes salir avisando con 15 días. Sí te <strong>recomiendo</strong> darle mínimo 3 meses, no por amarrarte, sino porque es el tiempo real que necesita la pauta para optimizar y para que el contenido acumule efecto. Si te vas, te llevas todo el material producido: es tuyo para siempre.</div>
-      </details>
-      <details class="obj-item">
-        <summary>¿Con quién voy a estar hablando durante el proyecto?</summary>
-        <div class="obj-body">Conmigo, directo. No hay ejecutivo de cuentas intermediario ni un chat donde nadie responde. Yo dirijo el proyecto y coordino a los especialistas que trabajan en cada área. Además tienes la <strong>app de avance</strong> para ver en cualquier momento en qué está tu proyecto, sin tener que preguntar.</div>
-      </details>
-      <details class="obj-item">
-        <summary>Ya probé con otra agencia y no funcionó. ¿Por qué sería distinto?</summary>
-        <div class="obj-body">Es la duda más justa de todas. La diferencia más común que veo: la mayoría vende <strong>solo</strong> pauta o <strong>solo</strong> contenido. Cuando se separan, la pauta termina promocionando contenido malo, o se produce contenido bonito que nadie ve. Acá van juntos y bajo un mismo responsable, más el agente IA que atiende a la gente que llega. Si aún así no ves cambios, no hay amarre: te vas cuando quieras y con tu material.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════
-     SECCIÓN 7 — CIERRE
-═════════════════════════════════════════════ -->
-<section id="cierre">
-  <div class="sec-inner">
-    <div class="sec-eyebrow"><span>07</span> — Tu decisión</div>
-    <h2 class="sec-h">Todo lo que llevas<br/>si decides hoy</h2>
-    <p class="sec-lead">Un resumen de todo lo que entra en tu negocio desde el día que dices que sí.</p>
-
-    <div class="close-summary">
-      <div class="cs-title">Resumen de tu oferta</div>
-
-      <div class="cs-line">
-        <div class="cs-line-left">
-          <div class="cs-check">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <div class="cs-line-name">Plan Turbo completo — 36 piezas de contenido/mes + Agente IA</div>
-            <div class="cs-line-sub">12 videos · 12 imágenes · 12 historias · 12 anuncios en Meta Ads · Agente IA · Landing · Reporte semanal · App de avance</div>
-          </div>
-        </div>
-        <div class="cs-line-val">$300.000/mes + IVA</div>
-      </div>
-
-      <div class="cs-line">
-        <div class="cs-line-left">
-          <div class="cs-check">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <div class="cs-line-name">4 Bonus exclusivos</div>
-            <div class="cs-line-sub">Guía 30 días · Auditoría Instagram · Pack Historias · WhatsApp Business</div>
-          </div>
-        </div>
-        <div class="cs-line-val green">$168.000 gratis</div>
-      </div>
-
-      <div class="cs-line">
-        <div class="cs-line-left">
-          <div class="cs-check">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <div class="cs-line-name">3 Garantías incluidas</div>
-            <div class="cs-line-sub">Satisfacción · Propiedad del contenido · Entrega en plazo</div>
-          </div>
-        </div>
-        <div class="cs-line-val green">Sin costo adicional</div>
-      </div>
-
-      <div class="cs-line" style="border-bottom:none;padding-top:1.1rem;margin-top:.3rem;border-top:1px solid var(--border2)">
-        <div class="cs-line-left">
-          <div>
-            <div class="cs-line-name" style="font-size:.78rem;color:var(--muted)">Valor de mercado equivalente</div>
-          </div>
-        </div>
-        <div class="cs-line-val" style="color:var(--muted);font-size:.85rem;text-decoration:line-through">$2.328.000/mes</div>
-      </div>
-    </div>
-
-    <div class="urgency-grid">
-      <div class="urgency-pill">
-        <span class="u-icon">⚡</span>
-        <div class="u-text">Bonus válidos<br/>solo en esta llamada</div>
-      </div>
-      <div class="urgency-pill">
-        <span class="u-icon">🔒</span>
-        <div class="u-text">Cupos limitados<br/>este mes</div>
-      </div>
-      <div class="urgency-pill">
-        <span class="u-icon">🚀</span>
-        <div class="u-text">Onboarding<br/>esta semana</div>
-      </div>
-    </div>
-
-    <div class="cta-wrap">
-      <a
-        href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20contratar%20el%20Plan%20Turbo.%20%C2%BFPodemos%20coordinar%20el%20onboarding%20esta%20semana%3F"
-        target="_blank"
-        rel="noopener"
-        class="cta-btn"
-      >
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Quiero contratar el Plan Turbo
-      </a>
-      <div class="cta-note">Abre WhatsApp con mensaje prellenado · +56 9 5674 7949</div>
-    </div>
-  </div>
-</section>
-
-<script>
-  const sections = ['problema','valor','resultados','bonus','garantias','preguntas','cierre'];
-
-  // Reproductor de los videos de testimonio
-  function playProof(overlay) {
-    const video = overlay.previousElementSibling;
-    video.play();
-    overlay.style.display = 'none';
-    video.controls = true;
-  }
-  const buttons  = document.querySelectorAll('.step-btn');
-  const fillEl   = document.getElementById('scrollFill');
-
-  // Click nav steps → scroll to section
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.dataset.target;
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  // Keyboard shortcuts: left/right arrows or j/k navigate between sections
-  document.addEventListener('keydown', e => {
-    if (['ArrowRight','ArrowDown','KeyJ'].includes(e.code)) {
-      e.preventDefault();
-      scrollToRelative(1);
-    }
-    if (['ArrowLeft','ArrowUp','KeyK'].includes(e.code)) {
-      e.preventDefault();
-      scrollToRelative(-1);
-    }
-  });
-
-  function scrollToRelative(delta) {
-    const active = [...buttons].findIndex(b => b.classList.contains('active'));
-    const next = Math.max(0, Math.min(sections.length - 1, active + delta));
-    document.getElementById(sections[next])?.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  // IntersectionObserver → highlight active section in nav
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        buttons.forEach(b => {
-          b.classList.toggle('active', b.dataset.target === id);
-        });
-      }
-    });
-  }, { threshold: 0.35 });
-
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
-  });
-
-  // Scroll progress bar
-  window.addEventListener('scroll', () => {
-    const total = document.documentElement.scrollHeight - window.innerHeight;
-    const pct   = total > 0 ? (window.scrollY / total) * 100 : 0;
-    fillEl.style.width = pct + '%';
-  });
-</script>
 </body>
 </html>
