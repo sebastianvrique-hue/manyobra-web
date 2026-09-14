@@ -200,7 +200,7 @@
 <!-- SERVICES -->
 <section class="services-sec sistema-sec" id="servicios" aria-labelledby="servicios-titulo">
   <div class="sec-inner">
-    <div class="sec-tag">El Sistema Faena</div>
+    <div class="sec-tag">Cómo funciona</div>
     <h2 id="servicios-titulo">De tu obra a una <span class="accent">reunión agendada</span></h2>
     <p class="sec-sub">No vendemos videos sueltos ni campañas aisladas. El sistema acompaña a cada interesado desde que ve tu obra hasta que llega a tu agenda.</p>
 
