@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /ventas.html
 Disallow: /ventas/
+Disallow: /planes/
 
 Sitemap: https://manyobra.cl/sitemap.xml
