@@ -1,10 +1,10 @@
 ---
 deployment:
   tasks:
-    # ── EL TEMA VA PRIMERO ──
-    # El home de manyobra.cl lo sirve WordPress, no index.html. Si el despliegue
-    # se corta (los videos de testimonios/ pesan y tardan), lo último que puede
-    # quedarse sin copiar es justo lo que renderiza la portada. Por eso va al inicio.
+    # THEME FIRST. The manyobra.cl homepage is rendered by WordPress, not by
+    # index.html, so the theme is the one thing that must never be skipped.
+    # deploy-check.txt is a probe: fetching it over HTTP tells us whether this
+    # block actually ran, which the deploy log alone has not made clear.
     - export WPTHEME=/home2/manyobra/public_html/wp-content/themes/manyobra/
     - /bin/mkdir -p $WPTHEME/assets
     - /bin/cp wordpress-theme/manyobra/front-page.php $WPTHEME
@@ -14,13 +14,13 @@ deployment:
     - /bin/cp wordpress-theme/manyobra/style.css $WPTHEME
     - /bin/cp wordpress-theme/manyobra/assets/main.css $WPTHEME/assets/
     - /bin/cp wordpress-theme/manyobra/assets/main.js $WPTHEME/assets/
+    - /bin/date > $WPTHEME/deploy-check.txt
 
-    # ── Páginas y assets livianos ──
+    # Static pages and light assets
     - export DEPLOYPATH=/home2/manyobra/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp planes.html $DEPLOYPATH
     - /bin/cp ventas.html $DEPLOYPATH
-    # URLs limpias: planes.html y ventas.html en la raíz quedan como redirect stub
     - /bin/mkdir -p $DEPLOYPATH/planes
     - /bin/cp planes/index.html $DEPLOYPATH/planes/
     - /bin/mkdir -p $DEPLOYPATH/ventas
@@ -39,5 +39,5 @@ deployment:
     - /bin/cp assets/hero.mp4 $DEPLOYPATH/assets/
     - /bin/cp assets/hero.jpg $DEPLOYPATH/assets/
 
-    # ── Lo más pesado, al final ──
+    # Heaviest last
     - /bin/cp -R testimonios/ $DEPLOYPATH
