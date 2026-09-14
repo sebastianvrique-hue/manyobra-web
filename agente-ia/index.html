@@ -378,7 +378,19 @@
       section { padding: 20px 4% !important; }
       .chat-phone, .cap-card, .vs-col, .use-card, .close-card, .problem-card { border: 1px solid #ccc !important; break-inside: avoid; }
     }
-  </style>
+  
+    /* ── Demo guiada del agente ── */
+    .chat-opciones { padding: .8rem; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: .5rem; background: var(--grey1); }
+    .chat-op {
+      appearance: none; font-family: inherit; cursor: pointer;
+      background: var(--glass); border: 1px solid var(--accent-brd); color: var(--white);
+      border-radius: 100px; padding: .6rem 1rem; font-size: .82rem; font-weight: 600;
+      text-align: left; transition: all .18s; text-decoration: none; display: block;
+    }
+    .chat-op:hover { background: rgba(59,130,246,.16); transform: translateY(-1px); }
+    .chat-op-cta { background: var(--grad); border-color: transparent; text-align: center; font-weight: 700; }
+    .chat-body { scroll-behavior: smooth; }
+</style>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#0A0A0A" />
@@ -408,7 +420,7 @@
   <h1>El vendedor que<br/><em>nunca duerme</em>.</h1>
   <p class="lead">Un agente de inteligencia artificial que atiende tu WhatsApp, responde al instante, califica a cada interesado y agenda la reunión. Tú solo entras a cerrar.</p>
   <div class="hero-actions">
-    <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="btn btn-grad">Probar el agente ahora →</a>
+    <a href="#demo" class="btn btn-grad">Probar el agente ahora →</a>
     <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA" target="_blank" rel="noopener" class="btn btn-outline">Quiero una demo</a>
   </div>
   <p class="hero-note">Se conecta a tu WhatsApp actual · Incluido en el Plan Dominio · También se contrata por separado</p>
@@ -454,35 +466,28 @@
 </section>
 
 <!-- CHAT DEMO -->
-<section class="chat-sec">
+<section class="chat-sec" id="demo">
   <div class="inner">
     <div class="sec-tag">Cómo se ve en la práctica</div>
-    <h2>Una conversación real,<br/>de principio a <span class="accent">reunión agendada</span></h2>
-    <p class="sec-sub">Esto es lo que pasa mientras tú estás trabajando, durmiendo o con tu familia.</p>
+    <h2>Pruébalo: elige una pregunta<br/>y mira cómo <span class="accent">respondería</span></h2>
+    <p class="sec-sub">Ejemplo guiado con respuestas reales del agente, para que veas cómo atiende mientras tú estás en la obra. <strong>No es una IA respondiendo en vivo</strong>: el agente de verdad trabaja sobre tu WhatsApp, entrenado con los datos de tu empresa.</p>
 
     <div class="chat-wrap">
       <div class="chat-phone reveal">
         <div class="chat-header">
           <div class="chat-avatar">🤖</div>
           <div>
-            <div class="chat-who">Tu negocio</div>
+            <div class="chat-who">Tu constructora</div>
             <div class="chat-status">en línea</div>
           </div>
         </div>
-        <div class="chat-body">
-          <div class="bubble in">Hola, vi su publicación en Instagram. Cuánto cuesta el servicio?<span class="t">23:41</span></div>
-          <div class="bubble out">¡Hola! Gracias por escribir 🙌 Con gusto te ayudo.<br/><br/>Los valores dependen del tamaño del proyecto. ¿Me cuentas qué necesitas exactamente?<span class="t">23:41</span></div>
-          <div class="bubble in">Necesito para mi local, es un restaurant nuevo<span class="t">23:43</span></div>
-          <div class="bubble out">Perfecto, trabajamos bastante con restaurantes 👌<br/><br/>Para orientarte bien: ¿tienes un presupuesto mensual aproximado en mente?<span class="t">23:43</span></div>
-          <div class="bubble in">Entre 200 y 300 mil<span class="t">23:45</span></div>
-          <div class="bubble out">Excelente, con ese rango podemos armarte algo muy completo ✨<br/><br/>¿Te parece si coordinamos una llamada de 15 min para mostrarte exactamente qué haríamos?<span class="t">23:45</span></div>
-          <div class="bubble in">Sí, mañana en la tarde puedo<span class="t">23:46</span></div>
-          <div class="bubble out">Listo ✅ Te agendé mañana a las 16:00. Te llega la confirmación al correo.<br/><br/>¡Hablamos!<span class="t">23:46</span></div>
-          <div class="chat-typing"><span></span><span></span><span></span></div>
+        <div class="chat-body" id="chatBody">
+          <div class="bubble out">¡Hola! Soy el asistente de <strong>[Tu constructora]</strong>. ¿En qué te puedo ayudar?<span class="t" data-hora></span></div>
         </div>
+        <div class="chat-opciones" id="chatOpciones" aria-label="Elige una pregunta"></div>
       </div>
 
-      <div class="chat-notes">
+      <div class="chat-notes">      <div class="chat-notes">
         <h3>Qué hizo el agente en 5 minutos</h3>
         <p>Todo esto pasó a las 23:41 de un día cualquiera. Sin que tú tocaras el teléfono.</p>
         <div class="note-item reveal">
@@ -686,7 +691,7 @@
     <h2>Pruébalo antes de <span class="accent">decidir</span></h2>
     <p>Escríbele al agente y hazle las preguntas que te haría un cliente tuyo. En dos minutos vas a entender exactamente qué haría por tu negocio.</p>
     <div class="close-actions">
-      <a href="https://manyobra-bot-production.up.railway.app/" target="_blank" rel="noopener" class="btn btn-grad">Probar el agente ahora →</a>
+      <a href="#demo" class="btn btn-grad">Probar el agente ahora →</a>
       <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20una%20demo%20del%20Agente%20IA%20para%20mi%20negocio" target="_blank" rel="noopener" class="btn btn-outline">Quiero una demo para mi negocio</a>
     </div>
     <p class="close-note">Incluido en el <a href="/planes/">Plan Dominio</a> · También se contrata por separado</p>
@@ -801,6 +806,90 @@
         content_name: cliente ? cliente.textContent.trim() : 'video'
       });
     }, true);
+  })();
+
+  // ── Demo guiada del agente ──
+  // Respuestas escritas de antemano: el visitante elige la pregunta y ve cómo
+  // respondería el agente. NO es una IA contestando en vivo, y así se rotula en
+  // la página: el agente real trabaja sobre el WhatsApp del cliente.
+  (function () {
+    var cuerpo = document.getElementById('chatBody');
+    var opciones = document.getElementById('chatOpciones');
+    if (!cuerpo || !opciones) return;
+
+    var GUION = [
+      { p: '¿Cuánto cuesta?',
+        r: 'Depende del tamaño de la obra y de lo que necesites mostrar.<br/><br/>Para orientarte bien: ¿qué tipo de proyectos haces — obra nueva, remodelación, movimiento de tierra?' },
+      { p: 'Hago remodelaciones',
+        r: 'Perfecto 👌 En remodelación lo que mejor funciona es el antes y después: es lo que más convence a un propietario.<br/><br/>¿Trabajas en alguna comuna en particular?' },
+      { p: '¿Trabajan en mi zona?',
+        r: 'Sí, vamos a terreno en la Región Metropolitana y alrededores. Para obras fuera coordinamos la sesión según el calendario.<br/><br/>¿Tienes alguna obra en curso que podamos grabar?' },
+      { p: 'Sí, tengo una obra ahora',
+        r: 'Excelente, esa es la mejor forma de partir: grabamos el avance y el resultado final.<br/><br/>¿Te parece si agendamos 20 minutos con Sebastián para ver el plan que te conviene?' },
+      { p: 'Dale, agendemos',
+        r: 'Listo ✅ Te dejo el enlace para que elijas el horario que más te acomode.<br/><br/>Nos vemos 👋', fin: true }
+    ];
+
+    var i = 0;
+
+    function hora() {
+      var d = new Date();
+      return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2);
+    }
+    function burbuja(clase, html) {
+      var b = document.createElement('div');
+      b.className = 'bubble ' + clase;
+      b.innerHTML = html + '<span class="t">' + hora() + '</span>';
+      cuerpo.appendChild(b);
+      cuerpo.scrollTop = cuerpo.scrollHeight;
+      return b;
+    }
+    function escribiendo() {
+      var t = document.createElement('div');
+      t.className = 'chat-typing';
+      t.innerHTML = '<span></span><span></span><span></span>';
+      cuerpo.appendChild(t);
+      cuerpo.scrollTop = cuerpo.scrollHeight;
+      return t;
+    }
+
+    function pintarOpcion() {
+      opciones.innerHTML = '';
+      if (i >= GUION.length) {
+        var a = document.createElement('a');
+        a.className = 'chat-op chat-op-cta';
+        a.href = 'https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=demo-agente';
+        a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = 'Agendar mi reunión →';
+        opciones.appendChild(a);
+        return;
+      }
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'chat-op';
+      btn.textContent = GUION[i].p;
+      btn.addEventListener('click', responder);
+      opciones.appendChild(btn);
+    }
+
+    function responder() {
+      var paso = GUION[i];
+      i++;
+      opciones.innerHTML = '';
+      burbuja('in', paso.p);
+      var t = escribiendo();
+      setTimeout(function () {
+        t.remove();
+        burbuja('out', paso.r);
+        pintarOpcion();
+      }, 900);
+    }
+
+    // la primera burbuja también lleva hora real, para que no descuadre con el resto
+    var inicial = cuerpo.querySelector('[data-hora]');
+    if (inicial) inicial.textContent = hora();
+
+    pintarOpcion();
   })();
 </script>
 
