@@ -892,6 +892,42 @@
       body { padding-bottom: 4.2rem; }
     }
     @media (prefers-reduced-motion: reduce) { .cupos-dot { animation: none; } }
+
+    /* ── EL SISTEMA (recorrido de 5 pasos) ── */
+    .sistema-sec { background: var(--black); }
+    .sistema-pasos { list-style: none; counter-reset: none; display: grid; gap: .9rem; max-width: 820px; margin: 0; padding: 0; }
+    .sis-paso {
+      display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; align-items: start;
+      background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.3rem 1.5rem; transition: border-color .2s;
+    }
+    .sis-paso:hover { border-color: var(--border2); }
+    .sis-paso.destacado { border-color: var(--accent-brd); background: linear-gradient(180deg, rgba(59,130,246,.08), transparent 70%), var(--glass); }
+    .sis-n { font-size: 1.15rem; font-weight: 900; color: var(--blue); line-height: 1.4; min-width: 1.8rem; }
+    .sis-paso h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: .3rem; display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+    .sis-paso p { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+    .sis-tag {
+      font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      background: var(--grad); color: #fff; padding: .2rem .55rem; border-radius: 100px;
+    }
+    .sistema-nota {
+      max-width: 820px; margin: 1.6rem 0 0;
+      border-left: 2px solid var(--accent); padding: .9rem 0 .9rem 1.2rem;
+    }
+    .sistema-nota p { font-size: .9rem; color: var(--muted); line-height: 1.65; }
+    .sistema-nota strong { color: var(--white); }
+
+    /* ── LO QUE NECESITO DE TI ── */
+    .condiciones-sec { background: var(--grey1); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .cond-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; max-width: 860px; }
+    .cond-item { display: flex; gap: .8rem; align-items: flex-start; font-size: .92rem; line-height: 1.6; }
+    .cond-item::before { content: '→'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+    .cond-item span { color: var(--muted); }
+    .cond-item b { color: var(--white); display: block; margin-bottom: .15rem; font-weight: 600; }
+    @media (max-width: 768px) {
+      .cond-grid { grid-template-columns: 1fr; }
+      .sis-paso { grid-template-columns: 1fr; gap: .5rem; }
+    }
 </style>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -923,8 +959,8 @@
   <div class="hero-tex" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-tag">🏗️ Marketing para empresas de construcción · Chile</div>
-    <h1>Tu obra es tu<br/><em>mejor vendedor</em>.</h1>
-    <p class="hero-sub">Somos la agencia de <strong>marketing para empresas de construcción en Chile</strong>. Grabamos tus obras, las convertimos en contenido profesional y las ponemos frente a quien puede contratarte.</p>
+    <h1>Tu obra llena<br/>tu <em>agenda</em>.</h1>
+    <p class="hero-sub">Somos la agencia de <strong>marketing para empresas de construcción en Chile</strong>. Grabamos tus obras, las ponemos frente a quien puede contratarte y un agente de IA filtra cada consulta. A ti te llega la reunión, no el ruido.</p>
     <div class="hero-actions">
       <a href="#contacto" class="btn btn-grad">Quiero más proyectos</a>
       <a href="#planes" class="btn btn-outline">Ver los planes</a>
@@ -1087,16 +1123,52 @@
 </div>
 
 <!-- SERVICES -->
-<section class="services-sec" id="servicios" aria-labelledby="servicios-titulo">
+<section class="services-sec sistema-sec" id="servicios" aria-labelledby="servicios-titulo">
   <div class="sec-inner">
-    <div class="sec-tag">Qué hacemos</div>
-    <h2 id="servicios-titulo">Todo bajo <span class="accent">un mismo equipo</span></h2>
-    <p class="sec-sub">No coordinas con nadie más: producción, pauta y atención en un solo lugar.</p>
-    <div class="svc-grid">
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">01</div><h3>Grabamos tus obras</h3><p>Vamos a terreno con equipo profesional y convertimos tu trabajo real en contenido que vende.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">02</div><h3>Las ponemos frente a quien contrata</h3><p>Campañas en Meta segmentadas por zona y perfil: propietarios, inmobiliarias y empresas.</p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">03</div><h3>Atendemos tus cotizaciones 24/7</h3><p>Un agente de IA responde y califica por WhatsApp mientras tú estás en la obra. <a href="/agente-ia/" class="svc-link">Ver cómo funciona →</a></p></div>
-      <div class="svc-card"><div class="svc-dot"></div><div class="svc-num">04</div><h3>Sabes en qué se va cada peso</h3><p>Reportes claros: cuánto costó cada contacto y de qué anuncio llegó. Sin humo.</p></div>
+    <div class="sec-tag">El Sistema Faena</div>
+    <h2 id="servicios-titulo">De tu obra a una <span class="accent">reunión agendada</span></h2>
+    <p class="sec-sub">No vendemos videos sueltos ni campañas aisladas. El sistema acompaña a cada interesado desde que ve tu obra hasta que llega a tu agenda.</p>
+
+    <ol class="sistema-pasos">
+      <li class="sis-paso">
+        <div class="sis-n">01</div>
+        <div>
+          <h3>Producimos</h3>
+          <p>Vamos a tu obra con equipo profesional. Tu trabajo real es el mejor anuncio que puedes tener.</p>
+        </div>
+      </li>
+      <li class="sis-paso">
+        <div class="sis-n">02</div>
+        <div>
+          <h3>Captamos</h3>
+          <p>Campañas en Meta segmentadas por zona y por perfil de quien de verdad contrata: propietarios, inmobiliarias y empresas.</p>
+        </div>
+      </li>
+      <li class="sis-paso destacado">
+        <div class="sis-n">03</div>
+        <div>
+          <h3>Filtramos <span class="sis-tag">Automático</span></h3>
+          <p>El Agente IA responde cada consulta en segundos y pregunta lo que importa: tipo de obra, zona y plazo. Tú recibes solo a quien tiene un proyecto real.</p>
+        </div>
+      </li>
+      <li class="sis-paso destacado">
+        <div class="sis-n">04</div>
+        <div>
+          <h3>Hacemos seguimiento <span class="sis-tag">Automático</span></h3>
+          <p>Nadie se enfría esperando respuesta mientras tú estás en terreno. El agente insiste hasta que la persona decide.</p>
+        </div>
+      </li>
+      <li class="sis-paso">
+        <div class="sis-n">05</div>
+        <div>
+          <h3>Te llega la reunión</h3>
+          <p>Llegas a conversar con alguien que ya dijo qué obra necesita, dónde y para cuándo. Cerrar es lo único que queda de tu lado.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="sistema-nota">
+      <p>Los pasos 3 y 4 son los que la mayoría de las agencias te entrega como una guía para que los hagas tú. <strong>Acá los hace el Agente IA, solo, las 24 horas.</strong> <a href="/agente-ia/" class="svc-link">Ver cómo funciona →</a></p>
     </div>
   </div>
 </section>
@@ -1147,9 +1219,9 @@
 <!-- PLANES (resumen) -->
 <section class="planes-sec" id="planes">
   <div class="sec-inner">
-    <div class="sec-tag">Cómo trabajamos</div>
-    <h2>Dos caminos, según quién <span class="accent">produce el contenido</span></h2>
-    <p class="sec-sub">Armamos el plan según el tamaño de tu empresa y lo que necesites mostrar. Lo vemos en la reunión.</p>
+    <div class="sec-tag">Dentro del sistema</div>
+    <h2>Dos formas de <span class="accent">producir el contenido</span></h2>
+    <p class="sec-sub">El sistema es el mismo; cambia quién graba. Definimos cuál te conviene en la reunión.</p>
     <div class="lp-grid">
       <article class="lp-card">
         <div class="lp-name">Online</div>
@@ -1176,11 +1248,26 @@
   </div>
 </section>
 
+<!-- CONDICIONES -->
+<section class="condiciones-sec">
+  <div class="sec-inner">
+    <div class="sec-tag">Para que funcione</div>
+    <h2>Lo que necesitamos <span class="accent">de ti</span></h2>
+    <p class="sec-sub">El sistema trae las oportunidades hasta tu agenda. Estas cuatro cosas dependen de ti, y sin ellas no funciona.</p>
+    <div class="cond-grid">
+      <div class="cond-item"><span><b>Responder a quien llega</b>El agente filtra y agenda, pero la reunión la haces tú.</span></div>
+      <div class="cond-item"><span><b>Mantener la pauta activa</b>Cortar la inversión a mitad de camino reinicia el aprendizaje de las campañas.</span></div>
+      <div class="cond-item"><span><b>Darnos acceso a la obra</b>Sin poder grabar tu trabajo real, el contenido pierde lo que lo hace funcionar.</span></div>
+      <div class="cond-item"><span><b>Aprobar el contenido a tiempo</b>Te mandamos las piezas para revisión; si se quedan detenidas, se atrasa todo.</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- GARANTIAS -->
 <section class="guarantee-strip">
   <div class="guarantee-strip-inner">
     <h2>Trabajas sin riesgo</h2>
-    <p>Tres compromisos que asumimos por escrito desde el primer mes.</p>
+    <p>Nos hacemos responsables de lo que controlamos. No prometemos ventas: el cierre depende de ti y de tu mercado.</p>
     <div class="guarantee-strip-grid">
       <div class="gs-card">
         <div class="gs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
@@ -1203,6 +1290,13 @@
           <div class="gs-desc">Si no cumplimos el plazo acordado, se aplica un descuento automático en tu próxima factura.</div>
         </div>
       </div>
+      <div class="gs-card">
+        <div class="gs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
+        <div>
+          <div class="gs-title">Conversaciones calificadas o seguimos sin costo</div>
+          <div class="gs-desc">Si en el período acordado el sistema no genera conversaciones con proyectos reales, seguimos trabajando sin cobrarte hasta lograrlo.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1212,7 +1306,7 @@
   <div class="sec-inner">
     <div class="sec-tag">Contacto</div>
     <h2>Agenda tu <span class="accent">diagnóstico gratuito</span></h2>
-    <p>Elige el horario que más te acomode. Conversamos sobre tu negocio, tus objetivos y qué plan te conviene — sin compromiso.</p>
+    <p>Primero revisamos si hay demanda suficiente en tu zona y si el sistema tiene sentido para tu tipo de obra. <strong>Si no lo tiene, te lo decimos.</strong> La evaluación no tiene costo.</p>
     <div class="cupos-home">
       <span class="cupos-dot"></span>
       <p><strong>Tomamos solo 3 a 4 clientes nuevos al mes.</strong> Es la única forma de mantener la calidad de producción y que tu obra no sea una más en la fila.</p>
