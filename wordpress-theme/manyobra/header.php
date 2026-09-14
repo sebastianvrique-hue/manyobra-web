@@ -20,6 +20,16 @@
   src="https://www.facebook.com/tr?id=956034103850677&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G9JF1L3ZJD');
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Manyobra – Marketing y producción audiovisual para empresas de construcción en Chile. Grabamos tus obras y las convertimos en campañas que traen proyectos." />
   <meta name="robots" content="index, follow" />
@@ -38,5 +48,8 @@
   <meta name="twitter:description" content="Tu obra es tu mejor vendedor. Grabamos tus proyectos y los ponemos frente a quien puede contratarte." />
   <meta name="twitter:image" content="https://manyobra.cl/og-manyobra.jpg" />
   <?php wp_head(); ?>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0A0A0A" />
 </head>
 <body <?php body_class(); ?>>

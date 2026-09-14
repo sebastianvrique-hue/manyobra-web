@@ -595,3 +595,48 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .video-play:focus-
 .gs-title { font-size: .85rem; font-weight: 700; margin-bottom: .3rem; }
 .gs-desc { font-size: .78rem; color: #B0B0B0; line-height: 1.5; }
 @media (max-width: 768px) { .guarantee-strip-grid { grid-template-columns: 1fr; } }
+
+/* ── SECCIÓN DE DOLOR ── */
+.dolor-sec { background: var(--black); }
+.dolor-sec .svc-card h3 { color: var(--white); }
+
+/* ── ESCASEZ JUNTO AL CTA ── */
+.cupos-home {
+  display: flex; align-items: flex-start; gap: .8rem;
+  max-width: 620px; margin: 0 auto 2rem;
+  background: var(--glass); border: 1px solid var(--accent-brd);
+  border-radius: var(--radius); padding: 1rem 1.2rem; text-align: left;
+}
+.cupos-home p { font-size: .84rem; color: var(--muted); line-height: 1.6; margin: 0; }
+.cupos-home strong { color: var(--white); }
+.cupos-dot {
+  width: 9px; height: 9px; border-radius: 50%; background: #22C55E; flex-shrink: 0;
+  margin-top: .45rem; box-shadow: 0 0 10px rgba(34,197,94,.8);
+  animation: cuposPulse 2.4s ease-in-out infinite;
+}
+@keyframes cuposPulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+
+/* Enlace dentro de una tarjeta de servicio */
+.svc-link { color: var(--blue); text-decoration: none; font-weight: 600; white-space: nowrap; }
+.svc-link:hover { text-decoration: underline; }
+
+/* ── BARRA FIJA EN MÓVIL ── */
+.cta-movil { display: none; }
+@media (max-width: 768px) {
+  .cta-movil {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+    padding: .7rem 4.6rem .7rem 1rem;
+    background: rgba(0,0,0,.94); backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border2);
+  }
+  .cta-movil a {
+    flex: 1; text-align: center; background: var(--grad); color: #fff;
+    padding: .8rem 1rem; border-radius: 8px; font-weight: 700; font-size: .88rem;
+    text-decoration: none; box-shadow: 0 4px 18px rgba(59,130,246,.35);
+  }
+  /* el flotante de WhatsApp sube para no chocar con la barra */
+  .wa-float { bottom: 4.6rem; }
+  /* que la barra no tape el final de la página */
+  body { padding-bottom: 4.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { .cupos-dot { animation: none; } }

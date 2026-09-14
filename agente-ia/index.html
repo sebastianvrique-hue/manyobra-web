@@ -22,6 +22,16 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G9JF1L3ZJD');
+  </script>
+
+
   <!-- ── SEO ── -->
   <title>Agente IA para Constructoras | Atiende tu WhatsApp 24/7 | Manyobra</title>
   <meta name="description" content="Un agente de IA que atiende el WhatsApp de tu constructora 24/7: responde cotizaciones, califica a cada interesado y agenda la reunión mientras estás en obra." />
@@ -40,7 +50,7 @@
   <!-- ── FONTS ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -369,6 +379,9 @@
       .chat-phone, .cap-card, .vs-col, .use-card, .close-card, .problem-card { border: 1px solid #ccc !important; break-inside: avoid; }
     }
   </style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0A0A0A" />
 </head>
 <body>
 
@@ -747,6 +760,47 @@
       if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
     }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  })();
+  // ── Medición de conversiones ──
+  // Antes solo se registraba PageView y el agendamiento de Calendly: los enlaces a
+  // WhatsApp, que son el CTA principal, no disparaban nada. Sin esto no se puede
+  // optimizar campañas por la acción que la gente realmente hace.
+  (function () {
+    function evento(nombre, datos) {
+      if (window.fbq) fbq('track', nombre, datos || {});
+      if (window.gtag) gtag('event', nombre, datos || {});
+    }
+
+    // Un solo listener delegado para todos los enlaces a WhatsApp de la página.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+      if (!a) return;
+      var tarjeta = a.closest('.plan-card, .lp-card, .suelto-card, .agente-ia-card');
+      var nombre = tarjeta && tarjeta.querySelector('.plan-name, .lp-name, .suelto-name, .ai-name');
+      evento('Contact', {
+        content_name: nombre ? nombre.textContent.trim() : 'General',
+        content_category: document.body.dataset.pagina || location.pathname
+      });
+    }, true);
+
+    // Quien llega a comparar planes es intención alta: habilita el público de
+    // "miró planes y no agendó".
+    if (/\/planes\/?$/.test(location.pathname)) {
+      evento('ViewContent', { content_category: 'Planes' });
+    }
+
+    // Reproducir una pieza del portafolio es señal de interés real, no una visita suelta.
+    document.addEventListener('play', function (e) {
+      if (e.target.tagName !== 'VIDEO') return;
+      if (e.target.dataset.medido) return;
+      e.target.dataset.medido = '1';
+      var tarjeta = e.target.closest('.video-card');
+      var cliente = tarjeta && tarjeta.querySelector('.reel-client, .client-name');
+      evento('ViewContent', {
+        content_type: 'portafolio',
+        content_name: cliente ? cliente.textContent.trim() : 'video'
+      });
+    }, true);
   })();
 </script>
 

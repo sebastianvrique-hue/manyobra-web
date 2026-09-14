@@ -22,9 +22,19 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G9JF1L3ZJD');
+  </script>
+
+
   <!-- ── PRIMARY SEO ── -->
   <title>Planes para Empresas de Construcción | Manyobra</title>
-  <meta name="description" content="Planes de marketing y producción audiovisual para empresas de construcción. Planes online (editamos lo que nos envías) y con grabación en tu obra. Desde $50.000/mes." />
+  <meta name="description" content="Planes de marketing y producción audiovisual para empresas de construcción. Contenido, Meta Ads, página web y Agente IA. Agenda una reunión y armamos tu plan." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://manyobra.cl/planes/" />
 
@@ -40,7 +50,7 @@
   <!-- ── FONTS ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -786,7 +796,43 @@
       .plan-card.popular, .pilares-total, .agente-ia-card { background: #fff !important; border: 1px solid #ccc !important; break-inside: avoid; }
       .plan-basico-banner::before { display: none !important; }
     }
-  </style>
+      /* ── ICONOS SVG DE PLAN (reemplazan emojis) ── */
+    .plan-ico { display: inline-flex; width: 22px; height: 22px; vertical-align: -4px; margin-right: .45rem; color: var(--blue); }
+    .plan-ico.sm { width: 15px; height: 15px; vertical-align: -2px; margin-right: .35rem; }
+    .plan-ico svg { width: 100%; height: 100%; display: block; }
+
+    /* ── WhatsApp como alternativa secundaria al agendamiento ── */
+    .plan-wa {
+      display: block; text-align: center; margin: -.6rem 0 1.4rem;
+      font-size: .76rem; color: var(--muted); text-decoration: none;
+    }
+    .plan-wa:hover { color: var(--white); text-decoration: underline; }
+
+
+    /* ── BARRA FIJA EN MÓVIL ── */
+    .cta-movil { display: none; }
+    @media (max-width: 768px) {
+      .cta-movil {
+        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+        padding: .7rem 4.6rem .7rem 1rem;
+        background: rgba(0,0,0,.94); backdrop-filter: blur(12px);
+        border-top: 1px solid var(--border2);
+      }
+      .cta-movil a {
+        flex: 1; text-align: center; background: var(--grad); color: #fff;
+        padding: .8rem 1rem; border-radius: 8px; font-weight: 700; font-size: .88rem;
+        text-decoration: none; box-shadow: 0 4px 18px rgba(59,130,246,.35);
+      }
+      /* el flotante de WhatsApp sube para no chocar con la barra */
+      .wa-float { bottom: 4.6rem; }
+      /* que la barra no tape el final de la página */
+      body { padding-bottom: 4.2rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { .cupos-dot { animation: none; } }
+</style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0A0A0A" />
 </head>
 <body>
 
@@ -870,29 +916,25 @@
     <!-- ── SELECTOR DE FAMILIA ── -->
     <div class="billing-toggle-wrap">
       <div class="billing-toggle" role="group" aria-label="Elige el tipo de plan">
-        <button type="button" class="bt-btn active" data-familia="online">🖥️ Online</button>
-        <button type="button" class="bt-btn" data-familia="grabacion">🎬 Con grabación</button>
+        <button type="button" class="bt-btn active" data-familia="online"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>Online</button>
+        <button type="button" class="bt-btn" data-familia="grabacion"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7Z"/><path d="m2 7 3.5-4h4L6 7"/><path d="m10 7 3.5-4h4L14 7"/></svg></span>Con grabación</button>
       </div>
     </div>
 
     <!-- ══ FAMILIA: ONLINE ══ -->
     <div class="familia-block" id="familia-online">
-      <div class="familia-title">🖥️ Planes Online</div>
+      <div class="familia-title"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>Planes Online</div>
       <p class="familia-desc">Sin grabación: <strong>editamos el material que tú nos envías</strong> (fotos y videos de tu local o de tu celular) y lo convertimos en piezas profesionales.</p>
       <div class="pricing-grid">
 
         <div class="plan-card">
-          <div class="plan-name">🌱 Inicio</div>
-          <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+          <div class="plan-name"><span class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-3 2-5 5-5 0 3-2 5-5 5Z"/><path d="M12 15c0-2.5-1.8-4.5-4.5-4.5 0 2.5 1.8 4.5 4.5 4.5Z"/></svg></span>Inicio</div>
+          <div class="plan-onboard"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>Onboarding en 48-72 hrs</div>
           <p class="plan-tagline">Empieza a existir en redes con contenido profesional, sin invertir de más.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">50.000</span>
-            <span class="period">/mes + IVA</span>
-          </div>
-          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Inicio" target="_blank" rel="noopener" class="plan-cta cta-outline">
-            Quiero este plan →
+          <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=plan-inicio" target="_blank" rel="noopener" class="plan-cta cta-outline">
+            Agendar reunión →
           </a>
+          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Inicio" target="_blank" rel="noopener" class="plan-wa">o escríbenos por WhatsApp</a>
           <div class="plan-divider"></div>
           <ul class="plan-features">
             <div class="feat-label">Contenido</div>
@@ -906,17 +948,13 @@
 
         <div class="plan-card popular">
           <div class="plan-badge">⭐ Popular</div>
-          <div class="plan-name">⚡ Activo</div>
-          <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+          <div class="plan-name"><span class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span>Activo</div>
+          <div class="plan-onboard"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>Onboarding en 48-72 hrs</div>
           <p class="plan-tagline">Publica seguido y empieza a traer clientes con pauta gestionada.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">100.000</span>
-            <span class="period">/mes + IVA</span>
-          </div>
-          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Activo" target="_blank" rel="noopener" class="plan-cta cta-white">
-            Quiero este plan →
+          <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=plan-activo" target="_blank" rel="noopener" class="plan-cta cta-white">
+            Agendar reunión →
           </a>
+          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Activo" target="_blank" rel="noopener" class="plan-wa">o escríbenos por WhatsApp</a>
           <div class="plan-divider"></div>
           <ul class="plan-features">
             <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Inicio</strong>, más:</span></li>
@@ -929,17 +967,13 @@
         </div>
 
         <div class="plan-card">
-          <div class="plan-name">🚀 Online Pro</div>
-          <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+          <div class="plan-name"><span class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13c0-6 4-10 7-11 3 1 7 5 7 11l-3 4H8l-3-4Z"/><circle cx="12" cy="9" r="2"/><path d="M9 19v3M15 19v3"/></svg></span>Online Pro</div>
+          <div class="plan-onboard"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>Onboarding en 48-72 hrs</div>
           <p class="plan-tagline">Presencia diaria y anuncios que vuelven a buscar a quien ya te vio.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">150.000</span>
-            <span class="period">/mes + IVA</span>
-          </div>
-          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Online%20Pro" target="_blank" rel="noopener" class="plan-cta cta-outline">
-            Quiero este plan →
+          <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=plan-online-pro" target="_blank" rel="noopener" class="plan-cta cta-outline">
+            Agendar reunión →
           </a>
+          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Online%20Pro" target="_blank" rel="noopener" class="plan-wa">o escríbenos por WhatsApp</a>
           <div class="plan-divider"></div>
           <ul class="plan-features">
             <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Activo</strong>, más:</span></li>
@@ -957,22 +991,18 @@
 
     <!-- ══ FAMILIA: CON GRABACIÓN ══ -->
     <div class="familia-block" id="familia-grabacion">
-      <div class="familia-title">🎬 Planes con grabación</div>
+      <div class="familia-title"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7Z"/><path d="m2 7 3.5-4h4L6 7"/><path d="m10 7 3.5-4h4L14 7"/></svg></span>Planes con grabación</div>
       <p class="familia-desc">Vamos a tu obra con <strong>equipo de producción</strong>: cámara, dirección de arte y edición profesional. El contenido lo generamos nosotros.</p>
       <div class="pricing-grid">
 
         <div class="plan-card">
-          <div class="plan-name">🎬 Producción</div>
-          <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+          <div class="plan-name"><span class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7Z"/><path d="m2 7 3.5-4h4L6 7"/><path d="m10 7 3.5-4h4L14 7"/></svg></span>Producción</div>
+          <div class="plan-onboard"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>Onboarding en 48-72 hrs</div>
           <p class="plan-tagline">Nuestro equipo va a tu obra y graba contenido real, no de archivo.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">200.000</span>
-            <span class="period">/mes + IVA</span>
-          </div>
-          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Producci%C3%B3n" target="_blank" rel="noopener" class="plan-cta cta-outline">
-            Quiero este plan →
+          <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=plan-produccion" target="_blank" rel="noopener" class="plan-cta cta-outline">
+            Agendar reunión →
           </a>
+          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Producci%C3%B3n" target="_blank" rel="noopener" class="plan-wa">o escríbenos por WhatsApp</a>
           <div class="plan-divider"></div>
           <ul class="plan-features">
             <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Online Pro</strong>, más:</span></li>
@@ -985,17 +1015,13 @@
 
         <div class="plan-card popular">
           <div class="plan-badge">⭐ Popular</div>
-          <div class="plan-name">🎥 Producción Pro</div>
-          <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+          <div class="plan-name"><span class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10" rx="2"/><path d="m15 11 6-3v8l-6-3Z"/></svg></span>Producción Pro</div>
+          <div class="plan-onboard"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>Onboarding en 48-72 hrs</div>
           <p class="plan-tagline">Contenido propio y tu página web midiendo cada visita.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">350.000</span>
-            <span class="period">/mes + IVA</span>
-          </div>
-          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Producci%C3%B3n%20Pro" target="_blank" rel="noopener" class="plan-cta cta-white">
-            Quiero este plan →
+          <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=plan-produccion-pro" target="_blank" rel="noopener" class="plan-cta cta-white">
+            Agendar reunión →
           </a>
+          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Producci%C3%B3n%20Pro" target="_blank" rel="noopener" class="plan-wa">o escríbenos por WhatsApp</a>
           <div class="plan-divider"></div>
           <ul class="plan-features">
             <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Producción</strong>, más:</span></li>
@@ -1010,17 +1036,13 @@
 
         <div class="plan-card">
           <div class="plan-badge nuevo">🤖 Con Agente IA</div>
-          <div class="plan-name">🏆 Dominio</div>
-          <div class="plan-onboard">⏱️ Onboarding en 48-72 hrs</div>
+          <div class="plan-name"><span class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v6a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/><path d="M10 20h4M12 15v5"/></svg></span>Dominio</div>
+          <div class="plan-onboard"><span class="plan-ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span>Onboarding en 48-72 hrs</div>
           <p class="plan-tagline">El sistema completo, con un agente IA atendiendo tu WhatsApp 24/7.</p>
-          <div class="plan-price">
-            <span class="currency">$</span>
-            <span class="amount">500.000</span>
-            <span class="period">/mes + IVA</span>
-          </div>
-          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Dominio" target="_blank" rel="noopener" class="plan-cta cta-outline">
-            Quiero este plan →
+          <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=plan-dominio" target="_blank" rel="noopener" class="plan-cta cta-outline">
+            Agendar reunión →
           </a>
+          <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20Plan%20Dominio" target="_blank" rel="noopener" class="plan-wa">o escríbenos por WhatsApp</a>
           <div class="plan-divider"></div>
           <ul class="plan-features">
             <li class="feat-inherit"><span class="check">✓</span><span><strong>Todo lo del Plan Producción Pro</strong>, más:</span></li>
@@ -1042,7 +1064,7 @@
     <div class="custom-band">
       <p>¿Tienes <strong>varias obras en paralelo</strong>, necesitas más volumen de contenido o vas a lanzar un proyecto grande? Armamos un <strong>proyecto a medida</strong> con el alcance que requieras.</p>
       <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20necesito%20un%20proyecto%20a%20medida" target="_blank" rel="noopener" class="plan-cta cta-outline" style="margin-bottom:0; white-space:nowrap;">
-        Desde $500.000/mes →
+        Hablemos de tu proyecto →
       </a>
     </div>
 
@@ -1143,6 +1165,11 @@
   </div>
 </footer>
 
+<!-- CTA FIJO EN MÓVIL -->
+<div class="cta-movil">
+  <a href="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?utm_source=web&utm_content=barra-movil" target="_blank" rel="noopener">Agendar reunión →</a>
+</div>
+
 <!-- WA FLOAT -->
 <a href="https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20info%20sobre%20los%20planes" target="_blank" rel="noopener" class="wa-float" aria-label="Escríbenos por WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1196,6 +1223,47 @@
       if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
     }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  })();
+  // ── Medición de conversiones ──
+  // Antes solo se registraba PageView y el agendamiento de Calendly: los enlaces a
+  // WhatsApp, que son el CTA principal, no disparaban nada. Sin esto no se puede
+  // optimizar campañas por la acción que la gente realmente hace.
+  (function () {
+    function evento(nombre, datos) {
+      if (window.fbq) fbq('track', nombre, datos || {});
+      if (window.gtag) gtag('event', nombre, datos || {});
+    }
+
+    // Un solo listener delegado para todos los enlaces a WhatsApp de la página.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+      if (!a) return;
+      var tarjeta = a.closest('.plan-card, .lp-card, .suelto-card, .agente-ia-card');
+      var nombre = tarjeta && tarjeta.querySelector('.plan-name, .lp-name, .suelto-name, .ai-name');
+      evento('Contact', {
+        content_name: nombre ? nombre.textContent.trim() : 'General',
+        content_category: document.body.dataset.pagina || location.pathname
+      });
+    }, true);
+
+    // Quien llega a comparar planes es intención alta: habilita el público de
+    // "miró planes y no agendó".
+    if (/\/planes\/?$/.test(location.pathname)) {
+      evento('ViewContent', { content_category: 'Planes' });
+    }
+
+    // Reproducir una pieza del portafolio es señal de interés real, no una visita suelta.
+    document.addEventListener('play', function (e) {
+      if (e.target.tagName !== 'VIDEO') return;
+      if (e.target.dataset.medido) return;
+      e.target.dataset.medido = '1';
+      var tarjeta = e.target.closest('.video-card');
+      var cliente = tarjeta && tarjeta.querySelector('.reel-client, .client-name');
+      evento('ViewContent', {
+        content_type: 'portafolio',
+        content_name: cliente ? cliente.textContent.trim() : 'video'
+      });
+    }, true);
   })();
 </script>
 
