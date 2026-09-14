@@ -46,6 +46,133 @@
   </div>
 </header>
 
+<!-- CLIENTES -->
+<section class="clientes-strip" aria-label="Clientes">
+  <div class="clientes-inner">
+    <div class="clientes-label">Empresas que ya confían en nosotros</div>
+    <ul class="clientes-lista">
+      <li>JN Piscinas</li>
+      <li>Áridos Lomas Blancas</li>
+      <li>Landspace</li>
+      <li>CJ1</li>
+      <li>Obras Menores</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PORTAFOLIO -->
+<section class="reel-sec" id="portafolio">
+  <div class="sec-inner">
+    <div class="sec-tag">Portafolio</div>
+    <h2>Contenido que <span class="accent">ya produjimos</span></h2>
+    <p class="sec-sub">Piezas reales que produjimos para las campañas de clientes del rubro.</p>
+    <div class="reel-grid">
+
+      <!-- Para sumar una pieza: copia este bloque, cambia src, poster, cliente y rubro,
+           y deja el .mp4 comprimido junto a su .jpg en testimonios/reels/ -->
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/jn-piscinas.mp4" poster="/testimonios/reels/jn-piscinas.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Piscinas</div>
+          <div class="reel-client">JN Piscinas</div>
+          <div class="reel-desc">Pieza para campaña de captación.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/landspace-1.mp4" poster="/testimonios/reels/landspace-1.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Arquitectura y construcción</div>
+          <div class="reel-client">Landspace</div>
+          <div class="reel-desc">Pieza para campaña de captación de proyectos.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/aridos-lomas.mp4" poster="/testimonios/reels/aridos-lomas.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Áridos</div>
+          <div class="reel-client">Áridos Lomas Blancas</div>
+          <div class="reel-desc">Pieza sobre operación y despacho de material.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/cj1.mp4" poster="/testimonios/reels/cj1.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Construcción</div>
+          <div class="reel-client">CJ1</div>
+          <div class="reel-desc">Pieza para campaña en redes.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/landspace-2.mp4" poster="/testimonios/reels/landspace-2.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Arquitectura y construcción</div>
+          <div class="reel-client">Landspace</div>
+          <div class="reel-desc">Segunda entrega mensual de contenido.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/aridos-agosto.mp4" poster="/testimonios/reels/aridos-agosto.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Áridos</div>
+          <div class="reel-client">Áridos Lomas Blancas</div>
+          <div class="reel-desc">Entrega mensual de contenido para redes.</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrap">
+          <video src="/testimonios/reels/pedro-campos.mp4" poster="/testimonios/reels/pedro-campos.jpg" preload="none" playsinline></video>
+          <div class="video-play" onclick="playVideo(this)">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="reel-rubro">Obras Menores</div>
+          <div class="reel-client">Pedro Campos</div>
+          <div class="reel-desc">Caso extendido · 3:36 min</div>
+        </div>
+      </div>
+
+    </div>
+    <p class="reel-note">Los videos se cargan solo cuando los reproduces, para no consumir tus datos de más.</p>
+  </div>
+</section>
+
 <!-- STATS -->
 <div class="stats">
   <div class="stats-grid">
@@ -86,155 +213,6 @@
       <div class="process-step"><div class="p-num">03</div><h3>Grabamos en terreno</h3><p>Vamos a tu obra, producimos el material y activamos las campañas.</p></div>
       <div class="process-step"><div class="p-num">04</div><h3>Reportes y escalado</h3><p>Ajustamos lo que funciona y escalamos hacia el tipo de proyecto que más te conviene.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- PROFILE -->
-<section class="profile-sec" id="perfil">
-  <div class="sec-inner">
-    <div class="sec-tag">El equipo</div>
-    <h2>Un <span class="accent">equipo</span> detrás de tu marca</h2>
-    <p class="sec-sub">A Manyobra la lidero yo, pero nunca trabajas con una sola persona.</p>
-    <div class="founder-card">
-      <div class="founder-head">
-        <div class="founder-avatar" aria-hidden="true">S</div>
-        <div>
-          <div class="profile-name">Hola, soy <span class="accent">Sebastián</span></div>
-          <div class="profile-role">Fundador y director · Meta Ads &amp; Producción Audiovisual</div>
-        </div>
-      </div>
-      <div class="founder-cols">
-        <div>
-          <p class="profile-bio">Llevo más de 4 años ayudando a negocios chilenos a crecer con publicidad en Meta. Combino estrategia con producción audiovisual, porque los mejores resultados llegan cuando el contenido y la pauta trabajan juntos.</p>
-          <p class="profile-bio">Pero Manyobra no es una sola persona: según lo que pide cada proyecto sumo a especialistas de confianza —edición de video, diseño y gestión de pauta— para que cada área la trabaje alguien que de verdad sabe. Yo dirijo, coordino y respondo por todo: tú tienes un solo interlocutor y, detrás, un equipo.</p>
-        </div>
-        <div class="founder-side">
-          <div class="profile-nums">
-            <div class="pn"><div class="pn-val">+200</div><div class="pn-lbl">Campañas</div></div>
-            <div class="pn"><div class="pn-val">+50</div><div class="pn-lbl">Clientes</div></div>
-            <div class="pn"><div class="pn-val">4+ años</div><div class="pn-lbl">Meta Ads</div></div>
-          </div>
-          <div class="profile-tags">
-            <span class="ptag">Meta Ads</span><span class="ptag">Facebook Ads</span>
-            <span class="ptag">Instagram Ads</span><span class="ptag">Producción Video</span>
-            <span class="ptag">WhatsApp Bot</span><span class="ptag">CRM</span>
-          </div>
-          <div class="profile-socials">
-          <a href="https://wa.me/56956747949" target="_blank" rel="noopener" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-          </a>
-          <a href="https://www.instagram.com/manyobra.cl/" target="_blank" rel="noopener" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            @manyobra.cl
-          </a>
-          <a href="https://www.instagram.com/sebavega_mk/" target="_blank" rel="noopener" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            @sebavega_mk
-          </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTAFOLIO -->
-<section class="reel-sec" id="portafolio">
-  <div class="sec-inner">
-    <div class="sec-tag">Portafolio</div>
-    <h2>Contenido que <span class="accent">ya produjimos</span></h2>
-    <p class="sec-sub">Piezas reales que produjimos para las campañas de clientes del rubro.</p>
-    <div class="reel-grid">
-
-      <!-- Para sumar una pieza: copia este bloque, cambia src, poster, cliente y rubro,
-           y deja el .mp4 comprimido junto a su .jpg en testimonios/reels/ -->
-      <div class="video-card">
-        <div class="video-wrap">
-          <video src="/testimonios/reels/jn-piscinas.mp4" poster="/testimonios/reels/jn-piscinas.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
-            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="video-info">
-          <div class="reel-rubro">Piscinas</div>
-          <div class="reel-client">JN Piscinas</div>
-          <div class="reel-desc">Pieza para campaña de captación.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-wrap">
-          <video src="/testimonios/reels/landspace-1.mp4" poster="/testimonios/reels/landspace-1.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
-            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="video-info">
-          <div class="reel-rubro">Paisajismo</div>
-          <div class="reel-client">Landspace</div>
-          <div class="reel-desc">Pieza para campaña de paisajismo.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-wrap">
-          <video src="/testimonios/reels/aridos-lomas.mp4" poster="/testimonios/reels/aridos-lomas.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
-            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="video-info">
-          <div class="reel-rubro">Áridos</div>
-          <div class="reel-client">Áridos Lomas Blancas</div>
-          <div class="reel-desc">Pieza sobre operación y despacho de material.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-wrap">
-          <video src="/testimonios/reels/cj1.mp4" poster="/testimonios/reels/cj1.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
-            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="video-info">
-          <div class="reel-rubro">Construcción</div>
-          <div class="reel-client">CJ1</div>
-          <div class="reel-desc">Pieza para campaña en redes.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-wrap">
-          <video src="/testimonios/reels/landspace-2.mp4" poster="/testimonios/reels/landspace-2.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
-            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="video-info">
-          <div class="reel-rubro">Paisajismo</div>
-          <div class="reel-client">Landspace</div>
-          <div class="reel-desc">Segunda entrega mensual de contenido.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-wrap">
-          <video src="/testimonios/reels/aridos-agosto.mp4" poster="/testimonios/reels/aridos-agosto.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
-            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-        </div>
-        <div class="video-info">
-          <div class="reel-rubro">Áridos</div>
-          <div class="reel-client">Áridos Lomas Blancas</div>
-          <div class="reel-desc">Entrega mensual de contenido para redes.</div>
-        </div>
-      </div>
-
-    </div>
-    <p class="reel-note">Los videos se cargan solo cuando los reproduces, para no consumir tus datos de más.</p>
   </div>
 </section>
 
@@ -324,6 +302,56 @@
   </div>
 </section>
 
+<!-- PROFILE -->
+<section class="profile-sec" id="perfil">
+  <div class="sec-inner">
+    <div class="sec-tag">El equipo</div>
+    <h2>Un <span class="accent">equipo</span> detrás de tu marca</h2>
+    <p class="sec-sub">A Manyobra la lidero yo, pero nunca trabajas con una sola persona.</p>
+    <div class="founder-card">
+      <div class="founder-head">
+        <div class="founder-avatar" aria-hidden="true">S</div>
+        <div>
+          <div class="profile-name">Hola, soy <span class="accent">Sebastián</span></div>
+          <div class="profile-role">Fundador y director · Meta Ads &amp; Producción Audiovisual</div>
+        </div>
+      </div>
+      <div class="founder-cols">
+        <div>
+          <p class="profile-bio">Llevo más de 4 años ayudando a negocios chilenos a crecer con publicidad en Meta. Combino estrategia con producción audiovisual, porque los mejores resultados llegan cuando el contenido y la pauta trabajan juntos.</p>
+          <p class="profile-bio">Pero Manyobra no es una sola persona: según lo que pide cada proyecto sumo a especialistas de confianza —edición de video, diseño y gestión de pauta— para que cada área la trabaje alguien que de verdad sabe. Yo dirijo, coordino y respondo por todo: tú tienes un solo interlocutor y, detrás, un equipo.</p>
+        </div>
+        <div class="founder-side">
+          <div class="profile-nums">
+            <div class="pn"><div class="pn-val">+200</div><div class="pn-lbl">Campañas</div></div>
+            <div class="pn"><div class="pn-val">+50</div><div class="pn-lbl">Clientes</div></div>
+            <div class="pn"><div class="pn-val">4+ años</div><div class="pn-lbl">Meta Ads</div></div>
+          </div>
+          <div class="profile-tags">
+            <span class="ptag">Meta Ads</span><span class="ptag">Facebook Ads</span>
+            <span class="ptag">Instagram Ads</span><span class="ptag">Producción Video</span>
+            <span class="ptag">WhatsApp Bot</span><span class="ptag">CRM</span>
+          </div>
+          <div class="profile-socials">
+          <a href="https://wa.me/56956747949" target="_blank" rel="noopener" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/manyobra.cl/" target="_blank" rel="noopener" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @manyobra.cl
+          </a>
+          <a href="https://www.instagram.com/sebavega_mk/" target="_blank" rel="noopener" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @sebavega_mk
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq-sec" id="faq">
   <div class="sec-inner">
@@ -337,6 +365,37 @@
       <details><summary>¿Cuánto tiempo tardan en verse resultados?</summary><div class="faq-body">El algoritmo de Meta necesita entre 7 y 14 días para optimizar. Los primeros resultados concretos suelen verse al final del primer mes de campaña.</div></details>
       <details><summary>¿Ustedes manejan el dinero de mi pauta?</summary><div class="faq-body">No. La pauta se carga directamente a tu cuenta Meta. Solo cobramos por gestión y estrategia. Tú tienes control total.</div></details>
       <details><summary>¿Tienen contrato de permanencia?</summary><div class="faq-body">No. Trabajamos mes a mes con aviso previo de 15 días.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIAS -->
+<section class="guarantee-strip">
+  <div class="guarantee-strip-inner">
+    <h2>Trabajas sin riesgo</h2>
+    <p>Tres compromisos que asumimos por escrito desde el primer mes.</p>
+    <div class="guarantee-strip-grid">
+      <div class="gs-card">
+        <div class="gs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div>
+          <div class="gs-title">Satisfacción garantizada en 15 días</div>
+          <div class="gs-desc">Si en los primeros 15 días no estás conforme con el trabajo, te devolvemos lo pagado.</div>
+        </div>
+      </div>
+      <div class="gs-card">
+        <div class="gs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7Z"/><path d="M9 7V4h6v3"/><path d="M9 13h6"/></svg></div>
+        <div>
+          <div class="gs-title">El contenido es tuyo para siempre</div>
+          <div class="gs-desc">Todo el material que producimos queda en tu poder, aunque dejes de trabajar con nosotros.</div>
+        </div>
+      </div>
+      <div class="gs-card">
+        <div class="gs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div>
+          <div class="gs-title">Entrega en plazo o descuento automático</div>
+          <div class="gs-desc">Si no cumplimos el plazo acordado, se aplica un descuento automático en tu próxima factura.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

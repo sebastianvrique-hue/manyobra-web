@@ -79,7 +79,7 @@ h1 em { font-style: normal; color: var(--blue); }
 .btn-outline:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.04); }
 .btn-blue { background: var(--blue); color: var(--white); box-shadow: 0 0 24px rgba(0,92,255,0.35); }
 .btn-blue:hover { background: #0050E0; transform: translateY(-2px); box-shadow: 0 4px 32px rgba(0,92,255,0.5); }
-.hero-note { margin-top: 1.2rem; font-size: .73rem; color: var(--grey5); }
+.hero-note { margin-top: 1.2rem; font-size: .73rem; color: var(--muted); text-shadow: 0 1px 3px rgba(0,0,0,.7); }
 
 .divider { height: 1px; background: var(--border); }
 
@@ -535,15 +535,19 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .video-play:focus-
 .hero-video {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; z-index: 0; pointer-events: none;
-  opacity: .38; filter: grayscale(.35);
+  opacity: .72; filter: grayscale(.12) contrast(1.05);
 }
 /* El oscurecido va en CSS, no quemado en el archivo: el texto se lee aunque el video no cargue */
+/* El oscurecido se concentra detrás del texto, no sobre todo el cuadro:
+   así la obra se ve y el titular igual tiene fondo sólido donde apoyarse. */
 .hero-scrim {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.75) 55%, var(--black) 100%),
-    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(0,0,0,.35), transparent 75%);
+    linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.30) 35%, rgba(0,0,0,.55) 80%, var(--black) 100%),
+    radial-gradient(ellipse 55% 45% at 50% 48%, rgba(0,0,0,.55), transparent 70%);
 }
+/* Los orbes no deben competir con la imagen */
+.hero .hero-bg::before, .hero .hero-bg::after { opacity: .45; }
 .hero-bg, .hero-tex { z-index: 2; }
 .hero-inner { position: relative; z-index: 3; }
 
@@ -552,3 +556,42 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .video-play:focus-
   .hero-video { display: none; }
   .hero { background-image: url('/assets/hero.jpg'); background-size: cover; background-position: center; }
 }
+
+/* ── FRANJA DE CLIENTES ── */
+.clientes-strip { background: var(--black); border-bottom: 1px solid var(--border); padding: 2.4rem 6%; }
+.clientes-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.clientes-label {
+  font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--grey5); margin-bottom: 1.2rem;
+}
+.clientes-lista {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: .9rem 2.2rem; list-style: none; padding: 0; margin: 0;
+}
+.clientes-lista li {
+  font-size: .95rem; font-weight: 700; letter-spacing: .04em;
+  color: var(--muted); white-space: nowrap; transition: color .2s;
+}
+.clientes-lista li:hover { color: var(--white); }
+.clientes-lista li + li::before {
+  content: ''; display: inline-block; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--grey4); margin-right: 2.2rem; vertical-align: middle;
+}
+@media (max-width: 640px) {
+  .clientes-lista { gap: .7rem 1.3rem; }
+  .clientes-lista li { font-size: .82rem; }
+  .clientes-lista li + li::before { margin-right: 1.3rem; }
+}
+
+/* ── GARANTÍAS (portadas desde /planes/) ── */
+.guarantee-strip { background: var(--grey1); border-top: 1px solid var(--border); padding: 60px 6%; }
+.guarantee-strip-inner { max-width: 900px; margin: 0 auto; }
+.guarantee-strip-inner h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: .4rem; }
+.guarantee-strip-inner p { font-size: .85rem; color: var(--muted); margin-bottom: 2rem; }
+.guarantee-strip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.gs-card { display: flex; align-items: flex-start; gap: .9rem; background: var(--grey2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
+.gs-icon { width: 22px; height: 22px; flex-shrink: 0; color: var(--blue); }
+.gs-icon svg { width: 100%; height: 100%; display: block; }
+.gs-title { font-size: .85rem; font-weight: 700; margin-bottom: .3rem; }
+.gs-desc { font-size: .78rem; color: #B0B0B0; line-height: 1.5; }
+@media (max-width: 768px) { .guarantee-strip-grid { grid-template-columns: 1fr; } }
