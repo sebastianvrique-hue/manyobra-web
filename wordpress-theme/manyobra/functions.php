@@ -9,11 +9,11 @@ function manyobra_enqueue() {
     );
     wp_enqueue_style('manyobra-main',
         get_template_directory_uri() . '/assets/main.css',
-        ['google-fonts'], '2.5'
+        ['google-fonts'], '2.6'
     );
     wp_enqueue_script('manyobra-main',
         get_template_directory_uri() . '/assets/main.js',
-        [], '2.5', true
+        [], '2.6', true
     );
 }
 add_action('wp_enqueue_scripts', 'manyobra_enqueue');
