@@ -3,6 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta Pixel. main.js dispara ViewContent en esta ruta para construir el
+       publico de "miro los planes y no agendo", que es el mas valioso del
+       sitio. Sin el Pixel aqui ese codigo corria sin crear nada. -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '956034103850677');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=956034103850677&ev=PageView&noscript=1" /></noscript>
+
   <meta name="robots" content="noindex, nofollow" />
   <title>Planes Manyobra · Construcción</title>
 
@@ -188,6 +206,48 @@
     <h2>Los caminos <span class="accent">del sistema</span></h2>
     <p class="lead" style="margin-bottom:2.2rem;">Valores mensuales en pesos chilenos, no incluyen IVA.</p>
 
+    <div class="plan destacado">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Completo</span><span class="etiqueta">Recomendado</span></div>
+        <p class="plan-para">El único que incluye el Agente IA atendiendo tu WhatsApp.</p>
+        <ul class="entregables">
+          <li>Contenido, pauta, retargeting y community management</li>
+          <li><b>Agente IA en tu WhatsApp:</b> responde en segundos y pregunta tipo de obra, zona y plazo</li>
+          <li><b>Seguimiento automático</b> a quien no contesta, para que nadie se enfríe mientras estás en terreno</li>
+          <li>Reporte quincenal con los contactos que traían proyecto real</li>
+        </ul>
+        <div class="ritmo"><b>Tu mes:</b> entregas semanales, el agente atendiendo día y noche, y reporte cada 15 días.</div>
+      </div>
+      <div class="precio"><span class="n">$200.000</span><span class="p">/mes + IVA</span></div>
+    </div>
+    <div class="plan">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Online Pro</span><span class="etiqueta">Online</span></div>
+        <p class="plan-para">Presencia diaria y anuncios que vuelven a buscar a quien ya te vio.</p>
+        <ul class="entregables">
+          <li>Todo lo de Completo, menos el Agente IA:</li>
+          <li>5 videos + 7 imágenes + historias al mes</li>
+          <li>Retargeting a quienes ya interactuaron</li>
+          <li>Community Manager + reporte quincenal</li>
+        </ul>
+        <div class="ritmo"><b>Tu mes:</b> Entregas semanales, pauta con retargeting y reporte cada 15 días.</div>
+      </div>
+      <div class="precio"><span class="n">$150.000</span><span class="p">/mes + IVA</span></div>
+    </div>
+    <div class="plan">
+      <div>
+        <div class="plan-top"><span class="plan-nombre">Activo</span><span class="etiqueta">Online</span></div>
+        <p class="plan-para">Publicar seguido y empezar a traer obras con pauta.</p>
+        <ul class="entregables">
+          <li>Todo lo de Online Pro, menos retargeting y community:</li>
+          <li>3 videos + 5 imágenes al mes</li>
+          <li>Meta Ads gestionados con campañas de conversión</li>
+          <li>Segmentación por zona, intereses y comportamiento</li>
+        </ul>
+        <div class="ritmo"><b>Tu mes:</b> Entregas quincenales, pauta activa todo el mes y reporte al cierre.</div>
+      </div>
+      <div class="precio"><span class="n">$100.000</span><span class="p">/mes + IVA</span></div>
+    </div>
     <div class="plan">
       <div>
         <div class="plan-top"><span class="plan-nombre">Inicio</span><span class="etiqueta">Online</span></div>
@@ -203,54 +263,9 @@
       <div class="precio"><span class="n">$50.000</span><span class="p">/mes + IVA</span></div>
     </div>
 
-    <div class="plan">
-      <div>
-        <div class="plan-top"><span class="plan-nombre">Activo</span><span class="etiqueta">Online</span></div>
-        <p class="plan-para">Publicar seguido y empezar a traer obras con pauta.</p>
-        <ul class="entregables">
-          <li>Todo lo de Inicio, más:</li>
-          <li>3 videos + 5 imágenes al mes</li>
-          <li>Meta Ads gestionados con campañas de conversión</li>
-          <li>Segmentación por zona, intereses y comportamiento</li>
-        </ul>
-        <div class="ritmo"><b>Tu mes:</b> Entregas quincenales, pauta activa todo el mes y reporte al cierre.</div>
-      </div>
-      <div class="precio"><span class="n">$100.000</span><span class="p">/mes + IVA</span></div>
-    </div>
-
-    <div class="plan">
-      <div>
-        <div class="plan-top"><span class="plan-nombre">Online Pro</span><span class="etiqueta">Online</span></div>
-        <p class="plan-para">Presencia diaria y anuncios que vuelven a buscar a quien ya te vio.</p>
-        <ul class="entregables">
-          <li>Todo lo de Activo, más:</li>
-          <li>5 videos + 7 imágenes + historias al mes</li>
-          <li>Retargeting a quienes ya interactuaron</li>
-          <li>Community Manager + reporte quincenal</li>
-        </ul>
-        <div class="ritmo"><b>Tu mes:</b> Entregas semanales, pauta con retargeting y reporte cada 15 días.</div>
-      </div>
-      <div class="precio"><span class="n">$150.000</span><span class="p">/mes + IVA</span></div>
-    </div>
-
-    <div class="plan destacado">
-      <div>
-        <div class="plan-top"><span class="plan-nombre">Producción</span><span class="etiqueta">Recomendado</span></div>
-        <p class="plan-para">Nuestro equipo va a tu obra y graba contenido real.</p>
-        <ul class="entregables">
-          <li>Todo lo de Online Pro, más:</li>
-          <li>1 sesión de grabación al mes con nuestro equipo</li>
-          <li>6 videos + 6 imágenes producidos por nosotros</li>
-          <li>Dirección de arte y guion estratégico</li>
-        </ul>
-        <div class="ritmo"><b>Tu mes:</b> 1 día de grabación en tu obra, entregas semanales y reporte cada 15 días.</div>
-      </div>
-      <div class="precio"><span class="n">$200.000</span><span class="p">/mes + IVA</span></div>
-    </div>
-
     <div class="mayores">
-      <b>¿Varias obras en paralelo o un proyecto grande?</b>
-      <span>Sobre este nivel trabajamos a medida: más sesiones de grabación, página web con Píxel y el Agente IA atendiendo tu WhatsApp. Lo cotizamos según el alcance real, no con un plan cerrado.</span>
+      <b>Grabación en terreno — se cotiza aparte</b>
+      <span>Ningún plan la incluye. Cuando el proyecto lo amerita vamos con equipo de producción a tu obra, y lo cotizamos según la jornada y el alcance. También trabajamos a medida si tienes varias obras en paralelo o necesitas página web con Píxel.</span>
     </div>
 
     <p class="legal">
