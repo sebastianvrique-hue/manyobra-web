@@ -9,11 +9,11 @@ function manyobra_enqueue() {
     );
     wp_enqueue_style('manyobra-main',
         get_template_directory_uri() . '/assets/main.css',
-        ['google-fonts'], '3.0'
+        ['google-fonts'], '3.1'
     );
     wp_enqueue_script('manyobra-main',
         get_template_directory_uri() . '/assets/main.js',
-        [], '3.0', true
+        [], '3.1', true
     );
 }
 add_action('wp_enqueue_scripts', 'manyobra_enqueue');
@@ -40,3 +40,56 @@ function manyobra_limpiar_cola() {
     }
 }
 add_action('wp_enqueue_scripts', 'manyobra_limpiar_cola', PHP_INT_MAX);
+
+/**
+ * Formulario de diagnostico por escrito.
+ *
+ * Contexto que importa: el formulario anterior de este sitio validaba los
+ * campos, mostraba "Mensaje enviado. Te contactamos pronto." y NO enviaba
+ * nada a ninguna parte --sin fetch, sin action, sin mailto--. Hubo gente
+ * creyendo que habia escrito. Por eso aca:
+ *
+ *   - El envio se procesa en el servidor (admin-post), no en el navegador.
+ *   - El exito solo se muestra si wp_mail() devolvio true.
+ *   - Si falla, se dice que fallo y se ofrece WhatsApp. Nunca un falso "listo".
+ *
+ * Funciona sin JavaScript: es un POST normal que redirige con un parametro.
+ */
+function manyobra_recibir_diagnostico() {
+    $volver = home_url('/#contacto');
+
+    // Nonce: sin esto cualquiera puede postear desde fuera
+    if (!isset($_POST['manyobra_nonce']) ||
+        !wp_verify_nonce($_POST['manyobra_nonce'], 'manyobra_diagnostico')) {
+        wp_safe_redirect($volver . '&diag=error'); exit;
+    }
+
+    // Trampa para bots: campo oculto que una persona nunca rellena
+    if (!empty($_POST['sitio_web'])) { wp_safe_redirect($volver . '&diag=ok'); exit; }
+
+    $email = sanitize_email(wp_unslash($_POST['email'] ?? ''));
+    $zona  = sanitize_text_field(wp_unslash($_POST['zona'] ?? ''));
+    $obra  = sanitize_text_field(wp_unslash($_POST['obra'] ?? ''));
+    $tel   = sanitize_text_field(wp_unslash($_POST['telefono'] ?? ''));
+
+    if (!is_email($email) || $zona === '') {
+        wp_safe_redirect($volver . '&diag=invalido'); exit;
+    }
+
+    $para    = get_option('admin_email');
+    $asunto  = 'Diagnostico solicitado: ' . $zona . ' (' . ($obra ?: 'sin especificar') . ')';
+    $cuerpo  = "Alguien pidio el diagnostico por escrito desde manyobra.cl\n\n"
+             . "Email:    $email\n"
+             . "Telefono: " . ($tel ?: '-') . "\n"
+             . "Zona:     $zona\n"
+             . "Obra:     " . ($obra ?: '-') . "\n\n"
+             . "Responder con los dos numeros: alcance de la zona y valor de obra promedio.\n";
+    $cabeceras = ['Content-Type: text/plain; charset=UTF-8', 'Reply-To: ' . $email];
+
+    $enviado = wp_mail($para, $asunto, $cuerpo, $cabeceras);
+
+    wp_safe_redirect($volver . ($enviado ? '&diag=ok' : '&diag=error'));
+    exit;
+}
+add_action('admin_post_nopriv_manyobra_diagnostico', 'manyobra_recibir_diagnostico');
+add_action('admin_post_manyobra_diagnostico',        'manyobra_recibir_diagnostico');
