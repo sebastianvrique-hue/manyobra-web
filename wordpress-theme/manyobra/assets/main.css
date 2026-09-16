@@ -29,6 +29,7 @@
   --concrete: #F3EFE8;
   --amber: #F59E0B;
   --orange: #EA580C;
+  --steel: #1E3A5F;
 
   /* Escala tipografica: 7 pasos con saltos perceptibles.
      Antes habia 29 tamanos distintos, 13 de ellos entre .7 y .95rem
@@ -699,3 +700,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .video-play:focus-
 .stats-footer .stat-n { font-size: var(--t-xl); }
 .cuenta-obra { max-width: 480px; margin: .9rem auto 0; font-size: var(--t-base);
   color: var(--ink); font-weight: 600; }
+
+/* ── Accesibilidad ── */
+/* Los botones de play eran <div onclick>: sin foco, sin Enter, invisibles
+   para un lector de pantalla. Ahora son <button> y necesitan reset visual. */
+button.video-play { border: 0; background: none; padding: 0; font: inherit; cursor: pointer; }
+.link-legal { border: 0; background: none; padding: 0; font: inherit; cursor: pointer;
+  color: inherit; text-decoration: underline; }
+
+/* Habia una sola regla :focus en 398. Quien navega con teclado no veia donde estaba. */
+a:focus-visible, button:focus-visible, summary:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--steel, #1E3A5F);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Sobre la seccion oscura y sobre video el acero no se ve: se usa el ambar */
+.guarantee-strip :focus-visible, .video-wrap :focus-visible { outline-color: var(--amber, #F59E0B); }
