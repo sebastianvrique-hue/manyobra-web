@@ -84,9 +84,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/jn-piscinas.mp4" data-poster="/testimonios/reels/jn-piscinas.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="reel-rubro">Piscinas</div>
@@ -98,9 +98,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/landspace-1.mp4" data-poster="/testimonios/reels/landspace-1.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="reel-rubro">Arquitectura y construcción</div>
@@ -112,9 +112,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/aridos-lomas.mp4" data-poster="/testimonios/reels/aridos-lomas.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="reel-rubro">Áridos</div>
@@ -126,9 +126,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/cj1.mp4" data-poster="/testimonios/reels/cj1.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="reel-rubro">Construcción</div>
@@ -140,9 +140,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/landspace-2.mp4" data-poster="/testimonios/reels/landspace-2.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="reel-rubro">Arquitectura y construcción</div>
@@ -154,9 +154,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/aridos-agosto.mp4" data-poster="/testimonios/reels/aridos-agosto.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="reel-rubro">Áridos</div>
@@ -168,9 +168,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/pedro-campos.mp4" data-poster="/testimonios/reels/pedro-campos.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="reel-rubro">Obras Menores</div>
@@ -255,9 +255,9 @@
       <div class="video-card">
         <div class="video-wrap">
           <video src="/testimonios/reels/testimonio-pedro.mp4" data-poster="/testimonios/reels/testimonio-pedro.jpg" preload="none" playsinline></video>
-          <div class="video-play" onclick="playVideo(this)">
+          <button type="button" class="video-play" onclick="playVideo(this)" aria-label="Reproducir video">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          </button>
         </div>
         <div class="video-info">
           <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
@@ -393,7 +393,7 @@
 </div>
     <div class="footer-bottom">
       <p>© 2026 Manyobra SpA. Todos los derechos reservados.</p>
-      <p><a href="#" onclick="openPrivacy(event)">Privacidad</a> &nbsp;·&nbsp; <a href="#" onclick="openTerms(event)">Términos</a></p>
+      <p><button type="button" class="link-legal" onclick="openPrivacy(event)">Privacidad</button> &nbsp;·&nbsp; <button type="button" class="link-legal" onclick="openTerms(event)">Términos</button></p>
     </div>
   </div>
 </footer>
