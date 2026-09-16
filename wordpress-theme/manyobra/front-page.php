@@ -5,7 +5,7 @@
   <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-logo">
     <span class="nav-logo-mark">
       <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 38 C4 38 10 8 20 8 C30 8 30 38 40 38 C50 38 50 8 60 8 C70 8 76 38 76 38" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M4 38 C4 38 10 8 20 8 C30 8 30 38 40 38 C50 38 50 8 60 8 C70 8 76 38 76 38" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>
     </span>
     <span class="nav-logo-text">Manyobra</span>
@@ -30,7 +30,7 @@
   <div class="hero-inner">
     <div class="hero-logo">
       <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 76 C8 76 20 16 40 16 C60 16 60 76 80 76 C100 76 100 16 120 16 C140 16 152 76 152 76" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M8 76 C8 76 20 16 40 16 C60 16 60 76 80 76 C100 76 100 16 120 16 C140 16 152 76 152 76" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>
     </div>
     <div class="hero-tag">🏗️ Marketing para empresas de construcción · Chile</div>
@@ -403,7 +403,7 @@
     <div class="footer-top">
 <div class="footer-brand">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-logo">
-          <span class="nav-logo-mark"><svg viewBox="0 0 80 50" fill="none"><path d="M4 38 C4 38 10 8 20 8 C30 8 30 38 40 38 C50 38 50 8 60 8 C70 8 76 38 76 38" stroke="white" stroke-width="7" stroke-linecap="round" fill="none"/></svg></span>
+          <span class="nav-logo-mark"><svg viewBox="0 0 80 50" fill="none"><path d="M4 38 C4 38 10 8 20 8 C30 8 30 38 40 38 C50 38 50 8 60 8 C70 8 76 38 76 38" stroke="currentColor" stroke-width="7" stroke-linecap="round" fill="none"/></svg></span>
           <span class="nav-logo-text">Manyobra</span>
         </a>
         <p>Producción audiovisual y Meta Ads para empresas de construcción en Chile.</p>
