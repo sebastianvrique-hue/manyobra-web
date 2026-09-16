@@ -12,8 +12,7 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#portafolio">Portafolio</a></li>
-    <li><a href="#servicios">Qué hacemos</a></li>
-    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#servicios">Cómo funciona</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Trabajemos juntos</a>
@@ -35,10 +34,9 @@
     </div>
     <div class="hero-tag">🏗️ Marketing para empresas de construcción · Chile</div>
     <h1>Tu obra llena<br/>tu <em>agenda</em>.</h1>
-    <p class="hero-sub">Grabamos tus obras, las ponemos frente a quien puede contratarte y un agente de IA filtra cada consulta. A ti te llega la reunión, no el ruido.</p>
+    <p class="hero-sub">Convertimos el registro de tus obras en campañas que llegan a quien puede contratarte. A tu WhatsApp llega gente con proyecto real, no curiosos.</p>
     <div class="hero-actions">
       <a href="#contacto" class="btn btn-grad">Quiero más proyectos</a>
-      <a href="#planes" class="btn btn-outline">Ver los planes</a>
     </div>
     <p class="hero-note">Los resultados dependen de cada empresa. No garantizamos cifras específicas.</p>
   </div>
@@ -78,7 +76,7 @@
   <div class="sec-inner">
     <div class="sec-tag">Portafolio</div>
     <h2>Contenido que <span class="accent">ya produjimos</span></h2>
-    <p class="sec-sub">Piezas reales que produjimos para las campañas de clientes del rubro.</p>
+    <p class="sec-sub">Cada cliente nos mandó el registro de su obra. Esto es lo que le devolvimos: piezas listas para campaña.</p>
     <div class="reel-grid">
 
       <!-- Para sumar una pieza: copia este bloque, cambia src, poster, cliente y rubro,
@@ -186,17 +184,6 @@
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stats-grid">
-    <div class="stat"><div class="stat-n">+<span class="accent">200</span></div><div class="stat-l">Campañas</div></div>
-    <div class="stat"><div class="stat-n"><span class="accent">3.5</span>x</div><div class="stat-l">ROAS promedio</div></div>
-    <div class="stat"><div class="stat-n">+<span class="accent">50</span></div><div class="stat-l">Clientes</div></div>
-    <div class="stat"><div class="stat-n"><span class="accent">4</span>+</div><div class="stat-l">Años</div></div>
-  </div>
-  <p class="stats-note">Experiencia acumulada de la agencia en todos los rubros que hemos trabajado, no exclusivamente en construcción.</p>
-</div>
-
 <!-- SERVICES -->
 <section class="services-sec sistema-sec" id="servicios" aria-labelledby="servicios-titulo">
   <div class="sec-inner">
@@ -209,7 +196,7 @@
         <div class="sis-n">01</div>
         <div>
           <h3>Producimos</h3>
-          <p>Vamos a tu obra con equipo profesional. Tu trabajo real es el mejor anuncio que puedes tener.</p>
+          <p>Nos mandas el registro de tu obra desde el teléfono. Nosotros lo convertimos en piezas de campaña: guion, edición y formato. Si el proyecto lo amerita, podemos ir a grabar en terreno como servicio aparte.</p>
         </div>
       </li>
       <li class="sis-paso">
@@ -222,43 +209,35 @@
       <li class="sis-paso destacado">
         <div class="sis-n">03</div>
         <div>
-          <h3>Filtramos <span class="sis-tag">Automático</span></h3>
-          <p>El Agente IA responde cada consulta en segundos y pregunta lo que importa: tipo de obra, zona y plazo. Tú recibes solo a quien tiene un proyecto real.</p>
+          <h3>Filtramos <span class="sis-tag">Módulo IA</span></h3>
+          <p>Donde el módulo está activo, el Agente IA responde en segundos y pregunta lo que importa: tipo de obra, zona y plazo. Así separas el proyecto real de la consulta suelta.</p>
         </div>
       </li>
       <li class="sis-paso destacado">
         <div class="sis-n">04</div>
         <div>
-          <h3>Hacemos seguimiento <span class="sis-tag">Automático</span></h3>
-          <p>Nadie se enfría esperando respuesta mientras tú estás en terreno. El agente insiste hasta que la persona decide.</p>
+          <h3>Hacemos seguimiento <span class="sis-tag">Módulo IA</span></h3>
+          <p>Con el módulo activo, nadie se enfría esperando respuesta mientras tú estás en terreno: el agente insiste hasta que la persona decide.</p>
         </div>
       </li>
       <li class="sis-paso">
         <div class="sis-n">05</div>
         <div>
-          <h3>Te llega la reunión</h3>
-          <p>Llegas a conversar con alguien que ya dijo qué obra necesita, dónde y para cuándo. Cerrar es lo único que queda de tu lado.</p>
+          <h3>Te llegan los contactos</h3>
+          <p>Gente que ya dijo qué obra necesita, dónde y para cuándo. Cerrar es lo único que queda de tu lado.</p>
+        </div>
+      </li>
+      <li class="sis-paso">
+        <div class="sis-n">06</div>
+        <div>
+          <h3>Medimos y escalamos</h3>
+          <p>Cada quincena revisas qué campañas trajeron proyectos reales y hacia qué tipo de obra conviene empujar.</p>
         </div>
       </li>
     </ol>
 
     <div class="sistema-nota">
-      <p>Los pasos 3 y 4 son los que la mayoría de las agencias te entrega como una guía para que los hagas tú. <strong>Acá los hace el Agente IA, solo, las 24 horas.</strong> <a href="/agente-ia/" class="svc-link">Ver cómo funciona →</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process-sec" id="proceso">
-  <div class="sec-inner">
-    <div class="sec-tag">Proceso</div>
-    <h2>Cómo <span class="accent">trabajamos</span></h2>
-    <p class="sec-sub">Simple y transparente: tú apruebas, nosotros hacemos que te lleguen proyectos.</p>
-    <div class="process-grid">
-      <div class="process-step"><div class="p-num">01</div><h3>Diagnóstico gratuito</h3><p>Revisamos qué tipo de obras haces, a quién le quieres llegar y contra quién compites en tu zona.</p></div>
-      <div class="process-step"><div class="p-num">02</div><h3>Estrategia y plan de rodaje</h3><p>Definimos qué obras grabar, qué mostrar de cada una y a qué público dirigir la pauta.</p></div>
-      <div class="process-step"><div class="p-num">03</div><h3>Grabamos en terreno</h3><p>Vamos a tu obra, producimos el material y activamos las campañas.</p></div>
-      <div class="process-step"><div class="p-num">04</div><h3>Reportes y escalado</h3><p>Ajustamos lo que funciona y escalamos hacia el tipo de proyecto que más te conviene.</p></div>
+      <p>Los pasos 3 y 4 son los que la mayoría de las agencias te entrega como una guía para que los hagas tú. <strong>Acá existe un Agente IA que ya los hace solo, y se activa según el plan.</strong> <a href="/agente-ia/" class="svc-link">Ver cómo funciona →</a></p>
     </div>
   </div>
 </section>
@@ -291,25 +270,6 @@
   </div>
 </section>
 
-<!-- PLANES (resumen) -->
-<section class="planes-sec" id="planes">
-  <div class="sec-inner">
-    <div class="sec-tag">Dentro del sistema</div>
-    <h2>Dos formas de <span class="accent">producir el contenido</span></h2>
-    <p class="sec-sub">El sistema es el mismo; cambia quién graba. Definimos cuál te conviene en la reunión.</p>
-    <div class="lp-grid">
-      <article class="lp-card">
-        <div class="lp-name">Online</div>
-        <p class="lp-desc">Tú nos envías fotos y videos desde la obra. Nosotros los convertimos en piezas profesionales y gestionamos la pauta.</p>
-      </article>
-      <article class="lp-card popular">
-        <div class="lp-name">Con grabación</div>
-        <p class="lp-desc">Vamos a terreno con equipo de producción: cámara, dirección de arte y edición. El contenido lo generamos nosotros.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq-sec" id="faq">
   <div class="sec-inner">
@@ -318,6 +278,8 @@
     <div class="faq-list">
       <details><summary>¿Cuánto presupuesto necesito para la pauta?</summary><div class="faq-body">La pauta se carga directamente a tu cuenta de Meta y no está incluida en el plan. Se puede partir desde $50.000 mensuales; recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.</div></details>
       <details><summary>¿Cuánto tardan en verse resultados?</summary><div class="faq-body">El algoritmo de Meta necesita entre 7 y 14 días para optimizar. Los primeros resultados concretos suelen verse al cierre del primer mes.</div></details>
+      <details><summary>¿Por qué no le pido a alguien conocido que me haga los videos?</summary><div class="faq-body">Puedes, y a veces sale bien. La diferencia no está en grabar: está en a quién se le muestra después. Nosotros armamos la pieza pensando en la campaña y la ponemos frente a gente que está buscando lo que tú haces, en tu zona. Un video bonito que no ve nadie no trae obras.</div></details>
+      <details><summary>Ya me llegan pegas por recomendación, ¿para qué esto?</summary><div class="faq-body">Por eso mismo. Esto no reemplaza el boca a boca, lo destapa: cuando el referido te busca y encuentra trabajo tuyo bien mostrado, llega convencido. Y en los meses en que las recomendaciones bajan, tienes algo funcionando que no depende de que alguien se acuerde de ti.</div></details>
       <details><summary>¿Tienen contrato de permanencia?</summary><div class="faq-body">No. Trabajamos mes a mes, con aviso previo de 15 días. Nos quedamos porque los resultados hablan.</div></details>
     </div>
   </div>
@@ -382,6 +344,7 @@
     <div class="sec-tag">Contacto</div>
     <h2>Agenda tu <span class="accent">diagnóstico gratuito</span></h2>
     <p>Antes de venderte nada revisamos dos números: cuánta gente alcanzable hay en tu zona de operación y cuánto vale tu obra promedio. <strong>Si no dan para que la pauta se pague sola, te lo decimos.</strong> Esa revisión no tiene costo.</p>
+    <p class="cuenta-obra">Haz la cuenta con tu obra promedio: si una sola obra al año viene de acá, el sistema ya se pagó.</p>
     <div class="cupos-home">
       <span class="cupos-dot"></span>
       <p><strong>Tomamos solo 3 a 4 clientes nuevos al mes.</strong> Es la única forma de mantener la calidad de producción y que tu obra no sea una más en la fila.</p>
@@ -412,12 +375,22 @@
         <h4>Navegación</h4>
         <ul>
           <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#servicios">Qué hacemos</a></li>
+          <li><a href="#servicios">Cómo funciona</a></li>
           <li><a href="/agente-ia/">Agente IA</a></li>
           <li><a href="#contacto">Agendar reunión</a></li>
         </ul>
       </div>
     </div>
+<!-- TRAYECTORIA (pie) -->
+<div class="stats stats-footer">
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-n">+<span class="accent">200</span></div><div class="stat-l">Campañas</div></div>
+    <div class="stat"><div class="stat-n"><span class="accent">3.5</span>x</div><div class="stat-l">ROAS promedio</div></div>
+    <div class="stat"><div class="stat-n">+<span class="accent">50</span></div><div class="stat-l">Clientes</div></div>
+    <div class="stat"><div class="stat-n"><span class="accent">4</span>+</div><div class="stat-l">Años</div></div>
+  </div>
+  <p class="stats-note">Experiencia acumulada de la agencia en todos los rubros que hemos trabajado, no exclusivamente en construcción.</p>
+</div>
     <div class="footer-bottom">
       <p>© 2026 Manyobra SpA. Todos los derechos reservados.</p>
       <p><a href="#" onclick="openPrivacy(event)">Privacidad</a> &nbsp;·&nbsp; <a href="#" onclick="openTerms(event)">Términos</a></p>

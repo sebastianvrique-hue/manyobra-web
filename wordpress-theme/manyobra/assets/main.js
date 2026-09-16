@@ -37,29 +37,6 @@ function playVideo(overlay) {
   video.controls = true;
 }
 
-// Audio player
-function toggleAudio(btn) {
-  const card = btn.closest('.audio-player');
-  const audio = card.previousElementSibling.tagName === 'AUDIO'
-    ? card.previousElementSibling
-    : card.closest('.audio-card').querySelector('audio');
-  if (!audio) return;
-  if (audio.paused) {
-    document.querySelectorAll('audio').forEach(a => { a.pause(); a.closest('.audio-card')?.querySelector('.audio-play-btn')?.classList.remove('playing'); });
-    audio.play();
-    btn.classList.add('playing');
-  } else {
-    audio.pause();
-    btn.classList.remove('playing');
-  }
-  audio.ontimeupdate = () => {
-    const fill = card.querySelector('.progress-bar-fill');
-    const time = card.querySelector('.audio-time');
-    if (fill && audio.duration) fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
-    if (time) time.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || 0);
-  };
-  audio.onended = () => btn.classList.remove('playing');
-}
 function seekAudio(e, bar) {
   const audio = bar.closest('.audio-card').querySelector('audio');
   if (!audio || !audio.duration) return;
@@ -78,15 +55,6 @@ document.querySelectorAll('.modal-overlay').forEach(el => el.addEventListener('c
 document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active')); });
 
 // Form
-// Calendly: cuando alguien agenda, lo registramos como conversión en Meta.
-// Validar el origen es obligatorio: sin esto cualquier iframe podría disparar conversiones falsas.
-window.addEventListener('message', function (e) {
-  if (e.origin !== 'https://calendly.com') return;
-  if (e.data && e.data.event === 'calendly.event_scheduled' && window.fbq) {
-    fbq('track', 'Schedule');
-    fbq('track', 'Lead');
-  }
-});
 
 
 // Reveal on scroll (las clases se agregan por JS: sin JS nada queda oculto)
@@ -136,6 +104,19 @@ window.addEventListener('message', function (e) {
     if (window.fbq) fbq('track', nombre, datos || {});
     if (window.gtag) gtag('event', nombre, datos || {});
   }
+
+  // Calendly: agendar una reunión es la conversión más valiosa del sitio.
+  // Vive aquí dentro, y no en el nivel superior, porque necesita evento():
+  // antes llamaba a fbq directo y el agendamiento existía en Meta pero no
+  // en GA4. Validar el origen es obligatorio: sin esto cualquier iframe
+  // podría disparar conversiones falsas.
+  window.addEventListener('message', function (e) {
+    if (e.origin !== 'https://calendly.com') return;
+    if (e.data && e.data.event === 'calendly.event_scheduled') {
+      evento('Schedule');
+      evento('Lead');
+    }
+  });
 
   // Un solo listener delegado para todos los enlaces a WhatsApp de la página.
   document.addEventListener('click', function (e) {
