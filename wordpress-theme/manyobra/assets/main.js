@@ -196,3 +196,30 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') document.que
   window.addEventListener('load', revisarCercanos);
   revisarCercanos();
 })();
+
+// ── Resultado del formulario de diagnóstico ──
+// El estado viene del servidor en la URL (?diag=ok|error|invalido). El
+// navegador NO decide si se envió: el formulario anterior de este sitio
+// mostraba "Mensaje enviado" sin haber enviado nada, y no se repite.
+(function () {
+  var aviso = document.getElementById('diagAviso');
+  if (!aviso) return;
+  var estado = new URLSearchParams(location.search).get('diag');
+  if (!estado) return;
+
+  var wa = 'https://wa.me/56956747949?text=Hola%20Manyobra%2C%20quiero%20el%20diagn%C3%B3stico';
+  var textos = {
+    ok:       ['ok',    'Listo. Te llegan los números por correo en las próximas horas, escritos a mano.'],
+    invalido: ['error', 'Revisa el correo y la zona: faltó alguno de los dos.'],
+    error:    ['error', 'No pudimos enviarlo. Escríbenos por <a href="' + wa + '" target="_blank" rel="noopener">WhatsApp</a> y lo resolvemos al tiro.']
+  };
+  var t = textos[estado];
+  if (!t) return;
+  aviso.className = 'diag-aviso ' + t[0];
+  aviso.innerHTML = t[1];
+  aviso.hidden = false;
+  if (estado === 'ok' && window.fbq) fbq('track', 'Lead', { content_name: 'Diagnostico escrito' });
+  if (estado === 'ok' && window.gtag) gtag('event', 'Lead', { content_name: 'Diagnostico escrito' });
+  aviso.scrollIntoView({ block: 'center' });
+  history.replaceState(null, '', location.pathname + location.hash);
+})();

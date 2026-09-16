@@ -349,6 +349,43 @@
       <span class="cupos-dot"></span>
       <p><strong>Tomamos solo 3 a 4 clientes nuevos al mes.</strong> Es la única forma de mantener la calidad de producción y que tu obra no sea una más en la fila.</p>
     </div>
+
+    <!-- Escalon intermedio: quien no esta listo para una videollamada
+         deja su correo y recibe por escrito los dos numeros. Sin esto,
+         el unico camino era agendar, y quien no agendaba se perdia. -->
+    <div class="diag-box">
+      <h3>¿Prefieres los números antes de hablar?</h3>
+      <p class="diag-sub">Déjanos tu correo y te mandamos por escrito cuánta gente alcanzable hay en tu zona y qué tendría que rendir la pauta según tu obra promedio. Lo escribimos nosotros, no es un informe automático.</p>
+      <form class="diag-form" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+        <input type="hidden" name="action" value="manyobra_diagnostico" />
+        <?php wp_nonce_field('manyobra_diagnostico', 'manyobra_nonce'); ?>
+        <p class="trampa" aria-hidden="true"><label>No rellenar<input type="text" name="sitio_web" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="diag-fila">
+          <label class="diag-campo"><span>Tu correo</span>
+            <input type="email" name="email" required placeholder="nombre@empresa.cl" autocomplete="email" /></label>
+          <label class="diag-campo"><span>Comuna o zona donde trabajas</span>
+            <input type="text" name="zona" required placeholder="Ej: Rancagua y alrededores" /></label>
+        </div>
+        <div class="diag-fila">
+          <label class="diag-campo"><span>Qué tipo de obra haces</span>
+            <select name="obra">
+              <option value="">Elige una</option>
+              <option>Casas y ampliaciones</option>
+              <option>Edificios y obra gruesa</option>
+              <option>Movimiento de tierra o áridos</option>
+              <option>Piscinas</option>
+              <option>Paisajismo y exteriores</option>
+              <option>Otro</option>
+            </select></label>
+          <label class="diag-campo"><span>Teléfono <em>(opcional)</em></span>
+            <input type="tel" name="telefono" placeholder="+56 9 ..." autocomplete="tel" /></label>
+        </div>
+        <button type="submit" class="btn btn-grad">Mándame los números</button>
+        <p class="diag-legal">Te escribimos solo por esto. No compartimos tu correo con nadie.</p>
+      </form>
+      <div class="diag-aviso" id="diagAviso" role="status" hidden></div>
+    </div>
+
     <div class="calendly-wrap">
       <div class="calendly-inline-widget" data-url="https://calendly.com/sebastian-vrique/reunion-manyobra-marketing-1-1?hide_gdpr_banner=1&amp;background_color=111111&amp;text_color=ffffff&amp;primary_color=ffffff" style="min-width:320px;height:700px;"></div>
       <noscript>

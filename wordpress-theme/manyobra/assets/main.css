@@ -717,3 +717,25 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:fo
 }
 /* Sobre la seccion oscura y sobre video el acero no se ve: se usa el ambar */
 .guarantee-strip :focus-visible, .video-wrap :focus-visible { outline-color: var(--amber, #F59E0B); }
+
+/* ── Diagnóstico por escrito ── */
+.diag-box { max-width: 640px; margin: 0 auto 2.5rem; padding: 2rem 1.8rem;
+  background: var(--grey2); border: 1px solid var(--border2);
+  border-radius: var(--radius-lg); text-align: left; }
+.diag-box h3 { font-size: var(--t-xl); font-weight: 800; margin-bottom: .5rem; }
+.diag-sub { font-size: var(--t-sm); color: var(--muted); line-height: 1.6; margin-bottom: 1.4rem; }
+.diag-fila { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-bottom: .9rem; }
+.diag-campo { display: flex; flex-direction: column; gap: .35rem; }
+.diag-campo span { font-size: var(--t-xs); font-weight: 700; color: var(--ink); }
+.diag-campo em { font-style: normal; font-weight: 400; color: var(--muted); }
+.diag-campo input, .diag-campo select {
+  padding: .7rem .8rem; border-radius: 8px; font: inherit; font-size: var(--t-sm);
+  background: var(--bone); color: var(--ink); border: 1px solid var(--grey4); }
+.diag-form .btn { width: 100%; justify-content: center; margin-top: .4rem; }
+.diag-legal { font-size: var(--t-xs); color: var(--muted); text-align: center; margin-top: .8rem; }
+/* Trampa para bots: fuera de pantalla, no display:none (algunos bots lo detectan) */
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.diag-aviso { margin-top: 1rem; padding: .85rem 1rem; border-radius: 8px; font-size: var(--t-sm); }
+.diag-aviso.ok    { background: rgba(22,163,74,.10); border: 1px solid rgba(22,163,74,.35); color: #15803D; }
+.diag-aviso.error { background: rgba(234,88,12,.10); border: 1px solid var(--accent-brd); color: #9A3412; }
+@media (max-width: 640px) { .diag-fila { grid-template-columns: 1fr; } }
