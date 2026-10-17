@@ -23,7 +23,7 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- Google Analytics 4 -->
+  <!-- Google Analytics 4 · instalado por Manyobra -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -31,6 +31,45 @@
     gtag('js', new Date());
     gtag('config', 'G-G9JF1L3ZJD');
   </script>
+  <script>
+  (function () {
+    function origen() {
+      var q = new URLSearchParams(location.search), s = {};
+      try { s = JSON.parse(sessionStorage.getItem('mo_origen') || '{}') || {}; } catch (_) {}
+      var o = {
+        utm_source: q.get('utm_source') || s.utm_source || undefined,
+        utm_medium: q.get('utm_medium') || s.utm_medium || undefined,
+        utm_campaign: q.get('utm_campaign') || s.utm_campaign || undefined,
+        landing_page: s.landing_page || location.pathname
+      };
+      try { sessionStorage.setItem('mo_origen', JSON.stringify(o)); } catch (_) {}
+      return o;
+    }
+    origen();
+    function ev(nombre, extra) {
+      if (!window.gtag) return;
+      var d = origen(); d.page_path = location.pathname;
+      for (var k in extra || {}) d[k] = extra[k];
+      window.gtag('event', nombre, d);
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var h = a.getAttribute('href') || '';
+      if (/wa\.me\/|api\.whatsapp\.com|whatsapp:/.test(h)) return ev('whatsapp_click');
+      if (h.indexOf('tel:') === 0) return ev('phone_click');
+      if (h.indexOf('mailto:') === 0) return ev('email_click');
+    }, true);
+    document.addEventListener('submit', function (e) {
+      var f = e.target;
+      if (f && f.tagName === 'FORM' && !f.hasAttribute('data-no-medir')) ev('generate_lead', { form_id: f.id || f.getAttribute('name') || 'formulario' });
+    }, true);
+    window.addEventListener('message', function (e) {
+      if (e.origin === 'https://calendly.com' && e.data && e.data.event === 'calendly.event_scheduled') ev('booking_completed');
+    });
+  })();
+  </script>
+  <!-- Fin Google Analytics 4 -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Manyobra – Marketing y producción audiovisual para empresas de construcción en Chile. Convertimos el registro de tus obras en campañas de Meta Ads que traen proyectos." />
