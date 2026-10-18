@@ -1285,6 +1285,7 @@ a:focus-visible,button:focus-visible { outline-color:#c9c09f; }
 .reel-grid .video-wrap,
 .reel-grid .video-card:nth-child(even) .video-wrap { aspect-ratio:9/16; border-radius:3px; background:#151515; }
 .reel-grid .video-wrap video { object-fit:contain; }
+.reel-grid .video-card:first-child .video-wrap video:not([controls]) { object-fit:cover; }
 .reel-grid .video-info { display:block; margin-top:12px; padding:14px 2px 0; border-top:1px solid #bdb7a8; }
 .reel-grid .reel-rubro { margin-bottom:6px; }
 .reel-grid .reel-client { display:block; font-size:20px; line-height:1.2; }
