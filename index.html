@@ -1023,6 +1023,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:fo
   .reel-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:34px 18px; }
   .reel-grid .video-wrap { aspect-ratio:9/16; background:#151515; }
   .reel-grid .video-wrap video { object-fit:contain; }
+  .reel-grid .video-card:first-child .video-wrap video:not([controls]) { object-fit:cover; }
   .reel-grid .video-info { margin-top:12px; padding:14px 2px 0; border-top:1px solid #bdb7a8; }
   .reel-grid .reel-client { font-size:20px; line-height:1.2; }
   .reel-grid .reel-desc { margin-top:7px; line-height:1.45; }
