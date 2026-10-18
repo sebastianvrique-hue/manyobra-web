@@ -849,6 +849,17 @@
       color: var(--muted); white-space: nowrap; transition: color .2s;
     }
     .clientes-lista li:hover { color: var(--white); }
+    .clientes-lista li.client-logo {
+      display: flex; flex: 1 1 145px; flex-direction: column; align-items: center;
+      justify-content: center; gap: 8px; min-height: 140px; padding: 10px 14px;
+      background: #202625; border: 1px solid #343a37; border-radius: 6px;
+      color: #f1f2ef; text-align: center; white-space: normal;
+    }
+    .clientes-lista .client-logo--dark { background: #000; }
+    .clientes-lista .client-logo--light { background: #f8f8f6; color: #232323; }
+    .clientes-lista .client-logo img { display: block; max-width: 100%; max-height: 88px; object-fit: contain; }
+    .clientes-lista .client-logo span { font-size: 13px; font-weight: 650; line-height: 1.2; }
+    .clientes-lista li.client-logo::before { display: none; }
     .clientes-lista li + li::before {
       content: ''; display: inline-block; width: 4px; height: 4px; border-radius: 50%;
       background: var(--grey4); margin-right: 2.2rem; vertical-align: middle;
@@ -1043,11 +1054,12 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:fo
   <div class="clientes-inner">
     <div class="clientes-label">Empresas que ya confían en nosotros</div>
     <ul class="clientes-lista">
-      <li>JN Piscinas</li>
-      <li>Áridos Lomas Blancas</li>
-      <li>Landspace</li>
-      <li>CJ1</li>
-      <li>Obras Menores</li>
+      <li class="client-logo client-logo--dark"><img src="/assets/marcas/s-sudamericana.webp" alt="Logo de S Sudamericana" loading="lazy"><span>S Sudamericana</span></li>
+      <li class="client-logo client-logo--light"><img src="/assets/marcas/pavimentos-myc.png" alt="Logo de Pavimentos M&amp;C" loading="lazy"><span>Pavimentos M&amp;C</span></li>
+      <li class="client-logo"><img src="/assets/marcas/piscinas-hormigon.jpg" alt="Logo de Piscinas Hormigón" loading="lazy"><span>Piscinas Hormigón</span></li>
+      <li class="client-logo client-logo--light"><img src="/assets/marcas/aridos-lomas-blancas.png" alt="Logo de Áridos Lomas Blancas" loading="lazy"><span>Áridos Lomas Blancas</span></li>
+      <li class="client-logo"><img src="/assets/marcas/landspace.png" alt="Logo de Landspace" loading="lazy"><span>Landspace</span></li>
+      <li class="client-logo"><img src="/assets/marcas/pedro-campos.png" alt="Logo de Pedro Campos" loading="lazy"><span>Pedro Campos · Obras Menores</span></li>
     </ul>
   </div>
 </section>
