@@ -1265,5 +1265,46 @@ a:focus-visible,button:focus-visible { outline-color:#c9c09f; }
   .clientes-lista li { flex-basis:calc(50% - 6px); min-height:132px; font-size:19px; }
 }
 @media(prefers-reduced-motion:reduce) { .hero .hero-video { display:none; } }
+
+/* Client work: calm, consistent frames around each original brand. */
+.clientes-strip { padding:46px 5% 52px; }
+.clientes-inner { display:block; max-width:1180px; text-align:left; }
+.clientes-label { max-width:none; margin:0 0 22px; color:#c9c09f; font-size:13px; letter-spacing:.01em; }
+.clientes-lista { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.clientes-lista li.client-logo,
+.clientes-lista li.client-logo--dark,
+.clientes-lista li.client-logo--light { display:flex; min-width:0; min-height:0; padding:12px; gap:0; flex-direction:column; background:#202321; border:1px solid #3c4039; border-radius:3px; color:#f6f6f2; }
+.clientes-lista .client-logo img { box-sizing:border-box; display:block; width:100%; max-width:none; height:118px; max-height:none; padding:10px; background:#f3f0e8; border-radius:2px; object-fit:contain; }
+.clientes-lista .client-logo span { display:block; width:100%; padding:13px 4px 2px; color:#f6f6f2; font-size:14px; font-weight:600; text-align:left; }
+@media(max-width:700px) { .clientes-lista { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:420px) { .clientes-lista .client-logo img { height:94px; } .clientes-lista .client-logo span { font-size:12px; } }
+
+/* Reels are portrait work; show their full format at a regular scale. */
+.reel-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:34px 18px; align-items:start; }
+.reel-grid .video-card:nth-child(even) { margin-top:0; }
+.reel-grid .video-wrap,
+.reel-grid .video-card:nth-child(even) .video-wrap { aspect-ratio:9/16; border-radius:3px; background:#151515; }
+.reel-grid .video-wrap video { object-fit:contain; }
+.reel-grid .video-info { display:block; margin-top:12px; padding:14px 2px 0; border-top:1px solid #bdb7a8; }
+.reel-grid .reel-rubro { margin-bottom:6px; }
+.reel-grid .reel-client { display:block; font-size:20px; line-height:1.2; }
+.reel-grid .reel-desc { margin-top:7px; line-height:1.45; }
+.reel-grid .video-play { background:rgba(0,0,0,.16); }
+.reel-grid .video-play:hover { background:rgba(0,0,0,.05); }
+@media(max-width:1000px) { .reel-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:700px) { .reel-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 12px; } }
+@media(max-width:430px) { .reel-grid { grid-template-columns:1fr; max-width:330px; margin-inline:auto; } }
+
+/* The testimonial is a vertical recording with a named speaker. */
+.testi-sec .sec-inner { grid-template-columns:minmax(0,1fr) minmax(260px,360px); gap:0 clamp(28px,6vw,100px); }
+.testi-sec .video-grid { max-width:360px; justify-self:end; }
+.testi-sec .video-card { background:#202321; border:1px solid #3c4039; border-radius:3px; }
+.testi-sec .video-wrap { aspect-ratio:9/16; background:#101211; }
+.testi-sec .video-wrap video { object-fit:contain; }
+.testi-sec .video-info { display:flex; align-items:center; gap:13px; padding:15px; border-top:1px solid #3c4039; }
+.testi-client-logo { width:48px; height:48px; flex:none; border-radius:50%; object-fit:cover; }
+.testi-sec .client-name { color:#f6f6f2; font-size:16px; margin:0 0 3px; }
+.testi-sec .client-biz { color:#b8b8b0; font-size:13px; }
+@media(max-width:700px) { .testi-sec .video-grid { justify-self:start; max-width:340px; } }
 .nav-logo-image { display:block; width:204px; height:auto; background:#141817; }
 @media(max-width:560px) { .nav-logo-image { width:174px; } }
