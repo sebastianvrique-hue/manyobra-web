@@ -102,7 +102,7 @@
       "name": "Manyobra",
       "alternateName": "Manyobra SpA",
       "url": "https://manyobra.cl",
-      "logo": "https://manyobra.cl/og-manyobra.jpg",
+      "logo": "https://manyobra.cl/assets/marca/manyobra-hora-logotipo.png",
       "image": "https://manyobra.cl/og-manyobra.jpg",
       "description": "Agencia chilena de marketing y producción audiovisual para empresas de construcción: grabamos obras y gestionamos campañas de Meta Ads que traen proyectos para negocios en Chile.",
       "telephone": "+56956747949",
@@ -249,7 +249,7 @@
 }
   </script>
   <?php wp_head(); ?>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/marca/manyobra-hora-isotipo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#FAF7F2" />
 </head>

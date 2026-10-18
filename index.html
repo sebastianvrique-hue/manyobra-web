@@ -73,7 +73,7 @@
       "name": "Manyobra",
       "alternateName": "Manyobra SpA",
       "url": "https://manyobra.cl",
-      "logo": "https://manyobra.cl/og-manyobra.jpg",
+      "logo": "https://manyobra.cl/assets/marca/manyobra-hora-logotipo.png",
       "image": "https://manyobra.cl/og-manyobra.jpg",
       "description": "Agencia chilena de marketing y producción audiovisual para empresas de construcción: grabamos obras y gestionamos campañas de Meta Ads que traen proyectos para negocios en Chile.",
       "telephone": "+56956747949",
@@ -997,8 +997,10 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:fo
 .diag-aviso.ok    { background: rgba(22,163,74,.10); border: 1px solid rgba(22,163,74,.35); color: #15803D; }
 .diag-aviso.error { background: rgba(234,88,12,.10); border: 1px solid var(--accent-brd); color: #9A3412; }
 @media (max-width: 640px) { .diag-fila { grid-template-columns: 1fr; } }
+  .nav-logo-image { display:block; width:204px; height:auto; background:#141817; }
+  @media (max-width:560px) { .nav-logo-image { width:174px; } }
 </style>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/marca/manyobra-hora-isotipo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#FAF7F2" />
 </head>
@@ -1007,12 +1009,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:fo
 <!-- NAV -->
 <nav id="navbar" role="navigation" aria-label="Navegación principal">
   <a href="#" class="nav-logo" aria-label="Manyobra – Inicio">
-    <span class="nav-logo-mark">
-      <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M4 38 C4 38 10 8 20 8 C30 8 30 38 40 38 C50 38 50 8 60 8 C70 8 76 38 76 38" stroke="currentColor" stroke-width="7" stroke-linecap="round" fill="none"/>
-      </svg>
-    </span>
-    <span class="nav-logo-text">Manyobra</span>
+    <img class="nav-logo-image" src="/assets/marca/manyobra-hora-logotipo.png" alt="Manyobra" />
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#portafolio">Portafolio</a></li>
@@ -1401,7 +1398,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:fo
     <div class="footer-top">
 <div class="footer-brand">
         <a href="#" class="nav-logo">
-          <img src="logo.png" alt="Manyobra" />
+          <img class="nav-logo-image" src="/assets/marca/manyobra-hora-logotipo.png" alt="Manyobra" />
         </a>
         <p>Producción audiovisual y Meta Ads para empresas de construcción en Chile.</p>
       </div>
