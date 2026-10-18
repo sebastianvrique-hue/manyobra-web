@@ -78,7 +78,7 @@ nav {
 }
 .hero-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
 .hero-logo { margin: 0 auto 3rem; }
-.hero-logo svg { width: 80px; height: 50px; }
+.hero-logo img { display:block; width:80px; height:auto; margin:0 auto; }
 .hero-tag {
   display: inline-block; border: 1px solid var(--border2);
   color: var(--muted); padding: .35rem 1rem; border-radius: 100px;
@@ -282,7 +282,7 @@ footer { background: var(--black); border-top: 1px solid var(--border); padding:
 
 /* (glow neón azul reemplazado por el sistema de gradientes en DESIGN V2, abajo) */
 .nav-logo-mark svg path { filter: none; }
-.hero-logo svg path { filter: drop-shadow(0 2px 8px rgba(250,247,242,.95)); }
+.hero-logo img { filter: drop-shadow(0 2px 8px rgba(250,247,242,.95)); }
 .wa-float { box-shadow: 0 4px 20px rgba(37,211,102,0.5), 0 0 40px rgba(37,211,102,0.25); }
 .wa-float:hover { box-shadow: 0 6px 30px rgba(37,211,102,0.7), 0 0 60px rgba(37,211,102,0.4); }
 
@@ -366,7 +366,7 @@ h1 em, h2 .accent, .stat-n .accent, .profile-name .accent, .pn-val {
   background: var(--grad); box-shadow: 0 0 10px var(--accent);
 }
 @keyframes tagPulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
-.hero-logo svg { color: var(--ink); filter: drop-shadow(0 1px 6px rgba(250,247,242,.9)); }
+.hero-logo img { filter: drop-shadow(0 1px 6px rgba(250,247,242,.9)); }
 @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 .btn-grad { display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.8rem; border-radius: 8px; font-weight: 600; font-size: var(--t-base); text-decoration: none; transition: all .2s; background: var(--grad); color: var(--ink); box-shadow: var(--glow); }
 .btn-grad:hover { transform: translateY(-2px); box-shadow: 0 10px 44px rgba(124,58,237,0.45); filter: brightness(1.08); }
@@ -508,7 +508,7 @@ footer::before { content: ''; position: absolute; top: -1px; left: 0; right: 0; 
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .hero-bg::before, .hero-bg::after, .hero-tag::before, .hero-logo svg { animation: none; }
+  .hero-bg::before, .hero-bg::after, .hero-tag::before, .hero-logo img { animation: none; }
 }
 
 /* ── PORTAFOLIO DE REELS (formato vertical) ── */
