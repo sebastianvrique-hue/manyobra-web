@@ -254,9 +254,8 @@
           </button>
         </div>
         <div class="video-info">
-          <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <div class="client-name">Pedro Campos</div>
-          <div class="client-biz">Obras Menores</div>
+          <img class="testi-client-logo" src="/assets/marcas/pedro-campos.png" alt="" loading="lazy">
+          <div class="testi-client-details"><div class="client-name">Pedro Campos</div><div class="client-biz">Obras Menores</div></div>
         </div>
       </div>
 
