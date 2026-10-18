@@ -40,11 +40,12 @@
   <div class="clientes-inner">
     <div class="clientes-label">Empresas que ya confían en nosotros</div>
     <ul class="clientes-lista">
-      <li>JN Piscinas</li>
-      <li>Áridos Lomas Blancas</li>
-      <li>Landspace</li>
-      <li>CJ1</li>
-      <li>Obras Menores</li>
+      <li class="client-logo client-logo--dark"><img src="/assets/marcas/s-sudamericana.webp" alt="Logo de S Sudamericana" loading="lazy"><span>S Sudamericana</span></li>
+      <li class="client-logo client-logo--light"><img src="/assets/marcas/pavimentos-myc.png" alt="Logo de Pavimentos M&amp;C" loading="lazy"><span>Pavimentos M&amp;C</span></li>
+      <li class="client-logo"><img src="/assets/marcas/piscinas-hormigon.jpg" alt="Logo de Piscinas Hormigón" loading="lazy"><span>Piscinas Hormigón</span></li>
+      <li class="client-logo client-logo--light"><img src="/assets/marcas/aridos-lomas-blancas.png" alt="Logo de Áridos Lomas Blancas" loading="lazy"><span>Áridos Lomas Blancas</span></li>
+      <li class="client-logo"><img src="/assets/marcas/landspace.png" alt="Logo de Landspace" loading="lazy"><span>Landspace</span></li>
+      <li class="client-logo"><img src="/assets/marcas/pedro-campos.png" alt="Logo de Pedro Campos" loading="lazy"><span>Pedro Campos · Obras Menores</span></li>
     </ul>
   </div>
 </section>
