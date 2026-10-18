@@ -23,9 +23,7 @@
   <div class="hero-tex" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-logo">
-      <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 76 C8 76 20 16 40 16 C60 16 60 76 80 76 C100 76 100 16 120 16 C140 16 152 76 152 76" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
+      <img src="<?php echo esc_url(home_url('/assets/marca/manyobra-hora-isotipo.png')); ?>" alt="" width="80" height="59" />
     </div>
     <div class="hero-tag">🏗️ Marketing para empresas de construcción · Chile</div>
     <h1>Tu obra llena<br/>tu <em>agenda</em>.</h1>

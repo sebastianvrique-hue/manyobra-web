@@ -9,7 +9,7 @@ function manyobra_enqueue() {
     );
     wp_enqueue_style('manyobra-main',
         get_template_directory_uri() . '/assets/main.css',
-        ['google-fonts'], '3.1'
+        ['google-fonts'], '3.2'
     );
     wp_enqueue_script('manyobra-main',
         get_template_directory_uri() . '/assets/main.js',
