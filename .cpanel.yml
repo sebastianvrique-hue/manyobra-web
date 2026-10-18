@@ -36,6 +36,8 @@ deployment:
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/mkdir -p $DEPLOYPATH/assets
+    - /bin/mkdir -p $DEPLOYPATH/assets/marca
+    - /bin/cp assets/marca/manyobra-hora-isotipo.png assets/marca/manyobra-hora-logotipo.png $DEPLOYPATH/assets/marca/
     - /bin/cp assets/hero.mp4 $DEPLOYPATH/assets/
     - /bin/cp assets/hero.jpg $DEPLOYPATH/assets/
 
