@@ -3,12 +3,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-logo">
-    <span class="nav-logo-mark">
-      <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 38 C4 38 10 8 20 8 C30 8 30 38 40 38 C50 38 50 8 60 8 C70 8 76 38 76 38" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-    </span>
-    <span class="nav-logo-text">Manyobra</span>
+    <img class="nav-logo-image" src="<?php echo esc_url(home_url('/assets/marca/manyobra-hora-logotipo.png')); ?>" alt="Manyobra" />
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#portafolio">Portafolio</a></li>
@@ -403,8 +398,7 @@
     <div class="footer-top">
 <div class="footer-brand">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-logo">
-          <span class="nav-logo-mark"><svg viewBox="0 0 80 50" fill="none"><path d="M4 38 C4 38 10 8 20 8 C30 8 30 38 40 38 C50 38 50 8 60 8 C70 8 76 38 76 38" stroke="currentColor" stroke-width="7" stroke-linecap="round" fill="none"/></svg></span>
-          <span class="nav-logo-text">Manyobra</span>
+          <img class="nav-logo-image" src="<?php echo esc_url(home_url('/assets/marca/manyobra-hora-logotipo.png')); ?>" alt="Manyobra" />
         </a>
         <p>Producción audiovisual y Meta Ads para empresas de construcción en Chile.</p>
       </div>
