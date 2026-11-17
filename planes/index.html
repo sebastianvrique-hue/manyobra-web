@@ -587,6 +587,13 @@
     .js .hero .sub { animation-delay: .55s; }
     @media (prefers-reduced-motion: reduce) { .js .hero .sub, .js .metodo-label { opacity: 1 !important; } }
     @media print { .js .hero .sub, .js .metodo-label { opacity: 1 !important; } .hero h1.metodo .oro { color: #8a7a45; background: none; -webkit-background-clip: border-box; } .js .hero h1.metodo .oro { opacity: 1 !important; transform: none !important; filter: none !important; } }
+    /* Portada alineada a la izquierda en pantallas anchas */
+    @media (min-width: 821px) {
+      .topbar .wrap, .hero .wrap { max-width: 1480px; padding: 0 clamp(40px, 5vw, 80px); }
+    }
+    .hero .wrap { width: 100%; }
+    .logos figcaption b { display: block; font-size: .86rem; }
+    .logos figcaption span { display: block; font-size: .78rem; font-weight: 500; color: var(--muted); line-height: 1.35; margin-top: .15rem; }
   </style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
@@ -628,8 +635,8 @@
   <div class="wrap">
     <div class="datos-clave">
       <div><b data-count="90" data-suf=" días">90 días</b><span>de sistema completo, paso a paso</span></div>
-      <div><b data-count="12" data-suf=" videos">12 videos</b><span>al mes, hechos para vender</span></div>
-      <div><b data-count="10" data-suf=" días">10 días</b><span>para tener tus anuncios funcionando</span></div>
+      <div><b data-count="30" data-pre="+" data-suf=" anuncios">+30 anuncios</b><span>probados en 90 días</span></div>
+      <div><b data-count="7" data-suf=" días">7 días</b><span>para tener tus anuncios funcionando</span></div>
       <div><b>Selder</b><span>tu app con todo a la vista</span></div>
     </div>
   </div>
@@ -669,7 +676,7 @@
     <div class="head rv">
       <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>02 · El Método Maestro</div>
       <h2>De desconocido a cliente, <span class="dim">en tres etapas.</span></h2>
-      <p class="lead">Cada mes producimos <b>12 videos: 4 para cada etapa</b>, y los mostramos con anuncios en Instagram, Facebook y Google a la gente de tu zona.</p>
+      <p class="lead">En los 90 días producimos <b>12 videos, 4 para cada etapa</b>, y 12 piezas gráficas. Con ellos armamos <b>más de 30 anuncios</b> en Instagram, Facebook y Google para la gente de tu zona.</p>
     </div>
 
     <div class="flujo label" aria-hidden="true"><span>Muchas personas</span><span>↓</span><span>Pocas y listas</span></div>
@@ -764,12 +771,12 @@
     </div>
     <div class="prueba">
       <div class="logos rv">
-        <figure><img src="/assets/marcas/s-sudamericana.webp" alt="Logo de S Sudamericana" loading="lazy" /><figcaption>S Sudamericana</figcaption></figure>
-        <figure><img src="/assets/marcas/pavimentos-myc.png" alt="Logo de Pavimentos M&amp;C" loading="lazy" /><figcaption>Pavimentos M&amp;C</figcaption></figure>
-        <figure><img src="/assets/marcas/piscinas-hormigon.jpg" alt="Logo de Piscinas Hormigón" loading="lazy" /><figcaption>Piscinas Hormigón</figcaption></figure>
-        <figure><img src="/assets/marcas/aridos-lomas-blancas.png" alt="Logo de Áridos Lomas Blancas" loading="lazy" /><figcaption>Áridos Lomas Blancas</figcaption></figure>
-        <figure><img src="/assets/marcas/landspace.png" alt="Logo de Landspace" loading="lazy" /><figcaption>Landspace</figcaption></figure>
-        <figure><img src="/assets/marcas/pedro-campos.png" alt="Logo de Pedro Campos Obras Menores" loading="lazy" /><figcaption>Pedro Campos · Obras Menores</figcaption></figure>
+        <figure><img src="/assets/marcas/s-sudamericana.webp" alt="Logo de S Sudamericana" loading="lazy" /><figcaption><b>S Sudamericana</b><span>Ingeniería eléctrica, obras civiles y montaje industrial para empresas</span></figcaption></figure>
+        <figure><img src="/assets/marcas/pavimentos-myc.png" alt="Logo de Pavimentos M&amp;C" loading="lazy" /><figcaption><b>Pavimentos M&amp;C</b><span>Pavimentación</span></figcaption></figure>
+        <figure><img src="/assets/marcas/piscinas-hormigon.jpg" alt="Logo de Piscinas Hormigón" loading="lazy" /><figcaption><b>Piscinas Hormigón</b><span>Construcción de piscinas de hormigón</span></figcaption></figure>
+        <figure><img src="/assets/marcas/aridos-lomas-blancas.png" alt="Logo de Áridos Lomas Blancas" loading="lazy" /><figcaption><b>Áridos Lomas Blancas</b><span>Venta y despacho de áridos</span></figcaption></figure>
+        <figure><img src="/assets/marcas/landspace.png" alt="Logo de Landspace" loading="lazy" /><figcaption><b>Landspace</b><span>Arquitectura y construcción de casas llave en mano</span></figcaption></figure>
+        <figure><img src="/assets/marcas/pedro-campos.png" alt="Logo de Pedro Campos Obras Menores" loading="lazy" /><figcaption><b>Pedro Campos</b><span>Carpintería y obras menores en Temuco</span></figcaption></figure>
       </div>
       <figure class="testimonio rv">
         <video controls preload="none" playsinline poster="/testimonios/reels/testimonio-pedro.jpg">
@@ -790,19 +797,19 @@
     </div>
     <ol class="linea-tiempo tres rv">
       <li>
-        <span class="label">Días 1 a 10</span>
+        <span class="label">Días 1 a 7</span>
         <h3>Preparamos todo</h3>
         <p>Accesos y contrato, estudio de tu zona, tu oferta, el primer contenido y tu página web.</p>
       </li>
       <li class="hito">
-        <span class="label">Día 10</span>
+        <span class="label">Día 7</span>
         <h3>Lanzamos</h3>
         <p>Anuncios activos en Meta y Google, Selder conectado y, en Llave en Mano, el agente IA atendiendo.</p>
       </li>
       <li>
-        <span class="label">Días 10 a 90</span>
+        <span class="label">Días 7 a 90</span>
         <h3>Ajustamos y crecemos</h3>
-        <p>Videos nuevos cada mes, más inversión a lo que trae proyectos y reporte final de 90 días.</p>
+        <p>Contenido nuevo cada mes, anuncios nuevos cada semana, más inversión a lo que trae proyectos y reporte final de 90 días.</p>
       </li>
     </ol>
     <p class="aviso rv">Los resultados dependen de tu rubro, tu zona y tu competencia. No garantizamos cifras; sí te mostramos en Selder qué funciona y qué no.</p>
@@ -822,10 +829,10 @@
       <article class="plan rv">
         <h3>Cimientos</h3>
         <p class="lema">Para empezar a recibir consultas de gente que busca lo que haces.</p>
-        <div class="valor"><s>$450.000</s><b>$360.000</b><span>+ IVA · sistema de 90 días</span><small>o 6 cuotas sin interés de $60.000</small></div>
+        <div class="valor"><s>$450.000</s><b>$360.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $120.000</small></div>
         <ul class="entregables">
-          <li><b>12 videos al mes</b> para las 3 etapas, más 5 imágenes</li>
-          <li><b>Anuncios en Meta y Google</b>, con retargeting</li>
+          <li><b>4 videos y 4 piezas gráficas al mes</b>: 12 + 12 en los 90 días, para las 3 etapas</li>
+          <li><b>+30 anuncios en Meta y Google</b>: probamos textos y ganchos nuevos cada semana, con retargeting</li>
           <li><b>Página web</b>: la hacemos y la mantenemos</li>
           <li><b>Selder:</b> tus campañas, clientes y ventas en una app</li>
           <li>Reunión de estrategia mensual</li>
@@ -837,12 +844,12 @@
         <span class="badge">Recomendado</span>
         <h3>Llave en Mano</h3>
         <p class="lema">Te entregamos el sistema funcionando. Tú solo cierras.</p>
-        <div class="valor"><s>$900.000</s><b>$720.000</b><span>+ IVA · sistema de 90 días</span><small>o 6 cuotas sin interés de $120.000</small></div>
+        <div class="valor"><s>$900.000</s><b>$720.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $240.000</small></div>
         <ul class="entregables">
           <li>Todo lo de Cimientos, y además:</li>
           <li><b>Agente IA en tu WhatsApp</b> que responde en segundos, filtra y agenda, las 24 horas</li>
           <li><b>Seguimiento automático</b>: recordatorios de cita, cotizaciones pendientes y pedido de reseñas</li>
-          <li><b>Community manager</b>, 7 imágenes e historias al mes</li>
+          <li><b>Community manager</b> e historias semanales</li>
           <li>Reunión de estrategia cada 15 días</li>
         </ul>
         <a class="btn btn-main" data-plan="Llave en Mano" href="https://wa.me/56956747949">Elegir Llave en Mano</a>
@@ -871,7 +878,7 @@
       </details>
       <details>
         <summary>¿Cómo se paga?</summary>
-        <p>Con tarjeta de crédito, hasta 6 cuotas sin interés por Mercado Pago. Por transferencia, al contado o en 3 pagos: al firmar, a los 30 y a los 60 días. Mes a mes se paga al inicio de cada mes y terminas avisando con 15 días.</p>
+        <p>Con tarjeta de crédito, hasta 3 cuotas sin interés por Mercado Pago. Por transferencia, al contado o en 3 pagos: al firmar, a los 30 y a los 60 días. Mes a mes se paga al inicio de cada mes y terminas avisando con 15 días.</p>
       </details>
       <details>
         <summary>¿Qué necesitan de mí?</summary>
@@ -899,7 +906,7 @@
     <div class="rv">
       <svg class="onda-cierre" viewBox="0 0 100 70" aria-hidden="true"><path d="M8 54C8 54 18 16 32 16S48 54 62 54 78 16 92 16" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg>
       <h2>¿Con cuál <span class="dim">partimos?</span></h2>
-      <p class="lead">Escríbenos por WhatsApp y en 10 días tienes tus anuncios funcionando.</p>
+      <p class="lead">Escríbenos por WhatsApp y en 7 días tienes tus anuncios funcionando.</p>
       <div class="acciones"><a class="btn btn-main" data-plan="" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Confirmar por WhatsApp</a><button class="btn btn-line" type="button" data-pdf>Descargar PDF</button></div>
       <p class="cupos">Tomamos solo 3 a 4 clientes nuevos al mes para mantener la calidad.</p>
     </div>
