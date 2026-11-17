@@ -201,7 +201,8 @@
     .testimonio span { font-size: .88rem; color: var(--muted); }
 
     /* 04 Planes */
-    .planes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: stretch; max-width: 880px; }
+    .planes { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; align-items: stretch; max-width: 1200px; }
+    @media (max-width: 1080px) { .planes { grid-template-columns: minmax(0,1fr); max-width: 560px; row-gap: 28px; } }
     .subir { font-size: .84rem; color: var(--faint); margin: -.4rem 0 1.1rem; }
     .modo { margin-bottom: 36px; align-items: center; }
     .modo em { font-style: normal; font-size: .75rem; font-weight: 800; color: var(--gold); margin-left: .35rem; }
@@ -774,7 +775,7 @@
     <div class="head rv">
       <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>03 · Selder, tu app</div>
       <h2>¿Lo que gastas en anuncios <span class="dim">te trae ventas?</span></h2>
-      <p class="lead">Selder es la app de Manyobra, incluida en los dos planes. Ahí ves cuánto invertiste, quién te escribió y cuánto vendiste, desde el celular.</p>
+      <p class="lead">Selder es la app de Manyobra, incluida en todos los planes. Ahí ves cuánto invertiste, quién te escribió y cuánto vendiste, desde el celular.</p>
     </div>
     <div class="dash rv" aria-label="Vista ilustrativa del panel de Selder">
       <div class="dash-bar"><span class="vivo" aria-hidden="true"></span><img src="/selder/logo-selder.png" alt="Selder by Manyobra" width="540" height="114" loading="lazy" /><span>Panel · últimos 90 días</span><em>Ejemplo ilustrativo</em></div>
@@ -868,11 +869,24 @@
   <div class="wrap">
     <div class="head rv">
       <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>06 · Planes y valores</div>
-      <h2>Dos planes. <span class="dim">Un sistema de 90 días.</span></h2>
-      <p class="lead">Los dos traen clientes desde el primer mes. La diferencia: en Llave en Mano también los atendemos y les hacemos seguimiento por ti.</p>
+      <h2>Tres planes. <span class="dim">Un sistema de 90 días.</span></h2>
+      <p class="lead">Los tres traen clientes desde el primer mes. Base es para partir, Cimientos suma más contenido y tu página web, y en Llave en Mano también atendemos y hacemos seguimiento por ti.</p>
     </div>
 
     <div class="planes">
+      <article class="plan rv">
+        <h3>Base</h3>
+        <p class="lema">Para partir con anuncios y contenido, con lo justo y necesario.</p>
+        <div class="valor"><s>$250.000</s><b>$200.000</b><span>+ IVA · sistema de 90 días</span><small>o 2 cuotas sin interés de $100.000</small></div>
+        <ul class="entregables">
+          <li><b>2 videos y 2 piezas gráficas al mes</b>: 6 + 6 en los 90 días</li>
+          <li><b>+15 anuncios en Meta y Google</b>: probamos textos y ganchos nuevos cada dos semanas</li>
+          <li><b>Selder:</b> tus campañas, clientes y ventas en una app</li>
+          <li>Reporte mensual de resultados</li>
+        </ul>
+        <a class="btn btn-line" data-plan="Base" href="https://wa.me/56956747949">Elegir Base</a>
+      </article>
+
       <article class="plan rv">
         <h3>Cimientos</h3>
         <p class="lema">Para empezar a recibir consultas de gente que busca lo que haces.</p>
@@ -906,7 +920,7 @@
     <ul class="notas-plan rv">
       <li><b>De regalo al partir:</b> Instagram optimizado, ficha de Google Business y estudio de tu competencia.</li>
       <li><b>La pauta va aparte:</b> se paga directo a Meta y Google desde tu cuenta. Se puede partir con $50.000 al mes; recomendamos $150.000.</li>
-      <li><b>¿Prefieres mes a mes?</b> $150.000 o $300.000 + IVA al mes, sin permanencia.</li>
+      <li><b>¿Prefieres mes a mes?</b> Cimientos a $150.000 o Llave en Mano a $300.000 + IVA al mes, sin permanencia.</li>
     </ul>
   </div>
 </section>
@@ -932,7 +946,7 @@
       <div class="objecion">
         <q>Es caro.</q>
         <h3>Basta un proyecto para pagarlo</h3>
-        <p>Una cocina, una ampliación o una piscina que cierres cubre el sistema completo. Y lo puedes pagar en 3 cuotas sin interés desde $120.000.</p>
+        <p>Una cocina, una ampliación o una piscina que cierres cubre el sistema completo. Y puedes partir desde $200.000 + IVA por los 90 días, en cuotas sin interés.</p>
       </div>
       <div class="objecion">
         <q>Me llegan puros curiosos que preguntan precio.</q>
