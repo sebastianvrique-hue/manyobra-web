@@ -40,6 +40,8 @@ deployment:
     - /bin/mkdir -p $DEPLOYPATH/assets
     - /bin/mkdir -p $DEPLOYPATH/assets/marca
     - /bin/cp assets/marca/manyobra-hora-isotipo.png assets/marca/manyobra-hora-logotipo.png assets/marca/manyobra-onda.jpg assets/marca/manyobra-onda-simbolo.jpg assets/marca/manyobra-onda-texto.jpg $DEPLOYPATH/assets/marca/
+    - /bin/mkdir -p $DEPLOYPATH/assets/agencia-ia
+    - /bin/cp assets/agencia-ia/*.jpg $DEPLOYPATH/assets/agencia-ia/
     - /bin/mkdir -p $DEPLOYPATH/assets/marcas
     - /bin/cp assets/marcas/* $DEPLOYPATH/assets/marcas/
     - /bin/cp assets/hero.mp4 $DEPLOYPATH/assets/
