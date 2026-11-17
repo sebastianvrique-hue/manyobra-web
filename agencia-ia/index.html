@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '956034103850677');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=956034103850677&ev=PageView&noscript=1" /></noscript>
+
+  <!-- Pagina oculta: no aparece en el menu, el sitemap ni Google. Se comparte
+       por link, y ?para=Empresa personaliza la portada. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Manyobra IA · Sistemas a medida</title>
+  <meta name="description" content="Manyobra IA: diseñamos e implementamos sistemas de inteligencia artificial a medida para tu empresa. Agentes, automatizaciones e integraciones con tus herramientas." />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Misma marca que /planes/: blanco y negro del logo de la onda, dorado
+       arena #D6C48F solo como acento. */
+    :root {
+      --ink: #0A0A0A;
+      --ink-2: #131313;
+      --bone: #FFFFFF;
+      --gold: #D6C48F;
+      --dim: rgba(255,255,255,.42);
+      --muted: rgba(255,255,255,.66);
+      --faint: rgba(255,255,255,.42);
+      --line: rgba(255,255,255,.09);
+      --line-2: rgba(255,255,255,.17);
+      --radius: 18px;
+      --wrap: 1140px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--ink); color: var(--bone);
+      font-size: 17px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 40px; }
+    section { padding: 104px 0; border-top: 1px solid var(--line); }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .65rem;
+      font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 1.4rem;
+    }
+    .eyebrow svg { width: 20px; height: 14px; flex-shrink: 0; color: var(--gold); }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 800; line-height: 1.02; letter-spacing: -.035em; margin-bottom: 1.5rem; }
+    h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); font-weight: 800; line-height: 1.06; letter-spacing: -.03em; margin-bottom: 1.2rem; }
+    h3 { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; }
+    .dim { color: var(--dim); }
+    .lead { font-size: 1.12rem; color: var(--muted); max-width: 660px; }
+    .lead b { color: var(--bone); }
+    .head { max-width: 780px; margin-bottom: 56px; }
+    .label { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--faint); }
+
+    /* Barra superior */
+    .topbar { padding: 28px 0; }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo img { display: block; width: auto; mix-blend-mode: screen; }
+    .logo-simbolo { height: 30px; }
+    .logo-texto { height: 13px; }
+    .logo em { font-style: normal; font-size: .72rem; font-weight: 800; letter-spacing: .14em; color: var(--ink); background: var(--gold); padding: .2rem .5rem; border-radius: 6px; }
+    .top-der { display: flex; align-items: center; gap: 18px; }
+    .top-der span { font-size: .82rem; color: var(--faint); letter-spacing: .04em; }
+    .btn-pdf { padding: .55rem 1rem; font-size: .85rem; white-space: nowrap; }
+    button.btn { background-color: transparent; cursor: pointer; font-family: inherit; }
+    .acciones { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; text-decoration: none; font-weight: 700; font-size: .95rem; border-radius: 100px; padding: .85rem 1.3rem; transition: transform .15s, background .2s, color .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-line { border: 1px solid var(--line-2); color: var(--bone); }
+    .btn-line:hover { border-color: var(--bone); }
+    .btn-main { background: var(--bone); color: var(--ink); }
+    .btn-main:hover { background: var(--gold); }
+    .btn svg { width: 18px; height: 18px; }
+
+    /* Portada */
+    .hero { padding: 72px 0 96px; border-top: 0; }
+    .hero .wrap { display: grid; grid-template-columns: 1.35fr 1fr; gap: 72px; align-items: end; }
+    .hero .wrap + .wrap { display: block; }
+    .para { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid var(--line-2); border-radius: 100px; padding: .45rem 1rem; font-size: .88rem; color: var(--muted); margin-bottom: 2rem; }
+    .para b { color: var(--bone); font-weight: 600; }
+    .hero .acciones { margin-top: 2rem; }
+    .indice { border: 1px solid var(--line-2); border-radius: var(--radius); padding: 26px 30px; background: var(--ink-2); }
+    .indice .label { margin-bottom: .8rem; }
+    .indice ol { list-style: none; }
+    .indice li { border-top: 1px solid var(--line); }
+    .indice a { display: flex; gap: 1rem; padding: .62rem 0; text-decoration: none; font-weight: 600; font-size: .95rem; transition: color .2s; }
+    .indice a span { color: var(--faint); font-variant-numeric: tabular-nums; width: 1.6rem; }
+    .indice a:hover { color: var(--gold); }
+    .datos-clave { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 72px; }
+    .datos-clave div { padding: 22px 0; }
+    .datos-clave div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+    .datos-clave b { display: block; font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
+    .datos-clave span { font-size: .88rem; color: var(--muted); }
+
+    /* 01 Diagnostico rapido: tareas que se comen el dia */
+    .dolores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .dolor { background: var(--ink); padding: 30px 26px 28px; display: flex; flex-direction: column; gap: .7rem; }
+    .dolor .num { font-size: .8rem; font-weight: 700; color: var(--faint); letter-spacing: .1em; }
+    .dolor p { color: var(--muted); font-size: .96rem; flex-grow: 1; }
+    .dolor .fix { font-size: .82rem; font-weight: 600; color: var(--bone); padding-top: .9rem; border-top: 1px solid var(--line); }
+    .dolor .fix::before { content: '→ '; color: var(--gold); }
+
+    /* 02 Lo que construimos */
+    .servicios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .servicio { background: var(--ink-2); border: 1px solid var(--line-2); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: .5rem; }
+    .servicio.clave { grid-column: span 2; border-color: var(--gold); background: linear-gradient(180deg, rgba(214,196,143,.07), rgba(214,196,143,0) 50%), var(--ink-2); }
+    .servicio .label { color: var(--gold); }
+    .servicio h3 { font-size: 1.15rem; }
+    .servicio p { font-size: .92rem; color: var(--muted); }
+    .servicio ul { list-style: none; margin-top: .4rem; display: grid; gap: .35rem; }
+    .servicio li { font-size: .88rem; color: var(--muted); padding-left: 1rem; position: relative; }
+    .servicio li::before { content: ''; position: absolute; left: 0; top: .6em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+    /* 03 Metodo */
+    .fases { list-style: none; counter-reset: fase; }
+    .fase { display: grid; grid-template-columns: 90px 1fr 1fr; gap: 36px; padding: 32px 0; border-top: 1px solid var(--line); }
+    .fase:last-child { border-bottom: 1px solid var(--line); }
+    .fase .n { font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--dim); }
+    .fase.hito .n { color: var(--gold); }
+    .fase h3 { font-size: 1.4rem; margin-bottom: .3rem; }
+    .fase .cuando { font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+    .fase p { color: var(--muted); font-size: .96rem; margin-top: .6rem; }
+    .fase .entrega .label { display: block; margin-bottom: .5rem; }
+    .fase .entrega ul { list-style: none; display: grid; gap: .4rem; }
+    .fase .entrega li { font-size: .92rem; color: var(--muted); padding-left: 1.1rem; position: relative; }
+    .fase .entrega li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: .8rem; }
+
+    /* 04 Ejemplo: flujo */
+    .flujo { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .pasos { list-style: none; position: relative; }
+    .pasos::before { content: ''; position: absolute; left: 15px; top: 16px; bottom: 16px; width: 1px; background: var(--line-2); }
+    .paso { position: relative; display: grid; grid-template-columns: 32px 1fr; gap: 18px; padding: 12px 0; }
+    .paso i { font-style: normal; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .78rem; font-weight: 800; background: var(--ink); border: 1px solid var(--line-2); position: relative; }
+    .paso.ia i { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .paso b { display: block; font-size: 1rem; }
+    .paso span { font-size: .9rem; color: var(--muted); }
+    .chat { background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+    .chat .label { margin-bottom: .4rem; }
+    .msg { max-width: 85%; padding: .7rem 1rem; border-radius: 16px; font-size: .9rem; line-height: 1.45; }
+    .msg.cli { align-self: flex-start; background: rgba(255,255,255,.08); border-bottom-left-radius: 4px; }
+    .msg.bot { align-self: flex-end; background: var(--bone); color: var(--ink); border-bottom-right-radius: 4px; }
+    .msg.sis { align-self: center; max-width: 100%; font-size: .78rem; color: var(--gold); border: 1px dashed rgba(214,196,143,.5); border-radius: 100px; padding: .35rem .9rem; }
+    .resultado { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
+    .resultado div { border: 1px solid var(--line-2); border-radius: 14px; padding: 20px 22px; }
+    .resultado b { display: block; font-size: 1.6rem; font-weight: 800; letter-spacing: -.02em; }
+    .resultado span { font-size: .88rem; color: var(--muted); }
+
+    /* 05 Principios */
+    .principios { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .principio { border: 1px solid var(--line-2); border-radius: var(--radius); padding: 28px 30px; }
+    .principio h3 { margin-bottom: .45rem; }
+    .principio h3::before { content: '●'; color: var(--gold); font-size: .6rem; vertical-align: middle; margin-right: .6rem; }
+    .principio p { color: var(--muted); font-size: .95rem; }
+
+    /* 06 Herramientas */
+    .stack { display: flex; flex-wrap: wrap; gap: 8px; }
+    .stack i { font-style: normal; font-size: .9rem; font-weight: 600; padding: .5rem 1rem; border-radius: 100px; border: 1px solid var(--line-2); color: var(--muted); }
+    .stack-nota { margin-top: 24px; color: var(--muted); font-size: .95rem; max-width: 760px; padding-left: 18px; border-left: 2px solid var(--gold); }
+
+    /* 07 Formas de trabajar */
+    .modelos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+    .modelo { position: relative; display: flex; flex-direction: column; background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 30px 26px 26px; }
+    .modelo.top { border-color: var(--gold); background: linear-gradient(180deg, rgba(214,196,143,.07), rgba(214,196,143,0) 40%), var(--ink-2); }
+    .badge { position: absolute; top: -12px; left: 24px; background: var(--gold); color: var(--ink); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 100px; }
+    .modelo h3 { font-size: 1.35rem; font-weight: 800; }
+    .modelo .que { color: var(--muted); font-size: .92rem; margin: .4rem 0 1.2rem; min-height: 4.4em; }
+    .modelo .precio { padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .modelo .precio b { display: block; font-size: 1.3rem; font-weight: 800; }
+    .modelo .precio span { font-size: .82rem; color: var(--faint); }
+    .modelo ul { list-style: none; display: grid; gap: .5rem; padding: 1.2rem 0 1.4rem; flex-grow: 1; }
+    .modelo li { position: relative; padding-left: 1rem; font-size: .9rem; color: var(--muted); line-height: 1.45; }
+    .modelo li::before { content: ''; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--bone); opacity: .5; }
+
+    /* 08 Preguntas */
+    .faq { max-width: 860px; }
+    .faq details { border-top: 1px solid var(--line); }
+    .faq details:last-child { border-bottom: 1px solid var(--line); }
+    .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1.5rem; padding: 22px 0; font-weight: 700; font-size: 1.05rem; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; color: var(--faint); font-weight: 400; font-size: 1.4rem; line-height: 1; transition: transform .2s; }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { color: var(--muted); padding: 0 0 24px; max-width: 720px; }
+
+    /* Cierre */
+    .cierre { text-align: center; padding: 120px 0 88px; }
+    .cierre .lead { margin: 0 auto 2.2rem; }
+    .cierre .acciones { justify-content: center; }
+    .cierre .btn { padding: 1.05rem 1.8rem; font-size: 1rem; }
+    .cupos { margin-top: 1.4rem; font-size: .88rem; color: var(--faint); }
+    .firma { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; text-align: left; font-size: .88rem; color: var(--faint); }
+    .firma b { color: var(--bone); font-weight: 600; }
+
+    .js .rv { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .js .rv.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .rv { opacity: 1; transform: none; transition: none; }
+    }
+
+    @media (max-width: 1080px) {
+      .servicios { grid-template-columns: 1fr 1fr; }
+      .fase { grid-template-columns: 70px 1fr; }
+      .fase .entrega { grid-column: 2; }
+      .flujo { grid-template-columns: 1fr; }
+      .modelos { grid-template-columns: 1fr; max-width: 560px; }
+      .modelo .que { min-height: 0; }
+    }
+    @media (max-width: 820px) {
+      body { font-size: 16px; }
+      .wrap { padding: 0 20px; }
+      section { padding: 76px 0; }
+      .hero { padding: 40px 0 72px; }
+      .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+      .datos-clave { grid-template-columns: 1fr 1fr; margin-top: 48px; }
+      .datos-clave div + div { padding-left: 0; border-left: 0; }
+      .datos-clave div:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--line); }
+      .datos-clave div:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .head { margin-bottom: 40px; }
+      .dolores, .principios, .resultado { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .servicios { grid-template-columns: 1fr; }
+      .servicio.clave { grid-column: auto; }
+      .fase { grid-template-columns: 1fr; gap: 10px; }
+      .fase .entrega { grid-column: auto; }
+      .fase .n { font-size: 2rem; }
+      .top-der span { display: none; }
+      .btn-pdf { padding: .5rem .85rem; font-size: .8rem; }
+      .logo-simbolo { height: 24px; }
+      .logo-texto { height: 10.5px; }
+    }
+
+    @page { size: A4; margin: 14mm; }
+    @media print {
+      :root { --ink:#fff; --ink-2:#f6f6f4; --bone:#111; --muted:#444; --faint:#777; --dim:#8a8a8a; --line:#e2e2e2; --line-2:#cfcfcf; --gold:#9C8650; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body { font-size: 10.5pt; background: #fff; }
+      .wrap { padding: 0; max-width: none; }
+      section { padding: 22px 0; }
+      .hero { padding: 10px 0 20px; }
+      .head { margin-bottom: 20px; }
+      h1 { font-size: 30pt; } h2 { font-size: 20pt; }
+      .logo img { filter: invert(1); mix-blend-mode: normal; }
+      .btn, .indice, .acciones, .top-der span { display: none !important; }
+      .msg.bot { background: #111; color: #fff; }
+      .js .rv { opacity: 1 !important; transform: none !important; }
+      .servicio, .fase, .principio, .modelo, .dolor, .paso, .faq details { break-inside: avoid; page-break-inside: avoid; }
+      .faq summary::after { display: none; }
+      .cierre { padding: 30px 0 0; }
+    }
+  </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G9JF1L3ZJD');
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="onda" viewBox="0 0 100 70"><path d="M8 54C8 54 18 16 32 16S48 54 62 54 78 16 92 16" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Manyobra"><img class="logo-simbolo" src="/assets/marca/manyobra-onda-simbolo.jpg" alt="" width="524" height="176" /><img class="logo-texto" src="/assets/marca/manyobra-onda-texto.jpg" alt="Manyobra" width="684" height="70" /><em>IA</em></a>
+    <div class="top-der"><span>Agencia de inteligencia artificial · Sistemas a medida</span><button class="btn btn-line btn-pdf" type="button" data-pdf>Descargar PDF</button></div>
+  </div>
+</header>
+
+<!-- PORTADA -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="para">Preparado para <b id="para">tu empresa</b></div>
+      <h1><span class="dim">Inteligencia artificial que trabaja</span> dentro de tu empresa.</h1>
+      <p class="lead">En <b>Manyobra IA</b> no vendemos un software genérico. Entramos a tu operación, vemos dónde se pierden horas y oportunidades, y construimos un sistema a medida: agentes que atienden, automatizaciones que hacen el trabajo repetitivo y todo conectado con las herramientas que ya usas.</p>
+      <div class="acciones">
+        <a class="btn btn-main" data-msg="diagnostico" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Agendar diagnóstico</a>
+        <a class="btn btn-line" href="#metodo">Ver cómo lo hacemos</a>
+      </div>
+    </div>
+    <nav class="indice" aria-label="Contenido">
+      <p class="label">En esta página</p>
+      <ol>
+        <li><a href="#tareas"><span>01</span>Dónde se pierde el tiempo</a></li>
+        <li><a href="#construimos"><span>02</span>Lo que construimos</a></li>
+        <li><a href="#metodo"><span>03</span>Cómo lo implementamos</a></li>
+        <li><a href="#ejemplo"><span>04</span>Un sistema por dentro</a></li>
+        <li><a href="#principios"><span>05</span>Cómo cuidamos tu negocio</a></li>
+        <li><a href="#herramientas"><span>06</span>Con qué lo conectamos</a></li>
+        <li><a href="#modelos"><span>07</span>Formas de trabajar</a></li>
+        <li><a href="#preguntas"><span>08</span>Preguntas frecuentes</a></li>
+      </ol>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="datos-clave">
+      <div><b>A medida</b><span>diseñado para tus procesos, no al revés</span></div>
+      <div><b>2–4 semanas</b><span>para tener la primera versión funcionando</span></div>
+      <div><b>24/7</b><span>tu sistema responde y trabaja sin descanso</span></div>
+      <div><b>Tú decides</b><span>la IA propone, tu equipo aprueba lo importante</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 TAREAS -->
+<section id="tareas">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>01 · Dónde se pierde el tiempo</p>
+      <h2>Tu equipo hace trabajo <span class="dim">que una máquina podría hacer mejor.</span></h2>
+      <p class="lead">Casi todas las empresas con las que hablamos tienen el mismo patrón: personas buenas, ocupadas en tareas repetitivas que no hacen crecer el negocio.</p>
+    </div>
+    <div class="dolores rv">
+      <div class="dolor"><span class="num">01</span><h3>WhatsApp sin respuesta</h3><p>Llegan consultas a toda hora y muchas se enfrían antes de que alguien conteste.</p><span class="fix">Agente que responde en segundos y califica</span></div>
+      <div class="dolor"><span class="num">02</span><h3>Cotizar a mano</h3><p>Cada cotización toma horas entre planillas, PDFs y correos que van y vienen.</p><span class="fix">Cotizaciones generadas con tus reglas</span></div>
+      <div class="dolor"><span class="num">03</span><h3>Seguimiento que se olvida</h3><p>El cliente que dijo "lo veo y te aviso" nunca vuelve a recibir un mensaje.</p><span class="fix">Seguimiento automático en el momento justo</span></div>
+      <div class="dolor"><span class="num">04</span><h3>Datos repartidos</h3><p>La información vive en el celular de alguien, en una planilla y en el correo. Nadie tiene la foto completa.</p><span class="fix">Todo registrado en un solo lugar</span></div>
+      <div class="dolor"><span class="num">05</span><h3>Documentos que se digitan</h3><p>Facturas, órdenes de compra y formularios que alguien copia campo por campo.</p><span class="fix">Lectura automática de documentos</span></div>
+      <div class="dolor"><span class="num">06</span><h3>Reportes de viernes</h3><p>Armar el reporte de la semana consume una tarde completa y llega tarde.</p><span class="fix">Reportes que se arman solos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LO QUE CONSTRUIMOS -->
+<section id="construimos">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>02 · Lo que construimos</p>
+      <h2>Piezas que se combinan <span class="dim">en un solo sistema.</span></h2>
+      <p class="lead">Cada empresa necesita una mezcla distinta. Estas son las piezas con las que armamos tu sistema; partimos por la que más impacto tiene y sumamos el resto por etapas.</p>
+    </div>
+    <div class="servicios rv">
+      <article class="servicio clave">
+        <span class="label">La pieza más pedida</span>
+        <h3>Agente de IA para WhatsApp e Instagram</h3>
+        <p>Un asistente entrenado con la información de tu empresa que conversa como una persona de tu equipo, de día y de noche.</p>
+        <ul>
+          <li>Responde preguntas de precios, plazos, horarios y servicios</li>
+          <li>Hace las preguntas correctas para filtrar a quien tiene un proyecto real</li>
+          <li>Agenda reuniones o visitas directo en tu calendario</li>
+          <li>Te pasa la conversación cuando un cliente está listo para comprar</li>
+        </ul>
+      </article>
+      <article class="servicio">
+        <span class="label">Ventas</span>
+        <h3>Seguimiento y CRM automático</h3>
+        <p>Cada contacto queda registrado con su etapa. El sistema recuerda, insiste y te avisa quién está caliente.</p>
+      </article>
+      <article class="servicio">
+        <span class="label">Operación</span>
+        <h3>Cotizaciones y propuestas</h3>
+        <p>Con tus precios y reglas, la IA arma una cotización o propuesta en PDF en minutos para que solo la revises.</p>
+      </article>
+      <article class="servicio">
+        <span class="label">Equipo</span>
+        <h3>Asistente interno con tus documentos</h3>
+        <p>Un "cerebro" de la empresa: tu equipo pregunta y responde con tus manuales, fichas técnicas y procedimientos.</p>
+      </article>
+      <article class="servicio">
+        <span class="label">Administración</span>
+        <h3>Lectura de documentos</h3>
+        <p>Facturas, órdenes y formularios que se leen solos y pasan a tu planilla o sistema sin digitar.</p>
+      </article>
+      <article class="servicio">
+        <span class="label">Gestión</span>
+        <h3>Reportes y alertas</h3>
+        <p>Indicadores que se actualizan solos y avisos cuando algo se sale de lo normal, en tu WhatsApp o correo.</p>
+      </article>
+      <article class="servicio">
+        <span class="label">Marketing</span>
+        <h3>Contenido y respuestas en redes</h3>
+        <p>Respuesta a comentarios, borradores de publicaciones y reactivación de clientes antiguos con mensajes personalizados.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 METODO -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>03 · Cómo lo implementamos</p>
+      <h2>De la conversación <span class="dim">al sistema funcionando,</span> en 5 pasos.</h2>
+      <p class="lead">La IA falla cuando se instala sin entender el negocio. Por eso nuestro método parte escuchando y termina midiendo.</p>
+    </div>
+    <ol class="fases rv">
+      <li class="fase">
+        <span class="n">01</span>
+        <div><span class="cuando">Semana 1</span><h3>Diagnóstico</h3><p>Nos sentamos con tu equipo y recorremos cómo funciona hoy la empresa: de dónde llegan los clientes, qué se repite, dónde se traba y qué herramientas usan.</p></div>
+        <div class="entrega"><span class="label">Te entregamos</span><ul><li>Mapa de tus procesos actuales</li><li>Lista de tareas automatizables, ordenadas por impacto</li><li>Estimación de horas que se pueden liberar</li></ul></div>
+      </li>
+      <li class="fase">
+        <span class="n">02</span>
+        <div><span class="cuando">Semana 1–2</span><h3>Diseño del sistema</h3><p>Definimos qué hace la IA, qué sigue haciendo tu equipo y en qué momentos una persona aprueba. Escribimos cómo debe hablar y qué nunca debe decir.</p></div>
+        <div class="entrega"><span class="label">Te entregamos</span><ul><li>Diagrama del sistema y sus conexiones</li><li>Guion y tono del agente</li><li>Indicadores con los que mediremos el resultado</li></ul></div>
+      </li>
+      <li class="fase hito">
+        <span class="n">03</span>
+        <div><span class="cuando">Semana 2–4</span><h3>Construcción</h3><p>Construimos la primera versión, la entrenamos con tu información real (precios, preguntas frecuentes, conversaciones pasadas) y la conectamos con tus herramientas.</p></div>
+        <div class="entrega"><span class="label">Te entregamos</span><ul><li>Sistema funcionando en un ambiente de prueba</li><li>Pruebas con casos reales de tu negocio</li><li>Ajustes hasta que respondas "así lo diría yo"</li></ul></div>
+      </li>
+      <li class="fase">
+        <span class="n">04</span>
+        <div><span class="cuando">Semana 4–5</span><h3>Lanzamiento acompañado</h3><p>Lo encendemos de forma controlada, primero con una parte de los contactos, revisando cada conversación. Capacitamos a tu equipo para trabajar con él.</p></div>
+        <div class="entrega"><span class="label">Te entregamos</span><ul><li>Sistema en producción</li><li>Capacitación y manual de uso</li><li>Canal directo con nosotros para ajustes</li></ul></div>
+      </li>
+      <li class="fase">
+        <span class="n">05</span>
+        <div><span class="cuando">Cada mes</span><h3>Medición y mejora</h3><p>La IA mejora con el uso. Revisamos conversaciones, corregimos respuestas, medimos resultados y sumamos nuevas piezas cuando la base está sólida.</p></div>
+        <div class="entrega"><span class="label">Te entregamos</span><ul><li>Reporte mensual de resultados</li><li>Mejoras y mantención continua</li><li>Propuesta de la siguiente automatización</li></ul></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 04 EJEMPLO -->
+<section id="ejemplo">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>04 · Un sistema por dentro</p>
+      <h2>Así se ve un sistema <span class="dim">trabajando a las 23:40.</span></h2>
+      <p class="lead">Ejemplo de una empresa de servicios: un cliente escribe fuera de horario. Nadie de tu equipo está conectado, pero el sistema sí.</p>
+    </div>
+    <div class="flujo rv">
+      <ol class="pasos">
+        <li class="paso ia"><i>1</i><div><b>Responde en segundos</b><span>El agente saluda, entiende la consulta y contesta con tu información.</span></div></li>
+        <li class="paso ia"><i>2</i><div><b>Califica</b><span>Pregunta lo que tú preguntarías: qué necesita, dónde, para cuándo y con qué presupuesto.</span></div></li>
+        <li class="paso ia"><i>3</i><div><b>Registra</b><span>Crea la ficha del contacto con todo lo conversado en tu CRM o planilla.</span></div></li>
+        <li class="paso ia"><i>4</i><div><b>Agenda</b><span>Ofrece horarios disponibles de tu calendario y deja la reunión confirmada.</span></div></li>
+        <li class="paso"><i>5</i><div><b>Te avisa</b><span>A la mañana siguiente recibes un resumen: quién es, qué quiere y cuándo lo ves.</span></div></li>
+        <li class="paso ia"><i>6</i><div><b>Hace seguimiento</b><span>Recuerda la reunión y, si el cliente no responde una cotización, vuelve a escribirle.</span></div></li>
+      </ol>
+      <div class="chat" aria-label="Ejemplo de conversación">
+        <span class="label">WhatsApp · 23:40</span>
+        <div class="msg cli">Hola, ¿cuánto sale ampliar una cocina? Es en Viña.</div>
+        <div class="msg bot">¡Hola! Claro, te ayudo. Para darte un valor cercano: ¿cuántos m² aproximados quieres ampliar y para cuándo te gustaría empezar?</div>
+        <div class="msg cli">Unos 12 m², idealmente en marzo.</div>
+        <div class="msg bot">Perfecto, es un proyecto que hacemos seguido. Lo ideal es una visita para medir. ¿Te acomoda el jueves a las 10:00 o el viernes a las 16:00?</div>
+        <div class="msg cli">El jueves 👍</div>
+        <div class="msg sis">● Visita agendada · Contacto registrado · Aviso enviado al equipo</div>
+      </div>
+    </div>
+    <div class="resultado rv">
+      <div><b>Segundos</b><span>en responder, en vez de horas o del día siguiente</span></div>
+      <div><b>0</b><span>contactos olvidados: todos quedan registrados</span></div>
+      <div><b>Solo lo importante</b><span>llega a tu equipo: personas con proyecto real</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PRINCIPIOS -->
+<section id="principios">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>05 · Cómo cuidamos tu negocio</p>
+      <h2>IA con criterio, <span class="dim">no IA porque sí.</span></h2>
+    </div>
+    <div class="principios rv">
+      <div class="principio"><h3>Una persona siempre al mando</h3><p>Definimos juntos qué decide la IA y qué pasa por tu equipo. Descuentos, compromisos y casos delicados siempre llegan a una persona.</p></div>
+      <div class="principio"><h3>Tus datos son tuyos</h3><p>La información de tu empresa y tus clientes se usa solo para tu sistema. Si un día terminamos, te la llevas completa.</p></div>
+      <div class="principio"><h3>Habla como tu marca</h3><p>Entrenamos el tono con tus propias conversaciones. Si no sabe algo, lo dice y deriva; no inventa respuestas.</p></div>
+      <div class="principio"><h3>Se mide en resultados</h3><p>Cada sistema tiene indicadores claros desde el día uno: horas liberadas, tiempo de respuesta, reuniones agendadas y ventas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 HERRAMIENTAS -->
+<section id="herramientas">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>06 · Con qué lo conectamos</p>
+      <h2>Se conecta con lo que <span class="dim">ya usas.</span></h2>
+      <p class="lead">No te pedimos cambiar tu forma de trabajar. El sistema se integra a tus herramientas actuales.</p>
+    </div>
+    <div class="stack rv">
+      <i>WhatsApp Business</i><i>Instagram</i><i>Facebook Messenger</i><i>Gmail y Outlook</i><i>Google Calendar</i><i>Google Sheets</i><i>Excel</i><i>Google Drive</i><i>Formularios web</i><i>Meta Ads</i><i>Google Ads</i><i>CRM</i><i>Sistemas de facturación</i><i>Selder, nuestra app</i>
+    </div>
+    <p class="stack-nota rv">¿Usas un sistema propio o poco común? En el diagnóstico revisamos cómo conectarlo. Trabajamos con los modelos de IA más avanzados del mercado y elegimos el adecuado para cada tarea.</p>
+  </div>
+</section>
+
+<!-- 07 MODELOS -->
+<section id="modelos">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>07 · Formas de trabajar</p>
+      <h2>Partimos chico, <span class="dim">crecemos con resultados.</span></h2>
+      <p class="lead">Como cada sistema es a medida, el valor se define después del diagnóstico, con un alcance cerrado y por escrito. Así sabes exactamente qué recibes antes de invertir.</p>
+    </div>
+    <div class="modelos rv">
+      <article class="modelo">
+        <h3>Diagnóstico</h3>
+        <p class="que">Una sesión de trabajo con tu equipo para mapear procesos y encontrar las automatizaciones con más retorno.</p>
+        <div class="precio"><b>Primer paso</b><span>Agéndalo por WhatsApp</span></div>
+        <ul><li>Reunión de diagnóstico</li><li>Mapa de procesos</li><li>Propuesta con alcance, plazos y valor</li></ul>
+        <a class="btn btn-line" data-msg="diagnostico" href="https://wa.me/56956747949">Agendar diagnóstico</a>
+      </article>
+      <article class="modelo top">
+        <span class="badge">Recomendado</span>
+        <h3>Sistema a medida</h3>
+        <p class="que">Diseñamos, construimos y lanzamos tu sistema, y luego lo mantenemos y mejoramos cada mes.</p>
+        <div class="precio"><b>Implementación + mensualidad</b><span>Según alcance · se cotiza tras el diagnóstico</span></div>
+        <ul><li>Las 5 fases del método</li><li>Agente, automatizaciones e integraciones</li><li>Mantención, ajustes y soporte</li><li>Reporte mensual de resultados</li></ul>
+        <a class="btn btn-main" data-msg="sistema" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Quiero mi sistema</a>
+      </article>
+      <article class="modelo">
+        <h3>Sistema + Marketing</h3>
+        <p class="que">Tu sistema de IA conectado a nuestros planes de contenido y anuncios: atraemos clientes y la IA los atiende.</p>
+        <div class="precio"><b>Todo en uno</b><span>Ver planes de marketing en la propuesta</span></div>
+        <ul><li>Contenido, Meta Ads y Google Ads</li><li>Agente IA que atiende cada contacto</li><li>Todo visible en Selder</li></ul>
+        <a class="btn btn-line" data-msg="marketing" href="https://wa.me/56956747949">Consultar</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 08 PREGUNTAS -->
+<section id="preguntas">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg><use href="#onda"/></svg>08 · Preguntas frecuentes</p>
+      <h2>Lo que más <span class="dim">nos preguntan.</span></h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>¿La IA va a reemplazar a mi equipo?</summary><p>No. Le quita el trabajo repetitivo para que tu equipo se dedique a lo que genera valor: cerrar ventas, atender bien y hacer crecer el negocio. Las decisiones importantes siguen siendo de personas.</p></details>
+      <details><summary>¿Qué pasa si el agente responde algo mal?</summary><p>Lo entrenamos con límites claros: si no sabe, lo dice y deriva a una persona. Durante el lanzamiento revisamos las conversaciones una a una, y cada mes seguimos corrigiendo y mejorando.</p></details>
+      <details><summary>¿Necesito saber de tecnología?</summary><p>No. Nosotros diseñamos, construimos y mantenemos el sistema. Tu equipo solo aprende a trabajar con él, y para eso lo capacitamos.</p></details>
+      <details><summary>¿Cuánto se demora en estar funcionando?</summary><p>Una primera versión suele estar lista entre 2 y 4 semanas, según la complejidad y las herramientas que haya que conectar. Partimos por la pieza de mayor impacto para que veas resultados rápido.</p></details>
+      <details><summary>¿Mis datos y los de mis clientes están seguros?</summary><p>Usamos plataformas con estándares de seguridad empresariales y accesos restringidos. Tu información se usa solo para tu sistema y es tuya: si terminamos, te la entregamos completa.</p></details>
+      <details><summary>¿Sirve para empresas pequeñas?</summary><p>Sí. De hecho es donde más se nota: en una empresa chica, cada hora liberada y cada cliente que no se pierde tienen un impacto directo en las ventas.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="cierre">
+  <div class="wrap">
+    <div class="rv">
+      <h2>¿Qué tarea te gustaría <span class="dim">no volver a hacer?</span></h2>
+      <p class="lead">Cuéntanos por WhatsApp cómo funciona hoy tu empresa y agendamos el diagnóstico.</p>
+      <div class="acciones"><a class="btn btn-main" data-msg="diagnostico" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Agendar diagnóstico</a><button class="btn btn-line" type="button" data-pdf>Descargar PDF</button></div>
+      <p class="cupos">Implementamos pocos sistemas a la vez para acompañar cada uno de cerca.</p>
+    </div>
+    <div class="firma">
+      <div><b>Sebastián</b> · Fundador y director, Manyobra<br/>+56 9 5674 7949 · contacto@manyobra.cl · manyobra.cl</div>
+      <div>Manyobra SpA · Imagine Lux SpA · RUT 78.213.349-7</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  // ?para=Nombre personaliza la portada al enviar el link a un cliente.
+  var para = new URLSearchParams(location.search).get('para');
+  if (para) {
+    para = para.trim().slice(0, 60);
+    document.getElementById('para').textContent = para;
+    document.title = 'Manyobra IA · ' + para;
+  }
+
+  // Cada boton abre WhatsApp con el mensaje ya escrito.
+  var mensajes = {
+    diagnostico: 'quiero agendar un diagnóstico para implementar IA en mi empresa.',
+    sistema: 'quiero implementar un sistema de IA a medida en mi empresa.',
+    marketing: 'me interesa el sistema de IA junto con marketing y anuncios.'
+  };
+  document.querySelectorAll('a[data-msg]').forEach(function (a) {
+    var msg = 'Hola Sebastián, vi la página de Manyobra IA' + (para ? ' (' + para + ')' : '') + ' y ' + mensajes[a.getAttribute('data-msg')];
+    a.href = 'https://wa.me/56956747949?text=' + encodeURIComponent(msg);
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  document.querySelectorAll('[data-pdf]').forEach(function (b) {
+    b.addEventListener('click', function () { window.print(); });
+  });
+
+  // Aparicion suave al hacer scroll.
+  var rv = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    rv.forEach(function (el) { io.observe(el); });
+  } else {
+    rv.forEach(function (el) { el.classList.add('in'); });
+  }
+  window.addEventListener('beforeprint', function () { rv.forEach(function (el) { el.classList.add('in'); }); });
+</script>
+</body>
+</html>
