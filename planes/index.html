@@ -23,7 +23,7 @@
 
   <meta name="robots" content="noindex, nofollow" />
   <title>Propuesta Manyobra</title>
-  <meta name="description" content="Propuesta comercial de Manyobra: el sistema de adquisición de clientes, los planes, la inversión mensual y qué esperar los primeros 90 días." />
+  <meta name="description" content="Propuesta comercial de Manyobra: el Sistema Reflex de 90 días, con contenido, Meta Ads, Google Ads, página web, agente IA en WhatsApp y Selder, nuestra app." />
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#0A0A0A" />
@@ -91,6 +91,11 @@
     .logo-simbolo { height: 30px; }
     .logo-texto { height: 13px; }
     .topbar span { font-size: .82rem; color: var(--faint); letter-spacing: .04em; }
+    .top-der { display: flex; align-items: center; gap: 18px; }
+    .btn-pdf { padding: .55rem 1rem; font-size: .85rem; white-space: nowrap; }
+    button.btn { background-color: transparent; cursor: pointer; font-family: inherit; }
+    button.btn-main { background-color: var(--bone); }
+    .acciones { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* Portada */
     .hero { padding: 72px 0 96px; border-top: 0; }
@@ -147,6 +152,34 @@
     .meta div { font-size: .92rem; color: var(--muted); }
     .meta .label { display: block; margin-bottom: .2rem; }
 
+    /* Selder */
+    .app-top { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 28px; }
+    .selder-logo { height: 34px; width: auto; display: block; }
+    .app-top span { font-size: .85rem; color: var(--muted); }
+    .crm { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 28px; padding: 18px 22px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--ink-2); }
+    .crm .label { margin-right: .6rem; }
+    .crm i { font-style: normal; font-size: .85rem; font-weight: 600; padding: .35rem .8rem; border-radius: 100px; border: 1px solid var(--line-2); }
+    .crm i:last-of-type { background: var(--bone); color: var(--ink); border-color: var(--bone); }
+    .crm b { color: var(--faint); font-weight: 400; }
+    .modulos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .modulo { background: var(--ink-2); border: 1px solid var(--line-2); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: .35rem; }
+    .modulo b { font-size: 1rem; }
+    .modulo span { font-size: .88rem; color: var(--muted); }
+    .modulo em { font-style: normal; font-size: .66rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-top: auto; padding-top: .6rem; }
+    /* Automatizaciones (Llave en Mano) */
+    .auto { margin-top: 20px; max-width: 880px; border: 1px solid var(--gold); border-radius: var(--radius); padding: 36px; background: linear-gradient(180deg, rgba(214,196,143,.06), rgba(214,196,143,0) 50%), var(--ink-2); }
+    .auto-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: .6rem; }
+    .auto h3 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
+    .auto .tag { font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: .3rem .75rem; border-radius: 100px; }
+    .auto > p { color: var(--muted); margin-bottom: 1.6rem; max-width: 640px; }
+    .auto-grid { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .auto-grid li { border: 1px solid var(--line-2); border-radius: 12px; padding: 18px 20px; }
+    .auto-grid li.clave { grid-column: 1 / -1; border-color: var(--gold); }
+    .auto-grid li.ancho { grid-column: 1 / -1; }
+    .auto-grid b { display: block; margin-bottom: .25rem; }
+    .auto-grid b::before { content: '●'; color: var(--gold); font-size: .55rem; vertical-align: middle; margin-right: .55rem; }
+    .auto-grid span { font-size: .9rem; color: var(--muted); }
+
     /* 03 Quienes confian */
     .prueba { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: start; }
     .logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -160,12 +193,19 @@
     .testimonio span { font-size: .88rem; color: var(--muted); }
 
     /* 04 Planes */
-    .planes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+    .planes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: stretch; max-width: 880px; }
+    .subir { font-size: .84rem; color: var(--faint); margin: -.4rem 0 1.1rem; }
+    .modo { margin-bottom: 36px; align-items: center; }
+    .modo em { font-style: normal; font-size: .75rem; font-weight: 800; color: var(--gold); margin-left: .35rem; }
+    .chips input:checked + span em { color: var(--ink); }
+    .valor s { font-size: .95rem; color: var(--faint); font-weight: 600; }
+    .valor small { font-size: .82rem; color: var(--bone); font-weight: 600; }
     .plan { position: relative; display: flex; flex-direction: column; background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 30px 24px 24px; }
     .plan.top { border-color: var(--gold); background: linear-gradient(180deg, rgba(214,196,143,.07), rgba(214,196,143,0) 40%), var(--ink-2); }
     .badge { position: absolute; top: -12px; left: 24px; background: var(--gold); color: var(--ink); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 100px; }
     .plan h3 { font-size: 1.4rem; font-weight: 800; }
-    .ideal { color: var(--muted); font-size: .9rem; min-height: 4.4em; margin: .4rem 0 1.3rem; }
+    .lema { font-size: .95rem; font-weight: 600; color: var(--bone); margin-top: .2rem; min-height: 2.9em; }
+    .ideal { color: var(--muted); font-size: .9rem; min-height: 2.9em; margin: .4rem 0 1.3rem; }
     .ideal b { color: var(--bone); font-weight: 600; }
     .valor { display: flex; flex-direction: column; gap: .3rem; padding-bottom: 1.3rem; border-bottom: 1px solid var(--line); }
     .valor b { font-size: 2.1rem; font-weight: 800; letter-spacing: -.03em; line-height: 1; }
@@ -189,7 +229,7 @@
     .btn svg { width: 18px; height: 18px; }
 
     .tabla-wrap { margin-top: 40px; border: 1px solid var(--line-2); border-radius: var(--radius); overflow-x: auto; }
-    .tabla { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .92rem; }
+    .tabla { width: 100%; min-width: 480px; border-collapse: collapse; font-size: .92rem; }
     .tabla caption { text-align: left; padding: 22px 24px 6px; font-weight: 700; font-size: 1.05rem; }
     .tabla th, .tabla td { padding: 13px 18px; text-align: center; border-top: 1px solid var(--line); }
     .tabla th:first-child, .tabla td:first-child { text-align: left; padding-left: 24px; color: var(--muted); font-weight: 500; }
@@ -200,6 +240,13 @@
     .tabla td.si::before { content: '●'; color: var(--gold); font-size: .6rem; }
     .tabla tr.grupo td { color: var(--faint); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; background: rgba(255,255,255,.025); text-align: left; padding: 10px 24px; }
 
+    .bonos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; max-width: 880px; }
+    .bonos > p { grid-column: 1 / -1; margin-bottom: .2rem; }
+    .bono { border: 1px solid var(--line-2); border-radius: 14px; padding: 18px 20px; }
+    .bono b { display: block; margin-bottom: .2rem; }
+    .bono span { font-size: .88rem; color: var(--muted); }
+    .comparar { max-width: 880px; margin-top: 20px; padding: 18px 22px; border-left: 2px solid var(--gold); color: var(--muted); font-size: .95rem; }
+    .comparar b { color: var(--bone); }
     .extras { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
     .extra { border: 1px dashed var(--line-2); border-radius: var(--radius); padding: 22px 24px; }
     .extra b { display: block; margin-bottom: .3rem; }
@@ -230,6 +277,9 @@
     .linea-tiempo { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
     .linea-tiempo::before { content: ''; position: absolute; top: 9px; left: 0; right: 0; height: 1px; background: var(--line-2); }
     .linea-tiempo li { position: relative; padding: 36px 22px 0 0; }
+    .linea-tiempo ul { list-style: none; margin-top: .5rem; }
+    .linea-tiempo ul li { padding: 0 0 .25rem; font-size: .86rem; color: var(--muted); }
+    .linea-tiempo ul li::before { display: none; }
     .linea-tiempo li::before { content: ''; position: absolute; top: 4px; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--ink); border: 1px solid var(--bone); }
     .linea-tiempo li.hito::before { background: var(--gold); border-color: var(--gold); }
     .linea-tiempo .label { display: block; margin-bottom: .45rem; }
@@ -288,12 +338,12 @@
     }
 
     @media (max-width: 1080px) {
-      .planes { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
       .dolores { grid-template-columns: repeat(2, 1fr); }
       .etapa { grid-template-columns: 260px 1fr; gap: 36px; }
       .flujo { max-width: 260px; }
       .detalle { grid-template-columns: 1fr; gap: 18px; }
       .prueba { grid-template-columns: 1fr; }
+      .modulos { grid-template-columns: 1fr 1fr; }
       .testimonio { justify-self: start; }
       .linea-tiempo { grid-template-columns: 1fr; }
       .linea-tiempo::before { top: 0; bottom: 0; left: 5px; right: auto; width: 1px; height: auto; }
@@ -317,27 +367,47 @@
       .detalle { padding: 22px 0 34px; border-bottom: 0; }
       .etapa:first-child .detalle { border-top: 0; }
       .logos { grid-template-columns: 1fr 1fr; }
-      .calc, .roles, .cond, .extras { grid-template-columns: 1fr; }
+      .calc, .roles, .cond, .extras, .planes, .auto-grid, .bonos { grid-template-columns: 1fr; row-gap: 28px; }
+      .auto-grid, .bonos { row-gap: 12px; }
+      .auto { padding: 26px 22px; }
       .cond { gap: 36px; }
     }
     @media (max-width: 600px) {
-      .planes, .dolores { grid-template-columns: 1fr; }
+      .dolores, .modulos { grid-template-columns: 1fr; }
       .reglas li { grid-template-columns: 1fr; gap: 4px; }
       .topbar span { display: none; }
-      .ideal { min-height: 0; }
+      .btn-pdf { padding: .5rem .85rem; font-size: .8rem; }
+      .ideal, .lema { min-height: 0; }
       .total b { font-size: 1.8rem; }
       .logo-simbolo { height: 24px; }
       .logo-texto { height: 10.5px; }
     }
 
+    /* Version para "Descargar PDF": fondo blanco, todo visible y sin controles. */
+    @page { size: A4; margin: 14mm; }
     @media print {
-      :root { --ink:#fff; --ink-2:#fff; --ink-3:#fff; --bone:#111; --muted:#444; --faint:#777; --dim:#888; --line:#ddd; --line-2:#ccc; --gold:#9C8650; }
-      body { font-size: 11pt; }
-      section { padding: 32px 0; page-break-inside: avoid; }
+      :root { --ink:#fff; --ink-2:#f6f6f4; --ink-3:#f6f6f4; --bone:#111; --muted:#444; --faint:#777; --dim:#8a8a8a; --line:#e2e2e2; --line-2:#cfcfcf; --gold:#9C8650; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body { font-size: 10.5pt; background: #fff; }
+      .wrap { padding: 0; max-width: none; }
+      section { padding: 22px 0; border-top: 1px solid #e2e2e2; }
+      .hero { padding: 10px 0 20px; }
+      .head { margin-bottom: 20px; }
+      h1 { font-size: 30pt; } h2 { font-size: 20pt; }
       .logo img { filter: invert(1); mix-blend-mode: normal; }
-      .btn, .indice, .calc-in, .testimonio video { display: none; }
-      .js .rv { opacity: 1; transform: none; }
-      .faq details > p { display: block; }
+      .selder-logo { background: #111; padding: 8px 12px; border-radius: 8px; height: 40px; }
+      .btn, .indice, .calc-in, .chips.modo, .testimonio video, .top-der span, .flujo, .acciones { display: none !important; }
+      .calc { grid-template-columns: 1fr; }
+      .js .rv { opacity: 1 !important; transform: none !important; }
+      .banda { background: rgba(0,0,0,calc(var(--a) * .55)); color: #111; }
+      .etapa.final .banda { background: #111; color: #fff; }
+      .barras i.on { background: #ececea; }
+      .crm i:last-of-type { background: #111; color: #fff; }
+      .plan, .etapa, .modulo, .dolor, .rol, .bono, .pago, .auto-grid li, .linea-tiempo > li, .faq details, .tabla tr, .logos figure { break-inside: avoid; page-break-inside: avoid; }
+      .planes, .tabla-wrap, .auto { max-width: none !important; }
+      .tabla { min-width: 0; }
+      .faq summary::after { display: none; }
+      .cierre { padding: 30px 0 0; }
     }
   </style>
   <!-- Google Analytics 4 -->
@@ -350,7 +420,6 @@
   </script>
 </head>
 <body>
-
 <!-- La onda del logo, reutilizada como marcador -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="onda" viewBox="0 0 100 70"><path d="M8 54C8 54 18 16 32 16S48 54 62 54 78 16 92 16" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -360,7 +429,7 @@
 <header class="topbar">
   <div class="wrap">
     <a class="logo" href="/" aria-label="Manyobra"><img class="logo-simbolo" src="/assets/marca/manyobra-onda-simbolo.jpg" alt="" width="524" height="176" /><img class="logo-texto" src="/assets/marca/manyobra-onda-texto.jpg" alt="Manyobra" width="684" height="70" /></a>
-    <span>Propuesta comercial · Valores válidos por 30 días</span>
+    <div class="top-der"><span>Propuesta comercial · Valores válidos por 30 días</span><button class="btn btn-line btn-pdf" type="button" data-pdf>Descargar PDF</button></div>
   </div>
 </header>
 
@@ -370,29 +439,30 @@
     <div>
       <div class="para">Preparada para <b id="para">tu empresa</b></div>
       <h1><span class="dim">Un sistema que convierte tu trabajo en</span> clientes.</h1>
-      <p class="lead">No vendemos posteos sueltos. Armamos el camino completo: alguien ve tu trabajo, te recuerda, te escribe y llega a tu WhatsApp con un proyecto real. Esta propuesta explica cómo funciona, cuánto cuesta y qué esperar.</p>
+      <p class="lead">El <b>Sistema Reflex</b> es nuestro método de 90 días. Funciona como un chaleco reflectante: hace que la gente correcta te vea, aunque haya mucha competencia alrededor. Alguien ve tu trabajo, te recuerda, te escribe y llega a tu WhatsApp con un proyecto real, y tú lo ves todo en tu propia app. Esta propuesta explica cómo funciona, cuánto cuesta y qué esperar.</p>
     </div>
     <nav class="indice" aria-label="Contenido de la propuesta">
       <p class="label">En esta propuesta</p>
       <ol>
         <li><a href="#partida"><span>01</span>El punto de partida</a></li>
-        <li><a href="#sistema"><span>02</span>El sistema de adquisición</a></li>
-        <li><a href="#clientes"><span>03</span>Quiénes ya trabajan con nosotros</a></li>
-        <li><a href="#planes"><span>04</span>Planes y valores</a></li>
-        <li><a href="#inversion"><span>05</span>Tu inversión mensual</a></li>
-        <li><a href="#esperar"><span>06</span>Qué esperar</a></li>
-        <li><a href="#roles"><span>07</span>Cómo trabajamos</a></li>
-        <li><a href="#condiciones"><span>08</span>Pago y condiciones</a></li>
-        <li><a href="#preguntas"><span>09</span>Preguntas frecuentes</a></li>
+        <li><a href="#sistema"><span>02</span>El Sistema Reflex</a></li>
+        <li><a href="#selder"><span>03</span>Selder, tu app</a></li>
+        <li><a href="#clientes"><span>04</span>Quiénes ya trabajan con nosotros</a></li>
+        <li><a href="#planes"><span>05</span>Planes y valores</a></li>
+        <li><a href="#inversion"><span>06</span>Tu inversión</a></li>
+        <li><a href="#dias"><span>07</span>Tus 90 días, paso a paso</a></li>
+        <li><a href="#roles"><span>08</span>Cómo trabajamos</a></li>
+        <li><a href="#condiciones"><span>09</span>Pago y condiciones</a></li>
+        <li><a href="#preguntas"><span>10</span>Preguntas frecuentes</a></li>
       </ol>
     </nav>
   </div>
   <div class="wrap">
     <div class="datos-clave">
-      <div><b>Desde $50.000</b><span>al mes + IVA</span></div>
-      <div><b>72 horas</b><span>para tener el sistema funcionando</span></div>
-      <div><b>Sin permanencia</b><span>terminas avisando con 15 días</span></div>
-      <div><b>100% tuyo</b><span>el contenido y la cuenta de anuncios</span></div>
+      <div><b>90 días</b><span>de sistema completo, desde $360.000 + IVA</span></div>
+      <div><b>3 cuotas</b><span>sin interés con tarjeta, o en 3 pagos</span></div>
+      <div><b>10 días</b><span>para tener tus anuncios funcionando</span></div>
+      <div><b>Selder</b><span>tu app con todo el sistema a la vista</span></div>
     </div>
   </div>
 </section>
@@ -403,7 +473,7 @@
     <div class="head rv">
       <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>01 · El punto de partida</div>
       <h2>El boca a boca trae clientes. <span class="dim">Pero no cuando tú lo necesitas.</span></h2>
-      <p class="lead">Estos son los cuatro problemas que vemos en casi todos los negocios de oficios y construcción. Cada etapa del sistema existe para resolver uno.</p>
+      <p class="lead">La mayoría de los negocios de oficios y construcción no fracasa por falta de trabajo, sino por falta de sistema. Estos son los cuatro problemas que vemos en casi todos. Cada etapa del sistema existe para resolver uno.</p>
     </div>
     <div class="dolores rv">
       <div class="dolor">
@@ -415,7 +485,7 @@
       <div class="dolor">
         <span class="num">02</span>
         <h3>Te comparan solo por precio</h3>
-        <p>Si nadie ha visto cómo trabajas, la única diferencia que queda es el presupuesto.</p>
+        <p>Si nadie ha visto cómo trabajas ni entiende qué te hace distinto, la única diferencia que queda es el presupuesto.</p>
         <span class="fix">Lo resuelve: Atención</span>
       </div>
       <div class="dolor">
@@ -428,7 +498,7 @@
         <span class="num">04</span>
         <h3>No sabes qué funciona</h3>
         <p>Publicas o pagas anuncios, pero no sabes cuáles de esos contactos tenían un proyecto real.</p>
-        <span class="fix">Lo resuelve: Cierre y reporte</span>
+        <span class="fix">Lo resuelve: Selder</span>
       </div>
     </div>
   </div>
@@ -438,9 +508,9 @@
 <section id="sistema">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>02 · El sistema de adquisición</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>02 · El Sistema Reflex</div>
       <h2>De desconocido a cliente, <span class="dim">en cinco etapas.</span></h2>
-      <p class="lead">Cada etapa filtra y empuja a la siguiente. Arriba entra mucha gente que no te conoce; abajo llegan pocas personas, pero con un proyecto concreto y ganas de cotizar.</p>
+      <p class="lead">Como un chaleco reflectante, el sistema existe para que te vean y te distingan. Cada etapa filtra y empuja a la siguiente: arriba entra mucha gente que no te conoce; abajo llegan pocas personas, pero con un proyecto concreto y ganas de cotizar.</p>
     </div>
 
     <div class="flujo label" aria-hidden="true"><span>Muchas personas</span><span>↓</span><span>Pocas y listas</span></div>
@@ -448,15 +518,15 @@
       <li class="etapa rv">
         <div class="banda-col"><div class="banda" style="--w:100%;--i:7%;--a:.11"><span class="n">01</span><span class="nombre">Atención</span><span class="quien">Te ven por primera vez</span></div></div>
         <div class="detalle">
-          <div><h3>Que te vean trabajando</h3><p>Convertimos tus trabajos en videos e imágenes que muestran cómo trabajas y la calidad de tus terminaciones. Es lo que te saca de la competencia por precio.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Guion, edición profesional y calendario de publicación</div><div><span class="label">Medimos</span>Alcance y reproducciones</div></div>
+          <div><h3>Una oferta clara y tu trabajo bien mostrado</h3><p>Antes de grabar, definimos contigo tu servicio foco y el gancho de tu oferta: no es lo mismo "hacemos ampliaciones" que "ampliaciones llave en mano en 90 días". Después convertimos tus trabajos en videos e imágenes que lo demuestran.</p></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Servicio foco y oferta, guion, edición profesional y calendario</div><div><span class="label">Medimos</span>Alcance y reproducciones</div></div>
         </div>
       </li>
       <li class="etapa rv">
         <div class="banda-col"><div class="banda" style="--w:86%;--i:8.1%;--a:.17"><span class="n">02</span><span class="nombre">Alcance</span><span class="quien">Llega a quien puede contratarte</span></div></div>
         <div class="detalle">
-          <div><h3>Ponerte frente a las personas correctas</h3><p>Ese contenido lo pautamos en Instagram y Facebook para que lo vean personas de tu zona con intención de construir, remodelar o reparar, no cualquiera.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Meta Ads con campañas de conversión, segmentadas por zona, intereses y comportamiento</div><div><span class="label">Medimos</span>Costo por conversación iniciada</div></div>
+          <div><h3>Ponerte frente a las personas correctas</h3><p>Pautamos tu contenido en Instagram y Facebook para personas de tu zona, y aparecemos en Google cuando alguien busca lo que haces. Probamos anuncios nuevos cada semana para encontrar los que más traen. Todo llega a tu página web.</p></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Meta Ads, Google Ads, testeo semanal de anuncios y tu página web</div><div><span class="label">Medimos</span>Costo por contacto, separado por canal</div></div>
         </div>
       </li>
       <li class="etapa rv">
@@ -469,26 +539,56 @@
       <li class="etapa rv">
         <div class="banda-col"><div class="banda" style="--w:58%;--i:12.1%;--a:.36"><span class="n">04</span><span class="nombre">Conversación</span><span class="quien">Te escribe</span></div></div>
         <div class="detalle">
-          <div><h3>Responder en segundos, aunque estés en terreno</h3><p>Un agente con inteligencia artificial atiende tu WhatsApp día y noche: responde, pregunta tipo de trabajo, zona y plazo, y le hace seguimiento a quien deja de contestar.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Agente IA en WhatsApp y seguimiento automático</div><div><span class="label">Medimos</span>Tiempo de respuesta y contactos calificados</div></div>
+          <div><h3>Responder en segundos, aunque estés en terreno</h3><p>Un agente con inteligencia artificial atiende tu WhatsApp las 24 horas: responde lo frecuente, pregunta tipo de trabajo, zona, plazo y presupuesto, filtra a los curiosos y agenda la reunión en tu calendario. A quien deja de contestar, le hace seguimiento solo.</p></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Agente IA que responde, filtra y agenda, con seguimiento automático</div><div><span class="label">Medimos</span>Tiempo de respuesta, contactos calificados y reuniones agendadas</div></div>
         </div>
       </li>
       <li class="etapa final rv">
         <div class="banda-col"><div class="banda" style="--w:44%;--i:0%;--a:1"><span class="n">05</span><span class="nombre">Cierre</span><span class="quien">Lo cierras tú</span></div></div>
         <div class="detalle">
-          <div><h3>Tú cotizas con información, no a ciegas</h3><p>Te llega el contacto con lo que necesita, dónde y para cuándo. Tú haces lo que mejor sabes: cotizar y cerrar. Nosotros te mostramos qué funcionó para hacer más de eso.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Reporte con los contactos que traían proyecto real y de qué anuncio venían</div><div><span class="label">Medimos</span>Reuniones y cotizaciones</div></div>
+          <div><h3>Tú cotizas con información, no a ciegas</h3><p>Te llega el contacto con lo que necesita, dónde y para cuándo. Tú haces lo que mejor sabes: cotizar y cerrar. Selder te muestra cuánto vendiste y qué anuncio trajo cada venta, para hacer más de lo que funciona.</p></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Recordatorios de reunión, seguimiento a tus cotizaciones y medición en Selder</div><div><span class="label">Medimos</span>Cotizaciones, ventas y retorno de cada peso invertido</div></div>
         </div>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- 03 CLIENTES -->
+<!-- 03 SELDER -->
+<section id="selder">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>03 · Selder, tu app</div>
+      <h2>Todo tu sistema, <span class="dim">en una sola app.</span></h2>
+      <p class="lead">Selder es la app propia de Manyobra. Es donde ves y manejas el Sistema Reflex completo: cuánto invertiste, quién te escribió, en qué etapa está cada cliente y cuánto vendiste. Funciona en el celular y en el computador, y viene incluida en los dos planes.</p>
+    </div>
+    <div class="app-top rv">
+      <img class="selder-logo" src="/selder/logo-selder.png" alt="Selder by Manyobra" width="540" height="114" loading="lazy" />
+      <span>La pregunta que responde: ¿lo que gasto en anuncios me está trayendo ventas o no?</span>
+    </div>
+    <div class="crm rv" aria-label="Etapas de cada cliente en Selder">
+      <span class="label">Cada cliente, en su etapa</span>
+      <i>Nuevo</i><b>→</b><i>Calificado</i><b>→</b><i>Agendado</i><b>→</b><i>Cotizado</i><b>→</b><i>Cliente</i>
+    </div>
+    <div class="modulos rv">
+      <div class="modulo"><b>Panel de campañas</b><span>Meta y Google en un mismo gráfico: inversión, alcance, clics, contactos y costo por contacto, comparados con el mes anterior.</span></div>
+      <div class="modulo"><b>Tu página web</b><span>Visitas, de dónde llegan y cuántos llenan el formulario o te escriben.</span></div>
+      <div class="modulo"><b>Clientes (CRM)</b><span>Cada contacto con su etapa, el anuncio del que vino, notas y recordatorios. Sabes a quién llamar hoy.</span></div>
+      <div class="modulo"><b>Ventas y retorno</b><span>Anotas lo que vendiste y ves cuánto te devolvió cada peso invertido en anuncios.</span></div>
+      <div class="modulo"><b>Contenido</b><span>Tu calendario de publicaciones: apruebas, comentas o pides cambios desde el celular, y ves en qué va cada pieza.</span></div>
+      <div class="modulo"><b>Tu mes en simple</b><span>Un resumen escrito en palabras normales: qué funcionó, qué no y qué conviene hacer.</span></div>
+      <div class="modulo"><b>Conversaciones</b><span>Todo tu WhatsApp en un lugar, con un análisis de lo que más pregunta la gente.</span><em>Llave en Mano</em></div>
+      <div class="modulo"><b>Tu agente IA</b><span>Ves qué responde tu agente, a quién filtró y a quién agendó, y te avisa cuando hay un cliente listo para cerrar.</span><em>Llave en Mano</em></div>
+    </div>
+    <p class="comparar rv"><a href="/selder/" target="_blank" rel="noopener"><b>Conocer Selder →</b></a></p>
+  </div>
+</section>
+
+<!-- 04 CLIENTES -->
 <section id="clientes">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>03 · Quiénes ya trabajan con nosotros</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>04 · Quiénes ya trabajan con nosotros</div>
       <h2>Empresas reales, <span class="dim">del mismo rubro que tú.</span></h2>
       <p class="lead">Constructoras, áridos, piscinas, paisajismo y maestros independientes. Cada uno nos mandó el registro de sus trabajos y lo convertimos en campañas.</p>
     </div>
@@ -511,228 +611,252 @@
   </div>
 </section>
 
-<!-- 04 PLANES -->
+<!-- 05 PLANES -->
 <section id="planes">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>04 · Planes y valores</div>
-      <h2>Cada plan activa <span class="dim">más etapas del embudo.</span></h2>
-      <p class="lead">Puedes partir por arriba y sumar etapas a medida que crece tu negocio. Valores mensuales en pesos chilenos, más IVA. La pauta en Meta va aparte y se paga directo a Meta.</p>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>05 · Planes y valores</div>
+      <h2>Dos planes. <span class="dim">Tú eliges hasta dónde llegamos.</span></h2>
+      <p class="lead">Los dos traen clientes con anuncios desde el primer mes; la diferencia es si además los recordamos, atendemos y seguimos por ti. Recomendamos tomarlo como sistema de 90 días, que es lo que tarda en mostrar su potencial, pagado al contado o en 3 cuotas. También puedes ir mes a mes.</p>
+    </div>
+
+    <div class="chips modo rv" role="radiogroup" aria-label="Modalidad">
+      <label><input type="radio" name="modo" value="programa" checked /><span>Sistema 90 días<em>−20%</em></span></label>
+      <label><input type="radio" name="modo" value="mensual" /><span>Mes a mes</span></label>
     </div>
 
     <div class="planes">
       <article class="plan rv">
-        <h3>Inicio</h3>
-        <p class="ideal"><b>Ideal si</b> hoy casi no publicas y quieres empezar a mostrar tu trabajo.</p>
-        <div class="valor"><b>$50.000</b><span>al mes + IVA</span></div>
-        <div class="cobertura">
-          <p class="label">Etapas que activa</p>
-          <div class="barras"><i class="on">Atención</i><i>Alcance</i><i>Recuerdo</i><i>Conversación</i></div>
-        </div>
-        <ul class="entregables">
-          <li><b>1 video + 3 imágenes</b> al mes</li>
-          <li>Guion estratégico y edición profesional</li>
-          <li>Calendario de publicación</li>
-          <li>Reporte mensual</li>
-        </ul>
-        <a class="btn btn-line" data-plan="Inicio" href="https://wa.me/56956747949">Elegir Inicio</a>
-      </article>
-
-      <article class="plan rv">
-        <h3>Activo</h3>
-        <p class="ideal"><b>Ideal si</b> quieres empezar a recibir consultas con anuncios.</p>
-        <div class="valor"><b>$100.000</b><span>al mes + IVA</span></div>
+        <h3>Cimientos</h3>
+        <p class="lema">La base para que te encuentren.</p>
+        <p class="ideal"><b>Ideal si</b> quieres empezar a recibir consultas de gente que busca lo que haces.</p>
+        <div class="valor" data-mensual="150000"><s hidden></s><b>$150.000</b><span>al mes + IVA</span><small hidden></small></div>
         <div class="cobertura">
           <p class="label">Etapas que activa</p>
           <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i>Recuerdo</i><i>Conversación</i></div>
         </div>
         <ul class="entregables">
-          <li><b>3 videos + 5 imágenes</b> al mes</li>
-          <li>Meta Ads con campañas de conversión</li>
-          <li>Segmentación por zona, intereses y comportamiento</li>
-          <li>Reporte mensual</li>
+          <li><b>Oferta y servicio foco</b> definidos contigo</li>
+          <li><b>3 videos + 5 imágenes</b> al mes: 24 piezas y más de 30 anuncios probados en 90 días</li>
+          <li><b>Meta Ads + Google Ads</b> con campañas de conversión</li>
+          <li><b>Página web</b> de tu negocio: la desarrollamos y la mantenemos</li>
+          <li><b>Selder:</b> campañas, web, clientes y ventas en tu app</li>
+          <li>Reporte y reunión de estrategia mensual</li>
         </ul>
-        <a class="btn btn-line" data-plan="Activo" href="https://wa.me/56956747949">Elegir Activo</a>
-      </article>
-
-      <article class="plan rv">
-        <h3>Online Pro</h3>
-        <p class="ideal"><b>Ideal si</b> ya te escriben y quieres un flujo más constante.</p>
-        <div class="valor"><b>$150.000</b><span>al mes + IVA</span></div>
-        <div class="cobertura">
-          <p class="label">Etapas que activa</p>
-          <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i class="on">Recuerdo</i><i>Conversación</i></div>
-        </div>
-        <ul class="entregables">
-          <li><b>5 videos + 7 imágenes</b> + historias al mes</li>
-          <li>Meta Ads con <b>retargeting</b> a quienes ya interactuaron</li>
-          <li>Community manager</li>
-          <li>Reporte quincenal</li>
-        </ul>
-        <a class="btn btn-line" data-plan="Online Pro" href="https://wa.me/56956747949">Elegir Online Pro</a>
+        <p class="subir">¿Te quedó corto? Subes a Llave en Mano cuando quieras.</p>
+        <a class="btn btn-line" data-plan="Cimientos" href="https://wa.me/56956747949">Elegir Cimientos</a>
       </article>
 
       <article class="plan top rv">
         <span class="badge">Recomendado</span>
-        <h3>Completo</h3>
-        <p class="ideal"><b>Ideal si</b> te llegan consultas y no alcanzas a responderlas a tiempo.</p>
-        <div class="valor"><b>$200.000</b><span>al mes + IVA</span></div>
+        <h3>Llave en Mano</h3>
+        <p class="lema">Te entregamos el sistema funcionando. Tú solo cierras.</p>
+        <p class="ideal"><b>Ideal si</b> quieres un flujo constante y no alcanzas a responder a tiempo.</p>
+        <div class="valor" data-mensual="300000"><s hidden></s><b>$300.000</b><span>al mes + IVA</span><small hidden></small></div>
         <div class="cobertura">
           <p class="label">Etapas que activa</p>
           <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i class="on">Recuerdo</i><i class="on">Conversación</i></div>
         </div>
         <ul class="entregables">
-          <li>Todo lo de Online Pro</li>
-          <li><b>Agente IA en tu WhatsApp:</b> responde en segundos y califica cada contacto</li>
-          <li><b>Seguimiento automático</b> a quien deja de contestar</li>
-          <li>Reporte quincenal con los contactos que traían proyecto real</li>
+          <li>Todo lo de Cimientos, y además:</li>
+          <li><b>5 videos + 7 imágenes</b> + historias al mes: 36 piezas y más de 50 anuncios probados en 90 días</li>
+          <li><b>Retargeting</b> a quienes ya te vieron y <b>community manager</b></li>
+          <li><b>Agente IA 24/7 en tu WhatsApp</b> que responde, filtra y agenda, con guiones para tu rubro</li>
+          <li><b>Automatizaciones de seguimiento</b>: recordatorios, cotizaciones, reactivación y reseñas</li>
+          <li>Reporte y reunión de estrategia cada 15 días, con soporte prioritario</li>
         </ul>
-        <a class="btn btn-main" data-plan="Completo" href="https://wa.me/56956747949">Elegir Completo</a>
+        <a class="btn btn-main" data-plan="Llave en Mano" href="https://wa.me/56956747949">Elegir Llave en Mano</a>
       </article>
     </div>
 
-    <div class="tabla-wrap rv">
+    <div class="bonos rv">
+      <p class="label">Bonos de inicio · en los dos planes</p>
+      <div class="bono"><b>Perfil de Instagram optimizado</b><span>Biografía, botón de contacto, foto y destacadas pensadas para vender.</span></div>
+      <div class="bono"><b>Ficha de Google Business</b><span>Creamos u optimizamos tu ficha para que aparezcas en Google Maps cuando te buscan.</span></div>
+      <div class="bono"><b>Estudio de tu zona</b><span>Qué ofrece tu competencia y a qué precio, para que tu oferta destaque.</span></div>
+    </div>
+
+    <div class="auto rv">
+      <div class="auto-top"><h3>El sistema que trabaja solo</h3><span class="tag">Solo en Llave en Mano</span></div>
+      <p>Lo que más se pierde en un negocio de oficios no son los contactos: es el seguimiento. Estas automatizaciones se encargan de que ningún cliente se enfríe mientras tú estás trabajando.</p>
+      <ul class="auto-grid">
+        <li class="clave"><b>Agente IA que responde, filtra y agenda</b><span>Contesta tu WhatsApp en segundos, las 24 horas. Usa guiones hechos para tu rubro y las objeciones típicas de tus clientes; pregunta tipo de trabajo, zona, plazo y presupuesto; descarta a los curiosos y agenda la visita o reunión directo en tu calendario. Funciona con WhatsApp Business API, la conexión oficial: más estable y más profesional.</span></li>
+        <li><b>Seguimiento a quien no contesta</b><span>Si alguien preguntó y desapareció, le vuelve a escribir al día siguiente y a los 3 días, con un mensaje distinto cada vez.</span></li>
+        <li><b>Recordatorios 48, 24 y 2 horas antes</b><span>Le recuerda la cita al cliente tres veces, para que no te deje plantado en terreno.</span></li>
+        <li><b>Seguimiento de cotizaciones</b><span>Cuando envías un presupuesto y no hay respuesta, hace seguimiento por ti y te avisa si el cliente quiere ajustar algo.</span></li>
+        <li><b>Aviso de cliente caliente</b><span>Te llega una alerta cuando un contacto está listo para cerrar, con el resumen de lo que necesita.</span></li>
+        <li><b>Reactivación de contactos</b><span>Vuelve a escribirle a quienes cotizaron hace meses y no compraron, con trabajos nuevos o una oferta de temporada.</span></li>
+        <li><b>Pedido de reseña en Google</b><span>Al terminar el trabajo le pide al cliente una reseña. Más reseñas, mejor apareces cuando te buscan.</span></li>
+        <li class="ancho"><b>Un agente que mejora cada semana</b><span>Revisamos sus conversaciones todas las semanas y ajustamos respuestas y guiones. Al mes 3 conoce tu negocio mejor que nadie.</span></li>
+      </ul>
+    </div>
+
+    <div class="tabla-wrap rv" style="max-width:880px">
       <table class="tabla">
         <caption>Qué incluye cada plan, en detalle</caption>
         <thead>
-          <tr><th scope="col"></th><th scope="col">Inicio</th><th scope="col">Activo</th><th scope="col">Online Pro</th><th scope="col" class="top">Completo</th></tr>
+          <tr><th scope="col"></th><th scope="col">Cimientos</th><th scope="col" class="top">Llave en Mano</th></tr>
         </thead>
         <tbody>
-          <tr class="grupo"><td colspan="5">Contenido</td></tr>
-          <tr><th scope="row">Videos al mes</th><td>1</td><td>3</td><td>5</td><td>5</td></tr>
-          <tr><th scope="row">Imágenes al mes</th><td>3</td><td>5</td><td>7</td><td>7</td></tr>
-          <tr><th scope="row">Historias</th><td class="no">—</td><td class="no">—</td><td class="si"></td><td class="si"></td></tr>
-          <tr><th scope="row">Guion, edición y calendario</th><td class="si"></td><td class="si"></td><td class="si"></td><td class="si"></td></tr>
-          <tr class="grupo"><td colspan="5">Anuncios</td></tr>
-          <tr><th scope="row">Meta Ads con campañas de conversión</th><td class="no">—</td><td class="si"></td><td class="si"></td><td class="si"></td></tr>
-          <tr><th scope="row">Retargeting</th><td class="no">—</td><td class="no">—</td><td class="si"></td><td class="si"></td></tr>
-          <tr><th scope="row">Community manager</th><td class="no">—</td><td class="no">—</td><td class="si"></td><td class="si"></td></tr>
-          <tr class="grupo"><td colspan="5">WhatsApp</td></tr>
-          <tr><th scope="row">Agente IA que responde y califica</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="si"></td></tr>
-          <tr><th scope="row">Seguimiento automático</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="si"></td></tr>
-          <tr class="grupo"><td colspan="5">Reportes</td></tr>
-          <tr><th scope="row">Frecuencia del reporte</th><td>Mensual</td><td>Mensual</td><td>Quincenal</td><td>Quincenal</td></tr>
-          <tr><th scope="row">Valor mensual + IVA</th><td>$50.000</td><td>$100.000</td><td>$150.000</td><td>$200.000</td></tr>
+          <tr class="grupo"><td colspan="3">Estrategia</td></tr>
+          <tr><th scope="row">Oferta y servicio foco</th><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Reunión de estrategia</th><td>Mensual</td><td>Cada 15 días</td></tr>
+          <tr class="grupo"><td colspan="3">Contenido</td></tr>
+          <tr><th scope="row">Videos al mes</th><td>3</td><td>5</td></tr>
+          <tr><th scope="row">Imágenes al mes</th><td>5</td><td>7</td></tr>
+          <tr><th scope="row">Historias</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Anuncios probados en 90 días</th><td>+30</td><td>+50</td></tr>
+          <tr class="grupo"><td colspan="3">Anuncios y web</td></tr>
+          <tr><th scope="row">Meta Ads (Instagram y Facebook)</th><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Google Ads (búsquedas en Google)</th><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Desarrollo y mantención de tu página web</th><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Retargeting</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Community manager</th><td class="no">—</td><td class="si"></td></tr>
+          <tr class="grupo"><td colspan="3">Inteligencia artificial y automatización</td></tr>
+          <tr><th scope="row">Agente IA 24/7 que responde, filtra y agenda</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Guiones según las objeciones de tu rubro</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">WhatsApp Business API (conexión oficial)</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Recordatorios 48, 24 y 2 horas antes</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Seguimiento de leads y cotizaciones</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Reactivación de contactos y pedido de reseñas</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Ajuste semanal del agente</th><td class="no">—</td><td class="si"></td></tr>
+          <tr class="grupo"><td colspan="3">Selder</td></tr>
+          <tr><th scope="row">Campañas, web, clientes (CRM) y ventas</th><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Conversaciones y panel del agente</th><td class="no">—</td><td class="si"></td></tr>
+          <tr class="grupo"><td colspan="3">Bonos de inicio</td></tr>
+          <tr><th scope="row">Instagram optimizado, Google Business y estudio de zona</th><td class="si"></td><td class="si"></td></tr>
+          <tr class="grupo"><td colspan="3">Valores + IVA</td></tr>
+          <tr><th scope="row">Sistema 90 días</th><td>$360.000</td><td>$720.000</td></tr>
+          <tr><th scope="row">En 3 cuotas</th><td>$120.000</td><td>$240.000</td></tr>
+          <tr><th scope="row">Mes a mes</th><td>$150.000</td><td>$300.000</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="extras rv">
+    <p class="comparar rv">Para comparar: hay agencias del rubro que cobran <b>entre $1.000.000 y $3.500.000</b> por programas de 90 días con un sistema parecido. El Sistema Reflex completo, con agente IA, Google Ads, página web y tu propia app, son <b>$720.000 + IVA</b>.</p>
+
+    <div class="extras rv" style="max-width:880px">
       <div class="extra">
         <b>Grabación en terreno · se cotiza aparte</b>
         <span>Ningún plan la incluye. Cuando el proyecto lo amerita vamos con equipo de producción a tu obra y la cotizamos según la jornada y el alcance.</span>
       </div>
       <div class="extra">
         <b>Proyectos a medida</b>
-        <span>Si tienes varias obras en paralelo o necesitas página web con Píxel, armamos una propuesta específica para tu caso.</span>
+        <span>Si tienes varias obras en paralelo, varias zonas o necesitas una tienda o sitio más grande, armamos una propuesta específica para tu caso.</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 05 INVERSION -->
+<!-- 06 INVERSION -->
 <section id="inversion">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>05 · Tu inversión mensual</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>06 · Tu inversión</div>
       <h2>Cuánto vas a invertir, <span class="dim">sin letra chica.</span></h2>
-      <p class="lead">Tu inversión tiene dos partes: el plan, que nos pagas a nosotros, y la pauta, que se carga directo a tu cuenta de Meta. Elige una combinación y mira el total.</p>
+      <p class="lead">Tu inversión tiene dos partes: el plan, que nos pagas a nosotros, y la pauta de anuncios, que se carga directo a tus cuentas de Meta y Google. Elige una combinación y mira cuánto es al mes.</p>
     </div>
     <div class="calc rv">
       <form class="calc-in" onsubmit="return false">
         <fieldset>
           <legend class="label">Plan</legend>
           <div class="chips">
-            <label><input type="radio" name="plan" value="50000" data-nombre="Inicio" /><span>Inicio</span></label>
-            <label><input type="radio" name="plan" value="100000" data-nombre="Activo" /><span>Activo</span></label>
-            <label><input type="radio" name="plan" value="150000" data-nombre="Online Pro" /><span>Online Pro</span></label>
-            <label><input type="radio" name="plan" value="200000" data-nombre="Completo" checked /><span>Completo</span></label>
+            <label><input type="radio" name="plan" value="150000" data-nombre="Cimientos" /><span>Cimientos</span></label>
+            <label><input type="radio" name="plan" value="300000" data-nombre="Llave en Mano" checked /><span>Llave en Mano</span></label>
           </div>
         </fieldset>
-        <fieldset id="pauta-set">
-          <legend class="label">Pauta en Meta</legend>
+        <fieldset>
+          <legend class="label">Modalidad</legend>
+          <div class="chips">
+            <label><input type="radio" name="modo" value="programa" checked /><span>Sistema 90 días<em>−20%</em></span></label>
+            <label><input type="radio" name="modo" value="mensual" /><span>Mes a mes</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="label">Pauta mensual (Meta + Google)</legend>
           <div class="chips">
             <label><input type="radio" name="pauta" value="50000" /><span>$50.000</span></label>
             <label><input type="radio" name="pauta" value="100000" /><span>$100.000</span></label>
             <label><input type="radio" name="pauta" value="150000" checked /><span>$150.000</span></label>
             <label><input type="radio" name="pauta" value="250000" /><span>$250.000</span></label>
           </div>
-          <p class="ayuda" id="pauta-ayuda">Se puede partir con $50.000. Recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.</p>
+          <p class="ayuda">Se puede partir con $50.000. Recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.</p>
         </fieldset>
       </form>
       <div class="calc-out" aria-live="polite">
         <p class="label">Tu inversión mensual</p>
-        <div class="linea"><span>Plan <span id="c-nombre">Completo</span></span><b id="c-plan">$200.000</b></div>
-        <div class="linea"><span>IVA del plan (19%)</span><b id="c-iva">$38.000</b></div>
-        <div class="linea"><span>Pauta en Meta</span><b id="c-pauta">$150.000</b></div>
-        <div class="total"><span>Total aproximado</span><b id="c-total">$388.000</b></div>
-        <p class="nota">La pauta se paga directo a Meta con tu tarjeta y Meta puede sumarle sus propios impuestos. Puedes subirla o bajarla cuando quieras.</p>
+        <div class="linea"><span>Plan <span id="c-nombre">Llave en Mano</span></span><b id="c-plan">$240.000</b></div>
+        <div class="linea"><span>IVA del plan (19%)</span><b id="c-iva">$45.600</b></div>
+        <div class="linea"><span>Pauta en Meta y Google</span><b id="c-pauta">$150.000</b></div>
+        <div class="total"><span>Total mensual aproximado</span><b id="c-total">$435.600</b></div>
+        <p class="nota" id="c-unico"></p>
+        <p class="nota">La pauta se paga directo a Meta y Google con tu tarjeta, y cada plataforma puede sumarle sus propios impuestos. Te recomendamos cómo repartirla y puedes subirla o bajarla cuando quieras.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 06 QUE ESPERAR -->
-<section id="esperar">
+<!-- 07 TUS 90 DIAS -->
+<section id="dias">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>06 · Qué esperar</div>
-      <h2>Del primer día <span class="dim">a los primeros resultados.</span></h2>
-      <p class="lead">Esto es lo que pasa, en orden. Sin promesas infladas: son los tiempos normales con que trabajan las campañas en Meta.</p>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>07 · Tus 90 días, paso a paso</div>
+      <h2>Del primer día <span class="dim">a un sistema que funciona solo.</span></h2>
+      <p class="lead">Esto es lo que pasa, en orden. Los 90 días se cuentan desde que se lanzan los anuncios: los días de activación y estrategia no se descuentan.</p>
     </div>
     <ol class="linea-tiempo rv">
       <li>
-        <span class="label">Día 1</span>
-        <h3>Eliges el plan</h3>
-        <p>Confirmamos alcance y fecha de inicio, y te enviamos la factura.</p>
+        <span class="label">Días 1 a 5</span>
+        <h3>Activación</h3>
+        <ul><li>Grupo de WhatsApp con el equipo</li><li>Formulario de tu negocio</li><li>Carpeta para tus fotos y videos</li><li>Accesos y contrato</li></ul>
       </li>
       <li>
-        <span class="label">Días 1 a 3</span>
-        <h3>Encendemos el sistema</h3>
-        <p>Nos das accesos y material de tus trabajos. Publicamos y activamos los anuncios.</p>
-      </li>
-      <li>
-        <span class="label">Semanas 1 y 2</span>
-        <h3>Meta aprende</h3>
-        <p>El algoritmo necesita entre 7 y 14 días para encontrar a quién mostrarle tus anuncios.</p>
+        <span class="label">Días 5 a 10</span>
+        <h3>Estrategia</h3>
+        <ul><li>Estudio de tu zona y competencia</li><li>Servicio foco y oferta</li><li>Instagram y Google optimizados</li><li>Contenido y página web</li></ul>
       </li>
       <li class="hito">
-        <span class="label">Fin del mes 1</span>
-        <h3>Primeros resultados</h3>
-        <p>Primer reporte con conversaciones, costo por contacto y cuáles traían proyecto real.</p>
+        <span class="label">Día 10</span>
+        <h3>Lanzamiento</h3>
+        <ul><li>Campañas en Meta y Google activas</li><li>Selder conectado</li><li>Agente IA atendiendo (Llave en Mano)</li></ul>
       </li>
       <li>
-        <span class="label">Meses 2 y 3</span>
-        <h3>Ajustamos y escalamos</h3>
-        <p>Empujamos lo que trae proyectos reales y cortamos lo que no.</p>
+        <span class="label">Días 10 a 30</span>
+        <h3>Aprendizaje</h3>
+        <ul><li>Las campañas aprenden (7 a 14 días)</li><li>Anuncios nuevos cada semana</li><li>Primer reporte con contactos reales</li></ul>
+      </li>
+      <li>
+        <span class="label">Días 30 a 90</span>
+        <h3>Escalamiento</h3>
+        <ul><li>Más inversión a lo que trae proyectos</li><li>Se corta lo que no funciona</li><li>Reporte final de 90 días y cómo seguir</li></ul>
       </li>
     </ol>
-    <p class="aviso rv">Los resultados dependen de tu rubro, tu zona y tu competencia. No garantizamos cifras específicas; sí te mostramos con datos qué está funcionando y qué no.</p>
+    <p class="aviso rv">Los resultados dependen de tu rubro, tu zona y tu competencia. No garantizamos cifras específicas; sí te mostramos con datos, en Selder, qué está funcionando y qué no.</p>
   </div>
 </section>
 
-<!-- 07 ROLES -->
+<!-- 08 ROLES -->
 <section id="roles">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>07 · Cómo trabajamos</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>08 · Cómo trabajamos</div>
       <h2>Nosotros hacemos el sistema. <span class="dim">Tú cierras los trabajos.</span></h2>
     </div>
     <div class="roles rv">
       <div class="rol nos">
         <h3>Lo que hacemos nosotros</h3>
         <ul>
-          <li><b>Producimos el contenido</b><span>Guion, edición y formato de cada pieza, listas para publicar.</span></li>
-          <li><b>Manejamos los anuncios</b><span>Creamos, segmentamos y optimizamos las campañas en Meta.</span></li>
-          <li><b>Atendemos el WhatsApp</b><span>En el plan Completo, el agente responde, califica y hace seguimiento.</span></li>
-          <li><b>Te reportamos con datos</b><span>Qué funcionó, cuánto costó cada contacto y qué ajustamos.</span></li>
+          <li><b>Definimos tu oferta y producimos el contenido</b><span>Servicio foco, gancho, guion, edición y formato de cada pieza.</span></li>
+          <li><b>Manejamos los anuncios y tu web</b><span>Creamos, probamos y optimizamos las campañas en Meta y Google, y mantenemos tu página web al día.</span></li>
+          <li><b>Automatizamos el seguimiento</b><span>En Llave en Mano, el agente IA responde, filtra, agenda y hace seguimiento a cada cliente.</span></li>
+          <li><b>Te mostramos todo en Selder</b><span>Campañas, web, clientes y ventas en tu app, más una reunión de estrategia para ajustar.</span></li>
         </ul>
       </div>
       <div class="rol">
         <h3>Lo que necesitamos de ti</h3>
         <ul>
           <li><b>Material de tus trabajos</b><span>Fotos y videos desde el teléfono. Sin tu trabajo real, el contenido pierde lo que lo hace funcionar.</span></li>
-          <li><b>Aprobar el contenido a tiempo</b><span>Te mandamos las piezas para revisión; si se quedan detenidas, se atrasa todo.</span></li>
+          <li><b>Aprobar el contenido a tiempo</b><span>Te mandamos las piezas a Selder para revisión; si se quedan detenidas, se atrasa todo.</span></li>
           <li><b>Mantener la pauta activa</b><span>Cortar la inversión a mitad de camino reinicia el aprendizaje de las campañas.</span></li>
           <li><b>Responder a quien llega</b><span>Nosotros traemos y filtramos el contacto; la cotización y la reunión las haces tú.</span></li>
         </ul>
@@ -741,62 +865,72 @@
   </div>
 </section>
 
-<!-- 08 PAGO Y CONDICIONES -->
+<!-- 09 PAGO Y CONDICIONES -->
 <section id="condiciones">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>08 · Pago y condiciones</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>09 · Pago y condiciones</div>
       <h2>Reglas claras <span class="dim">desde el primer día.</span></h2>
     </div>
     <div class="cond">
       <div class="pagos rv">
         <div class="pago">
-          <b>Transferencia bancaria</b>
-          <span>Al valor de lista. Te enviamos los datos y la factura al confirmar el plan.</span>
+          <b>Mercado Pago</b>
+          <span><em>Hasta 3 cuotas sin interés con tarjeta.</em> El valor es el mismo: la comisión la asumimos nosotros.</span>
         </div>
         <div class="pago">
-          <b>Mercado Pago</b>
-          <span><em>Hasta 3 cuotas sin interés.</em> El valor es el mismo: la comisión la asumimos nosotros.</span>
+          <b>Transferencia bancaria</b>
+          <span>Al contado o en 3 pagos: el primero al firmar y los otros dos a los 30 y 60 días.</span>
         </div>
       </div>
       <ul class="reglas rv">
-        <li><b>Pago mensual</b><span>Anticipado, al inicio de cada ciclo.</span></li>
-        <li><b>Sin permanencia</b><span>Puedes terminar cuando quieras avisando con 15 días.</span></li>
+        <li><b>Sistema 90 días</b><span>Pagas el programa completo, al contado o en 3 cuotas. Cimientos: $360.000 + IVA. Llave en Mano: $720.000 + IVA.</span></li>
+        <li><b>Mes a mes</b><span>Pago anticipado al inicio de cada mes, sin permanencia: terminas avisando con 15 días.</span></li>
+        <li><b>Al terminar los 90 días</b><span>Revisamos los resultados juntos y eliges: otro ciclo de 90 días, seguir mes a mes o terminar.</span></li>
+        <li><b>Contrato</b><span>Firmamos un contrato simple con el alcance, los plazos y la forma de pago.</span></li>
         <li><b>El contenido es tuyo</b><span>Todo el material queda en tu poder, aunque dejes de trabajar con nosotros.</span></li>
-        <li><b>Tu inversión, tu cuenta</b><span>Los anuncios se pagan desde tu cuenta de Meta. Esa plata nunca pasa por nosotros.</span></li>
+        <li><b>Tu inversión, tu cuenta</b><span>Los anuncios se pagan desde tus cuentas de Meta y Google. Esa plata nunca pasa por nosotros.</span></li>
         <li><b>Valores</b><span>En pesos chilenos, más IVA. Válidos por 30 días desde que recibes esta propuesta.</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- 09 PREGUNTAS -->
+<!-- 10 PREGUNTAS -->
 <section id="preguntas">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>09 · Preguntas frecuentes</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>10 · Preguntas frecuentes</div>
       <h2>Lo que más <span class="dim">nos preguntan.</span></h2>
     </div>
     <div class="faq rv">
       <details>
+        <summary>¿Por qué 90 días?</summary>
+        <p>Porque es lo que tarda un sistema así en mostrar su potencial: las campañas necesitan 7 a 14 días para aprender, el primer mes se ajusta y los meses 2 y 3 son los de escalar lo que funciona. Por eso el sistema de 90 días sale 20% más barato que ir mes a mes.</p>
+      </details>
+      <details>
+        <summary>¿Puedo pagarlo en cuotas?</summary>
+        <p>Sí. Con tarjeta por Mercado Pago, hasta 3 cuotas sin interés. O por transferencia, en 3 pagos: al firmar, a los 30 y a los 60 días.</p>
+      </details>
+      <details>
         <summary>¿Cuánto tengo que invertir en pauta?</summary>
-        <p>La pauta se carga directo a tu cuenta de Meta y no está incluida en el plan. Se puede partir desde $50.000 mensuales; recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.</p>
+        <p>La pauta se carga directo a tus cuentas de Meta y Google y no está incluida en el plan. Se puede partir desde $50.000 mensuales; recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.</p>
       </details>
       <details>
         <summary>¿Cuánto tardan en verse resultados?</summary>
-        <p>El algoritmo de Meta necesita entre 7 y 14 días para optimizar. Los primeros resultados concretos suelen verse al cierre del primer mes.</p>
+        <p>Los anuncios salen al día 10. Las campañas necesitan entre 7 y 14 días para optimizarse, y los primeros resultados concretos suelen verse al cierre del primer mes de anuncios.</p>
+      </details>
+      <details>
+        <summary>¿El agente IA va a sonar como robot?</summary>
+        <p>No. Lo entrenamos con guiones de tu rubro, tus servicios y las preguntas que te hacen siempre, y lo ajustamos cada semana revisando sus conversaciones. Cuando algo se sale de lo que sabe, te deriva la conversación a ti.</p>
       </details>
       <details>
         <summary>Ya me llegan trabajos por recomendación, ¿para qué esto?</summary>
         <p>Por eso mismo. Esto no reemplaza el boca a boca, lo potencia: cuando el referido te busca y encuentra tu trabajo bien mostrado, llega convencido. Y en los meses en que las recomendaciones bajan, tienes algo funcionando que no depende de que alguien se acuerde de ti.</p>
       </details>
       <details>
-        <summary>¿Por qué no le pido a un conocido que me haga los videos?</summary>
-        <p>Puedes, y a veces sale bien. La diferencia no está en grabar: está en a quién se le muestra después. Armamos cada pieza pensando en la campaña y la ponemos frente a gente de tu zona que busca lo que tú haces. Un video bonito que no ve nadie no trae trabajos.</p>
-      </details>
-      <details>
         <summary>¿Tienen contrato de permanencia?</summary>
-        <p>No. Trabajamos mes a mes, con aviso previo de 15 días. Nos quedamos porque los resultados hablan.</p>
+        <p>En el sistema de 90 días el compromiso es ese ciclo. Mes a mes no hay permanencia: terminas avisando con 15 días.</p>
       </details>
     </div>
   </div>
@@ -807,8 +941,8 @@
   <div class="wrap">
     <div class="rv">
       <h2>¿Con cuál <span class="dim">partimos?</span></h2>
-      <p class="lead">Escríbenos por WhatsApp con el plan que elegiste y dejamos el sistema funcionando en 72 horas.</p>
-      <a class="btn btn-main" data-plan="" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Confirmar por WhatsApp</a>
+      <p class="lead">Escríbenos por WhatsApp con el plan que elegiste y en 10 días tienes tus anuncios funcionando.</p>
+      <div class="acciones"><a class="btn btn-main" data-plan="" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Confirmar por WhatsApp</a><button class="btn btn-line" type="button" data-pdf>Descargar PDF</button></div>
       <p class="cupos">Tomamos solo 3 a 4 clientes nuevos al mes para mantener la calidad de producción.</p>
     </div>
     <div class="firma">
@@ -829,39 +963,85 @@
     document.title = 'Propuesta Manyobra · ' + para;
   }
 
-  // Cada boton abre WhatsApp con el plan (y la empresa, si viene) ya escrito.
-  document.querySelectorAll('a[data-plan]').forEach(function (a) {
-    var plan = a.getAttribute('data-plan');
-    var msg = 'Hola Sebastián, revisé la propuesta' + (para ? ' para ' + para : '') +
-      (plan ? ' y quiero partir con el plan ' + plan + '.' : ' y quiero partir.');
-    a.href = 'https://wa.me/56956747949?text=' + encodeURIComponent(msg);
-    a.target = '_blank';
-    a.rel = 'noopener';
-  });
-
-  // Calculadora de inversion: plan + IVA del plan + pauta en Meta.
-  // El plan Inicio no incluye anuncios, asi que ahi la pauta no aplica.
   var clp = function (n) { return '$' + n.toLocaleString('es-CL'); };
+  // El Sistema 90 dias tiene 20% de descuento sobre tres meses de mes a mes
+  // (Cimientos 150.000 -> 360.000 por 90 dias, Llave en Mano 300.000 -> 720.000).
+  var programa = function (mensual) { return mensual * 3 * 0.8; };
+  var modo = 'programa';
+
+  // Cada boton abre WhatsApp con el plan, la modalidad y la empresa ya escritos.
+  function enlacesWhatsApp() {
+    document.querySelectorAll('a[data-plan]').forEach(function (a) {
+      var plan = a.getAttribute('data-plan');
+      var msg = 'Hola Sebastián, revisé la propuesta' + (para ? ' para ' + para : '') +
+        (plan ? ' y quiero partir con el plan ' + plan : ' y quiero partir') +
+        (modo === 'programa' ? ' en el Sistema 90 días.' : ', mes a mes.');
+      a.href = 'https://wa.me/56956747949?text=' + encodeURIComponent(msg);
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  }
+
+  function precios() {
+    document.querySelectorAll('.valor[data-mensual]').forEach(function (v) {
+      var mensual = +v.getAttribute('data-mensual');
+      var prog = modo === 'programa';
+      var total = programa(mensual);
+      v.querySelector('b').textContent = clp(prog ? total : mensual);
+      v.querySelector('span').textContent = prog ? '+ IVA · sistema de 90 días' : 'al mes + IVA · sin permanencia';
+      v.querySelector('s').hidden = !prog;
+      v.querySelector('s').textContent = clp(mensual * 3);
+      v.querySelector('small').hidden = !prog;
+      v.querySelector('small').textContent = 'o 3 cuotas de ' + clp(total / 3);
+    });
+  }
+
+  // Calculadora de inversion mensual: plan + IVA del plan + pauta en Meta y Google.
   var calcIn = document.querySelector('.calc-in');
   function calcular() {
     var planIn = calcIn.querySelector('input[name="plan"]:checked');
-    var plan = +planIn.value;
-    var conAds = plan > 50000;
-    var pauta = conAds ? +calcIn.querySelector('input[name="pauta"]:checked').value : 0;
+    var prog = modo === 'programa';
+    var mensual = +planIn.value;
+    var plan = prog ? programa(mensual) / 3 : mensual;
+    var pauta = +calcIn.querySelector('input[name="pauta"]:checked').value;
     var iva = Math.round(plan * 0.19);
-    document.getElementById('pauta-set').disabled = !conAds;
-    document.getElementById('pauta-set').style.opacity = conAds ? 1 : .4;
-    document.getElementById('pauta-ayuda').textContent = conAds
-      ? 'Se puede partir con $50.000. Recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.'
-      : 'El plan Inicio no incluye anuncios, así que no necesitas pauta.';
-    document.getElementById('c-nombre').textContent = planIn.getAttribute('data-nombre');
+    document.getElementById('c-nombre').textContent = planIn.getAttribute('data-nombre') + (prog ? ' (90 días, por mes)' : '');
     document.getElementById('c-plan').textContent = clp(plan);
     document.getElementById('c-iva').textContent = clp(iva);
-    document.getElementById('c-pauta').textContent = conAds ? clp(pauta) : 'No aplica';
+    document.getElementById('c-pauta').textContent = clp(pauta);
     document.getElementById('c-total').textContent = clp(plan + iva + pauta);
+    document.getElementById('c-unico').textContent = prog
+      ? 'Sistema 90 días: ' + clp(programa(mensual)) + ' + IVA, al contado o en 3 cuotas de ' + clp(plan) + '.'
+      : 'Mes a mes pagas ' + clp(mensual) + ' + IVA al inicio de cada mes, sin permanencia.';
   }
+
+  // Los dos selectores de modalidad (planes y calculadora) van sincronizados.
+  function setModo(m) {
+    modo = m;
+    document.querySelectorAll('input[name="modo"]').forEach(function (i) { i.checked = i.value === m; });
+    precios();
+    calcular();
+    enlacesWhatsApp();
+  }
+  document.querySelectorAll('input[name="modo"]').forEach(function (i) {
+    i.addEventListener('change', function () { if (i.checked) setModo(i.value); });
+  });
   calcIn.addEventListener('change', calcular);
-  calcular();
+  setModo('programa');
+
+  // "Descargar PDF" usa la impresion del navegador (Guardar como PDF) con los
+  // estilos de @media print; las preguntas se abren para que salgan completas.
+  document.querySelectorAll('[data-pdf]').forEach(function (b) {
+    b.addEventListener('click', function () { window.print(); });
+  });
+  var cerradas = [];
+  window.addEventListener('beforeprint', function () {
+    cerradas = [].filter.call(document.querySelectorAll('.faq details'), function (d) { return !d.open; });
+    cerradas.forEach(function (d) { d.open = true; });
+  });
+  window.addEventListener('afterprint', function () {
+    cerradas.forEach(function (d) { d.open = false; });
+  });
 
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
