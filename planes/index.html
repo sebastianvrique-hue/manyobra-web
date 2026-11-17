@@ -460,7 +460,7 @@
   <div class="wrap">
     <div class="datos-clave">
       <div><b>90 días</b><span>de sistema completo, desde $360.000 + IVA</span></div>
-      <div><b>3 cuotas</b><span>sin interés con tarjeta, o en 3 pagos</span></div>
+      <div><b>6 cuotas</b><span>sin interés con tarjeta de crédito</span></div>
       <div><b>10 días</b><span>para tener tus anuncios funcionando</span></div>
       <div><b>Selder</b><span>tu app con todo el sistema a la vista</span></div>
     </div>
@@ -617,7 +617,7 @@
     <div class="head rv">
       <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>05 · Planes y valores</div>
       <h2>Dos planes. <span class="dim">Tú eliges hasta dónde llegamos.</span></h2>
-      <p class="lead">Los dos traen clientes con anuncios desde el primer mes; la diferencia es si además los recordamos, atendemos y seguimos por ti. Recomendamos tomarlo como sistema de 90 días, que es lo que tarda en mostrar su potencial, pagado al contado o en 3 cuotas. También puedes ir mes a mes.</p>
+      <p class="lead">Los dos traen clientes con anuncios desde el primer mes; la diferencia es si además los recordamos, atendemos y seguimos por ti. Recomendamos tomarlo como sistema de 90 días, que es lo que tarda en mostrar su potencial, pagado al contado o hasta en 6 cuotas sin interés con tarjeta de crédito. También puedes ir mes a mes.</p>
     </div>
 
     <div class="chips modo rv" role="radiogroup" aria-label="Modalidad">
@@ -727,7 +727,8 @@
           <tr><th scope="row">Instagram optimizado, Google Business y estudio de zona</th><td class="si"></td><td class="si"></td></tr>
           <tr class="grupo"><td colspan="3">Valores + IVA</td></tr>
           <tr><th scope="row">Sistema 90 días</th><td>$360.000</td><td>$720.000</td></tr>
-          <tr><th scope="row">En 3 cuotas</th><td>$120.000</td><td>$240.000</td></tr>
+          <tr><th scope="row">6 cuotas sin interés (tarjeta de crédito)</th><td>$60.000</td><td>$120.000</td></tr>
+          <tr><th scope="row">3 pagos (transferencia)</th><td>$120.000</td><td>$240.000</td></tr>
           <tr><th scope="row">Mes a mes</th><td>$150.000</td><td>$300.000</td></tr>
         </tbody>
       </table>
@@ -875,8 +876,8 @@
     <div class="cond">
       <div class="pagos rv">
         <div class="pago">
-          <b>Mercado Pago</b>
-          <span><em>Hasta 3 cuotas sin interés con tarjeta.</em> El valor es el mismo: la comisión la asumimos nosotros.</span>
+          <b>Tarjeta de crédito</b>
+          <span><em>Hasta 6 cuotas sin interés</em> en el Sistema 90 días, por Mercado Pago. El valor es el mismo: la comisión la asumimos nosotros.</span>
         </div>
         <div class="pago">
           <b>Transferencia bancaria</b>
@@ -884,7 +885,7 @@
         </div>
       </div>
       <ul class="reglas rv">
-        <li><b>Sistema 90 días</b><span>Pagas el programa completo, al contado o en 3 cuotas. Cimientos: $360.000 + IVA. Llave en Mano: $720.000 + IVA.</span></li>
+        <li><b>Sistema 90 días</b><span>Pagas el programa completo: al contado, hasta en 6 cuotas sin interés con tarjeta de crédito o en 3 pagos por transferencia. Cimientos: $360.000 + IVA. Llave en Mano: $720.000 + IVA.</span></li>
         <li><b>Mes a mes</b><span>Pago anticipado al inicio de cada mes, sin permanencia: terminas avisando con 15 días.</span></li>
         <li><b>Al terminar los 90 días</b><span>Revisamos los resultados juntos y eliges: otro ciclo de 90 días, seguir mes a mes o terminar.</span></li>
         <li><b>Contrato</b><span>Firmamos un contrato simple con el alcance, los plazos y la forma de pago.</span></li>
@@ -910,7 +911,7 @@
       </details>
       <details>
         <summary>¿Puedo pagarlo en cuotas?</summary>
-        <p>Sí. Con tarjeta por Mercado Pago, hasta 3 cuotas sin interés. O por transferencia, en 3 pagos: al firmar, a los 30 y a los 60 días.</p>
+        <p>Sí. Con tarjeta de crédito, hasta 6 cuotas sin interés: Cimientos queda en 6 cuotas de $60.000 y Llave en Mano en 6 cuotas de $120.000 (+ IVA). O por transferencia, en 3 pagos: al firmar, a los 30 y a los 60 días.</p>
       </details>
       <details>
         <summary>¿Cuánto tengo que invertir en pauta?</summary>
@@ -992,7 +993,7 @@
       v.querySelector('s').hidden = !prog;
       v.querySelector('s').textContent = clp(mensual * 3);
       v.querySelector('small').hidden = !prog;
-      v.querySelector('small').textContent = 'o 3 cuotas de ' + clp(total / 3);
+      v.querySelector('small').textContent = 'o 6 cuotas sin interés de ' + clp(total / 6);
     });
   }
 
@@ -1011,7 +1012,7 @@
     document.getElementById('c-pauta').textContent = clp(pauta);
     document.getElementById('c-total').textContent = clp(plan + iva + pauta);
     document.getElementById('c-unico').textContent = prog
-      ? 'Sistema 90 días: ' + clp(programa(mensual)) + ' + IVA, al contado o en 3 cuotas de ' + clp(plan) + '.'
+      ? 'Sistema 90 días: ' + clp(programa(mensual)) + ' + IVA, al contado o en 6 cuotas sin interés de ' + clp(programa(mensual) / 6) + ' con tarjeta de crédito.'
       : 'Mes a mes pagas ' + clp(mensual) + ' + IVA al inicio de cada mes, sin permanencia.';
   }
 
