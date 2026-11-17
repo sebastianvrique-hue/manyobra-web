@@ -23,7 +23,7 @@
 
   <meta name="robots" content="noindex, nofollow" />
   <title>Propuesta Manyobra</title>
-  <meta name="description" content="El sistema de adquisición de clientes de Manyobra: contenido, anuncios, retargeting y atención por WhatsApp, con los valores de cada plan." />
+  <meta name="description" content="Propuesta comercial de Manyobra: el sistema de adquisición de clientes, los planes, la inversión mensual y qué esperar los primeros 90 días." />
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#0A0A0A" />
@@ -34,20 +34,19 @@
 
   <style>
     /* Paleta corporativa: la base es el blanco y negro del logo de la onda
-       (logo.png); el dorado arena #D6C48F es solo acento (etiquetas, plan
-       recomendado, indicadores). Todo lo demas son transparencias. */
+       (logo.png); el dorado arena #D6C48F es solo acento (la onda, el plan
+       recomendado, indicadores activos). Todo lo demas son transparencias. */
     :root {
       --ink: #0A0A0A;
       --ink-2: #131313;
+      --ink-3: #1B1B1B;
       --bone: #FFFFFF;
       --gold: #D6C48F;
       --dim: rgba(255,255,255,.42);
-      --muted: rgba(255,255,255,.64);
-      --faint: rgba(255,255,255,.4);
+      --muted: rgba(255,255,255,.66);
+      --faint: rgba(255,255,255,.42);
       --line: rgba(255,255,255,.09);
       --line-2: rgba(255,255,255,.17);
-      --gold-line: rgba(214,196,143,.38);
-      --gold-wash: rgba(214,196,143,.07);
       --radius: 18px;
       --wrap: 1140px;
     }
@@ -61,15 +60,15 @@
     }
     a { color: inherit; }
     .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 40px; }
-    section { padding: 112px 0; border-top: 1px solid var(--line); }
+    section { padding: 104px 0; border-top: 1px solid var(--line); }
 
     /* Tipografia */
     .eyebrow {
-      display: inline-flex; align-items: center; gap: .6rem;
+      display: inline-flex; align-items: center; gap: .65rem;
       font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1.4rem;
+      color: var(--faint); margin-bottom: 1.4rem;
     }
-    .eyebrow svg { width: 20px; height: 14px; flex-shrink: 0; }
+    .eyebrow svg { width: 20px; height: 14px; flex-shrink: 0; color: var(--gold); }
     h1 {
       font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 800;
       line-height: 1.02; letter-spacing: -.035em; margin-bottom: 1.5rem;
@@ -78,57 +77,56 @@
       font-size: clamp(2rem, 4.2vw, 3.2rem); font-weight: 800;
       line-height: 1.06; letter-spacing: -.03em; margin-bottom: 1.2rem;
     }
-    h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; }
-    .gold { color: var(--gold); }
+    h3 { font-size: 1.2rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; }
     .dim { color: var(--dim); }
-    .lead { font-size: 1.15rem; color: var(--muted); max-width: 640px; }
-    .head { max-width: 760px; margin-bottom: 64px; }
+    .lead { font-size: 1.12rem; color: var(--muted); max-width: 660px; }
+    .head { max-width: 780px; margin-bottom: 56px; }
+    .label { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--faint); }
 
     /* Barra superior */
     .topbar { padding: 28px 0; }
     .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .logo img { display: block; width: auto; mix-blend-mode: screen; }
     .logo-simbolo { height: 30px; }
     .logo-texto { height: 13px; }
     .topbar span { font-size: .82rem; color: var(--faint); letter-spacing: .04em; }
 
     /* Portada */
-    .hero { padding: 72px 0 120px; border-top: 0; }
+    .hero { padding: 72px 0 96px; border-top: 0; }
     .hero .wrap { display: grid; grid-template-columns: 1.35fr 1fr; gap: 72px; align-items: end; }
+    .hero .wrap + .wrap { display: block; }
     .para {
       display: inline-flex; align-items: center; gap: .5rem;
-      border: 1px solid var(--gold-line); border-radius: 100px;
+      border: 1px solid var(--line-2); border-radius: 100px;
       padding: .45rem 1rem; font-size: .88rem; color: var(--muted); margin-bottom: 2rem;
     }
     .para b { color: var(--bone); font-weight: 600; }
-    .indice {
-      border: 1px solid var(--line-2); border-radius: var(--radius);
-      padding: 28px 30px; background: var(--ink-2);
-    }
-    .indice p { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); font-weight: 700; margin-bottom: 1rem; }
+    .indice { border: 1px solid var(--line-2); border-radius: var(--radius); padding: 26px 30px; background: var(--ink-2); }
+    .indice .label { margin-bottom: .8rem; }
     .indice ol { list-style: none; }
     .indice li { border-top: 1px solid var(--line); }
-    .indice a {
-      display: flex; gap: 1rem; padding: .85rem 0; text-decoration: none;
-      font-weight: 600; transition: color .2s;
-    }
-    .indice a span { color: var(--gold); font-variant-numeric: tabular-nums; width: 1.6rem; }
+    .indice a { display: flex; gap: 1rem; padding: .62rem 0; text-decoration: none; font-weight: 600; font-size: .95rem; transition: color .2s; }
+    .indice a span { color: var(--faint); font-variant-numeric: tabular-nums; width: 1.6rem; }
     .indice a:hover { color: var(--gold); }
+    .datos-clave { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 72px; }
+    .datos-clave div { padding: 22px 0; }
+    .datos-clave div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+    .datos-clave b { display: block; font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
+    .datos-clave span { font-size: .88rem; color: var(--muted); }
 
     /* 01 Punto de partida */
     .dolores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-    .dolor { background: var(--ink); padding: 32px 28px 30px; display: flex; flex-direction: column; gap: .7rem; }
+    .dolor { background: var(--ink); padding: 30px 26px 28px; display: flex; flex-direction: column; gap: .7rem; }
     .dolor .num { font-size: .8rem; font-weight: 700; color: var(--faint); letter-spacing: .1em; }
-    .dolor p { color: var(--muted); font-size: .97rem; flex-grow: 1; }
-    .dolor .fix { font-size: .82rem; font-weight: 600; color: var(--gold); padding-top: .9rem; border-top: 1px solid var(--line); }
+    .dolor p { color: var(--muted); font-size: .96rem; flex-grow: 1; }
+    .dolor .fix { font-size: .82rem; font-weight: 600; color: var(--bone); padding-top: .9rem; border-top: 1px solid var(--line); }
+    .dolor .fix::before { content: '→ '; color: var(--gold); }
 
-    /* 02 El embudo */
-    .flujo { display: flex; justify-content: space-between; max-width: 340px; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--faint); margin-bottom: 14px; }
+    /* 02 Embudo */
+    .flujo { display: flex; justify-content: space-between; max-width: 340px; margin-bottom: 14px; }
     .embudo { list-style: none; }
-    .etapa {
-      display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: stretch;
-    }
+    .etapa { display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: stretch; }
     .banda-col { display: flex; justify-content: center; padding: 3px 0; }
     .banda {
       width: var(--w); min-height: 128px;
@@ -136,114 +134,147 @@
       background: rgba(255,255,255,var(--a));
       /* --i: cuanto se angosta abajo, para calzar con el ancho de la banda siguiente */
       clip-path: polygon(0 0, 100% 0, calc(100% - var(--i)) 100%, var(--i) 100%);
-      color: var(--bone);
     }
     .banda .n { font-size: .75rem; font-weight: 700; letter-spacing: .16em; opacity: .7; }
     .banda .nombre { font-size: 1.35rem; font-weight: 800; letter-spacing: -.01em; }
     .banda .quien { font-size: .78rem; opacity: .7; }
-    .etapa.final .banda { color: var(--ink); font-weight: 800; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); border-radius: 0 0 14px 14px; }
-    .etapa.final .banda .n, .etapa.final .banda .quien { opacity: .75; }
-    .detalle { padding: 30px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; }
+    .etapa.final .banda { color: var(--ink); border-radius: 0 0 14px 14px; }
+    .detalle { padding: 28px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; }
     .etapa:first-child .detalle { border-top: 1px solid var(--line); }
     .detalle h3 { margin-bottom: .45rem; }
-    .detalle p { color: var(--muted); font-size: .97rem; }
+    .detalle p { color: var(--muted); font-size: .96rem; }
     .meta { display: grid; gap: .8rem; }
     .meta div { font-size: .92rem; color: var(--muted); }
-    .meta b { display: block; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: .2rem; }
-    .resultado {
-      margin-top: 48px; display: flex; gap: 22px; align-items: center;
-      border: 1px solid var(--gold-line); background: var(--gold-wash);
-      border-radius: var(--radius); padding: 26px 30px;
-    }
-    .resultado svg { width: 40px; height: 30px; flex-shrink: 0; }
-    .resultado p { color: var(--muted); }
-    .resultado b { color: var(--bone); }
+    .meta .label { display: block; margin-bottom: .2rem; }
 
-    /* 03 Planes */
+    /* 03 Quienes confian */
+    .prueba { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: start; }
+    .logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .logos figure { background: var(--ink-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px; }
+    .logos img { display: block; width: 100%; height: 104px; object-fit: contain; background: #F4F4F2; border-radius: 8px; padding: 12px; }
+    .logos figcaption { font-size: .82rem; font-weight: 600; padding: 10px 4px 2px; }
+    .testimonio { width: 100%; max-width: 330px; justify-self: end; background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); overflow: hidden; }
+    .testimonio video { display: block; width: 100%; aspect-ratio: 9 / 16; max-height: 560px; object-fit: cover; background: #000; }
+    .testimonio div { padding: 18px 20px; }
+    .testimonio b { display: block; }
+    .testimonio span { font-size: .88rem; color: var(--muted); }
+
+    /* 04 Planes */
     .planes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
-    .plan {
-      position: relative; display: flex; flex-direction: column;
-      background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius);
-      padding: 30px 26px 26px;
-    }
-    .plan.top { border-color: var(--gold); background: linear-gradient(180deg, rgba(214,196,143,.08), rgba(214,196,143,0) 40%), var(--ink-2); }
-    .badge {
-      position: absolute; top: -12px; left: 26px;
-      background: var(--gold); color: var(--ink);
-      font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
-      padding: .3rem .75rem; border-radius: 100px;
-    }
+    .plan { position: relative; display: flex; flex-direction: column; background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 30px 24px 24px; }
+    .plan.top { border-color: var(--gold); background: linear-gradient(180deg, rgba(214,196,143,.07), rgba(214,196,143,0) 40%), var(--ink-2); }
+    .badge { position: absolute; top: -12px; left: 24px; background: var(--gold); color: var(--ink); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 100px; }
     .plan h3 { font-size: 1.4rem; font-weight: 800; }
-    .plan .tag { color: var(--muted); font-size: .9rem; min-height: 2.9em; margin: .35rem 0 1.4rem; }
-    .valor { display: flex; flex-direction: column; gap: .3rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); }
+    .ideal { color: var(--muted); font-size: .9rem; min-height: 4.4em; margin: .4rem 0 1.3rem; }
+    .ideal b { color: var(--bone); font-weight: 600; }
+    .valor { display: flex; flex-direction: column; gap: .3rem; padding-bottom: 1.3rem; border-bottom: 1px solid var(--line); }
     .valor b { font-size: 2.1rem; font-weight: 800; letter-spacing: -.03em; line-height: 1; }
     .valor span { font-size: .82rem; color: var(--faint); }
     .cobertura { padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
-    .cobertura p { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--faint); margin-bottom: .7rem; }
+    .cobertura .label { margin-bottom: .7rem; }
     .barras { display: grid; gap: 5px; }
-    .barras i {
-      display: flex; align-items: center; justify-content: space-between;
-      font-style: normal; font-size: .78rem; font-weight: 600;
-      padding: .32rem .6rem; border-radius: 6px;
-      border: 1px solid var(--line); color: var(--faint);
-    }
+    .barras i { display: flex; align-items: center; justify-content: space-between; font-style: normal; font-size: .78rem; font-weight: 600; padding: .32rem .6rem; border-radius: 6px; border: 1px solid var(--line); color: var(--faint); }
     .barras i.on { background: rgba(255,255,255,.1); border-color: var(--line-2); color: var(--bone); }
     .barras i.on::after { content: '●'; color: var(--gold); font-size: .55rem; }
-    .entregables { list-style: none; display: grid; gap: .6rem; padding: 1.3rem 0; flex-grow: 1; }
+    .entregables { list-style: none; display: grid; gap: .55rem; padding: 1.2rem 0 1.4rem; flex-grow: 1; }
     .entregables li { position: relative; padding-left: 1rem; font-size: .9rem; color: var(--muted); line-height: 1.45; }
     .entregables li::before { content: ''; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--bone); opacity: .5; }
     .entregables li b { color: var(--bone); font-weight: 600; }
-    .ritmo { font-size: .82rem; color: var(--faint); margin-bottom: 1.2rem; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
-      text-decoration: none; font-weight: 700; font-size: .95rem;
-      border-radius: 100px; padding: .85rem 1.3rem; transition: transform .15s, background .2s, color .2s;
-    }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; text-decoration: none; font-weight: 700; font-size: .95rem; border-radius: 100px; padding: .85rem 1.3rem; transition: transform .15s, background .2s, color .2s, border-color .2s; }
     .btn:hover { transform: translateY(-1px); }
     .btn-line { border: 1px solid var(--line-2); color: var(--bone); }
-    .btn-line:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-line:hover { border-color: var(--bone); }
     .btn-main { background: var(--bone); color: var(--ink); }
     .btn-main:hover { background: var(--gold); }
     .btn svg { width: 18px; height: 18px; }
 
-    .extras { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
-    .extra { border: 1px dashed var(--line-2); border-radius: var(--radius); padding: 24px 26px; }
-    .extra b { display: block; margin-bottom: .35rem; }
-    .extra span { color: var(--muted); font-size: .93rem; }
-    .nota { font-size: .85rem; color: var(--faint); margin-top: 28px; max-width: 820px; }
+    .tabla-wrap { margin-top: 40px; border: 1px solid var(--line-2); border-radius: var(--radius); overflow-x: auto; }
+    .tabla { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .92rem; }
+    .tabla caption { text-align: left; padding: 22px 24px 6px; font-weight: 700; font-size: 1.05rem; }
+    .tabla th, .tabla td { padding: 13px 18px; text-align: center; border-top: 1px solid var(--line); }
+    .tabla th:first-child, .tabla td:first-child { text-align: left; padding-left: 24px; color: var(--muted); font-weight: 500; }
+    .tabla thead th { color: var(--bone); font-weight: 700; border-top: 0; padding-top: 16px; }
+    .tabla thead th.top { color: var(--gold); }
+    .tabla td { color: var(--bone); font-weight: 600; }
+    .tabla td.no { color: var(--faint); font-weight: 400; }
+    .tabla td.si::before { content: '●'; color: var(--gold); font-size: .6rem; }
+    .tabla tr.grupo td { color: var(--faint); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; background: rgba(255,255,255,.025); text-align: left; padding: 10px 24px; }
 
-    /* 04 Pago y condiciones */
-    .cond { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-    .pagos { display: grid; gap: 16px; }
-    .pago { background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 26px 28px; }
-    .pago b { display: block; font-size: 1.1rem; margin-bottom: .35rem; }
+    .extras { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .extra { border: 1px dashed var(--line-2); border-radius: var(--radius); padding: 22px 24px; }
+    .extra b { display: block; margin-bottom: .3rem; }
+    .extra span { color: var(--muted); font-size: .93rem; }
+
+    /* 05 Inversion */
+    .calc { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-in, .calc-out { background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 28px; }
+    .calc fieldset { border: 0; margin-bottom: 26px; }
+    .calc fieldset:last-child { margin-bottom: 0; }
+    .calc legend { margin-bottom: .8rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chips label { position: relative; cursor: pointer; }
+    .chips input { position: absolute; opacity: 0; pointer-events: none; }
+    .chips span { display: block; padding: .55rem 1rem; border: 1px solid var(--line-2); border-radius: 100px; font-size: .9rem; font-weight: 600; color: var(--muted); transition: all .15s; }
+    .chips label:hover span { border-color: var(--bone); color: var(--bone); }
+    .chips input:checked + span { background: var(--bone); border-color: var(--bone); color: var(--ink); }
+    .chips input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .calc .ayuda { font-size: .84rem; color: var(--faint); margin-top: .7rem; }
+    .linea { display: flex; justify-content: space-between; gap: 1rem; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+    .linea b { color: var(--bone); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .total { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-top: 18px; }
+    .total span { font-weight: 700; }
+    .total b { font-size: 2.2rem; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+    .calc-out .nota { font-size: .84rem; color: var(--faint); margin-top: 14px; }
+
+    /* 06 Que esperar */
+    .linea-tiempo { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+    .linea-tiempo::before { content: ''; position: absolute; top: 9px; left: 0; right: 0; height: 1px; background: var(--line-2); }
+    .linea-tiempo li { position: relative; padding: 36px 22px 0 0; }
+    .linea-tiempo li::before { content: ''; position: absolute; top: 4px; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--ink); border: 1px solid var(--bone); }
+    .linea-tiempo li.hito::before { background: var(--gold); border-color: var(--gold); }
+    .linea-tiempo .label { display: block; margin-bottom: .45rem; }
+    .linea-tiempo h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+    .linea-tiempo p { color: var(--muted); font-size: .9rem; }
+    .aviso { margin-top: 44px; color: var(--muted); font-size: .95rem; max-width: 760px; padding-left: 18px; border-left: 2px solid var(--line-2); }
+
+    /* 07 Como trabajamos */
+    .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .rol { border: 1px solid var(--line-2); border-radius: var(--radius); padding: 30px; }
+    .rol.nos { background: var(--ink-2); }
+    .rol h3 { margin-bottom: 1.2rem; }
+    .rol ul { list-style: none; }
+    .rol li { padding: 14px 0; border-top: 1px solid var(--line); }
+    .rol li b { display: block; font-weight: 600; margin-bottom: .15rem; }
+    .rol li span { color: var(--muted); font-size: .93rem; }
+
+    /* 08 Pago y condiciones */
+    .cond { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; }
+    .pagos { display: grid; gap: 16px; align-content: start; }
+    .pago { background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 24px 26px; }
+    .pago b { display: block; font-size: 1.1rem; margin-bottom: .3rem; }
     .pago span { color: var(--muted); font-size: .95rem; }
-    .pago em { font-style: normal; color: var(--gold); font-weight: 600; }
+    .pago em { font-style: normal; color: var(--bone); font-weight: 700; }
     .reglas { list-style: none; }
-    .reglas li { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 20px 0; border-top: 1px solid var(--line); }
+    .reglas li { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); }
     .reglas li:last-child { border-bottom: 1px solid var(--line); }
     .reglas b { font-size: .98rem; }
     .reglas span { color: var(--muted); font-size: .95rem; }
 
-    /* 05 Como partimos */
-    .pasos { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
-    .pasos::before { content: ''; position: absolute; top: 23px; left: 24px; right: 24px; height: 1px; background: var(--line-2); }
-    .pasos li { position: relative; }
-    .pasos .dot {
-      width: 48px; height: 48px; border-radius: 50%;
-      display: grid; place-items: center; margin-bottom: 1.4rem;
-      background: var(--ink); border: 1px solid var(--line-2); color: var(--bone);
-      font-weight: 800; position: relative;
-    }
-    .pasos h3 { margin-bottom: .4rem; }
-    .pasos p { color: var(--muted); font-size: .95rem; }
-    .pasos .cuando { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-bottom: .4rem; }
+    /* 09 Preguntas */
+    .faq { max-width: 860px; }
+    .faq details { border-top: 1px solid var(--line); }
+    .faq details:last-child { border-bottom: 1px solid var(--line); }
+    .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1.5rem; padding: 22px 0; font-weight: 700; font-size: 1.05rem; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; color: var(--faint); font-weight: 400; font-size: 1.4rem; line-height: 1; transition: transform .2s; }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { color: var(--muted); padding: 0 0 24px; max-width: 720px; }
 
     /* Cierre */
-    .cierre { text-align: center; padding: 128px 0 96px; }
-    .cierre h2 { margin-bottom: 1rem; }
-    .cierre .lead { margin: 0 auto 2.4rem; }
+    .cierre { text-align: center; padding: 120px 0 88px; }
+    .cierre .lead { margin: 0 auto 2.2rem; }
     .cierre .btn { padding: 1.05rem 1.8rem; font-size: 1rem; }
+    .cupos { margin-top: 1.4rem; font-size: .88rem; color: var(--faint); }
     .firma { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; text-align: left; font-size: .88rem; color: var(--faint); }
     .firma b { color: var(--bone); font-weight: 600; }
 
@@ -262,41 +293,51 @@
       .etapa { grid-template-columns: 260px 1fr; gap: 36px; }
       .flujo { max-width: 260px; }
       .detalle { grid-template-columns: 1fr; gap: 18px; }
+      .prueba { grid-template-columns: 1fr; }
+      .testimonio { justify-self: start; }
+      .linea-tiempo { grid-template-columns: 1fr; }
+      .linea-tiempo::before { top: 0; bottom: 0; left: 5px; right: auto; width: 1px; height: auto; }
+      .linea-tiempo li { padding: 0 0 30px 36px; }
+      .linea-tiempo li::before { top: 5px; }
     }
     @media (max-width: 820px) {
       body { font-size: 16px; }
       .wrap { padding: 0 20px; }
-      section { padding: 80px 0; }
-      .hero { padding: 40px 0 80px; }
+      section { padding: 76px 0; }
+      .hero { padding: 40px 0 72px; }
       .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
-      .head { margin-bottom: 44px; }
+      .datos-clave { grid-template-columns: 1fr 1fr; margin-top: 48px; }
+      .datos-clave div + div { padding-left: 0; border-left: 0; }
+      .datos-clave div:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--line); }
+      .datos-clave div:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .head { margin-bottom: 40px; }
       .flujo { display: none; }
       .etapa { grid-template-columns: 1fr; gap: 0; }
       .banda { min-height: 92px; }
       .detalle { padding: 22px 0 34px; border-bottom: 0; }
       .etapa:first-child .detalle { border-top: 0; }
-      .cond { grid-template-columns: 1fr; gap: 40px; }
-      .extras { grid-template-columns: 1fr; }
-      .pasos { grid-template-columns: 1fr; gap: 28px; }
-      .pasos::before { top: 24px; bottom: 24px; left: 23px; right: auto; width: 1px; height: auto; }
-      .pasos li { padding-left: 72px; }
-      .pasos .dot { position: absolute; left: 0; top: 0; }
-      .resultado { flex-direction: column; align-items: flex-start; }
+      .logos { grid-template-columns: 1fr 1fr; }
+      .calc, .roles, .cond, .extras { grid-template-columns: 1fr; }
+      .cond { gap: 36px; }
     }
     @media (max-width: 600px) {
       .planes, .dolores { grid-template-columns: 1fr; }
       .reglas li { grid-template-columns: 1fr; gap: 4px; }
       .topbar span { display: none; }
-      .plan .tag { min-height: 0; }
+      .ideal { min-height: 0; }
+      .total b { font-size: 1.8rem; }
+      .logo-simbolo { height: 24px; }
+      .logo-texto { height: 10.5px; }
     }
 
     @media print {
-      :root { --ink:#fff; --ink-2:#fff; --bone:#181818; --muted:#444; --faint:#777; --line:#ddd; --line-2:#ccc; --gold:#9C8650; --dim:#777; }
-      body { font-size: 12pt; }
-      section { padding: 36px 0; page-break-inside: avoid; }
-      .topbar img { filter: invert(1); mix-blend-mode: normal; }
-      .btn, .indice { display: none; }
+      :root { --ink:#fff; --ink-2:#fff; --ink-3:#fff; --bone:#111; --muted:#444; --faint:#777; --dim:#888; --line:#ddd; --line-2:#ccc; --gold:#9C8650; }
+      body { font-size: 11pt; }
+      section { padding: 32px 0; page-break-inside: avoid; }
+      .logo img { filter: invert(1); mix-blend-mode: normal; }
+      .btn, .indice, .calc-in, .testimonio video { display: none; }
       .js .rv { opacity: 1; transform: none; }
+      .faq details > p { display: block; }
     }
   </style>
   <!-- Google Analytics 4 -->
@@ -312,7 +353,7 @@
 
 <!-- La onda del logo, reutilizada como marcador -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="ast" viewBox="0 0 100 70"><path d="M8 54C8 54 18 16 32 16S48 54 62 54 78 16 92 16" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="onda" viewBox="0 0 100 70"><path d="M8 54C8 54 18 16 32 16S48 54 62 54 78 16 92 16" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></symbol>
 </svg>
 
@@ -329,18 +370,30 @@
     <div>
       <div class="para">Preparada para <b id="para">tu empresa</b></div>
       <h1><span class="dim">Un sistema que convierte tu trabajo en</span> clientes.</h1>
-      <p class="lead">No vendemos posteos sueltos. Armamos el camino completo: alguien ve tu trabajo, te recuerda, te escribe y llega a tu WhatsApp con un proyecto real. Aquí está cómo funciona y cuánto cuesta cada etapa.</p>
+      <p class="lead">No vendemos posteos sueltos. Armamos el camino completo: alguien ve tu trabajo, te recuerda, te escribe y llega a tu WhatsApp con un proyecto real. Esta propuesta explica cómo funciona, cuánto cuesta y qué esperar.</p>
     </div>
     <nav class="indice" aria-label="Contenido de la propuesta">
-      <p>En esta propuesta</p>
+      <p class="label">En esta propuesta</p>
       <ol>
         <li><a href="#partida"><span>01</span>El punto de partida</a></li>
         <li><a href="#sistema"><span>02</span>El sistema de adquisición</a></li>
-        <li><a href="#planes"><span>03</span>Planes y valores</a></li>
-        <li><a href="#condiciones"><span>04</span>Pago y condiciones</a></li>
-        <li><a href="#partimos"><span>05</span>Cómo partimos</a></li>
+        <li><a href="#clientes"><span>03</span>Quiénes ya trabajan con nosotros</a></li>
+        <li><a href="#planes"><span>04</span>Planes y valores</a></li>
+        <li><a href="#inversion"><span>05</span>Tu inversión mensual</a></li>
+        <li><a href="#esperar"><span>06</span>Qué esperar</a></li>
+        <li><a href="#roles"><span>07</span>Cómo trabajamos</a></li>
+        <li><a href="#condiciones"><span>08</span>Pago y condiciones</a></li>
+        <li><a href="#preguntas"><span>09</span>Preguntas frecuentes</a></li>
       </ol>
     </nav>
+  </div>
+  <div class="wrap">
+    <div class="datos-clave">
+      <div><b>Desde $50.000</b><span>al mes + IVA</span></div>
+      <div><b>72 horas</b><span>para tener el sistema funcionando</span></div>
+      <div><b>Sin permanencia</b><span>terminas avisando con 15 días</span></div>
+      <div><b>100% tuyo</b><span>el contenido y la cuenta de anuncios</span></div>
+    </div>
   </div>
 </section>
 
@@ -348,7 +401,7 @@
 <section id="partida">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#ast"/></svg>01 · El punto de partida</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>01 · El punto de partida</div>
       <h2>El boca a boca trae clientes. <span class="dim">Pero no cuando tú lo necesitas.</span></h2>
       <p class="lead">Estos son los cuatro problemas que vemos en casi todos los negocios de oficios y construcción. Cada etapa del sistema existe para resolver uno.</p>
     </div>
@@ -375,7 +428,7 @@
         <span class="num">04</span>
         <h3>No sabes qué funciona</h3>
         <p>Publicas o pagas anuncios, pero no sabes cuáles de esos contactos tenían un proyecto real.</p>
-        <span class="fix">Lo resuelve: Reporte</span>
+        <span class="fix">Lo resuelve: Cierre y reporte</span>
       </div>
     </div>
   </div>
@@ -385,73 +438,95 @@
 <section id="sistema">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#ast"/></svg>02 · El sistema de adquisición</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>02 · El sistema de adquisición</div>
       <h2>De desconocido a cliente, <span class="dim">en cinco etapas.</span></h2>
       <p class="lead">Cada etapa filtra y empuja a la siguiente. Arriba entra mucha gente que no te conoce; abajo llegan pocas personas, pero con un proyecto concreto y ganas de cotizar.</p>
     </div>
 
-    <div class="flujo" aria-hidden="true"><span>Muchas personas</span><span>↓</span><span>Pocas y listas</span></div>
+    <div class="flujo label" aria-hidden="true"><span>Muchas personas</span><span>↓</span><span>Pocas y listas</span></div>
     <ol class="embudo">
       <li class="etapa rv">
         <div class="banda-col"><div class="banda" style="--w:100%;--i:7%;--a:.11"><span class="n">01</span><span class="nombre">Atención</span><span class="quien">Te ven por primera vez</span></div></div>
         <div class="detalle">
           <div><h3>Que te vean trabajando</h3><p>Convertimos tus trabajos en videos e imágenes que muestran cómo trabajas y la calidad de tus terminaciones. Es lo que te saca de la competencia por precio.</p></div>
-          <div class="meta"><div><b>Hacemos</b>Guion, edición profesional y calendario de publicación</div><div><b>Medimos</b>Alcance y reproducciones</div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Guion, edición profesional y calendario de publicación</div><div><span class="label">Medimos</span>Alcance y reproducciones</div></div>
         </div>
       </li>
       <li class="etapa rv">
         <div class="banda-col"><div class="banda" style="--w:86%;--i:8.1%;--a:.17"><span class="n">02</span><span class="nombre">Alcance</span><span class="quien">Llega a quien puede contratarte</span></div></div>
         <div class="detalle">
           <div><h3>Ponerte frente a las personas correctas</h3><p>Ese contenido lo pautamos en Instagram y Facebook para que lo vean personas de tu zona con intención de construir, remodelar o reparar, no cualquiera.</p></div>
-          <div class="meta"><div><b>Hacemos</b>Meta Ads con campañas de conversión, segmentadas por zona, intereses y comportamiento</div><div><b>Medimos</b>Costo por conversación iniciada</div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Meta Ads con campañas de conversión, segmentadas por zona, intereses y comportamiento</div><div><span class="label">Medimos</span>Costo por conversación iniciada</div></div>
         </div>
       </li>
       <li class="etapa rv">
         <div class="banda-col"><div class="banda" style="--w:72%;--i:9.7%;--a:.25"><span class="n">03</span><span class="nombre">Recuerdo</span><span class="quien">Vuelve a pensar en ti</span></div></div>
         <div class="detalle">
           <div><h3>Seguir presente hasta que decidan</h3><p>Casi nadie contrata la primera vez que te ve. Volvemos a mostrarle tu trabajo a quien ya interactuó, y mantenemos tus redes activas para que cuando decida, piense en ti.</p></div>
-          <div class="meta"><div><b>Hacemos</b>Retargeting, historias y community manager</div><div><b>Medimos</b>Conversaciones de personas que ya te conocían</div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Retargeting, historias y community manager</div><div><span class="label">Medimos</span>Conversaciones de personas que ya te conocían</div></div>
         </div>
       </li>
       <li class="etapa rv">
         <div class="banda-col"><div class="banda" style="--w:58%;--i:12.1%;--a:.36"><span class="n">04</span><span class="nombre">Conversación</span><span class="quien">Te escribe</span></div></div>
         <div class="detalle">
           <div><h3>Responder en segundos, aunque estés en terreno</h3><p>Un agente con inteligencia artificial atiende tu WhatsApp día y noche: responde, pregunta tipo de trabajo, zona y plazo, y le hace seguimiento a quien deja de contestar.</p></div>
-          <div class="meta"><div><b>Hacemos</b>Agente IA en WhatsApp y seguimiento automático</div><div><b>Medimos</b>Tiempo de respuesta y contactos calificados</div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Agente IA en WhatsApp y seguimiento automático</div><div><span class="label">Medimos</span>Tiempo de respuesta y contactos calificados</div></div>
         </div>
       </li>
       <li class="etapa final rv">
         <div class="banda-col"><div class="banda" style="--w:44%;--i:0%;--a:1"><span class="n">05</span><span class="nombre">Cierre</span><span class="quien">Lo cierras tú</span></div></div>
         <div class="detalle">
           <div><h3>Tú cotizas con información, no a ciegas</h3><p>Te llega el contacto con lo que necesita, dónde y para cuándo. Tú haces lo que mejor sabes: cotizar y cerrar. Nosotros te mostramos qué funcionó para hacer más de eso.</p></div>
-          <div class="meta"><div><b>Hacemos</b>Reporte con los contactos que traían proyecto real y de qué anuncio venían</div><div><b>Medimos</b>Reuniones y cotizaciones</div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Reporte con los contactos que traían proyecto real y de qué anuncio venían</div><div><span class="label">Medimos</span>Reuniones y cotizaciones</div></div>
         </div>
       </li>
     </ol>
+  </div>
+</section>
 
-    <div class="resultado rv">
-      <svg viewBox="0 0 100 70" class="gold"><use href="#ast"/></svg>
-      <p><b>El resultado:</b> un flujo constante de personas con proyectos reales llegando a tu WhatsApp, y datos para saber exactamente de dónde vienen tus clientes.</p>
+<!-- 03 CLIENTES -->
+<section id="clientes">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>03 · Quiénes ya trabajan con nosotros</div>
+      <h2>Empresas reales, <span class="dim">del mismo rubro que tú.</span></h2>
+      <p class="lead">Constructoras, áridos, piscinas, paisajismo y maestros independientes. Cada uno nos mandó el registro de sus trabajos y lo convertimos en campañas.</p>
+    </div>
+    <div class="prueba">
+      <div class="logos rv">
+        <figure><img src="/assets/marcas/s-sudamericana.webp" alt="Logo de S Sudamericana" loading="lazy" /><figcaption>S Sudamericana</figcaption></figure>
+        <figure><img src="/assets/marcas/pavimentos-myc.png" alt="Logo de Pavimentos M&amp;C" loading="lazy" /><figcaption>Pavimentos M&amp;C</figcaption></figure>
+        <figure><img src="/assets/marcas/piscinas-hormigon.jpg" alt="Logo de Piscinas Hormigón" loading="lazy" /><figcaption>Piscinas Hormigón</figcaption></figure>
+        <figure><img src="/assets/marcas/aridos-lomas-blancas.png" alt="Logo de Áridos Lomas Blancas" loading="lazy" /><figcaption>Áridos Lomas Blancas</figcaption></figure>
+        <figure><img src="/assets/marcas/landspace.png" alt="Logo de Landspace" loading="lazy" /><figcaption>Landspace</figcaption></figure>
+        <figure><img src="/assets/marcas/pedro-campos.png" alt="Logo de Pedro Campos Obras Menores" loading="lazy" /><figcaption>Pedro Campos · Obras Menores</figcaption></figure>
+      </div>
+      <figure class="testimonio rv">
+        <video controls preload="none" playsinline poster="/testimonios/reels/testimonio-pedro.jpg">
+          <source src="/testimonios/reels/testimonio-pedro.mp4" type="video/mp4" />
+        </video>
+        <div><b>Pedro Campos</b><span>Obras Menores · Temuco. Cuenta en sus palabras cómo le ha ido.</span></div>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- 03 PLANES -->
+<!-- 04 PLANES -->
 <section id="planes">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#ast"/></svg>03 · Planes y valores</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>04 · Planes y valores</div>
       <h2>Cada plan activa <span class="dim">más etapas del embudo.</span></h2>
-      <p class="lead">Puedes partir por arriba y sumar etapas a medida que crece tu negocio. Valores mensuales en pesos chilenos, más IVA.</p>
+      <p class="lead">Puedes partir por arriba y sumar etapas a medida que crece tu negocio. Valores mensuales en pesos chilenos, más IVA. La pauta en Meta va aparte y se paga directo a Meta.</p>
     </div>
 
     <div class="planes">
       <article class="plan rv">
         <h3>Inicio</h3>
-        <p class="tag">Para empezar a existir en redes sin invertir de más.</p>
-        <div class="valor"><b>$50.000</b><span>/mes + IVA</span></div>
+        <p class="ideal"><b>Ideal si</b> hoy casi no publicas y quieres empezar a mostrar tu trabajo.</p>
+        <div class="valor"><b>$50.000</b><span>al mes + IVA</span></div>
         <div class="cobertura">
-          <p>Etapas que activa</p>
+          <p class="label">Etapas que activa</p>
           <div class="barras"><i class="on">Atención</i><i>Alcance</i><i>Recuerdo</i><i>Conversación</i></div>
         </div>
         <ul class="entregables">
@@ -460,34 +535,32 @@
           <li>Calendario de publicación</li>
           <li>Reporte mensual</li>
         </ul>
-        <p class="ritmo">1 entrega al mes, publicación semanal.</p>
         <a class="btn btn-line" data-plan="Inicio" href="https://wa.me/56956747949">Elegir Inicio</a>
       </article>
 
       <article class="plan rv">
         <h3>Activo</h3>
-        <p class="tag">Publicar seguido y empezar a traer trabajos con anuncios.</p>
-        <div class="valor"><b>$100.000</b><span>/mes + IVA</span></div>
+        <p class="ideal"><b>Ideal si</b> quieres empezar a recibir consultas con anuncios.</p>
+        <div class="valor"><b>$100.000</b><span>al mes + IVA</span></div>
         <div class="cobertura">
-          <p>Etapas que activa</p>
+          <p class="label">Etapas que activa</p>
           <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i>Recuerdo</i><i>Conversación</i></div>
         </div>
         <ul class="entregables">
           <li><b>3 videos + 5 imágenes</b> al mes</li>
           <li>Meta Ads con campañas de conversión</li>
           <li>Segmentación por zona, intereses y comportamiento</li>
-          <li>Reporte al cierre de mes</li>
+          <li>Reporte mensual</li>
         </ul>
-        <p class="ritmo">Entregas quincenales, anuncios activos todo el mes.</p>
         <a class="btn btn-line" data-plan="Activo" href="https://wa.me/56956747949">Elegir Activo</a>
       </article>
 
       <article class="plan rv">
         <h3>Online Pro</h3>
-        <p class="tag">Presencia diaria y anuncios que vuelven a buscar a quien ya te vio.</p>
-        <div class="valor"><b>$150.000</b><span>/mes + IVA</span></div>
+        <p class="ideal"><b>Ideal si</b> ya te escriben y quieres un flujo más constante.</p>
+        <div class="valor"><b>$150.000</b><span>al mes + IVA</span></div>
         <div class="cobertura">
-          <p>Etapas que activa</p>
+          <p class="label">Etapas que activa</p>
           <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i class="on">Recuerdo</i><i>Conversación</i></div>
         </div>
         <ul class="entregables">
@@ -496,17 +569,16 @@
           <li>Community manager</li>
           <li>Reporte quincenal</li>
         </ul>
-        <p class="ritmo">Entregas semanales, reporte cada 15 días.</p>
         <a class="btn btn-line" data-plan="Online Pro" href="https://wa.me/56956747949">Elegir Online Pro</a>
       </article>
 
       <article class="plan top rv">
         <span class="badge">Recomendado</span>
         <h3>Completo</h3>
-        <p class="tag">El sistema entero, con tu WhatsApp atendido día y noche.</p>
-        <div class="valor"><b>$200.000</b><span>/mes + IVA</span></div>
+        <p class="ideal"><b>Ideal si</b> te llegan consultas y no alcanzas a responderlas a tiempo.</p>
+        <div class="valor"><b>$200.000</b><span>al mes + IVA</span></div>
         <div class="cobertura">
-          <p>Etapas que activa</p>
+          <p class="label">Etapas que activa</p>
           <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i class="on">Recuerdo</i><i class="on">Conversación</i></div>
         </div>
         <ul class="entregables">
@@ -515,9 +587,34 @@
           <li><b>Seguimiento automático</b> a quien deja de contestar</li>
           <li>Reporte quincenal con los contactos que traían proyecto real</li>
         </ul>
-        <p class="ritmo">Entregas semanales, agente atendiendo 24/7.</p>
         <a class="btn btn-main" data-plan="Completo" href="https://wa.me/56956747949">Elegir Completo</a>
       </article>
+    </div>
+
+    <div class="tabla-wrap rv">
+      <table class="tabla">
+        <caption>Qué incluye cada plan, en detalle</caption>
+        <thead>
+          <tr><th scope="col"></th><th scope="col">Inicio</th><th scope="col">Activo</th><th scope="col">Online Pro</th><th scope="col" class="top">Completo</th></tr>
+        </thead>
+        <tbody>
+          <tr class="grupo"><td colspan="5">Contenido</td></tr>
+          <tr><th scope="row">Videos al mes</th><td>1</td><td>3</td><td>5</td><td>5</td></tr>
+          <tr><th scope="row">Imágenes al mes</th><td>3</td><td>5</td><td>7</td><td>7</td></tr>
+          <tr><th scope="row">Historias</th><td class="no">—</td><td class="no">—</td><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Guion, edición y calendario</th><td class="si"></td><td class="si"></td><td class="si"></td><td class="si"></td></tr>
+          <tr class="grupo"><td colspan="5">Anuncios</td></tr>
+          <tr><th scope="row">Meta Ads con campañas de conversión</th><td class="no">—</td><td class="si"></td><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Retargeting</th><td class="no">—</td><td class="no">—</td><td class="si"></td><td class="si"></td></tr>
+          <tr><th scope="row">Community manager</th><td class="no">—</td><td class="no">—</td><td class="si"></td><td class="si"></td></tr>
+          <tr class="grupo"><td colspan="5">WhatsApp</td></tr>
+          <tr><th scope="row">Agente IA que responde y califica</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Seguimiento automático</th><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="si"></td></tr>
+          <tr class="grupo"><td colspan="5">Reportes</td></tr>
+          <tr><th scope="row">Frecuencia del reporte</th><td>Mensual</td><td>Mensual</td><td>Quincenal</td><td>Quincenal</td></tr>
+          <tr><th scope="row">Valor mensual + IVA</th><td>$50.000</td><td>$100.000</td><td>$150.000</td><td>$200.000</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="extras rv">
@@ -530,16 +627,125 @@
         <span>Si tienes varias obras en paralelo o necesitas página web con Píxel, armamos una propuesta específica para tu caso.</span>
       </div>
     </div>
-
-    <p class="nota">El presupuesto de publicidad en Meta Ads no está incluido en los valores: se carga directo a tu cuenta y mantienes el control total de la inversión.</p>
   </div>
 </section>
 
-<!-- 04 PAGO Y CONDICIONES -->
+<!-- 05 INVERSION -->
+<section id="inversion">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>05 · Tu inversión mensual</div>
+      <h2>Cuánto vas a invertir, <span class="dim">sin letra chica.</span></h2>
+      <p class="lead">Tu inversión tiene dos partes: el plan, que nos pagas a nosotros, y la pauta, que se carga directo a tu cuenta de Meta. Elige una combinación y mira el total.</p>
+    </div>
+    <div class="calc rv">
+      <form class="calc-in" onsubmit="return false">
+        <fieldset>
+          <legend class="label">Plan</legend>
+          <div class="chips">
+            <label><input type="radio" name="plan" value="50000" data-nombre="Inicio" /><span>Inicio</span></label>
+            <label><input type="radio" name="plan" value="100000" data-nombre="Activo" /><span>Activo</span></label>
+            <label><input type="radio" name="plan" value="150000" data-nombre="Online Pro" /><span>Online Pro</span></label>
+            <label><input type="radio" name="plan" value="200000" data-nombre="Completo" checked /><span>Completo</span></label>
+          </div>
+        </fieldset>
+        <fieldset id="pauta-set">
+          <legend class="label">Pauta en Meta</legend>
+          <div class="chips">
+            <label><input type="radio" name="pauta" value="50000" /><span>$50.000</span></label>
+            <label><input type="radio" name="pauta" value="100000" /><span>$100.000</span></label>
+            <label><input type="radio" name="pauta" value="150000" checked /><span>$150.000</span></label>
+            <label><input type="radio" name="pauta" value="250000" /><span>$250.000</span></label>
+          </div>
+          <p class="ayuda" id="pauta-ayuda">Se puede partir con $50.000. Recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.</p>
+        </fieldset>
+      </form>
+      <div class="calc-out" aria-live="polite">
+        <p class="label">Tu inversión mensual</p>
+        <div class="linea"><span>Plan <span id="c-nombre">Completo</span></span><b id="c-plan">$200.000</b></div>
+        <div class="linea"><span>IVA del plan (19%)</span><b id="c-iva">$38.000</b></div>
+        <div class="linea"><span>Pauta en Meta</span><b id="c-pauta">$150.000</b></div>
+        <div class="total"><span>Total aproximado</span><b id="c-total">$388.000</b></div>
+        <p class="nota">La pauta se paga directo a Meta con tu tarjeta y Meta puede sumarle sus propios impuestos. Puedes subirla o bajarla cuando quieras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 QUE ESPERAR -->
+<section id="esperar">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>06 · Qué esperar</div>
+      <h2>Del primer día <span class="dim">a los primeros resultados.</span></h2>
+      <p class="lead">Esto es lo que pasa, en orden. Sin promesas infladas: son los tiempos normales con que trabajan las campañas en Meta.</p>
+    </div>
+    <ol class="linea-tiempo rv">
+      <li>
+        <span class="label">Día 1</span>
+        <h3>Eliges el plan</h3>
+        <p>Confirmamos alcance y fecha de inicio, y te enviamos la factura.</p>
+      </li>
+      <li>
+        <span class="label">Días 1 a 3</span>
+        <h3>Encendemos el sistema</h3>
+        <p>Nos das accesos y material de tus trabajos. Publicamos y activamos los anuncios.</p>
+      </li>
+      <li>
+        <span class="label">Semanas 1 y 2</span>
+        <h3>Meta aprende</h3>
+        <p>El algoritmo necesita entre 7 y 14 días para encontrar a quién mostrarle tus anuncios.</p>
+      </li>
+      <li class="hito">
+        <span class="label">Fin del mes 1</span>
+        <h3>Primeros resultados</h3>
+        <p>Primer reporte con conversaciones, costo por contacto y cuáles traían proyecto real.</p>
+      </li>
+      <li>
+        <span class="label">Meses 2 y 3</span>
+        <h3>Ajustamos y escalamos</h3>
+        <p>Empujamos lo que trae proyectos reales y cortamos lo que no.</p>
+      </li>
+    </ol>
+    <p class="aviso rv">Los resultados dependen de tu rubro, tu zona y tu competencia. No garantizamos cifras específicas; sí te mostramos con datos qué está funcionando y qué no.</p>
+  </div>
+</section>
+
+<!-- 07 ROLES -->
+<section id="roles">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>07 · Cómo trabajamos</div>
+      <h2>Nosotros hacemos el sistema. <span class="dim">Tú cierras los trabajos.</span></h2>
+    </div>
+    <div class="roles rv">
+      <div class="rol nos">
+        <h3>Lo que hacemos nosotros</h3>
+        <ul>
+          <li><b>Producimos el contenido</b><span>Guion, edición y formato de cada pieza, listas para publicar.</span></li>
+          <li><b>Manejamos los anuncios</b><span>Creamos, segmentamos y optimizamos las campañas en Meta.</span></li>
+          <li><b>Atendemos el WhatsApp</b><span>En el plan Completo, el agente responde, califica y hace seguimiento.</span></li>
+          <li><b>Te reportamos con datos</b><span>Qué funcionó, cuánto costó cada contacto y qué ajustamos.</span></li>
+        </ul>
+      </div>
+      <div class="rol">
+        <h3>Lo que necesitamos de ti</h3>
+        <ul>
+          <li><b>Material de tus trabajos</b><span>Fotos y videos desde el teléfono. Sin tu trabajo real, el contenido pierde lo que lo hace funcionar.</span></li>
+          <li><b>Aprobar el contenido a tiempo</b><span>Te mandamos las piezas para revisión; si se quedan detenidas, se atrasa todo.</span></li>
+          <li><b>Mantener la pauta activa</b><span>Cortar la inversión a mitad de camino reinicia el aprendizaje de las campañas.</span></li>
+          <li><b>Responder a quien llega</b><span>Nosotros traemos y filtramos el contacto; la cotización y la reunión las haces tú.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 PAGO Y CONDICIONES -->
 <section id="condiciones">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#ast"/></svg>04 · Pago y condiciones</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>08 · Pago y condiciones</div>
       <h2>Reglas claras <span class="dim">desde el primer día.</span></h2>
     </div>
     <div class="cond">
@@ -554,43 +760,45 @@
         </div>
       </div>
       <ul class="reglas rv">
-        <li><b>Pago mensual</b><span>Anticipado, al inicio de cada ciclo.</li>
-        <li><b>Sin permanencia</b><span>Puedes terminar cuando quieras avisando con 15 días.</li>
-        <li><b>El contenido es tuyo</b><span>Todo el material queda en tu poder, aunque dejes de trabajar con nosotros.</li>
-        <li><b>Tu inversión, tu cuenta</b><span>Los anuncios se pagan desde tu cuenta de Meta. Nunca pasa por nosotros.</li>
-        <li><b>Sin promesas vacías</b><span>Los resultados dependen de tu rubro, tu zona y tu competencia. No garantizamos cifras específicas.</li>
+        <li><b>Pago mensual</b><span>Anticipado, al inicio de cada ciclo.</span></li>
+        <li><b>Sin permanencia</b><span>Puedes terminar cuando quieras avisando con 15 días.</span></li>
+        <li><b>El contenido es tuyo</b><span>Todo el material queda en tu poder, aunque dejes de trabajar con nosotros.</span></li>
+        <li><b>Tu inversión, tu cuenta</b><span>Los anuncios se pagan desde tu cuenta de Meta. Esa plata nunca pasa por nosotros.</span></li>
+        <li><b>Valores</b><span>En pesos chilenos, más IVA. Válidos por 30 días desde que recibes esta propuesta.</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- 05 COMO PARTIMOS -->
-<section id="partimos">
+<!-- 09 PREGUNTAS -->
+<section id="preguntas">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#ast"/></svg>05 · Cómo partimos</div>
-      <h2>Funcionando en <span class="dim">48 a 72 horas.</span></h2>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>09 · Preguntas frecuentes</div>
+      <h2>Lo que más <span class="dim">nos preguntan.</span></h2>
     </div>
-    <ol class="pasos rv">
-      <li>
-        <div class="dot">1</div>
-        <p class="cuando">Día 1</p>
-        <h3>Eliges el plan</h3>
-        <p>Confirmamos alcance, fecha de inicio y te enviamos la factura.</p>
-      </li>
-      <li>
-        <div class="dot">2</div>
-        <p class="cuando">Día 1 a 2</p>
-        <h3>Accesos y material</h3>
-        <p>Nos das acceso a tus cuentas y nos envías fotos y videos de tus trabajos.</p>
-      </li>
-      <li>
-        <div class="dot">3</div>
-        <p class="cuando">Día 3</p>
-        <h3>El sistema se enciende</h3>
-        <p>Publicamos, activamos los anuncios y empiezas a recibir conversaciones y reportes.</p>
-      </li>
-    </ol>
+    <div class="faq rv">
+      <details>
+        <summary>¿Cuánto tengo que invertir en pauta?</summary>
+        <p>La pauta se carga directo a tu cuenta de Meta y no está incluida en el plan. Se puede partir desde $50.000 mensuales; recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tardan en verse resultados?</summary>
+        <p>El algoritmo de Meta necesita entre 7 y 14 días para optimizar. Los primeros resultados concretos suelen verse al cierre del primer mes.</p>
+      </details>
+      <details>
+        <summary>Ya me llegan trabajos por recomendación, ¿para qué esto?</summary>
+        <p>Por eso mismo. Esto no reemplaza el boca a boca, lo potencia: cuando el referido te busca y encuentra tu trabajo bien mostrado, llega convencido. Y en los meses en que las recomendaciones bajan, tienes algo funcionando que no depende de que alguien se acuerde de ti.</p>
+      </details>
+      <details>
+        <summary>¿Por qué no le pido a un conocido que me haga los videos?</summary>
+        <p>Puedes, y a veces sale bien. La diferencia no está en grabar: está en a quién se le muestra después. Armamos cada pieza pensando en la campaña y la ponemos frente a gente de tu zona que busca lo que tú haces. Un video bonito que no ve nadie no trae trabajos.</p>
+      </details>
+      <details>
+        <summary>¿Tienen contrato de permanencia?</summary>
+        <p>No. Trabajamos mes a mes, con aviso previo de 15 días. Nos quedamos porque los resultados hablan.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -599,8 +807,9 @@
   <div class="wrap">
     <div class="rv">
       <h2>¿Con cuál <span class="dim">partimos?</span></h2>
-      <p class="lead">Escríbenos por WhatsApp con el plan que elegiste y dejamos todo listo esta semana.</p>
+      <p class="lead">Escríbenos por WhatsApp con el plan que elegiste y dejamos el sistema funcionando en 72 horas.</p>
       <a class="btn btn-main" data-plan="" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Confirmar por WhatsApp</a>
+      <p class="cupos">Tomamos solo 3 a 4 clientes nuevos al mes para mantener la calidad de producción.</p>
     </div>
     <div class="firma">
       <div><b>Sebastián</b> · Fundador y director, Manyobra<br/>+56 9 5674 7949 · contacto@manyobra.cl · manyobra.cl</div>
@@ -629,6 +838,30 @@
     a.target = '_blank';
     a.rel = 'noopener';
   });
+
+  // Calculadora de inversion: plan + IVA del plan + pauta en Meta.
+  // El plan Inicio no incluye anuncios, asi que ahi la pauta no aplica.
+  var clp = function (n) { return '$' + n.toLocaleString('es-CL'); };
+  var calcIn = document.querySelector('.calc-in');
+  function calcular() {
+    var planIn = calcIn.querySelector('input[name="plan"]:checked');
+    var plan = +planIn.value;
+    var conAds = plan > 50000;
+    var pauta = conAds ? +calcIn.querySelector('input[name="pauta"]:checked').value : 0;
+    var iva = Math.round(plan * 0.19);
+    document.getElementById('pauta-set').disabled = !conAds;
+    document.getElementById('pauta-set').style.opacity = conAds ? 1 : .4;
+    document.getElementById('pauta-ayuda').textContent = conAds
+      ? 'Se puede partir con $50.000. Recomendamos cerca de $150.000 para que las campañas tengan datos suficientes.'
+      : 'El plan Inicio no incluye anuncios, así que no necesitas pauta.';
+    document.getElementById('c-nombre').textContent = planIn.getAttribute('data-nombre');
+    document.getElementById('c-plan').textContent = clp(plan);
+    document.getElementById('c-iva').textContent = clp(iva);
+    document.getElementById('c-pauta').textContent = conAds ? clp(pauta) : 'No aplica';
+    document.getElementById('c-total').textContent = clp(plan + iva + pauta);
+  }
+  calcIn.addEventListener('change', calcular);
+  calcular();
 
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
