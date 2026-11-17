@@ -3,7 +3,8 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-logo">
-    <img class="nav-logo-image" src="<?php echo esc_url(home_url('/assets/marca/manyobra-hora-logotipo.png')); ?>" alt="Manyobra" />
+    <img class="nav-logo-simbolo" src="<?php echo esc_url(home_url('/assets/marca/manyobra-onda-simbolo.jpg')); ?>" alt="" width="524" height="176" />
+    <img class="nav-logo-texto" src="<?php echo esc_url(home_url('/assets/marca/manyobra-onda-texto.jpg')); ?>" alt="Manyobra" width="684" height="70" />
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#portafolio">Portafolio</a></li>
@@ -23,7 +24,7 @@
   <div class="hero-tex" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-logo">
-      <img src="<?php echo esc_url(home_url('/assets/marca/manyobra-hora-isotipo.png')); ?>" alt="" width="80" height="59" />
+      <img src="<?php echo esc_url(home_url('/assets/marca/manyobra-onda-simbolo.jpg')); ?>" alt="" width="80" height="27" />
     </div>
     <div class="hero-tag">🏗️ Marketing para empresas de construcción · Chile</div>
     <h1>Tu obra llena<br/>tu <em>agenda</em>.</h1>
@@ -354,7 +355,8 @@
     <div class="footer-top">
 <div class="footer-brand">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-logo">
-          <img class="nav-logo-image" src="<?php echo esc_url(home_url('/assets/marca/manyobra-hora-logotipo.png')); ?>" alt="Manyobra" />
+          <img class="nav-logo-simbolo" src="<?php echo esc_url(home_url('/assets/marca/manyobra-onda-simbolo.jpg')); ?>" alt="" width="524" height="176" />
+    <img class="nav-logo-texto" src="<?php echo esc_url(home_url('/assets/marca/manyobra-onda-texto.jpg')); ?>" alt="Manyobra" width="684" height="70" />
         </a>
         <p>Producción audiovisual y Meta Ads para empresas de construcción en Chile.</p>
       </div>
