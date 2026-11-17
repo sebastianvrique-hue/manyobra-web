@@ -587,6 +587,11 @@
     .js .hero .sub { animation-delay: .55s; }
     @media (prefers-reduced-motion: reduce) { .js .hero .sub, .js .metodo-label { opacity: 1 !important; } }
     @media print { .js .hero .sub, .js .metodo-label { opacity: 1 !important; } .hero h1.metodo .oro { color: #8a7a45; background: none; -webkit-background-clip: border-box; } .js .hero h1.metodo .oro { opacity: 1 !important; transform: none !important; filter: none !important; } }
+    /* Portada alineada a la izquierda en pantallas anchas */
+    @media (min-width: 821px) {
+      .topbar .wrap, .hero .wrap { max-width: 1480px; padding: 0 clamp(40px, 5vw, 80px); }
+    }
+    .hero .wrap { width: 100%; }
   </style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
@@ -629,7 +634,7 @@
     <div class="datos-clave">
       <div><b data-count="90" data-suf=" días">90 días</b><span>de sistema completo, paso a paso</span></div>
       <div><b data-count="12" data-suf=" videos">12 videos</b><span>al mes, hechos para vender</span></div>
-      <div><b data-count="10" data-suf=" días">10 días</b><span>para tener tus anuncios funcionando</span></div>
+      <div><b data-count="7" data-suf=" días">7 días</b><span>para tener tus anuncios funcionando</span></div>
       <div><b>Selder</b><span>tu app con todo a la vista</span></div>
     </div>
   </div>
@@ -790,17 +795,17 @@
     </div>
     <ol class="linea-tiempo tres rv">
       <li>
-        <span class="label">Días 1 a 10</span>
+        <span class="label">Días 1 a 7</span>
         <h3>Preparamos todo</h3>
         <p>Accesos y contrato, estudio de tu zona, tu oferta, el primer contenido y tu página web.</p>
       </li>
       <li class="hito">
-        <span class="label">Día 10</span>
+        <span class="label">Día 7</span>
         <h3>Lanzamos</h3>
         <p>Anuncios activos en Meta y Google, Selder conectado y, en Llave en Mano, el agente IA atendiendo.</p>
       </li>
       <li>
-        <span class="label">Días 10 a 90</span>
+        <span class="label">Días 7 a 90</span>
         <h3>Ajustamos y crecemos</h3>
         <p>Videos nuevos cada mes, más inversión a lo que trae proyectos y reporte final de 90 días.</p>
       </li>
@@ -899,7 +904,7 @@
     <div class="rv">
       <svg class="onda-cierre" viewBox="0 0 100 70" aria-hidden="true"><path d="M8 54C8 54 18 16 32 16S48 54 62 54 78 16 92 16" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg>
       <h2>¿Con cuál <span class="dim">partimos?</span></h2>
-      <p class="lead">Escríbenos por WhatsApp y en 10 días tienes tus anuncios funcionando.</p>
+      <p class="lead">Escríbenos por WhatsApp y en 7 días tienes tus anuncios funcionando.</p>
       <div class="acciones"><a class="btn btn-main" data-plan="" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Confirmar por WhatsApp</a><button class="btn btn-line" type="button" data-pdf>Descargar PDF</button></div>
       <p class="cupos">Tomamos solo 3 a 4 clientes nuevos al mes para mantener la calidad.</p>
     </div>
