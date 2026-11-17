@@ -328,6 +328,17 @@
     .objecion p { color: var(--muted); font-size: .95rem; }
     @media (max-width: 820px) { .objeciones { grid-template-columns: 1fr; } .objecion { padding: 24px 22px 26px; } }
 
+    /* Regalo: playbook */
+    .regalo { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 40px; align-items: center; margin-top: 44px; max-width: 880px; background: var(--ink-2); border: 1px solid var(--line-2); border-radius: var(--radius); padding: 30px 36px 30px 30px; }
+    .regalo-portada { display: block; perspective: 900px; }
+    .regalo-portada img { display: block; width: 100%; height: auto; border-radius: 4px 8px 8px 4px; box-shadow: 0 24px 50px -18px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.08); transform: rotateY(-14deg) rotateX(4deg); transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+    .regalo-portada:hover img { transform: rotateY(-4deg) rotateX(1deg) translateY(-4px); }
+    .regalo .label { color: var(--gold); }
+    .regalo h3 { font-size: 1.5rem; letter-spacing: -.02em; margin: .4rem 0 .6rem; }
+    .regalo p { color: var(--muted); font-size: .95rem; margin-bottom: 1.2rem; }
+    @media (max-width: 820px) { .regalo { grid-template-columns: 1fr; padding: 24px; gap: 24px; } .regalo-portada { max-width: 200px; } }
+    @media print { .regalo-portada img { transform: none; } }
+
     /* 09 Preguntas */
     .faq { max-width: 860px; }
     .faq details { border-top: 1px solid var(--line); }
@@ -918,10 +929,20 @@
     </div>
 
     <ul class="notas-plan rv">
-      <li><b>De regalo al partir:</b> Instagram optimizado, ficha de Google Business y estudio de tu competencia.</li>
+      <li><b>De regalo al partir:</b> Instagram optimizado, ficha de Google Business, estudio de tu competencia y el playbook para cerrar ventas por WhatsApp.</li>
       <li><b>La pauta va aparte:</b> se paga directo a Meta y Google desde tu cuenta. Se puede partir con $50.000 al mes; recomendamos $150.000.</li>
       <li><b>¿Prefieres mes a mes?</b> Cimientos a $150.000 o Llave en Mano a $300.000 + IVA al mes, sin permanencia.</li>
     </ul>
+
+    <div class="regalo rv">
+      <a class="regalo-portada" href="playbook-whatsapp-construccion.pdf" target="_blank" rel="noopener"><img src="playbook-portada.jpg" alt="Portada del playbook Cierra más obras por WhatsApp en 5 pasos" loading="lazy" width="700" height="990"></a>
+      <div>
+        <span class="label">Regalo · Guía gratuita en PDF</span>
+        <h3>Cierra más obras por WhatsApp <span class="dim">en 5 pasos.</span></h3>
+        <p>El playbook de Manyobra para el rubro de la construcción: cómo responder, calificar, agendar la visita, cotizar y hacer seguimiento, con mensajes listos para copiar y respuestas a las objeciones de siempre.</p>
+        <a class="btn btn-line" href="playbook-whatsapp-construccion.pdf" download>Descargar la guía gratis</a>
+      </div>
+    </div>
   </div>
 </section>
 
