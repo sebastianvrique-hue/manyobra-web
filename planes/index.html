@@ -574,6 +574,19 @@
       .dash .area { opacity: 1 !important; }
       .dash .barra { transform: none !important; }
     }
+    /* Nombre del metodo como titulo principal */
+    .hero h1.metodo { font-size: clamp(3.4rem, 9.5vw, 7.6rem); line-height: .95; letter-spacing: -.045em; margin-bottom: 1.1rem; max-width: none; }
+    .hero h1.metodo .oro { background: linear-gradient(100deg, var(--gold) 0%, var(--gold) 40%, #fff6dc 50%, var(--gold) 60%, var(--gold) 100%); background-size: 250% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; }
+    .js .hero h1.metodo .oro { opacity: 0; transform: translateY(.3em); filter: blur(8px); animation: palabra 1s cubic-bezier(.2,.7,.2,1) .25s forwards, brillo-oro 5s ease-in-out 1.6s infinite; }
+    @media (prefers-reduced-motion: reduce) { .js .hero h1.metodo .oro { opacity: 1 !important; transform: none !important; filter: none !important; } }
+    @keyframes brillo-oro { 0% { background-position: 100% 0; } 40%, 100% { background-position: 0 0; } }
+    .metodo-label { margin-bottom: 1rem; color: var(--muted); }
+    .hero .sub { font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.2; margin-bottom: 1.2rem; }
+    .js .hero .sub, .js .metodo-label { opacity: 0; animation: subir .9s cubic-bezier(.2,.7,.2,1) forwards; }
+    .js .metodo-label { animation-delay: .1s; }
+    .js .hero .sub { animation-delay: .55s; }
+    @media (prefers-reduced-motion: reduce) { .js .hero .sub, .js .metodo-label { opacity: 1 !important; } }
+    @media print { .js .hero .sub, .js .metodo-label { opacity: 1 !important; } .hero h1.metodo .oro { color: #8a7a45; background: none; -webkit-background-clip: border-box; } .js .hero h1.metodo .oro { opacity: 1 !important; transform: none !important; filter: none !important; } }
   </style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
@@ -606,16 +619,18 @@
   <div class="wrap">
     <div>
       <div class="para">Preparada para <b id="para">tu empresa</b></div>
-      <h1><span class="dim">Un sistema que convierte tu trabajo en</span> clientes.</h1>
-      <p class="lead">El <b>Método Maestro</b> es nuestro sistema de 90 días para conseguir clientes. Como en una obra bien hecha, cada etapa tiene su orden: te descubren, te prefieren y te escriben con un proyecto real. Tú lo ves todo en tu propia app.</p>
+      <p class="label metodo-label">Sistema de 90 días · Manyobra</p>
+      <h1 class="metodo">Método <span class="oro">Maestro</span></h1>
+      <p class="sub">Convierte tu trabajo en clientes.</p>
+      <p class="lead">Como en una obra bien hecha, cada etapa tiene su orden: te descubren, te prefieren y te escriben con un proyecto real. Tú lo ves todo en tu propia app.</p>
     </div>
   </div>
   <div class="wrap">
     <div class="datos-clave">
-      <div><b data-count="90" data-suf=" días">90 días</b><span>de sistema completo, desde $360.000 + IVA</span></div>
-      <div><b data-count="6" data-suf=" cuotas">6 cuotas</b><span>sin interés con tarjeta de crédito</span></div>
+      <div><b data-count="90" data-suf=" días">90 días</b><span>de sistema completo, paso a paso</span></div>
       <div><b data-count="12" data-suf=" videos">12 videos</b><span>al mes, hechos para vender</span></div>
       <div><b data-count="10" data-suf=" días">10 días</b><span>para tener tus anuncios funcionando</span></div>
+      <div><b>Selder</b><span>tu app con todo a la vista</span></div>
     </div>
   </div>
   <span class="scroll-cue" aria-hidden="true"></span>
@@ -740,11 +755,65 @@
   </div>
 </section>
 
-<!-- 04 PLANES -->
+<!-- 04 CLIENTES -->
+<section id="clientes">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>04 · Clientes</div>
+      <h2>Empresas reales, <span class="dim">del mismo rubro que tú.</span></h2>
+    </div>
+    <div class="prueba">
+      <div class="logos rv">
+        <figure><img src="/assets/marcas/s-sudamericana.webp" alt="Logo de S Sudamericana" loading="lazy" /><figcaption>S Sudamericana</figcaption></figure>
+        <figure><img src="/assets/marcas/pavimentos-myc.png" alt="Logo de Pavimentos M&amp;C" loading="lazy" /><figcaption>Pavimentos M&amp;C</figcaption></figure>
+        <figure><img src="/assets/marcas/piscinas-hormigon.jpg" alt="Logo de Piscinas Hormigón" loading="lazy" /><figcaption>Piscinas Hormigón</figcaption></figure>
+        <figure><img src="/assets/marcas/aridos-lomas-blancas.png" alt="Logo de Áridos Lomas Blancas" loading="lazy" /><figcaption>Áridos Lomas Blancas</figcaption></figure>
+        <figure><img src="/assets/marcas/landspace.png" alt="Logo de Landspace" loading="lazy" /><figcaption>Landspace</figcaption></figure>
+        <figure><img src="/assets/marcas/pedro-campos.png" alt="Logo de Pedro Campos Obras Menores" loading="lazy" /><figcaption>Pedro Campos · Obras Menores</figcaption></figure>
+      </div>
+      <figure class="testimonio rv">
+        <video controls preload="none" playsinline poster="/testimonios/reels/testimonio-pedro.jpg">
+          <source src="/testimonios/reels/testimonio-pedro.mp4" type="video/mp4" />
+        </video>
+        <div><b>Pedro Campos</b><span>Obras Menores · Temuco. Cuenta en sus palabras cómo le ha ido.</span></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 05 COMO PARTIMOS -->
+<section id="dias">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>05 · Cómo partimos</div>
+      <h2>Tus 90 días, <span class="dim">en tres pasos.</span></h2>
+    </div>
+    <ol class="linea-tiempo tres rv">
+      <li>
+        <span class="label">Días 1 a 10</span>
+        <h3>Preparamos todo</h3>
+        <p>Accesos y contrato, estudio de tu zona, tu oferta, el primer contenido y tu página web.</p>
+      </li>
+      <li class="hito">
+        <span class="label">Día 10</span>
+        <h3>Lanzamos</h3>
+        <p>Anuncios activos en Meta y Google, Selder conectado y, en Llave en Mano, el agente IA atendiendo.</p>
+      </li>
+      <li>
+        <span class="label">Días 10 a 90</span>
+        <h3>Ajustamos y crecemos</h3>
+        <p>Videos nuevos cada mes, más inversión a lo que trae proyectos y reporte final de 90 días.</p>
+      </li>
+    </ol>
+    <p class="aviso rv">Los resultados dependen de tu rubro, tu zona y tu competencia. No garantizamos cifras; sí te mostramos en Selder qué funciona y qué no.</p>
+  </div>
+</section>
+
+<!-- 06 PLANES -->
 <section id="planes">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>04 · Planes</div>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>06 · Planes y valores</div>
       <h2>Dos planes. <span class="dim">Un sistema de 90 días.</span></h2>
       <p class="lead">Los dos traen clientes desde el primer mes. La diferencia: en Llave en Mano también los atendemos y les hacemos seguimiento por ti.</p>
     </div>
@@ -788,58 +857,13 @@
   </div>
 </section>
 
-<!-- 05 CLIENTES -->
-<section id="clientes">
+<!-- PREGUNTAS -->
+<section id="preguntas">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>05 · Clientes</div>
-      <h2>Empresas reales, <span class="dim">del mismo rubro que tú.</span></h2>
+      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>Preguntas frecuentes</div>
+      <h2>Lo que más <span class="dim">nos preguntan.</span></h2>
     </div>
-    <div class="prueba">
-      <div class="logos rv">
-        <figure><img src="/assets/marcas/s-sudamericana.webp" alt="Logo de S Sudamericana" loading="lazy" /><figcaption>S Sudamericana</figcaption></figure>
-        <figure><img src="/assets/marcas/pavimentos-myc.png" alt="Logo de Pavimentos M&amp;C" loading="lazy" /><figcaption>Pavimentos M&amp;C</figcaption></figure>
-        <figure><img src="/assets/marcas/piscinas-hormigon.jpg" alt="Logo de Piscinas Hormigón" loading="lazy" /><figcaption>Piscinas Hormigón</figcaption></figure>
-        <figure><img src="/assets/marcas/aridos-lomas-blancas.png" alt="Logo de Áridos Lomas Blancas" loading="lazy" /><figcaption>Áridos Lomas Blancas</figcaption></figure>
-        <figure><img src="/assets/marcas/landspace.png" alt="Logo de Landspace" loading="lazy" /><figcaption>Landspace</figcaption></figure>
-        <figure><img src="/assets/marcas/pedro-campos.png" alt="Logo de Pedro Campos Obras Menores" loading="lazy" /><figcaption>Pedro Campos · Obras Menores</figcaption></figure>
-      </div>
-      <figure class="testimonio rv">
-        <video controls preload="none" playsinline poster="/testimonios/reels/testimonio-pedro.jpg">
-          <source src="/testimonios/reels/testimonio-pedro.mp4" type="video/mp4" />
-        </video>
-        <div><b>Pedro Campos</b><span>Obras Menores · Temuco. Cuenta en sus palabras cómo le ha ido.</span></div>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- 06 COMO PARTIMOS -->
-<section id="dias">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>06 · Cómo partimos</div>
-      <h2>Tus 90 días, <span class="dim">en tres pasos.</span></h2>
-    </div>
-    <ol class="linea-tiempo tres rv">
-      <li>
-        <span class="label">Días 1 a 10</span>
-        <h3>Preparamos todo</h3>
-        <p>Accesos y contrato, estudio de tu zona, tu oferta, el primer contenido y tu página web.</p>
-      </li>
-      <li class="hito">
-        <span class="label">Día 10</span>
-        <h3>Lanzamos</h3>
-        <p>Anuncios activos en Meta y Google, Selder conectado y, en Llave en Mano, el agente IA atendiendo.</p>
-      </li>
-      <li>
-        <span class="label">Días 10 a 90</span>
-        <h3>Ajustamos y crecemos</h3>
-        <p>Videos nuevos cada mes, más inversión a lo que trae proyectos y reporte final de 90 días.</p>
-      </li>
-    </ol>
-    <p class="aviso rv">Los resultados dependen de tu rubro, tu zona y tu competencia. No garantizamos cifras; sí te mostramos en Selder qué funciona y qué no.</p>
-
     <div class="faq rv">
       <details>
         <summary>¿Por qué 90 días?</summary>
@@ -940,7 +964,7 @@
             frag.appendChild(w);
           });
           c.parentNode.replaceChild(frag, c);
-        } else if (c.nodeType === 1) { partir(c); }
+        } else if (c.nodeType === 1 && !c.classList.contains('oro')) { partir(c); }
       });
     })(h1);
   })();
