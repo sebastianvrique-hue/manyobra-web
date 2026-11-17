@@ -102,7 +102,7 @@
       "name": "Manyobra",
       "alternateName": "Manyobra SpA",
       "url": "https://manyobra.cl",
-      "logo": "https://manyobra.cl/assets/marca/manyobra-hora-logotipo.png",
+      "logo": "https://manyobra.cl/assets/marca/manyobra-onda.jpg",
       "image": "https://manyobra.cl/og-manyobra.jpg",
       "description": "Agencia chilena de marketing y producción audiovisual para empresas de construcción: grabamos obras y gestionamos campañas de Meta Ads que traen proyectos para negocios en Chile.",
       "telephone": "+56956747949",

@@ -1307,5 +1307,69 @@ a:focus-visible,button:focus-visible { outline-color:#c9c09f; }
 .testi-sec .client-name { color:#f6f6f2; font-size:16px; margin:0 0 3px; }
 .testi-sec .client-biz { color:#b8b8b0; font-size:13px; }
 @media(max-width:700px) { .testi-sec .video-grid { justify-self:start; max-width:340px; } }
-.nav-logo-image { display:block; width:204px; height:auto; background:#141817; }
-@media(max-width:560px) { .nav-logo-image { width:174px; } }
+
+/* Marca: el logo de la onda en blanco y negro manda. La base es negro neutro
+   y blanco; el arena (#D6C48F) solo destaca la palabra clave del titular, los
+   numeros de los pasos y los checks. Va al final para ganarle a las capas
+   anteriores, que traian negros verdosos y acentos champagne. */
+:root { --blue:#f6f6f2; --accent:#f6f6f2; --accent-brd:#4a4a47; --grad:#f6f6f2; --blue-dim:rgba(246,246,242,.07); }
+body, #navbar, .hero, .clientes-strip, .dolor-sec, .sistema-sec, .testi-sec, .faq-sec, .interior-page, .interior-hero { background:#0a0a0a; }
+.guarantee-strip, footer { background:#050505; }
+.ai-feature, .interior-detail { background:#141414; }
+#navbar, .clientes-strip { border-color:#262626; }
+@media(max-width:800px) { #navbar .nav-links { background:#0a0a0a; border-color:#262626; } }
+.hero-film-frame::after {
+  background:linear-gradient(90deg,rgba(10,10,10,.85) 0%,rgba(10,10,10,.48) 50%,rgba(10,10,10,.2) 100%),
+             linear-gradient(0deg,rgba(10,10,10,.75),transparent 55%);
+}
+
+/* Logo: simbolo + palabra, recortados del original (logo.png). El fondo negro
+   del JPG se funde con screen. */
+.nav-logo { display:flex; align-items:center; gap:12px; }
+.nav-logo-simbolo, .nav-logo-texto { display:block; width:auto; mix-blend-mode:screen; }
+.nav-logo-simbolo { height:30px; }
+.nav-logo-texto { height:13px; }
+.hero-logo img { mix-blend-mode:screen; }
+@media(max-width:560px) { .nav-logo { gap:9px; } .nav-logo-simbolo { height:24px; } .nav-logo-texto { height:10.5px; } }
+
+/* Acciones en blanco */
+#navbar .nav-cta, .btn-grad, .btn-grad:hover, .btn-submit, .skip-link { background:#f6f6f2; color:#0a0a0a; }
+#navbar .nav-cta:hover, .btn-grad:hover { background:#fff; }
+.cta-sec .btn-grad, .interior-support .btn-grad { background:#0a0a0a; color:#fff; }
+a:focus-visible, button:focus-visible { outline-color:#f6f6f2; }
+.reel-grid .video-card:focus-within .video-wrap { outline-color:#0a0a0a; }
+
+/* Etiquetas y textos de apoyo en gris neutro */
+.hero .hero-tag { color:#e6e6e3; }
+.sec-tag, .ai-feature .sec-tag, .clientes-label { color:#a3a3a0; }
+.sis-tag { background:#232323; color:#e6e6e3; }
+.sis-paso, .sis-paso.destacado, .svc-card, .svc-card:hover { border-color:#2e2e2e; }
+
+/* Secciones claras: blanco con texto negro, sin tonos tostados */
+.reel-sec { background:#f4f4f2; color:#0f0f0f; }
+.reel-sec .sec-tag, .reel-sec .reel-rubro { color:#5c5c58; }
+.reel-sec .sec-sub, .reel-sec .reel-desc, .reel-note { color:#55554f!important; }
+.reel-client { color:#0f0f0f; }
+.reel-grid .video-info { border-color:#cfcfcb; }
+.portfolio-all-link { color:#0f0f0f; border-color:#8a8a85; }
+.portfolio-all-link:hover { color:#555; }
+#propuesta, .cta-sec { --blue:#0f0f0f; }
+#propuesta .sec-tag, .cta-sec .sec-tag { color:#5c5c58; }
+
+/* Tarjetas y enlaces en grises neutros */
+.clientes-lista li.client-logo, .clientes-lista li.client-logo--dark, .clientes-lista li.client-logo--light,
+.testi-sec .video-card { background:#141414; border-color:#2a2a2a; }
+.testi-sec .video-info { border-color:#2a2a2a; }
+.testi-sec .video-wrap { background:#0a0a0a; }
+.web-project { border-color:#2e2e2e; background:linear-gradient(120deg,#1a1a1a,#111 70%); }
+.web-project-copy a, .case-body a, .case-card span { color:#f6f6f2; }
+.interior-cards article { border-top-color:#3a3a3a; }
+.interior-note { border-left-color:#f6f6f2; }
+.service-links a:hover { border-color:#f6f6f2; }
+
+/* Arena, solo para destacar */
+.hero h1 em { color:#d6c48f; -webkit-text-fill-color:#d6c48f; }
+.svc-num, .sis-n, .ai-benefits li::before, .booking-points li::before { color:#d6c48f; }
+#propuesta .svc-num { color:#8c7a45; }
+.clientes-lista .client-logo img { background:#f4f4f2; }
+.cupos-home { background:#ebebe8; border-color:#d4d4d0; }
