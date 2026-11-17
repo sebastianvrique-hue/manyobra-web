@@ -148,6 +148,14 @@
     .etapa:first-child .detalle { border-top: 1px solid var(--line); }
     .detalle h3 { margin-bottom: .45rem; }
     .detalle p { color: var(--muted); font-size: .96rem; }
+    .guion { margin-top: 1rem; padding: 14px 16px; border-left: 2px solid var(--gold); background: rgba(255,255,255,.03); border-radius: 0 10px 10px 0; font-size: .92rem; color: var(--muted); }
+    .guion .label { display: block; margin-bottom: .3rem; }
+    .guion b { color: var(--bone); font-weight: 600; }
+    .guion em { display: block; margin-top: .45rem; color: var(--bone); }
+    .guion ol { list-style: none; counter-reset: v; display: grid; gap: .55rem; margin-top: .5rem; }
+    .guion ol li { counter-increment: v; position: relative; padding-left: 1.7rem; }
+    .guion ol li::before { content: counter(v); position: absolute; left: 0; top: .05rem; width: 1.15rem; height: 1.15rem; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold); font-size: .68rem; font-weight: 700; display: grid; place-items: center; }
+    .guion ol em { display: inline; margin: 0; }
     .meta { display: grid; gap: .8rem; }
     .meta div { font-size: .92rem; color: var(--muted); }
     .meta .label { display: block; margin-bottom: .2rem; }
@@ -480,19 +488,19 @@
         <span class="num">01</span>
         <h3>Meses llenos, meses vacíos</h3>
         <p>Dependes de que alguien te recomiende. Cuando no pasa, no tienes cómo generar trabajo.</p>
-        <span class="fix">Lo resuelve: Alcance</span>
+        <span class="fix">Lo resuelve: Atención</span>
       </div>
       <div class="dolor">
         <span class="num">02</span>
         <h3>Te comparan solo por precio</h3>
         <p>Si nadie ha visto cómo trabajas ni entiende qué te hace distinto, la única diferencia que queda es el presupuesto.</p>
-        <span class="fix">Lo resuelve: Atención</span>
+        <span class="fix">Lo resuelve: Confianza</span>
       </div>
       <div class="dolor">
         <span class="num">03</span>
         <h3>Preguntan y desaparecen</h3>
         <p>Estás en terreno, respondes tarde y el cliente ya cotizó con otro.</p>
-        <span class="fix">Lo resuelve: Conversación</span>
+        <span class="fix">Lo resuelve: Decisión</span>
       </div>
       <div class="dolor">
         <span class="num">04</span>
@@ -509,45 +517,49 @@
   <div class="wrap">
     <div class="head rv">
       <div class="eyebrow"><svg viewBox="0 0 100 70"><use href="#onda"/></svg>02 · El Sistema Reflex</div>
-      <h2>De desconocido a cliente, <span class="dim">en cinco etapas.</span></h2>
-      <p class="lead">Como un chaleco reflectante, el sistema existe para que te vean y te distingan. Cada etapa filtra y empuja a la siguiente: arriba entra mucha gente que no te conoce; abajo llegan pocas personas, pero con un proyecto concreto y ganas de cotizar.</p>
+      <h2>De desconocido a cliente, <span class="dim">en tres etapas.</span></h2>
+      <p class="lead">Como un chaleco reflectante, el sistema existe para que te vean y te distingan. Cada etapa filtra y empuja a la siguiente: arriba entra mucha gente que no te conoce; abajo llegan pocas personas, pero con un proyecto concreto y ganas de cotizar. Cada mes producimos <b>12 videos: 4 para cada etapa</b>, con un guion distinto según qué tan cerca está la persona de contratarte.</p>
     </div>
 
     <div class="flujo label" aria-hidden="true"><span>Muchas personas</span><span>↓</span><span>Pocas y listas</span></div>
     <ol class="embudo">
       <li class="etapa rv">
-        <div class="banda-col"><div class="banda" style="--w:100%;--i:7%;--a:.11"><span class="n">01</span><span class="nombre">Atención</span><span class="quien">Te ven por primera vez</span></div></div>
+        <div class="banda-col"><div class="banda" style="--w:100%;--i:12%;--a:.12"><span class="n">01</span><span class="nombre">Atención</span><span class="quien">Te descubren</span></div></div>
         <div class="detalle">
-          <div><h3>Una oferta clara y tu trabajo bien mostrado</h3><p>Antes de grabar, definimos contigo tu servicio foco y el gancho de tu oferta: no es lo mismo "hacemos ampliaciones" que "ampliaciones llave en mano en 90 días". Después convertimos tus trabajos en videos e imágenes que lo demuestran.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Servicio foco y oferta, guion, edición profesional y calendario</div><div><span class="label">Medimos</span>Alcance y reproducciones</div></div>
+          <div><h3>Que te vean y te detengan a mirar</h3><p>Antes de grabar definimos contigo tu servicio foco y el gancho de tu oferta: no es lo mismo "hacemos ampliaciones" que "ampliaciones llave en mano en 90 días". Estos videos se pautan en Instagram, Facebook y Google para personas de tu zona que no te conocen.</p>
+            <div class="guion"><span class="label">Los 4 videos de esta etapa</span><ol>
+              <li><b>Antes y después.</b> El resultado en los primeros 3 segundos. <em>"Así quedó esta cocina en 12 días."</em></li>
+              <li><b>El proceso en 30 segundos.</b> Un trabajo de principio a fin, rápido.</li>
+              <li><b>El problema que tu cliente reconoce.</b> Y cómo lo resuelves. <em>"¿Tu baño tiene humedad? Esto es lo que pasa por dentro."</em></li>
+              <li><b>Un consejo del rubro.</b> Algo útil que te posiciona como el que sabe.</li>
+            </ol></div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Servicio foco y oferta, guiones, edición, Meta Ads y Google Ads</div><div><span class="label">Medimos</span>Alcance, reproducciones y costo por contacto</div></div>
         </div>
       </li>
       <li class="etapa rv">
-        <div class="banda-col"><div class="banda" style="--w:86%;--i:8.1%;--a:.17"><span class="n">02</span><span class="nombre">Alcance</span><span class="quien">Llega a quien puede contratarte</span></div></div>
+        <div class="banda-col"><div class="banda" style="--w:76%;--i:15.8%;--a:.26"><span class="n">02</span><span class="nombre">Confianza</span><span class="quien">Te recuerdan y te comparan</span></div></div>
         <div class="detalle">
-          <div><h3>Ponerte frente a las personas correctas</h3><p>Pautamos tu contenido en Instagram y Facebook para personas de tu zona, y aparecemos en Google cuando alguien busca lo que haces. Probamos anuncios nuevos cada semana para encontrar los que más traen. Todo llega a tu página web.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Meta Ads, Google Ads, testeo semanal de anuncios y tu página web</div><div><span class="label">Medimos</span>Costo por contacto, separado por canal</div></div>
-        </div>
-      </li>
-      <li class="etapa rv">
-        <div class="banda-col"><div class="banda" style="--w:72%;--i:9.7%;--a:.25"><span class="n">03</span><span class="nombre">Recuerdo</span><span class="quien">Vuelve a pensar en ti</span></div></div>
-        <div class="detalle">
-          <div><h3>Seguir presente hasta que decidan</h3><p>Casi nadie contrata la primera vez que te ve. Volvemos a mostrarle tu trabajo a quien ya interactuó, y mantenemos tus redes activas para que cuando decida, piense en ti.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Retargeting, historias y community manager</div><div><span class="label">Medimos</span>Conversaciones de personas que ya te conocían</div></div>
-        </div>
-      </li>
-      <li class="etapa rv">
-        <div class="banda-col"><div class="banda" style="--w:58%;--i:12.1%;--a:.36"><span class="n">04</span><span class="nombre">Conversación</span><span class="quien">Te escribe</span></div></div>
-        <div class="detalle">
-          <div><h3>Responder en segundos, aunque estés en terreno</h3><p>Un agente con inteligencia artificial atiende tu WhatsApp las 24 horas: responde lo frecuente, pregunta tipo de trabajo, zona, plazo y presupuesto, filtra a los curiosos y agenda la reunión en tu calendario. A quien deja de contestar, le hace seguimiento solo.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Agente IA que responde, filtra y agenda, con seguimiento automático</div><div><span class="label">Medimos</span>Tiempo de respuesta, contactos calificados y reuniones agendadas</div></div>
+          <div><h3>Que te elijan a ti y no al más barato</h3><p>Casi nadie contrata la primera vez que te ve. A quienes ya vieron tus videos les mostramos estos otros (retargeting), para que conozcan cómo trabajas y te prefieran cuando decidan.</p>
+            <div class="guion"><span class="label">Los 4 videos de esta etapa</span><ol>
+              <li><b>Tus terminaciones.</b> Detalles y materiales de cerca: lo que separa un trabajo bien hecho.</li>
+              <li><b>Tu equipo trabajando.</b> Quiénes van a estar en la casa del cliente.</li>
+              <li><b>Una duda frecuente.</b> Precio, plazos o permisos, respondidos claro. <em>"¿Cuánto cuesta ampliar 20 m²?"</em></li>
+              <li><b>La opinión de un cliente.</b> Corta, en su casa, con el trabajo terminado.</li>
+            </ol></div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Retargeting a quienes ya te vieron y redes activas</div><div><span class="label">Medimos</span>Conversaciones de personas que ya te conocían</div></div>
         </div>
       </li>
       <li class="etapa final rv">
-        <div class="banda-col"><div class="banda" style="--w:44%;--i:0%;--a:1"><span class="n">05</span><span class="nombre">Cierre</span><span class="quien">Lo cierras tú</span></div></div>
+        <div class="banda-col"><div class="banda" style="--w:52%;--i:0%;--a:1"><span class="n">03</span><span class="nombre">Decisión</span><span class="quien">Te escriben y te contratan</span></div></div>
         <div class="detalle">
-          <div><h3>Tú cotizas con información, no a ciegas</h3><p>Te llega el contacto con lo que necesita, dónde y para cuándo. Tú haces lo que mejor sabes: cotizar y cerrar. Selder te muestra cuánto vendiste y qué anuncio trajo cada venta, para hacer más de lo que funciona.</p></div>
-          <div class="meta"><div><span class="label">Hacemos</span>Recordatorios de reunión, seguimiento a tus cotizaciones y medición en Selder</div><div><span class="label">Medimos</span>Cotizaciones, ventas y retorno de cada peso invertido</div></div>
+          <div><h3>Que te escriban, y que nadie se enfríe</h3><p>Estos videos empujan a dar el paso. Cuando te escriben, en Llave en Mano el agente IA responde en segundos, filtra y agenda la reunión contigo. Tú cotizas y cierras, y Selder te muestra qué anuncio trajo cada venta.</p>
+            <div class="guion"><span class="label">Los 4 videos de esta etapa</span><ol>
+              <li><b>Oferta y llamado a la acción.</b> <em>"¿Vas a ampliar en Puente Alto? Te visitamos y cotizamos en 48 horas."</em></li>
+              <li><b>Tu presentación.</b> Quién eres y cómo trabajas; también se envía en la conversación.</li>
+              <li><b>Un caso completo.</b> Un cliente real contando su experiencia de principio a fin.</li>
+              <li><b>Cómo es trabajar contigo.</b> De la visita a la entrega, paso a paso.</li>
+            </ol></div></div>
+          <div class="meta"><div><span class="label">Hacemos</span>Anuncios de conversión, agente IA y seguimiento (Llave en Mano) y medición en Selder</div><div><span class="label">Medimos</span>Contactos calificados, reuniones, ventas y retorno</div></div>
         </div>
       </li>
     </ol>
@@ -631,13 +643,10 @@
         <p class="lema">La base para que te encuentren.</p>
         <p class="ideal"><b>Ideal si</b> quieres empezar a recibir consultas de gente que busca lo que haces.</p>
         <div class="valor" data-mensual="150000"><s hidden></s><b>$150.000</b><span>al mes + IVA</span><small hidden></small></div>
-        <div class="cobertura">
-          <p class="label">Etapas que activa</p>
-          <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i>Recuerdo</i><i>Conversación</i></div>
-        </div>
         <ul class="entregables">
           <li><b>Oferta y servicio foco</b> definidos contigo</li>
-          <li><b>3 videos + 5 imágenes</b> al mes: 24 piezas y más de 30 anuncios probados en 90 días</li>
+          <li><b>12 videos al mes</b>, 4 por cada etapa del embudo, más 5 imágenes: 36 videos en 90 días</li>
+          <li><b>Retargeting</b> para mostrar los videos de confianza a quien ya te vio</li>
           <li><b>Meta Ads + Google Ads</b> con campañas de conversión</li>
           <li><b>Página web</b> de tu negocio: la desarrollamos y la mantenemos</li>
           <li><b>Selder:</b> campañas, web, clientes y ventas en tu app</li>
@@ -653,14 +662,9 @@
         <p class="lema">Te entregamos el sistema funcionando. Tú solo cierras.</p>
         <p class="ideal"><b>Ideal si</b> quieres un flujo constante y no alcanzas a responder a tiempo.</p>
         <div class="valor" data-mensual="300000"><s hidden></s><b>$300.000</b><span>al mes + IVA</span><small hidden></small></div>
-        <div class="cobertura">
-          <p class="label">Etapas que activa</p>
-          <div class="barras"><i class="on">Atención</i><i class="on">Alcance</i><i class="on">Recuerdo</i><i class="on">Conversación</i></div>
-        </div>
         <ul class="entregables">
           <li>Todo lo de Cimientos, y además:</li>
-          <li><b>5 videos + 7 imágenes</b> + historias al mes: 36 piezas y más de 50 anuncios probados en 90 días</li>
-          <li><b>Retargeting</b> a quienes ya te vieron y <b>community manager</b></li>
+          <li><b>7 imágenes + historias</b> al mes y <b>community manager</b></li>
           <li><b>Agente IA 24/7 en tu WhatsApp</b> que responde, filtra y agenda, con guiones para tu rubro</li>
           <li><b>Automatizaciones de seguimiento</b>: recordatorios, cotizaciones, reactivación y reseñas</li>
           <li>Reporte y reunión de estrategia cada 15 días, con soporte prioritario</li>
@@ -702,15 +706,16 @@
           <tr><th scope="row">Oferta y servicio foco</th><td class="si"></td><td class="si"></td></tr>
           <tr><th scope="row">Reunión de estrategia</th><td>Mensual</td><td>Cada 15 días</td></tr>
           <tr class="grupo"><td colspan="3">Contenido</td></tr>
-          <tr><th scope="row">Videos al mes</th><td>3</td><td>5</td></tr>
+          <tr><th scope="row">Videos al mes</th><td>12</td><td>12</td></tr>
+          <tr><th scope="row">Videos por etapa del embudo</th><td>4 + 4 + 4</td><td>4 + 4 + 4</td></tr>
           <tr><th scope="row">Imágenes al mes</th><td>5</td><td>7</td></tr>
           <tr><th scope="row">Historias</th><td class="no">—</td><td class="si"></td></tr>
-          <tr><th scope="row">Anuncios probados en 90 días</th><td>+30</td><td>+50</td></tr>
+          <tr><th scope="row">Videos en 90 días</th><td>36</td><td>36</td></tr>
           <tr class="grupo"><td colspan="3">Anuncios y web</td></tr>
           <tr><th scope="row">Meta Ads (Instagram y Facebook)</th><td class="si"></td><td class="si"></td></tr>
           <tr><th scope="row">Google Ads (búsquedas en Google)</th><td class="si"></td><td class="si"></td></tr>
           <tr><th scope="row">Desarrollo y mantención de tu página web</th><td class="si"></td><td class="si"></td></tr>
-          <tr><th scope="row">Retargeting</th><td class="no">—</td><td class="si"></td></tr>
+          <tr><th scope="row">Retargeting</th><td class="si"></td><td class="si"></td></tr>
           <tr><th scope="row">Community manager</th><td class="no">—</td><td class="si"></td></tr>
           <tr class="grupo"><td colspan="3">Inteligencia artificial y automatización</td></tr>
           <tr><th scope="row">Agente IA 24/7 que responde, filtra y agenda</th><td class="no">—</td><td class="si"></td></tr>
