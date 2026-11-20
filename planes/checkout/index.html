@@ -137,6 +137,18 @@
     .confianza li { display: flex; gap: .5rem; align-items: center; }
     .confianza svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; }
 
+    /* Paso 4: formulario de tarjeta de Mercado Pago */
+    #bloqueTarjeta { scroll-margin-top: 20px; border-color: var(--line-2); }
+    #bloqueTarjeta.in { animation: sube .45s cubic-bezier(.2,.7,.2,1); }
+    .tarjeta-nota { font-size: .86rem; color: var(--muted); margin: -.4rem 0 1rem; }
+    #cardBrick { min-height: 120px; }
+    .cargando { display: flex; align-items: center; gap: .7rem; font-size: .88rem; color: var(--muted); padding: 1rem 0; }
+    .cargando::before { content: ''; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--line-2); border-top-color: var(--gold); animation: gira .8s linear infinite; }
+    @keyframes gira { to { transform: rotate(360deg); } }
+    .tarjeta-error { margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: rgba(229,128,107,.1); border: 1px solid rgba(229,128,107,.35); color: #F2B0A2; font-size: .88rem; }
+    .tarjeta-error a { color: var(--bone); }
+    .tarjeta-error[hidden], .cargando[hidden] { display: none; }
+
     /* Barra fija en celular */
     .barra { display: none; }
 
@@ -255,6 +267,14 @@
           <label class="acepto"><input type="checkbox" name="acepto" required /><span>Acepto las condiciones de la <a href="/planes/#preguntas" target="_blank" rel="noopener">propuesta</a>: valores + IVA, la pauta se paga aparte a Meta y Google, y el contenido es mío.</span></label>
           <small class="err" id="errAcepto" style="color:#E5806B;font-size:.76rem"></small>
         </section>
+
+        <section class="bloque" id="bloqueTarjeta" hidden>
+          <h2><span class="n">4</span>Paga con tu tarjeta</h2>
+          <p class="tarjeta-nota">Crédito o débito. Con crédito eliges hasta 3 cuotas sin interés. El formulario es de Mercado Pago: tus datos de tarjeta no pasan por nosotros.</p>
+          <div class="cargando" id="cargando">Cargando el pago seguro…</div>
+          <div id="cardBrick"></div>
+          <p class="tarjeta-error" id="errTarjeta" role="alert" hidden></p>
+        </section>
       </form>
 
       <aside class="resumen" aria-live="polite">
@@ -277,7 +297,7 @@
           <a class="btn btn-line" id="btnHablar" href="https://wa.me/56956747949" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Prefiero hablar primero</a>
         </div>
         <ul class="confianza">
-          <li><svg><use href="#candado"/></svg>Pagas en Mercado Pago: tus datos de tarjeta nunca pasan por nosotros</li>
+          <li><svg><use href="#candado"/></svg>Pago procesado por Mercado Pago: tus datos de tarjeta nunca pasan por nosotros</li>
           <li><svg><use href="#check"/></svg>Sin permanencia después de los 90 días</li>
           <li><svg><use href="#check"/></svg>Factura a nombre de tu empresa</li>
         </ul>
@@ -288,7 +308,7 @@
   <section class="listo" aria-live="polite">
     <div class="ok"><svg><use href="#check"/></svg></div>
     <h2 id="listoTitulo">¡Bienvenido al Método Maestro!</h2>
-    <p id="listoTexto">Terminamos el pago en la pestaña de Mercado Pago. Cuando esté listo, avísanos por WhatsApp y partimos.</p>
+    <p id="listoTexto">Tu pago fue aprobado. Te escribimos hoy para partir.</p>
     <ol>
       <li><span><b>Hoy:</b> te escribimos para agendar la reunión de inicio y te enviamos la factura.</span></li>
       <li><span><b>Días 1 a 3:</b> te damos acceso a Selder, tu app, y revisamos tu marca y tu competencia.</span></li>
@@ -296,10 +316,10 @@
       <li><span><b>Semana 2:</b> apruebas tus primeros videos desde el celular.</span></li>
     </ol>
     <div class="acciones">
-      <a class="btn btn-mp" id="btnAvisar" href="https://wa.me/56956747949" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Avisar que ya pagué</a>
+      <a class="btn btn-mp" id="btnAvisar" href="https://wa.me/56956747949" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Escribirnos por WhatsApp</a>
       <a class="btn btn-line" href="/planes/playbook-whatsapp-construccion.pdf" target="_blank" rel="noopener">Descargar tu playbook de regalo</a>
     </div>
-    <p style="margin-top:22px;font-size:.84rem;color:var(--faint)">¿No se abrió Mercado Pago? <a href="#" id="reabrir">Ábrelo de nuevo</a> · <a href="#" id="volver">Volver al resumen</a></p>
+    <p style="margin-top:22px;font-size:.84rem;color:var(--faint)" id="listoRef"></p>
   </section>
 </main>
 
@@ -309,16 +329,14 @@
 </div>
 
 <script>
-  // ===== Links de pago de Mercado Pago =====
-  // Se crean una sola vez en Mercado Pago (Tu negocio > Link de pago) y se
-  // pegan aqui. Mientras un link este
-  // vacio, ese boton abre WhatsApp con el resumen para enviar el link a mano.
-  // Los montos de cada link deben ser el TOTAL CON IVA que muestra el resumen.
-  var LINKS_MP = {
-    base:        { tarjeta: '' },
-    constructor: { tarjeta: '' },
-    llave:       { tarjeta: '' }
-  };
+  // ===== Mercado Pago (API, Checkout Bricks) =====
+  // Clave PUBLICA de Mercado Pago Developers > Tus integraciones > Credenciales.
+  // Es publica, puede ir aqui. El Access Token (secreto) va solo en el servidor,
+  // en manyobra-privado/mercadopago.php (ver planes/api/_comun.php).
+  // Mientras este vacia, el pago con tarjeta se pide por WhatsApp.
+  // Para probar: clave publica de PRUEBA aqui + Access Token de PRUEBA en el servidor.
+  var MP_PUBLIC_KEY = '';
+  var API_PAGAR = '/planes/api/pagar.php';
 
   var WA = '56956747949';
   var IVA = 0.19;
@@ -381,7 +399,7 @@
     var modoTxt = e.modo === 'tarjeta' ? 'con tarjeta en Mercado Pago' :
       'por transferencia ' + (e.cuotasTr === 3 ? 'en 3 pagos' : 'al contado');
     var l = [];
-    l.push(pagado ? 'Hola Sebastián, ya pagué el plan ' + e.p.nombre + ' ' + modoTxt + '.' :
+    l.push(pagado ? 'Hola Sebastián, acabo de pagar el plan ' + e.p.nombre + ' ' + modoTxt + '.' :
       e.modo === 'transferencia' ? 'Hola Sebastián, quiero partir con el plan ' + e.p.nombre + ' y pagar ' + modoTxt + '. ¿Me envías los datos?' :
       'Hola Sebastián, quiero partir con el plan ' + e.p.nombre + ' y pagar ' + modoTxt + '. ¿Me envías el link de pago?');
     l.push('Total: ' + clp(e.total) + ' IVA incluido.');
@@ -394,9 +412,8 @@
   }
 
   function destino(e) {
-    if (e.modo === 'transferencia') return { url: mensaje(e), mp: false };
-    var link = LINKS_MP[e.key] && LINKS_MP[e.key].tarjeta;
-    return link ? { url: link, mp: true } : { url: mensaje(e), mp: false };
+    if (e.modo === 'tarjeta' && MP_PUBLIC_KEY) return { brick: true };
+    return { url: mensaje(e) };
   }
 
   var ultimoHoy = '';
@@ -423,8 +440,8 @@
     $('subTransfer').hidden = e.modo !== 'transferencia';
 
     var d = destino(e);
-    $('btnPagarTxt').textContent = e.modo === 'transferencia' ? 'Pedir datos de transferencia' : d.mp ? 'Pagar ' + h + ' con Mercado Pago' : 'Pedir mi link de Mercado Pago';
-    $('btnPagar').querySelector('use').setAttribute('href', d.mp ? '#candado' : '#wa');
+    $('btnPagarTxt').textContent = e.modo === 'transferencia' ? 'Pedir datos de transferencia' : d.brick ? 'Pagar ' + h + ' con tarjeta' : 'Pedir mi link de pago';
+    $('btnPagar').querySelector('use').setAttribute('href', d.brick ? '#candado' : '#wa');
     $('barraBtn').textContent = e.modo === 'transferencia' ? 'Pedir datos' : 'Pagar';
     $('btnHablar').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hola Sebastián, estoy viendo el plan ' + p.nombre + (para ? ' para ' + para : '') + ' y antes de pagar quiero hacerte unas preguntas.');
   }
@@ -461,19 +478,137 @@
     try { sessionStorage.setItem('mo-checkout', JSON.stringify(Object.assign(datos(), { plan: e.key, modo: e.modo, total: Math.round(e.total) }))); } catch (x) {}
     if (window.fbq) fbq('track', 'AddPaymentInfo', { value: Math.round(e.hoy), currency: 'CLP', content_name: e.p.nombre });
     if (window.gtag) gtag('event', 'add_payment_info', { value: Math.round(e.hoy), currency: 'CLP', payment_type: e.modo, items: [{ item_name: e.p.nombre }] });
-    window.open(d.url, '_blank', 'noopener');
-    if (d.mp) {
-      $('btnAvisar').href = mensaje(e, true);
-      $('reabrir').onclick = function (x) { x.preventDefault(); window.open(d.url, '_blank', 'noopener'); };
-      $('listoTitulo').textContent = '¡Bienvenido al Método Maestro!';
-      $('listoTexto').textContent = 'Termina el pago en la pestaña de Mercado Pago. Cuando esté listo, avísanos por WhatsApp y partimos con tu plan ' + e.p.nombre + '.';
-      document.body.classList.add('pagando');
-      window.scrollTo(0, 0);
+    if (!d.brick) { window.open(d.url, '_blank', 'noopener'); return; }
+    var b = $('bloqueTarjeta');
+    b.hidden = false; b.classList.add('in');
+    b.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!brick || brickClave !== claveBrick(e)) montarBrick(e);
+  }
+
+  // ===== Formulario de tarjeta (Card Payment Brick) =====
+  var brick = null, brickClave = '', sdk = null;
+  function claveBrick(e) { return e.key + '|' + f.email.value.trim(); }
+
+  function cargarSDK() {
+    if (sdk) return sdk;
+    sdk = new Promise(function (ok, mal) {
+      var s = document.createElement('script');
+      s.src = 'https://sdk.mercadopago.com/js/v2';
+      s.onload = ok; s.onerror = function () { sdk = null; mal(new Error('sdk')); };
+      document.head.appendChild(s);
+    });
+    return sdk;
+  }
+
+  function errorTarjeta(txt) {
+    var el = $('errTarjeta');
+    if (!txt) { el.hidden = true; el.textContent = ''; return; }
+    el.innerHTML = txt + ' <a href="' + mensaje(estado()) + '" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>.';
+    el.hidden = false;
+  }
+
+  function desmontarBrick() {
+    var b = brick; brick = null; brickClave = '';
+    if (b) { try { b.unmount(); } catch (x) {} }
+  }
+
+  function montarBrick(e, mantenerError) {
+    desmontarBrick();
+    if (!mantenerError) errorTarjeta('');
+    $('cargando').hidden = false;
+    var clave = claveBrick(e);
+    brickClave = clave;
+    cargarSDK().then(function () {
+      var mp = new MercadoPago(MP_PUBLIC_KEY, { locale: 'es-CL' });
+      return mp.bricks().create('cardPayment', 'cardBrick', {
+        initialization: { amount: Math.round(e.total), payer: { email: f.email.value.trim() } },
+        customization: {
+          paymentMethods: { minInstallments: 1, maxInstallments: 3 },
+          visual: {
+            style: {
+              theme: 'dark',
+              customVariables: { baseColor: '#D6C48F', formBackgroundColor: '#131313', inputBackgroundColor: '#0A0A0A', borderRadiusMedium: '12px', borderRadiusLarge: '14px' }
+            },
+            texts: { formSubmit: 'Pagar ' + clp(e.total) }
+          }
+        },
+        callbacks: {
+          onReady: function () { $('cargando').hidden = true; },
+          onError: function (err) {
+            console.error(err);
+            $('cargando').hidden = true;
+            if (err && err.type === 'critical') errorTarjeta('No pudimos cargar el formulario de pago.');
+          },
+          onSubmit: function (formData) { return enviarPago(e, formData); }
+        }
+      });
+    }).then(function (ctrl) {
+      if (brickClave === clave) brick = ctrl; else { try { ctrl.unmount(); } catch (x) {} }
+    }).catch(function () {
+      $('cargando').hidden = true;
+      errorTarjeta('No pudimos cargar el formulario de pago.');
+    });
+  }
+
+  var RECHAZOS = {
+    cc_rejected_bad_filled_card_number: 'Revisa el número de la tarjeta.',
+    cc_rejected_bad_filled_date: 'Revisa la fecha de vencimiento.',
+    cc_rejected_bad_filled_security_code: 'Revisa el código de seguridad.',
+    cc_rejected_bad_filled_other: 'Revisa los datos de la tarjeta.',
+    cc_rejected_insufficient_amount: 'La tarjeta no tiene cupo suficiente. Prueba con otra o con menos cuotas.',
+    cc_rejected_call_for_authorize: 'Tu banco pide autorizar este pago. Llámalo y vuelve a intentar.',
+    cc_rejected_card_disabled: 'La tarjeta está inactiva. Actívala con tu banco o usa otra.',
+    cc_rejected_duplicated_payment: 'Ya hiciste un pago por este monto. Si necesitas pagar de nuevo, usa otra tarjeta.',
+    cc_rejected_high_risk: 'El pago fue rechazado por seguridad. Prueba con otra tarjeta.',
+    cc_rejected_blacklist: 'El pago fue rechazado por seguridad. Prueba con otra tarjeta.',
+    cc_rejected_max_attempts: 'Llegaste al límite de intentos con esta tarjeta. Usa otra.'
+  };
+
+  function enviarPago(e, formData) {
+    errorTarjeta('');
+    return fetch(API_PAGAR, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ plan: e.key, formData: formData, cliente: datos() })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) { j._http = r.status; return j; });
+    }).then(function (j) {
+      if (j.status === 'approved') { listo(e, 'approved', j); return; }
+      if (j.status === 'in_process' || j.status === 'pending') { listo(e, 'pending', j); return; }
+      var txt = j.status === 'rejected' ? (RECHAZOS[j.status_detail] || 'El pago fue rechazado. Prueba con otra tarjeta.') :
+        (j.error || 'No pudimos procesar el pago.');
+      errorTarjeta(txt);
+      montarBrick(e, true); // el token de tarjeta es de un solo uso: se vuelve a cargar el formulario
+    }).catch(function () {
+      errorTarjeta('Se cortó la conexión. Revisa tu internet y vuelve a intentar.');
+      montarBrick(e, true);
+    });
+  }
+
+  function listo(e, st, j) {
+    desmontarBrick();
+    try { sessionStorage.removeItem('mo-checkout'); } catch (x) {}
+    $('btnAvisar').href = mensaje(e, true);
+    if (st === 'approved') {
+      $('listoTitulo').textContent = '¡Pago aprobado! Bienvenido al Método Maestro';
+      $('listoTexto').textContent = 'Recibimos el pago de tu plan ' + e.p.nombre + '. Mercado Pago te envió el comprobante a tu correo y hoy te escribimos para partir.';
+      if (window.fbq) fbq('track', 'Purchase', { value: j.total || Math.round(e.total), currency: 'CLP', content_name: e.p.nombre });
+      if (window.gtag) gtag('event', 'purchase', { transaction_id: j.referencia || '', value: j.total || Math.round(e.total), currency: 'CLP', items: [{ item_name: e.p.nombre }] });
+    } else {
+      $('listoTitulo').textContent = 'Tu pago está en revisión';
+      $('listoTexto').textContent = 'Mercado Pago está confirmando el pago de tu plan ' + e.p.nombre + '. Suele tardar unos minutos; te avisamos apenas se apruebe.';
     }
+    $('listoRef').textContent = j.referencia ? 'Número de referencia: ' + j.referencia : '';
+    document.body.classList.add('pagando');
+    window.scrollTo(0, 0);
   }
 
   f.addEventListener('change', function (ev) {
-    if (ev.target.name === 'plan' || ev.target.name === 'pago' || ev.target.name === 'cuotasTr') pintar();
+    if (ev.target.name === 'plan' || ev.target.name === 'pago' || ev.target.name === 'cuotasTr') {
+      pintar();
+      // Si cambia el plan o la forma de pago, el formulario de tarjeta se cierra.
+      if (!$('bloqueTarjeta').hidden) { desmontarBrick(); errorTarjeta(''); $('bloqueTarjeta').hidden = true; }
+    }
     if (ev.target.classList.contains('mal')) validar();
   });
   f.addEventListener('input', function (ev) {
@@ -481,7 +616,6 @@
   });
   $('btnPagar').addEventListener('click', pagar);
   $('barraBtn').addEventListener('click', pagar);
-  $('volver').addEventListener('click', function (x) { x.preventDefault(); document.body.classList.remove('pagando'); });
 
   // En celular la barra fija se esconde cuando el resumen ya esta a la vista.
   if ('IntersectionObserver' in window) {
