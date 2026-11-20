@@ -23,6 +23,9 @@ deployment:
     - /bin/cp ventas.html $DEPLOYPATH
     - /bin/mkdir -p $DEPLOYPATH/planes
     - /bin/cp planes/index.html $DEPLOYPATH/planes/
+    - /bin/mkdir -p $DEPLOYPATH/planes/checkout $DEPLOYPATH/planes/api
+    - /bin/cp planes/checkout/index.html $DEPLOYPATH/planes/checkout/
+    - /bin/cp planes/api/_comun.php planes/api/pagar.php planes/api/webhook.php planes/api/.htaccess $DEPLOYPATH/planes/api/
     - /bin/mkdir -p $DEPLOYPATH/ventas
     - /bin/cp ventas/index.html $DEPLOYPATH/ventas/
     - /bin/mkdir -p $DEPLOYPATH/agente-ia
