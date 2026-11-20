@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '956034103850677');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=956034103850677&ev=PageView&noscript=1" /></noscript>
+
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Contratar plan · Manyobra</title>
+  <meta name="description" content="Elige tu plan del Método Maestro, la forma de pago y paga seguro con Mercado Pago." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Misma paleta que la propuesta: blanco y negro, dorado arena solo de acento. */
+    :root {
+      --ink: #0A0A0A; --ink-2: #131313; --ink-3: #1B1B1B;
+      --bone: #FFFFFF; --gold: #D6C48F;
+      --muted: rgba(255,255,255,.66); --faint: rgba(255,255,255,.42);
+      --line: rgba(255,255,255,.09); --line-2: rgba(255,255,255,.17);
+      --mp: #009EE3;
+      --radius: 18px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: var(--ink); color: var(--bone); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
+    .label { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--faint); }
+
+    .topbar { padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo img { display: block; width: auto; mix-blend-mode: screen; }
+    .logo-simbolo { height: 28px; } .logo-texto { height: 12px; }
+    .seguro { display: inline-flex; align-items: center; gap: .45rem; font-size: .82rem; color: var(--muted); }
+    .seguro svg { width: 15px; height: 15px; color: var(--gold); }
+
+    .pasos-top { display: flex; gap: 8px; list-style: none; margin: 40px 0 18px; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); flex-wrap: wrap; }
+    .pasos-top li { display: flex; align-items: center; gap: 8px; }
+    .pasos-top li + li::before { content: ''; width: 22px; height: 1px; background: var(--line-2); }
+    .pasos-top li.on { color: var(--bone); }
+    h1 { font-size: clamp(2rem, 4.4vw, 3rem); font-weight: 800; line-height: 1.05; letter-spacing: -.03em; margin-bottom: .6rem; }
+    h1 .dim { color: var(--faint); }
+    .intro { color: var(--muted); max-width: 620px; margin-bottom: 40px; }
+
+    .grid { display: grid; grid-template-columns: 1fr 400px; gap: 40px; align-items: start; padding-bottom: 96px; }
+    .bloque { border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2); padding: 28px; }
+    .bloque + .bloque { margin-top: 18px; }
+    .bloque h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; display: flex; align-items: center; gap: .7rem; margin-bottom: 1.1rem; }
+    .bloque h2 .n { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line-2); display: grid; place-items: center; font-size: .8rem; font-weight: 800; flex-shrink: 0; }
+
+    /* Opciones (plan y forma de pago) */
+    .opciones { display: grid; gap: 10px; }
+    .opciones.tres { grid-template-columns: repeat(3, 1fr); }
+    .op { position: relative; display: block; cursor: pointer; }
+    .op input { position: absolute; opacity: 0; pointer-events: none; }
+    .op .caja { display: flex; flex-direction: column; gap: .25rem; height: 100%; border: 1px solid var(--line-2); border-radius: 14px; padding: 16px 16px 15px; transition: border-color .2s, background .2s, transform .15s; }
+    .op:hover .caja { border-color: rgba(255,255,255,.35); }
+    .op input:checked + .caja { border-color: var(--gold); background: rgba(214,196,143,.07); box-shadow: 0 0 0 1px var(--gold) inset; }
+    .op input:focus-visible + .caja { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .op input:disabled + .caja { opacity: .38; cursor: not-allowed; }
+    .op b { font-size: 1rem; font-weight: 700; }
+    .op .pr { font-size: .92rem; font-weight: 700; }
+    .op .pr s { color: var(--faint); font-weight: 500; margin-right: .35rem; }
+    .op small { font-size: .8rem; color: var(--muted); line-height: 1.4; }
+    .op .tag { position: absolute; top: -9px; right: 12px; background: var(--gold); color: var(--ink); font-size: .64rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 100px; }
+    .op .fila { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .mp-chip { display: inline-flex; align-items: center; gap: .35rem; font-size: .72rem; font-weight: 700; color: var(--mp); background: rgba(0,158,227,.1); border-radius: 100px; padding: 3px 9px; white-space: nowrap; }
+    .sub-op { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .sub-op[hidden] { display: none; }
+    .sub-op label { cursor: pointer; }
+    .sub-op input { position: absolute; opacity: 0; }
+    .sub-op span { display: inline-block; font-size: .84rem; font-weight: 600; border: 1px solid var(--line-2); border-radius: 100px; padding: .4rem .9rem; transition: all .2s; }
+    .sub-op input:checked + span { background: var(--bone); color: var(--ink); border-color: var(--bone); }
+    .aviso-op { font-size: .82rem; color: var(--faint); margin-top: 10px; }
+
+    /* Formulario */
+    .campos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .campo { display: flex; flex-direction: column; gap: .35rem; }
+    .campo.ancho { grid-column: 1 / -1; }
+    .campo span { font-size: .82rem; font-weight: 600; color: var(--muted); }
+    .campo em { font-style: normal; color: var(--faint); font-weight: 500; }
+    .campo input { font: inherit; font-size: 1rem; color: var(--bone); background: var(--ink); border: 1px solid var(--line-2); border-radius: 12px; padding: .8rem .95rem; transition: border-color .2s; width: 100%; }
+    .campo input:focus { outline: none; border-color: var(--gold); }
+    .campo input.mal { border-color: #E5806B; }
+    .campo .err { font-size: .76rem; color: #E5806B; min-height: 0; }
+    .acepto { display: flex; gap: .7rem; align-items: flex-start; margin-top: 18px; font-size: .86rem; color: var(--muted); cursor: pointer; }
+    .acepto input { margin-top: .25rem; accent-color: var(--gold); width: 16px; height: 16px; flex-shrink: 0; }
+    .acepto a { color: var(--bone); }
+
+    /* Resumen */
+    .resumen { position: sticky; top: 24px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--ink-2); overflow: hidden; }
+    .res-head { padding: 24px 26px 18px; border-bottom: 1px solid var(--line); }
+    .res-head h3 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; margin-top: .3rem; }
+    .res-head p { font-size: .88rem; color: var(--muted); }
+    .res-incluye { list-style: none; padding: 18px 26px; display: grid; gap: .5rem; border-bottom: 1px solid var(--line); }
+    .res-incluye li { font-size: .86rem; color: var(--muted); padding-left: 1.4rem; position: relative; line-height: 1.4; }
+    .res-incluye li::before { content: ''; position: absolute; left: 0; top: .2em; width: 14px; height: 14px; border-radius: 50%; background: var(--bone); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+    .res-incluye li b { color: var(--bone); font-weight: 600; }
+    .res-incluye li.regalo::before { background: var(--gold); }
+    .cuentas { padding: 18px 26px; display: grid; gap: .45rem; font-size: .9rem; }
+    .cuentas div { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); }
+    .cuentas div b { color: var(--bone); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .cuentas .ahorro b { color: var(--gold); }
+    .cuentas .total { border-top: 1px solid var(--line); padding-top: .7rem; margin-top: .3rem; color: var(--bone); font-weight: 700; }
+    .hoy { margin: 0 26px; padding: 16px 18px; border-radius: 14px; background: var(--ink); border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .hoy span { font-size: .84rem; color: var(--muted); }
+    .hoy b { font-size: 1.7rem; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .hoy small { display: block; font-size: .76rem; color: var(--faint); }
+    .pagar { padding: 18px 26px 24px; display: grid; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; text-decoration: none; font: inherit; font-weight: 700; font-size: .98rem; border-radius: 100px; padding: .95rem 1.3rem; border: 0; cursor: pointer; transition: transform .15s, background .2s, color .2s, border-color .2s, opacity .2s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn-mp { background: var(--bone); color: var(--ink); }
+    .btn-mp:hover { background: var(--gold); }
+    .btn-line { background: transparent; border: 1px solid var(--line-2); color: var(--bone); font-size: .9rem; padding: .8rem 1.2rem; }
+    .btn-line:hover { border-color: var(--bone); }
+    .btn[aria-disabled="true"] { opacity: .45; }
+    .confianza { list-style: none; display: grid; gap: .4rem; padding: 0 26px 24px; font-size: .8rem; color: var(--faint); }
+    .confianza li { display: flex; gap: .5rem; align-items: center; }
+    .confianza svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; }
+
+    /* Barra fija en celular */
+    .barra { display: none; }
+
+    /* Estado final: despues de abrir Mercado Pago */
+    .listo { display: none; max-width: 640px; margin: 64px auto 96px; text-align: center; }
+    body.pagando .flujo { display: none; }
+    body.pagando .listo { display: block; animation: sube .5s cubic-bezier(.2,.7,.2,1); }
+    .listo .ok { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--gold); display: grid; place-items: center; margin: 0 auto 24px; color: var(--gold); }
+    .listo .ok svg { width: 28px; height: 28px; }
+    .listo h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.08; margin-bottom: .8rem; }
+    .listo > p { color: var(--muted); margin-bottom: 28px; }
+    .listo ol { list-style: none; text-align: left; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2); margin-bottom: 28px; counter-reset: p; }
+    .listo ol li { counter-increment: p; display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 16px 20px; font-size: .92rem; color: var(--muted); }
+    .listo ol li + li { border-top: 1px solid var(--line); }
+    .listo ol li::before { content: counter(p, decimal-leading-zero); font-weight: 800; color: var(--gold); font-size: .85rem; padding-top: .1rem; }
+    .listo ol li b { color: var(--bone); }
+    .listo .acciones { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    @keyframes sube { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+    .monto { display: inline-block; }
+    .monto.salta { animation: salta .35s cubic-bezier(.2,.7,.2,1); }
+    @keyframes salta { 0% { opacity: .2; transform: translateY(6px); } 100% { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; gap: 24px; }
+      .resumen { position: static; }
+    }
+    @media (max-width: 720px) {
+      .wrap { padding: 0 16px; }
+      .seguro span { display: none; }
+      .logo-simbolo { height: 22px; } .logo-texto { height: 10px; }
+      .pasos-top { margin-top: 28px; }
+      .opciones.tres { grid-template-columns: 1fr; }
+      .campos { grid-template-columns: 1fr; }
+      .bloque { padding: 22px 18px; }
+      .res-head, .res-incluye, .cuentas, .pagar { padding-left: 18px; padding-right: 18px; }
+      .hoy { margin: 0 18px; }
+      .confianza { padding: 0 18px 22px; }
+      .grid { padding-bottom: 120px; }
+      .barra { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(10,10,10,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line-2); transform: translateY(0); transition: transform .3s; }
+      .barra.oculta { transform: translateY(110%); }
+      .barra div { font-size: .76rem; color: var(--muted); line-height: 1.25; }
+      .barra div b { display: block; font-size: 1.15rem; color: var(--bone); font-weight: 800; }
+      .barra .btn { padding: .8rem 1.1rem; font-size: .9rem; }
+      body.pagando .barra { display: none; }
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G9JF1L3ZJD');
+  </script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="candado" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 11h12v9H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="/planes/" aria-label="Volver a la propuesta de Manyobra"><img class="logo-simbolo" src="/assets/marca/manyobra-onda-simbolo.jpg" alt="" width="524" height="176" /><img class="logo-texto" src="/assets/marca/manyobra-onda-texto.jpg" alt="Manyobra" width="684" height="70" /></a>
+    <span class="seguro"><svg><use href="#candado"/></svg><span>Pago seguro con</span> Mercado Pago</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="flujo">
+    <ol class="pasos-top" aria-label="Pasos">
+      <li class="on">1 · Plan</li><li class="on">2 · Pago</li><li class="on">3 · Datos</li><li>4 · Partimos</li>
+    </ol>
+    <h1>Partamos con tu <span id="tituloPlan">plan</span>. <span class="dim">Toma 2 minutos.</span></h1>
+    <p class="intro">Eliges cómo pagar, dejas tus datos para la factura y pagas seguro en Mercado Pago. En 7 días tienes tus anuncios funcionando.</p>
+
+    <div class="grid">
+      <form id="checkout" novalidate>
+        <section class="bloque">
+          <h2><span class="n">1</span>Tu plan</h2>
+          <div class="opciones tres" role="radiogroup" aria-label="Plan">
+            <label class="op"><input type="radio" name="plan" value="base" /><span class="caja"><b>Base</b><span class="pr"><s>$250.000</s>$200.000</span><small>2 + 2 piezas al mes · +10 anuncios</small></span></label>
+            <label class="op"><input type="radio" name="plan" value="constructor" checked /><span class="caja"><span class="tag">El más elegido</span><b>Constructor</b><span class="pr"><s>$450.000</s>$360.000</span><small>4 + 4 al mes · +20 anuncios · web con dominio .cl</small></span></label>
+            <label class="op"><input type="radio" name="plan" value="llave" /><span class="caja"><b>Llave en Mano</b><span class="pr"><s>$900.000</s>$720.000</span><small>Todo Constructor · +30 anuncios · agente IA</small></span></label>
+          </div>
+        </section>
+
+        <section class="bloque">
+          <h2><span class="n">2</span>Cómo quieres pagar</h2>
+          <div class="opciones">
+            <label class="op"><input type="radio" name="pago" value="tarjeta" checked /><span class="caja">
+              <span class="fila"><b>Tarjeta · 3 cuotas sin interés</b><span class="mp-chip">Mercado Pago</span></span>
+              <small>Pagas el sistema de 90 días con tarjeta de crédito o débito. Con crédito eliges hasta 3 cuotas sin interés.</small></span></label>
+            <label class="op"><input type="radio" name="pago" value="transferencia" /><span class="caja">
+              <span class="fila"><b>Transferencia</b></span>
+              <small>Al contado o en 3 pagos: al firmar, a los 30 y a los 60 días. Te enviamos los datos por WhatsApp.</small></span></label>
+            <label class="op" id="opMes"><input type="radio" name="pago" value="mes" /><span class="caja">
+              <span class="fila"><b>Mes a mes, sin permanencia</b><span class="mp-chip">Mercado Pago</span></span>
+              <small id="mesTexto">Se cobra al inicio de cada mes y terminas avisando con 15 días.</small></span></label>
+          </div>
+          <div class="sub-op" id="subTransfer" hidden role="radiogroup" aria-label="Pagos por transferencia">
+            <label><input type="radio" name="cuotasTr" value="3" checked /><span>En 3 pagos</span></label>
+            <label><input type="radio" name="cuotasTr" value="1" /><span>Al contado</span></label>
+          </div>
+          <p class="aviso-op" id="avisoMes" hidden>El plan Base se contrata solo por los 90 días.</p>
+        </section>
+
+        <section class="bloque">
+          <h2><span class="n">3</span>Tus datos</h2>
+          <div class="campos">
+            <label class="campo"><span>Tu nombre</span><input name="nombre" required autocomplete="name" placeholder="Nombre y apellido" /><small class="err"></small></label>
+            <label class="campo"><span>Empresa</span><input name="empresa" required autocomplete="organization" placeholder="Ej: Constructora Andes" /><small class="err"></small></label>
+            <label class="campo"><span>WhatsApp</span><input name="telefono" type="tel" required autocomplete="tel" placeholder="+56 9 1234 5678" /><small class="err"></small></label>
+            <label class="campo"><span>Correo</span><input name="email" type="email" required autocomplete="email" placeholder="nombre@empresa.cl" /><small class="err"></small></label>
+            <label class="campo"><span>Comuna o zona donde trabajas</span><input name="zona" required placeholder="Ej: Temuco y alrededores" /><small class="err"></small></label>
+            <label class="campo"><span>RUT de la empresa <em>(para la factura)</em></span><input name="rut" placeholder="76.123.456-7" /><small class="err"></small></label>
+          </div>
+          <label class="acepto"><input type="checkbox" name="acepto" required /><span>Acepto las condiciones de la <a href="/planes/#preguntas" target="_blank" rel="noopener">propuesta</a>: valores + IVA, la pauta se paga aparte a Meta y Google, y el contenido es mío.</span></label>
+          <small class="err" id="errAcepto" style="color:#E5806B;font-size:.76rem"></small>
+        </section>
+      </form>
+
+      <aside class="resumen" aria-live="polite">
+        <div class="res-head">
+          <span class="label">Tu resumen</span>
+          <h3 id="resNombre">Plan Constructor</h3>
+          <p id="resModo">Sistema de 90 días</p>
+        </div>
+        <ul class="res-incluye" id="resIncluye"></ul>
+        <div class="cuentas">
+          <div id="filaAntes"><span>Valor normal</span><b><s id="resAntes"></s></b></div>
+          <div class="ahorro" id="filaAhorro"><span>Ahorras</span><b id="resAhorro"></b></div>
+          <div><span id="resNetoTxt">Plan (neto)</span><b id="resNeto"></b></div>
+          <div><span>IVA 19%</span><b id="resIva"></b></div>
+          <div class="total"><span id="resTotalTxt">Total</span><b id="resTotal"></b></div>
+        </div>
+        <div class="hoy"><div><span id="hoyTxt">Pagas hoy</span><small id="hoySub"></small></div><b class="monto" id="resHoy"></b></div>
+        <div class="pagar">
+          <a class="btn btn-mp" id="btnPagar" href="#"><svg><use href="#candado"/></svg><span id="btnPagarTxt">Pagar con Mercado Pago</span></a>
+          <a class="btn btn-line" id="btnHablar" href="https://wa.me/56956747949" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Prefiero hablar primero</a>
+        </div>
+        <ul class="confianza">
+          <li><svg><use href="#candado"/></svg>Pagas en Mercado Pago: tus datos de tarjeta nunca pasan por nosotros</li>
+          <li><svg><use href="#check"/></svg>Sin permanencia después de los 90 días</li>
+          <li><svg><use href="#check"/></svg>Factura a nombre de tu empresa</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <section class="listo" aria-live="polite">
+    <div class="ok"><svg><use href="#check"/></svg></div>
+    <h2 id="listoTitulo">¡Bienvenido al Método Maestro!</h2>
+    <p id="listoTexto">Terminamos el pago en la pestaña de Mercado Pago. Cuando esté listo, avísanos por WhatsApp y partimos.</p>
+    <ol>
+      <li><span><b>Hoy:</b> te escribimos para agendar la reunión de inicio y te enviamos la factura.</span></li>
+      <li><span><b>Días 1 a 3:</b> te damos acceso a Selder, tu app, y revisamos tu marca y tu competencia.</span></li>
+      <li><span><b>Día 7:</b> tus primeros anuncios funcionando en Meta y Google.</span></li>
+      <li><span><b>Semana 2:</b> apruebas tus primeros videos desde el celular.</span></li>
+    </ol>
+    <div class="acciones">
+      <a class="btn btn-mp" id="btnAvisar" href="https://wa.me/56956747949" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Avisar que ya pagué</a>
+      <a class="btn btn-line" href="/planes/playbook-whatsapp-construccion.pdf" target="_blank" rel="noopener">Descargar tu playbook de regalo</a>
+    </div>
+    <p style="margin-top:22px;font-size:.84rem;color:var(--faint)">¿No se abrió Mercado Pago? <a href="#" id="reabrir">Ábrelo de nuevo</a> · <a href="#" id="volver">Volver al resumen</a></p>
+  </section>
+</main>
+
+<div class="barra" id="barra">
+  <div><span id="barraTxt">Pagas hoy</span><b id="barraHoy"></b></div>
+  <a class="btn btn-mp" href="#" id="barraBtn">Continuar</a>
+</div>
+
+<script>
+  // ===== Links de pago de Mercado Pago =====
+  // Se crean una sola vez en Mercado Pago (Tu negocio > Link de pago, y
+  // Suscripciones para mes a mes) y se pegan aqui. Mientras un link este
+  // vacio, ese boton abre WhatsApp con el resumen para enviar el link a mano.
+  // Los montos de cada link deben ser el TOTAL CON IVA que muestra el resumen.
+  var LINKS_MP = {
+    base:        { tarjeta: '', mes: '' },
+    constructor: { tarjeta: '', mes: '' },
+    llave:       { tarjeta: '', mes: '' }
+  };
+
+  var WA = '56956747949';
+  var IVA = 0.19;
+  var PLANES = {
+    base: {
+      nombre: 'Base', total: 200000, antes: 250000, mes: null,
+      incluye: ['<b>App Selder</b> para aprobar contenido y ver cada consulta', '<b>2 videos y 2 piezas</b> al mes', '<b>+10 anuncios</b> en Meta y Google', 'Reporte mensual de resultados']
+    },
+    constructor: {
+      nombre: 'Constructor', total: 360000, antes: 450000, mes: 150000,
+      incluye: ['<b>App Selder</b> completa: contenido, conversaciones y pipeline', '<b>4 videos y 4 piezas</b> al mes', '<b>+20 anuncios</b> en Meta y Google, con retargeting', '<b>Página web</b> con dominio .cl y hosting por 1 año', 'Reunión de estrategia mensual']
+    },
+    llave: {
+      nombre: 'Llave en Mano', total: 720000, antes: 900000, mes: 300000,
+      incluye: ['Todo lo de Constructor, <b>web incluida</b>', '<b>+30 anuncios</b> en Meta y Google', '<b>Agente IA</b> en tu WhatsApp las 24 horas', 'Seguimiento automático y community manager', 'Reunión de estrategia cada 15 días']
+    }
+  };
+  var REGALO = '<b>De regalo:</b> Instagram optimizado, ficha de Google y el playbook de ventas por WhatsApp';
+
+  var f = document.getElementById('checkout');
+  var $ = function (id) { return document.getElementById(id); };
+  var q = new URLSearchParams(location.search);
+  var para = (q.get('para') || '').trim().slice(0, 60);
+  var clp = function (n) { return '$' + Math.round(n).toLocaleString('es-CL'); };
+
+  // Llega con ?plan=constructor desde la propuesta (tambien acepta el nombre).
+  (function () {
+    var p = (q.get('plan') || '').toLowerCase();
+    if (/base/.test(p)) p = 'base'; else if (/llave/.test(p)) p = 'llave'; else if (/constr/.test(p)) p = 'constructor';
+    if (PLANES[p]) f.plan.value = p;
+    if (q.get('pago') === 'mes' && PLANES[f.plan.value].mes) f.pago.value = 'mes';
+    if (para) f.empresa.value = para;
+  })();
+
+  // Datos guardados en este navegador por si vuelve desde Mercado Pago.
+  var CAMPOS = ['nombre', 'empresa', 'telefono', 'email', 'zona', 'rut'];
+  try {
+    var g = JSON.parse(sessionStorage.getItem('mo-checkout') || '{}');
+    CAMPOS.forEach(function (k) { if (g[k] && !f[k].value) f[k].value = g[k]; });
+  } catch (e) {}
+
+  function estado() {
+    var p = PLANES[f.plan.value], modo = f.pago.value;
+    if (modo === 'mes' && !p.mes) { modo = 'tarjeta'; f.pago.value = 'tarjeta'; }
+    var cuotasTr = +f.cuotasTr.value;
+    var neto = modo === 'mes' ? p.mes : p.total;
+    var total = neto * (1 + IVA);
+    var hoy = total, hoySub = '', hoyTxt = 'Pagas hoy';
+    if (modo === 'tarjeta') { hoySub = 'o 3 cuotas sin interés de ' + clp(total / 3) + ' con tarjeta de crédito'; }
+    if (modo === 'transferencia' && cuotasTr === 3) { hoy = total / 3; hoyTxt = 'Primer pago, al firmar'; hoySub = 'luego 2 pagos de ' + clp(total / 3) + ' a los 30 y 60 días'; }
+    if (modo === 'mes') { hoyTxt = 'Pagas este mes'; hoySub = 'se renueva cada mes, terminas cuando quieras'; }
+    return { key: f.plan.value, p: p, modo: modo, cuotasTr: cuotasTr, neto: neto, iva: neto * IVA, total: total, hoy: hoy, hoyTxt: hoyTxt, hoySub: hoySub };
+  }
+
+  function datos() {
+    var d = {};
+    CAMPOS.forEach(function (k) { d[k] = f[k].value.trim(); });
+    return d;
+  }
+
+  function mensaje(e, pagado) {
+    var d = datos();
+    var modoTxt = e.modo === 'tarjeta' ? 'con tarjeta en Mercado Pago' :
+      e.modo === 'mes' ? 'mes a mes en Mercado Pago' :
+      'por transferencia ' + (e.cuotasTr === 3 ? 'en 3 pagos' : 'al contado');
+    var l = [];
+    l.push(pagado ? 'Hola Sebastián, ya pagué el plan ' + e.p.nombre + ' ' + modoTxt + '.' :
+      e.modo === 'transferencia' ? 'Hola Sebastián, quiero partir con el plan ' + e.p.nombre + ' y pagar ' + modoTxt + '. ¿Me envías los datos?' :
+      'Hola Sebastián, quiero partir con el plan ' + e.p.nombre + ' y pagar ' + modoTxt + '. ¿Me envías el link de pago?');
+    l.push('Total: ' + clp(e.total) + ' IVA incluido' + (e.modo === 'mes' ? ' al mes' : '') + '.');
+    if (d.nombre) l.push('Nombre: ' + d.nombre);
+    if (d.empresa) l.push('Empresa: ' + d.empresa);
+    if (d.rut) l.push('RUT: ' + d.rut);
+    if (d.email) l.push('Correo: ' + d.email);
+    if (d.zona) l.push('Zona: ' + d.zona);
+    return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(l.join('\n'));
+  }
+
+  function destino(e) {
+    if (e.modo === 'transferencia') return { url: mensaje(e), mp: false };
+    var link = LINKS_MP[e.key] && LINKS_MP[e.key][e.modo === 'mes' ? 'mes' : 'tarjeta'];
+    return link ? { url: link, mp: true } : { url: mensaje(e), mp: false };
+  }
+
+  var ultimoHoy = '';
+  function pintar() {
+    var e = estado(), p = e.p;
+    $('tituloPlan').textContent = 'plan ' + p.nombre;
+    $('resNombre').textContent = 'Plan ' + p.nombre;
+    $('resModo').textContent = e.modo === 'mes' ? 'Mes a mes, sin permanencia' : 'Sistema completo de 90 días';
+    $('resIncluye').innerHTML = p.incluye.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '<li class="regalo">' + REGALO + '</li>';
+    var conDescuento = e.modo !== 'mes';
+    $('filaAntes').hidden = $('filaAhorro').hidden = !conDescuento;
+    $('resAntes').textContent = clp(p.antes);
+    $('resAhorro').textContent = clp(p.antes - p.total);
+    $('resNetoTxt').textContent = e.modo === 'mes' ? 'Plan mensual (neto)' : 'Plan 90 días (neto)';
+    $('resNeto').textContent = clp(e.neto);
+    $('resIva').textContent = clp(e.iva);
+    $('resTotalTxt').textContent = e.modo === 'mes' ? 'Total al mes' : 'Total';
+    $('resTotal').textContent = clp(e.total);
+    $('hoyTxt').textContent = $('barraTxt').textContent = e.hoyTxt;
+    $('hoySub').textContent = e.hoySub;
+    var h = clp(e.hoy);
+    $('resHoy').textContent = $('barraHoy').textContent = h;
+    if (h !== ultimoHoy && ultimoHoy) { var m = $('resHoy'); m.classList.remove('salta'); void m.offsetWidth; m.classList.add('salta'); }
+    ultimoHoy = h;
+
+    // Mes a mes no existe para Base.
+    var mesInput = f.querySelector('input[name="pago"][value="mes"]');
+    mesInput.disabled = !p.mes;
+    $('avisoMes').hidden = !!p.mes;
+    $('mesTexto').textContent = p.mes ? clp(p.mes) + ' + IVA al mes. Se cobra al inicio de cada mes y terminas avisando con 15 días.' : 'No disponible para el plan Base.';
+    $('subTransfer').hidden = e.modo !== 'transferencia';
+
+    var d = destino(e);
+    $('btnPagarTxt').textContent = e.modo === 'transferencia' ? 'Pedir datos de transferencia' : d.mp ? 'Pagar ' + h + ' con Mercado Pago' : 'Pedir mi link de Mercado Pago';
+    $('btnPagar').querySelector('use').setAttribute('href', d.mp ? '#candado' : '#wa');
+    $('barraBtn').textContent = e.modo === 'transferencia' ? 'Pedir datos' : 'Pagar';
+    $('btnHablar').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hola Sebastián, estoy viendo el plan ' + p.nombre + (para ? ' para ' + para : '') + ' y antes de pagar quiero hacerte unas preguntas.');
+  }
+
+  // Validacion simple, con el error junto a cada campo.
+  function validar() {
+    var ok = true, primero = null;
+    var reglas = {
+      nombre: function (v) { return v.length >= 3 || 'Escribe tu nombre'; },
+      empresa: function (v) { return v.length >= 2 || 'Escribe el nombre de tu empresa'; },
+      telefono: function (v) { return v.replace(/\D/g, '').length >= 8 || 'Revisa tu número de WhatsApp'; },
+      email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || 'Revisa tu correo'; },
+      zona: function (v) { return v.length >= 3 || '¿Dónde trabajas?'; },
+      rut: function (v) { return !v || /^\d{1,2}\.?\d{3}\.?\d{3}-?[\dkK]$/.test(v) || 'Revisa el RUT (ej: 76.123.456-7)'; }
+    };
+    Object.keys(reglas).forEach(function (k) {
+      var r = reglas[k](f[k].value.trim()), err = f[k].parentNode.querySelector('.err');
+      var mal = r !== true;
+      f[k].classList.toggle('mal', mal);
+      err.textContent = mal ? r : '';
+      if (mal) { ok = false; primero = primero || f[k]; }
+    });
+    var acepta = f.acepto.checked;
+    $('errAcepto').textContent = acepta ? '' : 'Marca esta casilla para continuar';
+    if (!acepta) { ok = false; primero = primero || f.acepto; }
+    if (primero) { primero.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(function () { primero.focus({ preventScroll: true }); }, 350); }
+    return ok;
+  }
+
+  function pagar(ev) {
+    ev.preventDefault();
+    if (!validar()) return;
+    var e = estado(), d = destino(e);
+    try { sessionStorage.setItem('mo-checkout', JSON.stringify(Object.assign(datos(), { plan: e.key, modo: e.modo, total: Math.round(e.total) }))); } catch (x) {}
+    if (window.fbq) fbq('track', 'AddPaymentInfo', { value: Math.round(e.hoy), currency: 'CLP', content_name: e.p.nombre });
+    if (window.gtag) gtag('event', 'add_payment_info', { value: Math.round(e.hoy), currency: 'CLP', payment_type: e.modo, items: [{ item_name: e.p.nombre }] });
+    window.open(d.url, '_blank', 'noopener');
+    if (d.mp) {
+      $('btnAvisar').href = mensaje(e, true);
+      $('reabrir').onclick = function (x) { x.preventDefault(); window.open(d.url, '_blank', 'noopener'); };
+      $('listoTitulo').textContent = '¡Bienvenido al Método Maestro!';
+      $('listoTexto').textContent = 'Termina el pago en la pestaña de Mercado Pago. Cuando esté listo, avísanos por WhatsApp y partimos con tu plan ' + e.p.nombre + '.';
+      document.body.classList.add('pagando');
+      window.scrollTo(0, 0);
+    }
+  }
+
+  f.addEventListener('change', function (ev) {
+    if (ev.target.name === 'plan' || ev.target.name === 'pago' || ev.target.name === 'cuotasTr') pintar();
+    if (ev.target.classList.contains('mal')) validar();
+  });
+  f.addEventListener('input', function (ev) {
+    if (ev.target.classList.contains('mal')) { ev.target.classList.remove('mal'); ev.target.parentNode.querySelector('.err').textContent = ''; }
+  });
+  $('btnPagar').addEventListener('click', pagar);
+  $('barraBtn').addEventListener('click', pagar);
+  $('volver').addEventListener('click', function (x) { x.preventDefault(); document.body.classList.remove('pagando'); });
+
+  // En celular la barra fija se esconde cuando el resumen ya esta a la vista.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { $('barra').classList.toggle('oculta', es[0].isIntersecting); }, { threshold: .15 }).observe(document.querySelector('.pagar'));
+  }
+
+  pintar();
+  var e0 = estado();
+  if (window.fbq) fbq('track', 'InitiateCheckout', { value: Math.round(e0.total), currency: 'CLP', content_name: e0.p.nombre });
+  if (window.gtag) gtag('event', 'begin_checkout', { value: Math.round(e0.total), currency: 'CLP', items: [{ item_name: e0.p.nombre }] });
+</script>
+</body>
+</html>

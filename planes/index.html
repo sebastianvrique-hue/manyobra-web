@@ -1059,7 +1059,7 @@
           <li><b>+10 anuncios en Meta y Google</b>: probamos textos y ganchos nuevos cada dos semanas</li>
           <li>Reporte mensual de resultados</li>
         </ul>
-        <a class="btn btn-line" data-plan="Base" href="https://wa.me/56956747949">Elegir Base</a>
+        <a class="btn btn-line" data-plan="Base" href="/planes/checkout/?plan=base">Elegir Base</a>
       </article>
 
       <article class="plan top rv">
@@ -1075,7 +1075,7 @@
             <span class="web-incluye"><i>Dominio .cl · 1 año</i><i>Hosting · 1 año</i><i>Certificado de seguridad</i></span></li>
           <li>Reunión de estrategia mensual</li>
         </ul>
-        <a class="btn btn-main" data-plan="Constructor" href="https://wa.me/56956747949">Elegir Constructor</a>
+        <a class="btn btn-main" data-plan="Constructor" href="/planes/checkout/?plan=constructor">Elegir Constructor</a>
       </article>
 
       <article class="plan full rv">
@@ -1091,7 +1091,7 @@
           <li><b>Community manager</b> e historias semanales</li>
           <li>Reunión de estrategia cada 15 días</li>
         </ul>
-        <a class="btn btn-line" data-plan="Llave en Mano" href="https://wa.me/56956747949">Elegir Llave en Mano</a>
+        <a class="btn btn-line" data-plan="Llave en Mano" href="/planes/checkout/?plan=llave">Elegir Llave en Mano</a>
       </article>
     </div>
 
@@ -1218,7 +1218,7 @@
         </div>
         <div class="precio"><b>$360.000</b><span>+ IVA · 90 días<br>o 3 cuotas de $120.000</span></div>
       </div>
-      <div class="acciones"><a class="btn btn-main" data-plan="Constructor" href="https://wa.me/56956747949"><svg><use href="#wa"/></svg>Partir con Constructor</a><a class="btn btn-line" href="#planes">Ver los 3 planes</a><button class="btn btn-line" type="button" data-pdf>Descargar PDF</button></div>
+      <div class="acciones"><a class="btn btn-main" data-plan="Constructor" href="/planes/checkout/?plan=constructor">Partir con Constructor</a><a class="btn btn-line" href="#planes">Ver los 3 planes</a><button class="btn btn-line" type="button" data-pdf>Descargar PDF</button></div>
       <p class="cupos">Tomamos solo 3 a 4 clientes nuevos al mes para mantener la calidad.</p>
     </div>
     <div class="firma">
@@ -1239,14 +1239,11 @@
     document.title = 'Propuesta Manyobra · ' + para;
   }
 
-  // Cada boton abre WhatsApp con el plan y la empresa ya escritos.
+  // Cada boton de plan lleva al checkout con el plan (y la empresa) ya elegidos.
+  var CLAVES = { 'Base': 'base', 'Constructor': 'constructor', 'Llave en Mano': 'llave' };
   document.querySelectorAll('a[data-plan]').forEach(function (a) {
-    var plan = a.getAttribute('data-plan');
-    var msg = 'Hola Sebastián, revisé la propuesta' + (para ? ' para ' + para : '') +
-      (plan ? ' y quiero partir con el plan ' + plan + '.' : ' y quiero partir.');
-    a.href = 'https://wa.me/56956747949?text=' + encodeURIComponent(msg);
-    a.target = '_blank';
-    a.rel = 'noopener';
+    var plan = CLAVES[a.getAttribute('data-plan')] || 'constructor';
+    a.href = '/planes/checkout/?plan=' + plan + (para ? '&para=' + encodeURIComponent(para) : '');
   });
 
   // "Descargar PDF" usa la impresion del navegador (Guardar como PDF); los
