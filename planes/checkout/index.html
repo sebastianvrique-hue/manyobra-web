@@ -235,15 +235,11 @@
             <label class="op"><input type="radio" name="pago" value="transferencia" /><span class="caja">
               <span class="fila"><b>Transferencia</b></span>
               <small>Al contado o en 3 pagos: al firmar, a los 30 y a los 60 días. Te enviamos los datos por WhatsApp.</small></span></label>
-            <label class="op" id="opMes"><input type="radio" name="pago" value="mes" /><span class="caja">
-              <span class="fila"><b>Mes a mes, sin permanencia</b><span class="mp-chip">Mercado Pago</span></span>
-              <small id="mesTexto">Se cobra al inicio de cada mes y terminas avisando con 15 días.</small></span></label>
           </div>
           <div class="sub-op" id="subTransfer" hidden role="radiogroup" aria-label="Pagos por transferencia">
             <label><input type="radio" name="cuotasTr" value="3" checked /><span>En 3 pagos</span></label>
             <label><input type="radio" name="cuotasTr" value="1" /><span>Al contado</span></label>
           </div>
-          <p class="aviso-op" id="avisoMes" hidden>El plan Base se contrata solo por los 90 días.</p>
         </section>
 
         <section class="bloque">
@@ -314,29 +310,29 @@
 
 <script>
   // ===== Links de pago de Mercado Pago =====
-  // Se crean una sola vez en Mercado Pago (Tu negocio > Link de pago, y
-  // Suscripciones para mes a mes) y se pegan aqui. Mientras un link este
+  // Se crean una sola vez en Mercado Pago (Tu negocio > Link de pago) y se
+  // pegan aqui. Mientras un link este
   // vacio, ese boton abre WhatsApp con el resumen para enviar el link a mano.
   // Los montos de cada link deben ser el TOTAL CON IVA que muestra el resumen.
   var LINKS_MP = {
-    base:        { tarjeta: '', mes: '' },
-    constructor: { tarjeta: '', mes: '' },
-    llave:       { tarjeta: '', mes: '' }
+    base:        { tarjeta: '' },
+    constructor: { tarjeta: '' },
+    llave:       { tarjeta: '' }
   };
 
   var WA = '56956747949';
   var IVA = 0.19;
   var PLANES = {
     base: {
-      nombre: 'Base', total: 300000, antes: 375000, mes: null,
+      nombre: 'Base', total: 300000, antes: 375000,
       incluye: ['<b>App Selder</b> para aprobar contenido y ver cada consulta', '<b>2 videos y 2 piezas</b> al mes', '<b>+10 anuncios</b> en Meta y Google', 'Reporte mensual de resultados']
     },
     constructor: {
-      nombre: 'Constructor', total: 480000, antes: 600000, mes: 200000,
+      nombre: 'Constructor', total: 480000, antes: 600000,
       incluye: ['<b>App Selder</b> completa: contenido, conversaciones y pipeline', '<b>4 videos y 4 piezas</b> al mes', '<b>+20 anuncios</b> en Meta y Google, con retargeting', '<b>Página web</b> con dominio .cl y hosting por 1 año', 'Reunión de estrategia mensual']
     },
     llave: {
-      nombre: 'Llave en Mano', total: 960000, antes: 1200000, mes: 400000,
+      nombre: 'Llave en Mano', total: 960000, antes: 1200000,
       incluye: ['Todo lo de Constructor, <b>web incluida</b>', '<b>+30 anuncios</b> en Meta y Google', '<b>Agente IA</b> en tu WhatsApp las 24 horas', 'Seguimiento automático y community manager', 'Reunión de estrategia cada 15 días']
     }
   };
@@ -353,7 +349,6 @@
     var p = (q.get('plan') || '').toLowerCase();
     if (/base/.test(p)) p = 'base'; else if (/llave/.test(p)) p = 'llave'; else if (/constr/.test(p)) p = 'constructor';
     if (PLANES[p]) f.plan.value = p;
-    if (q.get('pago') === 'mes' && PLANES[f.plan.value].mes) f.pago.value = 'mes';
     if (para) f.empresa.value = para;
   })();
 
@@ -366,14 +361,12 @@
 
   function estado() {
     var p = PLANES[f.plan.value], modo = f.pago.value;
-    if (modo === 'mes' && !p.mes) { modo = 'tarjeta'; f.pago.value = 'tarjeta'; }
     var cuotasTr = +f.cuotasTr.value;
-    var neto = modo === 'mes' ? p.mes : p.total;
+    var neto = p.total;
     var total = neto * (1 + IVA);
     var hoy = total, hoySub = '', hoyTxt = 'Pagas hoy';
     if (modo === 'tarjeta') { hoySub = 'o 3 cuotas sin interés de ' + clp(total / 3) + ' con tarjeta de crédito'; }
     if (modo === 'transferencia' && cuotasTr === 3) { hoy = total / 3; hoyTxt = 'Primer pago, al firmar'; hoySub = 'luego 2 pagos de ' + clp(total / 3) + ' a los 30 y 60 días'; }
-    if (modo === 'mes') { hoyTxt = 'Pagas este mes'; hoySub = 'se renueva cada mes, terminas cuando quieras'; }
     return { key: f.plan.value, p: p, modo: modo, cuotasTr: cuotasTr, neto: neto, iva: neto * IVA, total: total, hoy: hoy, hoyTxt: hoyTxt, hoySub: hoySub };
   }
 
@@ -386,13 +379,12 @@
   function mensaje(e, pagado) {
     var d = datos();
     var modoTxt = e.modo === 'tarjeta' ? 'con tarjeta en Mercado Pago' :
-      e.modo === 'mes' ? 'mes a mes en Mercado Pago' :
       'por transferencia ' + (e.cuotasTr === 3 ? 'en 3 pagos' : 'al contado');
     var l = [];
     l.push(pagado ? 'Hola Sebastián, ya pagué el plan ' + e.p.nombre + ' ' + modoTxt + '.' :
       e.modo === 'transferencia' ? 'Hola Sebastián, quiero partir con el plan ' + e.p.nombre + ' y pagar ' + modoTxt + '. ¿Me envías los datos?' :
       'Hola Sebastián, quiero partir con el plan ' + e.p.nombre + ' y pagar ' + modoTxt + '. ¿Me envías el link de pago?');
-    l.push('Total: ' + clp(e.total) + ' IVA incluido' + (e.modo === 'mes' ? ' al mes' : '') + '.');
+    l.push('Total: ' + clp(e.total) + ' IVA incluido.');
     if (d.nombre) l.push('Nombre: ' + d.nombre);
     if (d.empresa) l.push('Empresa: ' + d.empresa);
     if (d.rut) l.push('RUT: ' + d.rut);
@@ -403,7 +395,7 @@
 
   function destino(e) {
     if (e.modo === 'transferencia') return { url: mensaje(e), mp: false };
-    var link = LINKS_MP[e.key] && LINKS_MP[e.key][e.modo === 'mes' ? 'mes' : 'tarjeta'];
+    var link = LINKS_MP[e.key] && LINKS_MP[e.key].tarjeta;
     return link ? { url: link, mp: true } : { url: mensaje(e), mp: false };
   }
 
@@ -412,16 +404,14 @@
     var e = estado(), p = e.p;
     $('tituloPlan').textContent = 'plan ' + p.nombre;
     $('resNombre').textContent = 'Plan ' + p.nombre;
-    $('resModo').textContent = e.modo === 'mes' ? 'Mes a mes, sin permanencia' : 'Sistema completo de 90 días';
+    $('resModo').textContent = 'Sistema completo de 90 días';
     $('resIncluye').innerHTML = p.incluye.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '<li class="regalo">' + REGALO + '</li>';
-    var conDescuento = e.modo !== 'mes';
-    $('filaAntes').hidden = $('filaAhorro').hidden = !conDescuento;
     $('resAntes').textContent = clp(p.antes);
     $('resAhorro').textContent = clp(p.antes - p.total);
-    $('resNetoTxt').textContent = e.modo === 'mes' ? 'Plan mensual (neto)' : 'Plan 90 días (neto)';
+    $('resNetoTxt').textContent = 'Plan 90 días (neto)';
     $('resNeto').textContent = clp(e.neto);
     $('resIva').textContent = clp(e.iva);
-    $('resTotalTxt').textContent = e.modo === 'mes' ? 'Total al mes' : 'Total';
+    $('resTotalTxt').textContent = 'Total';
     $('resTotal').textContent = clp(e.total);
     $('hoyTxt').textContent = $('barraTxt').textContent = e.hoyTxt;
     $('hoySub').textContent = e.hoySub;
@@ -430,11 +420,6 @@
     if (h !== ultimoHoy && ultimoHoy) { var m = $('resHoy'); m.classList.remove('salta'); void m.offsetWidth; m.classList.add('salta'); }
     ultimoHoy = h;
 
-    // Mes a mes no existe para Base.
-    var mesInput = f.querySelector('input[name="pago"][value="mes"]');
-    mesInput.disabled = !p.mes;
-    $('avisoMes').hidden = !!p.mes;
-    $('mesTexto').textContent = p.mes ? clp(p.mes) + ' + IVA al mes. Se cobra al inicio de cada mes y terminas avisando con 15 días.' : 'No disponible para el plan Base.';
     $('subTransfer').hidden = e.modo !== 'transferencia';
 
     var d = destino(e);
