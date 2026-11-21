@@ -1104,6 +1104,10 @@
     .hj-q span { font-size: 11px; color: #333; border: 1px solid #ddd; border-radius: 100px; padding: 3px 9px; }
     .cd-demo:is([data-paso="2"], [data-paso="3"]) .hj-q .sel { animation: elegir .3s ease 2.2s forwards; }
     .cd-demo[data-paso="3"] .hj-q .sel { animation-delay: 0s; }
+    .cd-demo:is([data-paso="2"], [data-paso="3"]) .hj-plazo .sel { animation-delay: 2.8s; }
+    .cd-demo[data-paso="3"] .hj-plazo .sel { animation-delay: .15s; }
+    .sl-resp { display: flex; flex-wrap: wrap; gap: 5px; }
+    .sl-resp span { margin-top: 6px; }
     @keyframes elegir { to { background: #3D6AF2; border-color: #3D6AF2; color: #fff; } }
     .hj-btn { position: relative; margin-top: 8px; text-align: center; background: #3D6AF2; color: #fff; font-weight: 700; padding: 10px; border-radius: 8px; }
     .hj-btn .tap { right: 40%; }
@@ -1501,15 +1505,16 @@
             <label>Teléfono<span>+56 9 8123 4567</span></label>
             <label>Comuna<span class="escribe">Maipú</span></label>
             <div class="hj-q">¿Qué necesitas?<div><span class="sel">Cocina</span><span>Baño</span><span>Ampliación</span></div></div>
+            <div class="hj-q hj-plazo">¿Para cuándo quieres construir?<div><span>Lo antes posible</span><span class="sel">En 1 a 3 meses</span><span>Más adelante</span></div></div>
             <div class="hj-btn">Enviar<i class="tap"></i></div>
             <div class="hj-ok"><b>✓</b><strong>¡Listo, Carolina!</strong><small>Tu empresa te contactará hoy.</small></div>
           </div>
-          <div class="pt pt-selder"><div class="sl-top"><img src="/selder/logo-selder.png" alt="" width="540" height="114" /><span>Nuevo contacto</span></div><div class="sl-card"><span class="sl-origen">Formulario · Anuncio cocina</span><b>Carolina Muñoz</b><small>+56 9 8123 4567 · Maipú</small><div class="sl-resp"><span>Necesita: <b>Cocina</b></span></div><div class="sl-btns"><span>Llamar</span><span class="wa">WhatsApp</span></div></div><p class="sl-pie">Llegó hace 1 minuto · desde tu anuncio</p></div>
+          <div class="pt pt-selder"><div class="sl-top"><img src="/selder/logo-selder.png" alt="" width="540" height="114" /><span>Nuevo contacto</span></div><div class="sl-card"><span class="sl-origen">Formulario · Anuncio cocina</span><b>Carolina Muñoz</b><small>+56 9 8123 4567 · Maipú</small><div class="sl-resp"><span>Necesita: <b>Cocina</b></span><span>Plazo: <b>1 a 3 meses</b></span></div><div class="sl-btns"><span>Llamar</span><span class="wa">WhatsApp</span></div></div><p class="sl-pie">Llegó hace 1 minuto · desde tu anuncio</p></div>
         </div></div>
         <div class="cd-texto">
           <h3>Campañas de formulario</h3>
           <p>Para quien no quiere chatear todavía: deja sus datos sin salir de Instagram o Facebook y tú lo llamas.</p>
-          <ol class="cd-pasos"><li data-p="1"><button type="button"><span class="cd-n">1</span><span><b>Ve tu anuncio</b><small>Alguien de tu zona ve tu obra y toca «Más información».</small></span></button><i class="cd-barra"></i></li><li data-p="2"><button type="button"><span class="cd-n">2</span><span><b>Se abre un formulario</b><small>Ahí mismo, sin salir de la app. Su nombre y teléfono ya vienen puestos.</small></span></button><i class="cd-barra"></i></li><li data-p="3"><button type="button"><span class="cd-n">3</span><span><b>Responde y envía</b><small>Comuna y tipo de obra. Le toma 15 segundos.</small></span></button><i class="cd-barra"></i></li><li data-p="4"><button type="button"><span class="cd-n">4</span><span><b>Te llega a Selder</b><small>Con sus datos y respuestas, listo para llamarlo o escribirle.</small></span></button><i class="cd-barra"></i></li></ol>
+          <ol class="cd-pasos"><li data-p="1"><button type="button"><span class="cd-n">1</span><span><b>Ve tu anuncio</b><small>Alguien de tu zona ve tu obra y toca «Más información».</small></span></button><i class="cd-barra"></i></li><li data-p="2"><button type="button"><span class="cd-n">2</span><span><b>Se abre un formulario</b><small>Ahí mismo, sin salir de la app. Su nombre y teléfono ya vienen puestos.</small></span></button><i class="cd-barra"></i></li><li data-p="3"><button type="button"><span class="cd-n">3</span><span><b>Responde y envía</b><small>Comuna, tipo de obra y para cuándo la necesita. Le toma 15 segundos.</small></span></button><i class="cd-barra"></i></li><li data-p="4"><button type="button"><span class="cd-n">4</span><span><b>Te llega a Selder</b><small>Con sus datos y respuestas, listo para llamarlo o escribirle.</small></span></button><i class="cd-barra"></i></li></ol>
         </div>
       </div>
       <div class="cd-demo" data-demo="wa" data-paso="1" role="tabpanel" aria-label="Cómo funciona una campaña de mensajes" hidden>
@@ -1760,7 +1765,7 @@
         <h3>Lanzamos</h3>
         <ol class="pasos-lt">
           <li><span class="cuando">Meta</span><b>Campañas de mensajes</b><span class="txt">Anuncios en Instagram y Facebook que abren una conversación directo en tu WhatsApp.</span></li>
-          <li><span class="cuando">Meta</span><b>Campañas de formularios</b><span class="txt">Para quien prefiere dejar sus datos: nombre, teléfono, comuna y tipo de obra, sin salir de Instagram o Facebook.</span></li>
+          <li><span class="cuando">Meta</span><b>Campañas de formularios</b><span class="txt">Para quien prefiere dejar sus datos: nombre, teléfono, comuna, tipo de obra y para cuándo la necesita, sin salir de Instagram o Facebook.</span></li>
           <li><span class="cuando">Google</span><b>Búsqueda y Maps</b><span class="txt">Apareces cuando alguien de tu zona busca lo que haces.</span></li>
           <li><span class="cuando">Selder</span><b>Todo conectado</b><span class="txt">Cada mensaje y formulario llega a Selder con el anuncio que lo trajo. En Llave en Mano, el agente IA ya está atendiendo.</span></li>
         </ol>
