@@ -839,6 +839,9 @@
     .ico.g { background: #fff; }
     .ico.g svg { width: 20px; height: 20px; }
     .ico.ig { background: radial-gradient(circle at 30% 110%, #FDCB52 0%, #FD5949 40%, #D6249F 65%, #285AEB 100%); color: #fff; }
+    .cd-plan { display: inline-block; margin-bottom: .6rem; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: 3px 9px; border-radius: 100px; }
+    .ico.fb { background: #1877F2; color: #fff; }
+    .ico.fb svg { width: 21px; height: 21px; }
     .ico.web { background: linear-gradient(140deg, #5B7CFA, #A78BFA); color: #fff; }
     .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: .5rem; }
     .chips span { display: inline-flex; align-items: center; gap: 5px; font-size: .7rem; font-weight: 600; color: var(--bone); padding: 3px 8px 3px 6px; border-radius: 100px; background: rgba(255,255,255,.06); border: 1px solid var(--line-2); }
@@ -928,6 +931,8 @@
     @media (max-width: 620px) { .casos, .res-total { grid-template-columns: 1fr; } .res-total > div + div { border-left: 0; border-top: 1px dashed var(--line-2); } }
     @media (prefers-reduced-motion: reduce) { .js .casos.in .cpc-barras i { animation: none; } }
     /* Automatizaciones de seguimiento */
+    .entregables.pro li.ia { padding: 16px; }
+    .entregables.pro li.ia .ia-cab { gap: .6rem; }
     .entregables.pro li.auto { padding: 14px; border-radius: 14px; border: 1px solid rgba(214,196,143,.5); background: radial-gradient(120% 90% at 100% 0%, rgba(214,196,143,.14), transparent 60%), rgba(255,255,255,.02); }
     .auto-cab { display: flex; align-items: center; gap: .6rem; }
     .auto-cab b { color: var(--bone); font-size: .95rem; line-height: 1.25; flex: 1; }
@@ -1225,6 +1230,153 @@
     .cd-demo[data-demo="maps"][data-paso="4"] .pt-selder { transform: none; }
     @media (max-width: 900px) { .cd-tabs { grid-template-columns: 1fr 1fr; } .cd-tabs button { padding: 12px; gap: 9px; } .cd-tabs small { font-size: .7rem; } }
     @media (prefers-reduced-motion: reduce) { .cd-burbuja.abre, .cd-burbuja.abre * { animation: none !important; } .camp-demo .cd-tabs button { animation: none !important; } }
+
+    /* Cotizador */
+    .cotizador { margin-top: 56px; border: 1px solid var(--line-2); border-radius: 22px; padding: 34px; background: radial-gradient(80% 120% at 100% 0%, rgba(214,196,143,.09), transparent 60%), var(--ink-2); }
+    .cz-cab { max-width: 640px; margin-bottom: 26px; }
+    .cz-cab h3 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.025em; line-height: 1.15; margin: .4rem 0 .5rem; }
+    .cz-cab p { color: var(--muted); }
+    .cz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; }
+    .cotizador fieldset { border: 0; margin-bottom: 24px; min-width: 0; padding: 0; }
+    .cz-grid > * { min-width: 0; }
+    .cotizador legend { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .cz-planes, .cz-pago { display: grid; gap: 8px; }
+    .cz-planes { grid-template-columns: repeat(3, 1fr); } .cz-pago { grid-template-columns: 1fr 1fr; }
+    .cotizador label { cursor: pointer; }
+    .cotizador label input { position: absolute; opacity: 0; pointer-events: none; }
+    .cotizador label > span { display: block; height: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line-2); background: rgba(255,255,255,.02); transition: border-color .2s, background .2s; font-weight: 600; font-size: .92rem; }
+    .cotizador label > span small { display: block; font-weight: 500; font-size: .78rem; color: var(--muted); margin-top: 2px; }
+    .cotizador label:hover > span { border-color: rgba(255,255,255,.32); }
+    .cotizador label input:checked + span { border-color: var(--gold); background: rgba(214,196,143,.1); box-shadow: inset 0 0 0 1px var(--gold); }
+    .cotizador label input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .cz-monto { display: block; font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; margin-bottom: 14px; font-variant-numeric: tabular-nums; }
+    .cz-monto::after { content: ' / mes'; font-size: 1rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+    #cz-rango { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: 8px; background: linear-gradient(90deg, var(--gold) var(--p, 10%), rgba(255,255,255,.12) var(--p, 10%)); outline: none; cursor: pointer; }
+    #cz-rango::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; border-radius: 50%; background: var(--bone); border: 4px solid var(--gold); box-shadow: 0 0 0 6px rgba(214,196,143,.2); }
+    #cz-rango::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--bone); border: 4px solid var(--gold); }
+    #cz-rango:focus-visible { box-shadow: 0 0 0 3px rgba(214,196,143,.4); }
+    .cz-marcas { display: flex; justify-content: space-between; font-size: .74rem; color: var(--faint); margin-top: 8px; }
+    .cz-marcas small { display: block; font-size: .66rem; }
+    .cz-rapidos { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .cz-rapidos button { all: unset; cursor: pointer; font-size: .8rem; font-weight: 600; padding: 6px 12px; border-radius: 100px; border: 1px solid var(--line-2); color: var(--bone); display: inline-flex; align-items: center; gap: 6px; }
+    .cz-rapidos button em { font-style: normal; font-size: .6rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: 2px 6px; border-radius: 100px; }
+    .cz-rapidos button.on { border-color: var(--gold); background: rgba(214,196,143,.12); }
+    .cz-rapidos button:focus-visible { outline: 2px solid var(--gold); }
+    .cz-ref { margin-top: 14px; font-size: .84rem; color: var(--muted); padding: 12px 14px; border-radius: 12px; background: rgba(52,211,153,.07); border: 1px solid rgba(52,211,153,.25); }
+    .cz-ref b { color: #34D399; }
+    .cz-doc { border-radius: 16px; background: #F7F6F2; color: #111; padding: 22px 22px 18px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); position: relative; }
+    .cz-doc::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 6px; border-radius: 16px 16px 0 0; background: repeating-linear-gradient(-45deg, #0A0A0A 0 8px, #D6C48F 8px 16px); }
+    .cz-doc-cab { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; padding: 8px 0 14px; border-bottom: 1px solid #e2dfd5; }
+    .cz-doc-cab .label { color: #9C8650; }
+    .cz-doc-cab b { display: block; font-size: 1.2rem; letter-spacing: -.01em; }
+    .cz-doc-cab small { font-size: .78rem; color: #777; white-space: nowrap; }
+    .cz-doc table { width: 100%; border-collapse: collapse; margin: 6px 0 14px; font-size: .9rem; }
+    .cz-doc th { text-align: left; font-weight: 500; color: #333; padding: 9px 0; border-bottom: 1px dashed #e2dfd5; }
+    .cz-doc th small { display: block; font-size: .72rem; color: #888; }
+    .cz-doc td { text-align: right; font-weight: 700; padding: 9px 0; border-bottom: 1px dashed #e2dfd5; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .cz-doc .cz-sub th, .cz-doc .cz-sub td { font-weight: 800; color: #111; border-bottom: 0; }
+    .cz-doc .cz-nota th { font-size: .78rem; color: #9C8650; font-weight: 600; padding-top: 0; }
+    .cz-totales { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .cz-totales div { border-radius: 12px; padding: 12px 14px; background: #fff; border: 1px solid #e7e4da; }
+    .cz-totales div:first-child { background: #0A0A0A; color: #fff; border-color: #0A0A0A; }
+    .cz-totales span { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9C8650; }
+    .cz-totales div:first-child span { color: #D6C48F; }
+    .cz-totales b { display: block; font-size: 1.55rem; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+    .cz-totales small { font-size: .72rem; color: #888; }
+    .cz-totales div:first-child small { color: rgba(255,255,255,.6); }
+    .cz-letra { font-size: .7rem; color: #888; margin-top: 12px; }
+    .cz-btns { display: grid; gap: 8px; margin-top: 14px; }
+    .cz-btns .btn { width: 100%; }
+    .cz-btns svg { width: 18px; height: 18px; fill: currentColor; }
+    @media (max-width: 900px) {
+      .cotizador { padding: 22px 16px; }
+      .cz-grid { grid-template-columns: 1fr; gap: 10px; }
+      .cz-planes { grid-template-columns: 1fr; }
+      .cz-monto { font-size: 2.1rem; }
+    }
+    @media print {
+      .cotizador { border: 0; padding: 0; margin-top: 24px; background: none; }
+      .cz-in, .cz-btns { display: none !important; }
+      .cz-grid { grid-template-columns: 1fr; }
+      .cz-cab { display: none; }
+      .cz-doc { box-shadow: none; border: 1px solid #ddd; }
+    }
+
+    /* Cotizador en ventana */
+    .cz-cta { margin-top: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 28px; border-radius: 18px; border: 1px solid rgba(214,196,143,.45); background: linear-gradient(120deg, rgba(214,196,143,.12), rgba(214,196,143,.02)); }
+    .cz-cta b { display: block; font-size: 1.15rem; margin: .25rem 0 .2rem; }
+    .cz-cta small { color: var(--muted); font-size: .88rem; }
+    .cz-cta .btn { flex-shrink: 0; }
+    .cz-link { all: unset; cursor: pointer; display: block; text-align: center; margin-top: 10px; font-size: .84rem; font-weight: 600; color: var(--gold); }
+    .cz-link:hover { text-decoration: underline; }
+    .cz-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+    .cz-modal { width: min(1120px, calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); padding: 0; border: 1px solid var(--line-2); border-radius: 22px; background: var(--ink-2); color: var(--bone); overflow: auto; overflow-x: hidden; overscroll-behavior: contain; }
+    .cz-modal::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(4px); }
+    .cz-modal[open] { animation: modalIn .4s cubic-bezier(.2,.9,.3,1.1); }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(24px) scale(.97); } }
+    .cz-modal .cotizador { margin: 0; border: 0; border-radius: 0; }
+    .cz-modal .cz-in { position: sticky; top: 16px; }
+    @media (max-width: 900px) { .cz-modal .cz-in { position: static; } }
+    .cz-cerrar { all: unset; cursor: pointer; position: sticky; top: 14px; float: right; margin: 14px 14px -54px 0; z-index: 5; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-size: 1.6rem; line-height: 1; color: var(--bone); background: rgba(255,255,255,.08); border: 1px solid var(--line-2); }
+    .cz-cerrar:hover { background: rgba(255,255,255,.16); }
+    .cz-cerrar:focus-visible { outline: 2px solid var(--gold); }
+    .cz-marca { display: flex; align-items: center; gap: 8px; padding-top: 6px; color: #0A0A0A; }
+    .cz-marca svg { width: 26px; height: 18px; color: #9C8650; }
+    .cz-marca b { font-size: .9rem; letter-spacing: .18em; }
+    .cz-marca span { margin-left: auto; font-size: .7rem; color: #888; }
+    .cz-incluye { margin: 16px 0 4px; padding-top: 14px; border-top: 1px solid #e2dfd5; }
+    .cz-inc-tit { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #9C8650; margin-bottom: 6px; }
+    .cz-incluye h5 { font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #888; margin: 12px 0 4px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+    .cz-incluye ul { list-style: none; display: grid; gap: 6px; }
+    .cz-incluye li { position: relative; padding-left: 16px; font-size: .82rem; line-height: 1.4; }
+    .cz-incluye li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #2E9E6A; font-weight: 800; }
+    .cz-incluye li b { color: #111; }
+    .cz-incluye li span { display: block; color: #555; font-size: .78rem; }
+    .cz-firma { font-size: .68rem; color: #999; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e2dfd5; }
+    @media (max-width: 900px) {
+      .cz-cta { flex-direction: column; align-items: stretch; padding: 20px; }
+      .cz-modal { width: calc(100% - 12px); max-height: calc(100dvh - 12px); border-radius: 16px; }
+      .cz-marca span { display: none; }
+      .cz-doc { padding: 18px 14px 14px; }
+      .cz-totales div { min-width: 0; padding: 10px; }
+      .cz-totales b { font-size: 1.2rem; }
+      .cz-doc th, .cz-doc td { font-size: .84rem; }
+    }
+    @media print {
+      .cz-cta, .cz-link { display: none !important; }
+      .cz-modal { display: none; }
+      html.cz-usado .cz-modal, html.solo-cot .cz-modal { display: block !important; position: static !important; inset: auto !important; transform: none !important; animation: none !important; width: auto !important; max-width: none !important; max-height: none !important; overflow: visible !important; margin: 24px 0 0 !important; padding: 0 !important; border: 0 !important; background: #fff !important; color: #111 !important; break-before: page; }
+      .cz-modal::backdrop { display: none; }
+      .cz-cerrar, .cz-modal .cz-in, .cz-modal .cz-btns, .cz-modal .cz-cab { display: none !important; }
+      html.solo-cot body > *:not(.cz-modal) { display: none !important; }
+      html.solo-cot .cz-modal { margin: 0 !important; break-before: auto; }
+      .cz-incluye li { break-inside: avoid; }
+      html.solo-cot .cz-doc { padding: 16px 20px 12px; font-size: 9.5pt; }
+      html.solo-cot .cz-doc th, html.solo-cot .cz-doc td { padding: 5px 0; }
+      html.solo-cot .cz-doc-cab { padding: 4px 0 8px; }
+      html.solo-cot .cz-totales b { font-size: 1.3rem; }
+      html.solo-cot .cz-totales div { padding: 8px 12px; }
+      html.solo-cot .cz-incluye { margin-top: 10px; padding-top: 8px; }
+      html.solo-cot .cz-incluye h5 { margin: 7px 0 2px; }
+      html.solo-cot .cz-incluye ul { gap: 3px; }
+      html.solo-cot .cz-incluye li { font-size: .74rem; line-height: 1.3; }
+      html.solo-cot .cz-incluye li span { font-size: .7rem; }
+    }
+
+    /* Aviso de la pauta antes de los planes */
+    .pauta-aviso { margin: -8px 0 28px; padding: 20px 22px; border-radius: 18px; border: 1px dashed rgba(214,196,143,.55); background: rgba(214,196,143,.05); }
+    .pa-partes { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; }
+    .pa-parte { display: flex; gap: 12px; align-items: flex-start; }
+    .pa-parte span:not(.pa-ico) { display: block; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+    .pa-parte b { display: block; font-size: 1.05rem; margin: 1px 0 3px; }
+    .pa-parte small { display: block; font-size: .86rem; color: var(--muted); line-height: 1.45; }
+    .pa-ico { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; display: grid; place-items: center; background: rgba(214,196,143,.12); border: 1px solid rgba(214,196,143,.35); color: var(--gold); }
+    .pa-ico svg { width: 20px; height: 20px; }
+    .pa-ico.meta { background: #fff; border-color: #fff; color: #0866FF; }
+    .pa-mas { font-size: 1.8rem; font-weight: 300; color: var(--gold); }
+    .pa-nota { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line-2); font-size: .84rem; color: var(--muted); }
+    .valor-pauta { font-style: normal; font-size: .76rem; color: var(--gold); margin-top: 2px; }
+    @media (max-width: 820px) { .pa-partes { grid-template-columns: 1fr; gap: 10px; } .pa-mas { text-align: center; line-height: 1; } }
   </style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9JF1L3ZJD"></script>
@@ -1253,6 +1405,7 @@
   <symbol id="i-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
   <symbol id="i-server" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="3.5" y="13" width="17" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.5 7.5h.01M7.5 16.5h.01"/></symbol>
   <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5l3 3 5.8-5.8a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></symbol>
   <symbol id="i-persona" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="4" fill="currentColor"/><path d="M4 21c.9-4.6 4-7 8-7s7.1 2.4 8 7z" fill="currentColor"/></symbol>
   <symbol id="i-capas" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3 21 8l-9 5-9-5zM3 12.5l9 5 9-5M3 16.5l9 5 9-5"/></symbol>
 
@@ -1413,6 +1566,7 @@
           <div class="pt pt-selder"><div class="sl-top"><img src="/selder/logo-selder.png" alt="" width="540" height="114" /><span>Nuevo contacto</span></div><div class="sl-card"><span class="sl-origen">Google Maps · Llamada</span><b>Carolina Muñoz</b><small>+56 9 8123 4567 · Maipú</small><div class="sl-btns"><span>Llamar</span><span class="wa">WhatsApp</span></div></div><p class="sl-pie">Llamó hace 1 minuto · desde tu perfil de Google</p></div>
         </div></div>
         <div class="cd-texto">
+          <span class="cd-plan">Desde el plan Constructor</span>
           <h3>Tu perfil en Google Maps</h3>
           <p>Tu ficha de Google Mi Negocio: cuando alguien busca en el mapa lo que haces, apareces tú, con fotos de tus obras y lo que dicen tus clientes.</p>
           <ol class="cd-pasos"><li data-p="1"><button type="button"><span class="cd-n">1</span><span><b>Busca en Google Maps</b><small>«Remodelaciones cerca de mí» o el nombre de su comuna.</small></span></button><i class="cd-barra"></i></li><li data-p="2"><button type="button"><span class="cd-n">2</span><span><b>Apareces en el mapa</b><small>Tu negocio marcado, con tus estrellas a la vista.</small></span></button><i class="cd-barra"></i></li><li data-p="3"><button type="button"><span class="cd-n">3</span><span><b>Ve tu perfil</b><small>Fotos de tus obras, reseñas, horario y teléfono. Toca «Llamar».</small></span></button><i class="cd-barra"></i></li><li data-p="4"><button type="button"><span class="cd-n">4</span><span><b>Te llama y queda en Selder</b><small>Sabes cuántos llamaron o pidieron cómo llegar.</small></span></button><i class="cd-barra"></i></li></ol>
@@ -1595,7 +1749,7 @@
         <h3>Preparamos todo</h3>
         <ol class="pasos-lt">
           <li><span class="cuando">Día 1</span><b>Reunión de inicio</b><span class="txt">Una hora para conocer tus servicios, tu zona, tu cliente ideal y tus mejores obras. Firmamos el contrato.</span></li>
-          <li><span class="cuando">Días 1 y 2</span><b>Configuramos tus cuentas</b><span class="txt">Meta Business y cuenta publicitaria, píxel, Google Ads, Google Mi Negocio y WhatsApp Business. Todo queda a tu nombre.</span></li>
+          <li><span class="cuando">Días 1 y 2</span><b>Configuramos tus cuentas</b><span class="txt">Meta Business y cuenta publicitaria, píxel, Google Ads, WhatsApp Business y, desde Constructor, Google Mi Negocio. Todo queda a tu nombre.</span></li>
           <li><span class="cuando">Días 2 a 4</span><b>Oferta y guiones</b><span class="txt">Definimos qué vas a ofrecer en los anuncios y te mandamos los guiones de los primeros videos para que grabes.</span></li>
           <li><span class="cuando">Días 3 a 6</span><b>Contenido y página</b><span class="txt">Editamos tus videos y piezas, armamos los formularios y, en Constructor y Llave en Mano, tu página web.</span></li>
           <li><span class="cuando">Día 6</span><b>Tú apruebas</b><span class="txt">Revisas los anuncios y textos en Selder. Nada sale sin tu visto bueno.</span></li>
@@ -1639,11 +1793,20 @@
       <p class="lead">Los tres traen clientes desde el primer mes. Base es para partir, Constructor suma más contenido, más anuncios y tu página web, y en Llave en Mano también atendemos y hacemos seguimiento por ti.</p>
     </div>
 
+    <div class="pauta-aviso rv">
+      <div class="pa-partes">
+        <div class="pa-parte"><span class="pa-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-capas"/></svg></span><div><span>El plan</span><b>Nuestro trabajo</b><small>Estrategia, contenido, anuncios, Selder y seguimiento. Es el valor de cada plan.</small></div></div>
+        <span class="pa-mas" aria-hidden="true">+</span>
+        <div class="pa-parte"><span class="pa-ico meta"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-meta"/></svg></span><div><span>La pauta</span><b>Lo que pagas a Meta y Google</b><small>Para que muestren tus anuncios. Va directo desde tu tarjeta, aparte del plan: desde $50.000 al mes, recomendamos $150.000.</small></div></div>
+      </div>
+      <p class="pa-nota">Tú decides cuánto invertir en pauta y puedes cambiarlo cuando quieras. La pauta es tuya: la cuenta publicitaria queda a tu nombre.</p>
+    </div>
+
     <div class="planes">
       <article class="plan rv">
         <h3>Base</h3>
         <p class="lema">Para partir con anuncios y contenido, con lo justo y necesario.</p>
-        <div class="valor"><s>$250.000</s><b>$200.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $66.667</small></div>
+        <div class="valor"><s>$250.000</s><b>$200.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $66.667</small><em class="valor-pauta">+ pauta en anuncios, desde $50.000/mes</em></div>
         <div class="app-selder">
           <div class="app-cab"><img src="/selder/logo-selder.png" alt="Selder by Manyobra" width="540" height="120" loading="lazy" /><span>App incluida</span></div>
           <p class="app-lead">Todo lo que hacemos por ti, <b>en tiempo real</b> y en tu celular. Sin esperar el reporte.</p>
@@ -1654,19 +1817,20 @@
           <li class="it"><span class="ico neu"><svg viewBox="0 0 24 24"><use href="#i-video"/></svg></span><div class="tx"><b>6 videos + 6 piezas gráficas</b><p>2 + 2 al mes, con guion y tomas para cada video.</p></div></li>
           <li class="grupo">Anuncios</li>
           <li class="it"><span class="ico ads"><svg viewBox="0 0 24 24"><use href="#i-meta"/></svg><svg class="mini-g" viewBox="0 0 48 48"><use href="#i-g"/></svg></span><div class="tx"><b>+10 anuncios en Meta y Google</b><p>Textos y ganchos nuevos cada dos semanas.</p><div class="chips"><span class="wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Mensajes a WhatsApp</span><span><svg viewBox="0 0 24 24"><use href="#i-form"/></svg>Formularios</span></div></div></li>
-          <li class="grupo">Google y redes</li>
-          <li class="it"><span class="ico g"><svg viewBox="0 0 24 24"><use href="#i-g"/></svg></span><div class="tx"><b>Google Mi Negocio configurado</b><p>Tu ficha lista para aparecer en Google Maps.</p></div></li>
-          <li class="it"><span class="ico ig"><svg viewBox="0 0 24 24"><use href="#i-ig"/></svg></span><div class="tx"><b>Instagram configurado</b><p>Perfil, destacados y biografía listos al partir.</p></div></li>
+          <li class="grupo">Redes</li>
+          <li class="it"><span class="ico ig"><svg viewBox="0 0 24 24"><use href="#i-ig"/></svg></span><div class="tx"><b>Instagram optimizado</b><p>Perfil, destacados y biografía que invitan a escribirte.</p></div></li>
+          <li class="it"><span class="ico fb"><svg viewBox="0 0 24 24"><use href="#i-fb"/></svg></span><div class="tx"><b>Facebook optimizado</b><p>Página con portada, datos de contacto y botón a tu WhatsApp.</p></div></li>
           <li class="grupo">Resultados</li>
           <li class="it"><span class="ico neu"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg></span><div class="tx"><b>Reporte mensual</b><p>Cuánto invertiste, quién te escribió y qué funcionó.</p></div></li>
         </ul>
         <a class="btn btn-line" data-plan="Base" href="https://wa.me/56956747949">Elegir Base</a>
+        <button class="cz-link" type="button" data-cotizar="Base">Cotizar este plan con pauta →</button>
       </article>
 
       <article class="plan rv">
         <h3>Constructor</h3>
         <p class="lema">Para empezar a recibir consultas de gente que busca lo que haces.</p>
-        <div class="valor"><s>$450.000</s><b>$360.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $120.000</small></div>
+        <div class="valor"><s>$450.000</s><b>$360.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $120.000</small><em class="valor-pauta">+ pauta en anuncios, desde $50.000/mes</em></div>
         <div class="app-selder">
           <div class="app-cab"><img src="/selder/logo-selder.png" alt="Selder by Manyobra" width="540" height="120" loading="lazy" /><span>App incluida</span></div>
           <p class="app-lead">Todo lo que hacemos por ti, <b>en tiempo real</b> y en tu celular. Sin esperar el reporte.</p>
@@ -1683,24 +1847,26 @@
           <li class="it caja"><span class="ico web"><svg viewBox="0 0 24 24"><use href="#i-web"/></svg></span><div class="tx"><b>Página web profesional</b><p>La hacemos y la mantenemos todo el año ante cualquier eventualidad. Con botón de WhatsApp y conectada a Selder.</p><div class="spec"><span><svg viewBox="0 0 24 24"><use href="#i-link"/></svg>Dominio<em>1 año</em></span><span><svg viewBox="0 0 24 24"><use href="#i-server"/></svg>Hosting<em>1 año</em></span><span><svg viewBox="0 0 24 24"><use href="#i-tool"/></svg>Soporte<em>1 año</em></span></div></div></li>
           <li class="grupo">Redes</li>
           <li class="it"><span class="ico ig"><svg viewBox="0 0 24 24"><use href="#i-ig"/></svg></span><div class="tx"><b>Instagram optimizado</b><p>Perfil, destacados y biografía que invitan a escribirte.</p></div></li>
+          <li class="it"><span class="ico fb"><svg viewBox="0 0 24 24"><use href="#i-fb"/></svg></span><div class="tx"><b>Facebook optimizado</b><p>Página con portada, datos de contacto y botón a tu WhatsApp.</p></div></li>
           <li class="grupo">Resultados</li>
           <li class="it"><span class="ico neu"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg></span><div class="tx"><b>Reporte + reunión mensual</b><p>Revisamos los números y ajustamos la estrategia contigo.</p></div></li>
         </ul>
         <a class="btn btn-line" data-plan="Constructor" href="https://wa.me/56956747949">Elegir Constructor</a>
+        <button class="cz-link" type="button" data-cotizar="Constructor">Cotizar este plan con pauta →</button>
       </article>
 
       <article class="plan top rv">
         <span class="badge">Recomendado</span>
         <h3>Llave en Mano <span class="chip-ia">Con IA</span></h3>
         <p class="lema">Te entregamos el sistema funcionando. Tú solo cierras.</p>
-        <div class="valor"><s>$900.000</s><b>$720.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $240.000</small></div>
+        <div class="valor"><s>$900.000</s><b>$720.000</b><span>+ IVA · sistema de 90 días</span><small>o 3 cuotas sin interés de $240.000</small><em class="valor-pauta">+ pauta en anuncios, desde $50.000/mes</em></div>
         <div class="app-selder">
           <div class="app-cab"><img src="/selder/logo-selder.png" alt="Selder by Manyobra" width="540" height="120" loading="lazy" /><span>App incluida</span></div>
           <p class="app-lead">Todo lo que hacemos por ti, <b>en tiempo real</b> y en tu celular. Sin esperar el reporte.</p>
           <div class="app-ves"><span><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg>Inversión y resultados</span><span><svg viewBox="0 0 24 24"><use href="#i-chat"/></svg>Contactos que llegan</span><span><svg viewBox="0 0 24 24"><use href="#i-meta"/></svg>Costo por contacto</span><span><svg viewBox="0 0 24 24"><use href="#i-capas"/></svg>Clientes por etapa</span></div><p class="app-mas"><b>+ En tu plan:</b> todo lo de Constructor, más cada conversación y cita que agenda tu agente IA.</p>
         </div>
         <ul class="entregables pro">
-          <li class="todo"><span class="ico neu"><svg viewBox="0 0 24 24"><use href="#i-capas"/></svg></span><div class="tx"><b>Todo lo de Constructor</b><div class="chips"><span><svg class="gc" viewBox="0 0 48 48"><use href="#i-g"/></svg>Google Mi Negocio</span><span><svg viewBox="0 0 24 24"><use href="#i-web"/></svg>Web, dominio y hosting</span><span><svg viewBox="0 0 24 24"><use href="#i-video"/></svg>12 + 12 contenidos</span><span><svg viewBox="0 0 24 24"><use href="#i-ig"/></svg>Instagram</span></div><p class="ademas">y además:</p></div></li>
+          <li class="todo"><span class="ico neu"><svg viewBox="0 0 24 24"><use href="#i-capas"/></svg></span><div class="tx"><b>Todo lo de Constructor</b><div class="chips"><span><svg class="gc" viewBox="0 0 48 48"><use href="#i-g"/></svg>Google Mi Negocio</span><span><svg viewBox="0 0 24 24"><use href="#i-web"/></svg>Web, dominio y hosting</span><span><svg viewBox="0 0 24 24"><use href="#i-video"/></svg>12 + 12 contenidos</span><span><svg viewBox="0 0 24 24"><use href="#i-ig"/></svg>Instagram y Facebook</span></div><p class="ademas">y además:</p></div></li>
           <li class="grupo">Anuncios</li>
           <li class="it"><span class="ico ads"><svg viewBox="0 0 24 24"><use href="#i-meta"/></svg><svg class="mini-g" viewBox="0 0 48 48"><use href="#i-g"/></svg></span><div class="tx"><b>+30 anuncios en Meta y Google</b><p>El máximo de pruebas para encontrar más rápido lo que trae obras.</p><div class="chips"><span class="wa"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Mensajes a WhatsApp</span><span><svg viewBox="0 0 24 24"><use href="#i-form"/></svg>Formularios</span><span>Retargeting</span></div></div></li>
           <li class="grupo">Inteligencia artificial</li>
@@ -1730,15 +1896,19 @@
           <li class="it"><span class="ico neu"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg></span><div class="tx"><b>Reporte + reunión cada 15 días</b><p>El doble de seguimiento para ajustar más rápido.</p></div></li>
         </ul>
         <a class="btn btn-main" data-plan="Llave en Mano" href="https://wa.me/56956747949">Elegir Llave en Mano</a>
+        <button class="cz-link" type="button" data-cotizar="Llave en Mano">Cotizar este plan con pauta →</button>
       </article>
     </div>
 
     <ul class="notas-plan rv">
       <li><b>De regalo al contratar:</b> los 3 playbooks de ventas de Manyobra para el rubro: WhatsApp, cotización y cierre.</li>
-      <li><b>La pauta va aparte:</b> se paga directo a Meta y Google desde tu cuenta. Se puede partir con $50.000 al mes; recomendamos $150.000.</li>
       <li><b>¿Prefieres mes a mes?</b> Constructor a $150.000 o Llave en Mano a $300.000 + IVA al mes, sin permanencia.</li>
     </ul>
 
+    <div class="cz-cta rv">
+      <div><span class="label">¿Ya elegiste?</span><b>Arma tu cotización con el plan y lo que quieres invertir en publicidad.</b><small>Con todo el detalle del plan. Te la llevas en PDF o nos la envías por WhatsApp.</small></div>
+      <button class="btn btn-main" type="button" data-cotizar>Cotizar mi plan</button>
+    </div>
     <div class="regalo rv">
       <div class="regalo-intro">
         <span class="label">Exclusivo clientes · 3 guías en PDF</span>
@@ -1871,6 +2041,62 @@
   </div>
 </section>
 
+<dialog class="cz-modal" id="cz-modal" aria-labelledby="cz-titulo">
+  <button class="cz-cerrar" type="button" aria-label="Cerrar cotizador">×</button>
+    <div class="cotizador" id="cotizar">
+      <div class="cz-cab">
+        <span class="label">Plan + pauta en anuncios</span>
+        <h3 id="cz-titulo">Arma tu cotización</h3>
+        <p>Elige tu plan y cuánto quieres poner en anuncios cada mes. La pauta se paga directo a Meta y Google desde tu cuenta, aparte del plan.</p>
+      </div>
+      <div class="cz-grid">
+        <div class="cz-in">
+          <fieldset class="cz-planes"><legend>1 · Tu plan</legend>
+            <label><input type="radio" name="cz-plan" value="Base" data-precio="200000" data-cuota="66667"><span><b>Base</b><small>$200.000 + IVA</small></span></label>
+            <label><input type="radio" name="cz-plan" value="Constructor" data-precio="360000" data-cuota="120000"><span><b>Constructor</b><small>$360.000 + IVA</small></span></label>
+            <label><input type="radio" name="cz-plan" value="Llave en Mano" data-precio="720000" data-cuota="240000" checked><span><b>Llave en Mano</b><small>$720.000 + IVA</small></span></label>
+          </fieldset>
+          <fieldset class="cz-pago"><legend>2 · Forma de pago</legend>
+            <label><input type="radio" name="cz-pago" value="contado"><span>Al contado</span></label>
+            <label><input type="radio" name="cz-pago" value="cuotas" checked><span>3 cuotas sin interés</span></label>
+          </fieldset>
+          <fieldset class="cz-pauta"><legend>3 · Pauta en anuncios al mes</legend>
+            <output class="cz-monto" id="cz-monto">$150.000</output>
+            <input type="range" id="cz-rango" min="50000" max="1000000" step="10000" value="150000" aria-label="Pauta mensual en anuncios">
+            <div class="cz-marcas"><span>$50.000<small>Mínimo</small></span><span>$1.000.000</span></div>
+            <div class="cz-rapidos"><button type="button" data-v="50000">$50 mil</button><button type="button" data-v="150000">$150 mil<em>Recomendado</em></button><button type="button" data-v="300000">$300 mil</button><button type="button" data-v="500000">$500 mil</button></div>
+            <p class="cz-ref">Con esa pauta, nuestros clientes de construcción reciben <b id="cz-conv">entre 73 y 200 conversaciones al mes</b>. Es una referencia de los últimos 90 días, no una garantía: depende del rubro, la zona y la oferta.</p>
+          </fieldset>
+          <div class="cz-btns">
+            <a class="btn btn-main" id="cz-wa" href="https://wa.me/56956747949" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Enviar cotización por WhatsApp</a>
+            <button class="btn btn-line" type="button" data-pdf-cot>Descargar cotización en PDF</button>
+          </div>
+        </div>
+        <div class="cz-res">
+          <div class="cz-doc">
+            <div class="cz-marca"><svg viewBox="0 0 100 70" aria-hidden="true"><use href="#onda"/></svg><b>MANYOBRA</b><span>Marketing para empresas de construcción</span></div>
+            <div class="cz-doc-cab"><div><span class="label">Cotización para</span><b id="cz-para">Tu empresa</b></div><small id="cz-fecha"></small></div>
+            <table>
+              <tr><th id="cz-l-plan">Plan Llave en Mano · sistema de 90 días</th><td id="cz-v-plan">$720.000</td></tr>
+              <tr><th>IVA 19%</th><td id="cz-v-iva">$136.800</td></tr>
+              <tr class="cz-sub"><th>Total plan</th><td id="cz-v-totplan">$856.800</td></tr>
+              <tr class="cz-nota"><th colspan="2" id="cz-l-pago">En 3 cuotas sin interés de $285.600 (IVA incluido)</th></tr>
+              <tr><th>Pauta en anuncios <small>Pagada directo a Meta y Google</small></th><td id="cz-v-pauta">$150.000 / mes</td></tr>
+            </table>
+            <div class="cz-totales">
+              <div><span>Primer mes</span><b id="cz-t-mes">$435.600</b><small id="cz-t-mes-d">Cuota 1 + pauta del mes</small></div>
+              <div><span>Total 90 días</span><b id="cz-t-90">$1.306.800</b><small>Plan con IVA + 3 meses de pauta</small></div>
+            </div>
+            <div class="cz-incluye"><span class="cz-inc-tit" id="cz-inc-tit">Qué incluye el plan</span><div id="cz-inc"></div></div>
+            <p class="cz-letra">Valores en pesos chilenos. La pauta no incluye impuestos que apliquen Meta o Google. Cotización válida por 30 días.</p>
+            <p class="cz-firma">Sebastián · Fundador, Manyobra · +56 9 5674 7949 · contacto@manyobra.cl · Manyobra SpA · Imagine Lux SpA · RUT 78.213.349-7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</dialog>
+
 <script>
   document.documentElement.classList.add('js');
 
@@ -1891,6 +2117,107 @@
     a.target = '_blank';
     a.rel = 'noopener';
   });
+
+  // Cotizador: plan + forma de pago + pauta mensual.
+  (function () {
+    var cz = document.getElementById('cotizar');
+    if (!cz) return;
+    var $ = function (id) { return document.getElementById(id); };
+    var peso = function (n) { return '$' + Math.round(n).toLocaleString('es-CL'); };
+    var rango = $('cz-rango');
+    try {
+      var g = JSON.parse(localStorage.getItem('manyobra-cotizador') || 'null');
+      if (g) {
+        var r = cz.querySelector('input[name=cz-plan][value="' + g.plan + '"]'); if (r) r.checked = true;
+        var q = cz.querySelector('input[name=cz-pago][value="' + g.pago + '"]'); if (q) q.checked = true;
+        if (g.pauta) rango.value = g.pauta;
+      }
+    } catch (e) {}
+    $('cz-para').textContent = para || 'Tu empresa';
+    $('cz-fecha').textContent = new Date().toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' });
+    var calc = function () {
+      var pl = cz.querySelector('input[name=cz-plan]:checked');
+      var cuotas = cz.querySelector('input[name=cz-pago]:checked').value === 'cuotas';
+      var precio = +pl.getAttribute('data-precio'), cuota = +pl.getAttribute('data-cuota');
+      var pauta = +rango.value;
+      var iva = precio * .19, totPlan = precio + iva, cuotaIva = Math.round(cuota * 1.19);
+      var mes = (cuotas ? cuotaIva : totPlan) + pauta;
+      $('cz-monto').textContent = peso(pauta);
+      rango.style.setProperty('--p', ((pauta - rango.min) / (rango.max - rango.min) * 100) + '%');
+      $('cz-l-plan').textContent = 'Plan ' + pl.value + ' · sistema de 90 días';
+      $('cz-v-plan').textContent = peso(precio);
+      $('cz-v-iva').textContent = peso(iva);
+      $('cz-v-totplan').textContent = peso(totPlan);
+      $('cz-l-pago').textContent = cuotas ? 'En 3 cuotas sin interés de ' + peso(cuotaIva) + ' (IVA incluido)' : 'Pago al contado al partir';
+      $('cz-v-pauta').textContent = peso(pauta) + ' / mes';
+      $('cz-t-mes').textContent = peso(mes);
+      $('cz-t-mes-d').textContent = cuotas ? 'Cuota 1 + pauta del mes' : 'Plan completo + pauta del mes';
+      $('cz-t-90').textContent = peso(totPlan + pauta * 3);
+      $('cz-conv').textContent = 'entre ' + Math.round(pauta / 2055) + ' y ' + Math.round(pauta / 750) + ' conversaciones al mes';
+      cz.querySelectorAll('.cz-rapidos button').forEach(function (b) { b.classList.toggle('on', +b.getAttribute('data-v') === pauta); });
+      var msg = 'Hola Sebastián, revisé la propuesta' + (para ? ' para ' + para : '') + '. Quiero partir con:\n' +
+        '• Plan ' + pl.value + (cuotas ? ' en 3 cuotas de ' + peso(cuotaIva) + ' IVA incluido' : ' al contado, ' + peso(totPlan) + ' IVA incluido') + '\n' +
+        '• Pauta en anuncios: ' + peso(pauta) + ' al mes\n' +
+        '• Primer mes: ' + peso(mes) + '\n¿Cómo seguimos?';
+      $('cz-wa').href = 'https://wa.me/56956747949?text=' + encodeURIComponent(msg);
+      try { localStorage.setItem('manyobra-cotizador', JSON.stringify({ plan: pl.value, pago: cuotas ? 'cuotas' : 'contado', pauta: pauta })); } catch (e) {}
+    };
+    var calcBase = calc;
+    // Detalle del plan elegido, tomado de su tarjeta.
+    function detalle(nombre) {
+      var card = [].filter.call(document.querySelectorAll('.planes .plan'), function (c) {
+        var h = c.querySelector('h3'); return h && h.firstChild.textContent.trim() === nombre;
+      })[0];
+      if (!card) return '';
+      var mas = card.querySelector('.app-mas');
+      var out = '<h5>Selder, tu app</h5><ul><li><b>App Selder incluida</b><span>Todo lo que hacemos por ti, en tiempo real: inversión y resultados, contactos que llegan, costo por contacto y clientes por etapa.' + (mas ? ' ' + mas.textContent.replace('+ En tu plan:', 'Además:') : '') + '</span></li>';
+      card.querySelectorAll('.entregables > li').forEach(function (li) {
+        if (li.classList.contains('grupo')) { out += '</ul><h5>' + li.textContent + '</h5><ul>'; return; }
+        var c = li.cloneNode(true);
+        c.querySelectorAll('.estrellas, .chat, .ico, .ia-ico, svg, .auto-flujo, em, .chips, .spec, .ademas').forEach(function (x) { x.remove(); });
+        var t = c.querySelector('b');
+        var tit = t ? t.textContent.trim() : '';
+        if (t) t.remove();
+        var desc = c.textContent.replace(/\s+/g, ' ').replace(/^[:\s]+/, '').trim();
+        var chips = [].map.call(li.querySelectorAll('.chips span, .spec span'), function (x) { return x.textContent.replace(/\s+/g, ' ').trim(); });
+        if (li.classList.contains('auto')) desc += ' ' + [].map.call(li.querySelectorAll('.auto-flujo li'), function (x) { var k = x.querySelector('span').textContent; return k + ': ' + x.textContent.replace(k, '').trim(); }).join('. ') + '.';
+        if (chips.length) desc += (desc ? ' ' : '') + 'Incluye: ' + chips.join(', ') + '.';
+        out += '<li><b>' + tit + '</b>' + (desc ? '<span>' + desc + '</span>' : '') + '</li>';
+      });
+      return (out + '</ul>').replace(/<ul><\/ul>/g, '');
+    }
+    calc = function () {
+      calcBase();
+      var pl = cz.querySelector('input[name=cz-plan]:checked').value;
+      $('cz-inc-tit').textContent = 'Qué incluye el plan ' + pl;
+      $('cz-inc').innerHTML = detalle(pl);
+    };
+    cz.addEventListener('input', calc);
+    cz.addEventListener('change', calc);
+    cz.querySelectorAll('.cz-rapidos button').forEach(function (b) {
+      b.addEventListener('click', function () { rango.value = b.getAttribute('data-v'); calc(); });
+    });
+    calc();
+
+    // Ventana del cotizador.
+    var modal = $('cz-modal');
+    document.querySelectorAll('[data-cotizar]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var plan = b.getAttribute('data-cotizar');
+        if (plan) { var r = cz.querySelector('input[name=cz-plan][value="' + plan + '"]'); if (r) r.checked = true; }
+        calc();
+        document.documentElement.classList.add('cz-usado');
+        if (modal.showModal) modal.showModal(); else modal.setAttribute('open', '');
+      });
+    });
+    modal.querySelector('.cz-cerrar').addEventListener('click', function () { modal.close(); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+    modal.querySelector('[data-pdf-cot]').addEventListener('click', function () {
+      document.documentElement.classList.add('solo-cot');
+      window.print();
+    });
+    window.addEventListener('afterprint', function () { document.documentElement.classList.remove('solo-cot'); });
+  })();
 
   // "Descargar PDF" usa la impresion del navegador (Guardar como PDF); los
   // desplegables se abren para que salgan completos.
